@@ -23,14 +23,16 @@ function App() {
     <>
       {/* <Navbar /> */}
       <DataProvider>
-        <Router>
+        <Router
+          basename={import.meta.env.BASE_URL}
+        >
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/payment-confirm" element={<PaymentConfirm />} />
-            <Route path="/pa" element={<PaymentConfirmed />} />
-            <Route path="/pr" element={<PaymentFailed />} />
-            <Route path="/loading" element={<Loading />} />
+            <Route path="" element={<Home />} />
+            <Route path="register" element={<Register />} />
+            <Route path="payment-confirm" element={<PaymentConfirm />} />
+            <Route path="pa" element={<PaymentConfirmed />} />
+            <Route path="pr" element={<PaymentFailed />} />
+            <Route path="loading" element={<Loading />} />
           </Routes>
         </Router>
       </DataProvider>
