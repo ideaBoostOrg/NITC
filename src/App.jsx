@@ -23,7 +23,9 @@ function App() {
     <>
       {/* <Navbar /> */}
       <DataProvider>
-        <Router>
+        <Router
+          basename={import.meta.env.DEV ? '/' : '/NITC/'}
+        >
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/register" element={<Register />} />
