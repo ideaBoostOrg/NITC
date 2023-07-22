@@ -25,13 +25,16 @@ function ConfirmPage() {
 
     useEffect(() => {
         setIsLoading(true)
-        axios.post('http://localhost:3400/confirm', {
+        const url = 'https://7kw2pe2bd8.execute-api.us-east-1.amazonaws.com/dev/confirm'
+        // const url = 'http://localhost:3400/confirm'
+        axios.post(url, {
             clientRef: clientRef,
             reqid: reqid
-        })
+        }
+        )
             .then(Response => {
                 setData(Response.data)
-                console.table(Response.data);
+                // console.log(Response.data);
                 if (Response.data?.responseCode) {
                     if (Response.data?.responseCode === "00" && Response.data?.clientRef === clientRef) {
                         updatePaymentStatus("Paid", Response.data);
@@ -83,7 +86,7 @@ function ConfirmPage() {
                 });
 
                 // change this to "Paid"
-                if (status === 'Payment Failed') {
+                if (status === 'Paid') {
                     sendEmail({
                         firstName: userData?.firstName,
                         lastName: userData?.lastName,

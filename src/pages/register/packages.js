@@ -9,21 +9,21 @@ export const packages = [
     {
         key: "Inauguration",
         name: "Inauguration Ceremony",
-        price: "2000.00",
+        price: "20000.00",
         currency: "LKR",
         features: ["Keynote Speech", "CSSL National ICT Awards", "Gala Dinner"],
     },
     {
         key: "Day_01",
         name: "NITC Conference Day 01",
-        price: "1500.00",
+        price: "15000.00",
         currency: "LKR",
         features: ["Keynote Presentations", "Panel Discussion and Q&A", "Lunch", "Conference Tracks"]
     },
     {
         key: "Day_02",
         name: "NITC Conference Day 02",
-        price: "1500.00",
+        price: "15000.00",
         currency: "LKR",
         features: ["Keynote Presentations", "Investment Summit", "Lunch", "Conference Tracks", "CSSL Research Colloquium"]
     },

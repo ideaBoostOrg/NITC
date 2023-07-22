@@ -1,4 +1,4 @@
-import Digital_investment_summit from "../../../assets/img/Digital_investment_summit.webp";
+import Digital_investment_summit from "../../../assets/img/DIGI_ECON.jpg";
 function CSSL_digital_investment_submit() {
   return (
     <section id="cssl-digita-investment-summit" style={{ paddingTop: "10px" }}>

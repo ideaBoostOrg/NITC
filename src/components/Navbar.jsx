@@ -12,7 +12,8 @@ function Navbar() {
 
 
   return (
-    <nav className="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar top-nav-collapse"
+    <nav
+      className="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar top-nav-collapse"
       style={{ height: isOpen ? "fit-content" : "60px" }}
     >
       <div className="container">
@@ -57,7 +58,6 @@ function Navbar() {
                 duration={300}
                 // smooth={true}
                 onClick={() => setIsOpen(!isOpen)}
-
               >
                 About
               </SLink>
@@ -72,9 +72,23 @@ function Navbar() {
                 duration={300}
                 smooth={true}
                 onClick={() => setIsOpen(false)}
-
               >
                 Schedules
+              </SLink>
+            </li>
+
+            <li className="nav-item">
+              <SLink
+                className="nav-link"
+                activeClass="active-link"
+                spy={true}
+                offset={0}
+                to="award"
+                duration={300}
+                smooth={true}
+                onClick={() => setIsOpen(false)}
+              >
+                Awards
               </SLink>
             </li>
             <li className="nav-item">
@@ -83,13 +97,12 @@ function Navbar() {
                 activeClass="active-link"
                 spy={true}
                 offset={0}
-                to="cssl"
+                to="dis"
                 duration={300}
                 smooth={true}
                 onClick={() => setIsOpen(false)}
-
               >
-                CSSL
+                DIS
               </SLink>
               {/* <div class="dropdown">
                 <button
@@ -160,13 +173,12 @@ function Navbar() {
                 activeClass="active-link"
                 spy={true}
                 offset={0}
-                to="award"
+                to="digital-economy"
                 duration={300}
                 smooth={true}
                 onClick={() => setIsOpen(false)}
-
               >
-                Awards
+                DIGI-ECON
               </SLink>
             </li>
             <li className="nav-item">
@@ -179,7 +191,6 @@ function Navbar() {
                 duration={300}
                 smooth={true}
                 onClick={() => setIsOpen(false)}
-
               >
                 Gallery
               </SLink>
@@ -194,7 +205,6 @@ function Navbar() {
                 duration={300}
                 smooth={true}
                 onClick={() => setIsOpen(false)}
-
               >
                 Pricing
               </SLink>
@@ -209,7 +219,6 @@ function Navbar() {
                 duration={300}
                 smooth={true}
                 onClick={() => setIsOpen(false)}
-
               >
                 Sponsors
               </SLink>

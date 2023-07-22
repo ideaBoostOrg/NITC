@@ -1,26 +1,25 @@
 /* eslint-disable react/no-unescaped-entities */
 import logo_CSSL from "../../../assets/img/CSSL_logo.png";
-import { useState } from "react";
+// import { useState } from "react";
 
-import CSSL_digital_investment_summit from "./CSSL_digital_investment_summit";
-import DIGI_ECON_Inauguration from "./DIGI-ECON_Inauguration";
-import CSSL_awards from "./CSSL_awards";
+// import CSSL_digital_investment_summit from "./CSSL_digital_investment_summit";
+// import DIGI_ECON_Inauguration from "./DIGI-ECON_Inauguration";
+// import CSSL_awards from "./CSSL_awards";
 
 
 
 function About_CSSL() {
 
-  const [toggleState, setToggleState] = useState(1);
-  const toggleTab = (index) => {
-    setToggleState(index);
-  };
+  // const [toggleState, setToggleState] = useState(1);
+  // const toggleTab = (index) => {
+  //   setToggleState(index);
+  // };
 
   return (
     <section
       id="cssl"
       className="intro"
       style={{
-        backgroundColor: "rgb(0 85 255 / 8%)",
         padding: "50px 0 75px 0",
       }}
     >
@@ -73,12 +72,11 @@ function About_CSSL() {
           program through which CSSL brings international standards on ICT
           related degrees to Sri Lanka.
         </p>
-        <div className="schedule" style={{ marginTop: "60px" }}>
+        {/* <div className="schedule" style={{ marginTop: "60px" }}>
           <div className="col-12 mb-4 text-center">
             <ul className="nav nav-tabs" id="myTab" role="tablist">
               <li className="nav-item">
                 <a
-                  // className="nav-link active"
                   className={toggleState === 1 ? "nav-link active" : "nav-link"}
                   style={{
                     display: "flex",
@@ -126,8 +124,6 @@ function About_CSSL() {
                   onClick={() => toggleTab(3)}
                 >
                   <div className="item-text">
-                    {/* <h4>Day 03</h4>
-                    <h5>13th October 2023</h5> */}
                     <h4>
                       Sri Lanka Digital <br /> Investment Summit
                     </h4>
@@ -136,11 +132,11 @@ function About_CSSL() {
               </li>
             </ul>
           </div>
-        </div>
+        </div> */}
 
-        {toggleState === 1 && <DIGI_ECON_Inauguration />}
+        {/* {toggleState === 1 && <DIGI_ECON_Inauguration />}
         {toggleState === 2 && <CSSL_awards />}
-        {toggleState === 3 && <CSSL_digital_investment_summit />}
+        {toggleState === 3 && <CSSL_digital_investment_summit />} */}
       </div>
     </section>
   );

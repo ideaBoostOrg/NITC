@@ -1,11 +1,11 @@
-import logo_1 from "../../../assets/img/sponsors/logo-1.webp";
-import logo_2 from "../../../assets/img/sponsors/logo-2.webp";
-import logo_3 from "../../../assets/img/sponsors/logo-3.webp";
-import logo_4 from "../../../assets/img/sponsors/logo-4.webp";
-import logo_5 from "../../../assets/img/sponsors/logo-5.webp";
-// import logo_6 from '../../../assets/img/sponsors/logo-6.png'
-// import logo_7 from '../../../assets/img/sponsors/logo-7.png'
-// import logo_8 from '../../../assets/img/sponsors/logo-8.png'
+import logo_1 from "../../../assets/img/partners/ACM.png";
+import logo_2 from "../../../assets/img/partners/ACS.png";
+import logo_3 from "../../../assets/img/partners/BCS.png";
+import logo_4 from "../../../assets/img/partners/FITTIS.png";
+import logo_5 from "../../../assets/img/partners/IESL.png";
+import logo_6 from "../../../assets/img/partners/IET.png";
+import logo_7 from "../../../assets/img/partners/ISACA.png";
+// import logo_8 from '../../../assets/img/partners/SLASSCOM.png'
 // import logo_9 from '../../../assets/img/sponsors/logo-9.png'
 
 function Partners() {
@@ -24,9 +24,9 @@ function Partners() {
                 Partners
               </h2>
               <p className="wow fadeInDown" data-wow-delay="0.2s">
-                A heartfelt appreciation to our esteemed
-                partners, whose collaboration <br/>has been paramount in fueling our
-                accomplishments
+                A heartfelt appreciation to our esteemed partners, whose
+                collaboration <br />
+                has been paramount in fueling our accomplishments
               </p>
             </div>
           </div>
@@ -37,23 +37,30 @@ function Partners() {
         >
           <div className="col-lg-12">
             <div className="sponsors-logo text-center">
-              {/* <a href="" className="sponsor-logo">
-                  <img src={logo_1} style={{ width: 100, height: 60 }} alt="" />
-                </a>
-                <a href="" className="sponsor-logo">
-                  <img src={logo_2} style={{ width: 100, height: 60 }} alt="" />
-                </a>
-                <a href="" className="sponsor-logo">
-                  <img src={logo_3} style={{ width: 100, height: 80 }} alt="" />
-                </a>
-                <a href="" className="sponsor-logo">
-                  <img src={logo_4} style={{ width: 100, height: 60 }} alt="" />
-                </a>
-                <a href="" className="sponsor-logo">
-                  <img src={logo_5} style={{ width: 100, height: 60 }} alt="" />
-                </a> */}
-
-              <p>===content will be provided===</p>
+              <a href="" className="partner-logo">
+                <img src={logo_1} style={{ width: 80, height: 60 }} alt="" />
+              </a>
+              <a href="" className="partner-logo">
+                <img src={logo_2} style={{ width: 70, height: 60 }} alt="" />
+              </a>
+              <a href="" className="partner-logo">
+                <img src={logo_3} style={{ width: 80, height: 80 }} alt="" />
+              </a>
+              <a href="" className="partner-logo">
+                <img src={logo_4} style={{ width: 90, height: 60 }} alt="" />
+              </a>
+              <a href="" className="partner-logo">
+                <img src={logo_5} style={{ width: 100, height: 50 }} alt="" />
+              </a>
+              <a href="" className="partner-logo">
+                <img src={logo_6} style={{ width: 100, height: 40 }} alt="" />
+              </a>
+              <a href="" className="partner-logo">
+                <img src={logo_7} style={{ width: 80, height: 40 }} alt="" />
+              </a>
+              {/* <a href="" className="partner-logo">
+                <img src={logo_8} style={{ width: 60, height: 70 }} alt="" />
+              </a> */}
             </div>
           </div>
         </div>

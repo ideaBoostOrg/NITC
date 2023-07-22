@@ -1,17 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
-import Awards from "../../../assets/img/Awards-2.webp";
+import Awards from "../../../assets/img/CSSL_Awards.jpg";
 import View_more from "./View_more";
 
 
-// const [viewMoreOpen, setViewMoreOpen] = useState(false);
-
 function CSSL_awards() {
   const [viewMoreOpen, setviewMoreOpen] = useState(false);
-  // const clickfun = () => {
-  //   console.log("click");
-  // };
-
   return (
     <section id="cssl-awards" style={{ paddingTop: "10px" }}>
       <div className="container">
@@ -45,12 +39,12 @@ function CSSL_awards() {
                 className="btn btn-common"
                 id="view_more_btn"
                 onClick={() => setviewMoreOpen(true)}
-              // onClick={clickfun()}
+                // onClick={clickfun()}
               >
                 View more
               </span>
 
-              <a href="" className="btn btn-common">
+              <a href="http://digitalcssl.lk" className="btn btn-common">
                 Apply Now
               </a>
             </div>

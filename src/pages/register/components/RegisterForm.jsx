@@ -80,14 +80,11 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
       })
     }
 
-    console.log(selectedEvents);
-
   }
 
   useEffect(() => {
 
     if (selectedEvents.Inauguration && selectedEvents.Day_01 && selectedEvents.Day_02) {
-      console.log('all ture');
       setSelectedEvents({
         ...events,
         Full_package: true
@@ -106,7 +103,6 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
         total += parseFloat(packages.find(p => p.key === key).price)
       }
     }
-    console.log(total)
     setAmount(total)
 
     let d = 0
@@ -174,7 +170,7 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
       });
 
     if (docRef) {
-      console.log("Document written with ID: ", docRef.id);
+      // console.log("Document written with ID: ", docRef.id);
       if (netTotal > 0) {
         setIsError(false);
         const pgData = {
@@ -191,12 +187,11 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
         setIsError(true);
       }
     } else {
-      console.log("Document not written");
+      // console.log("Document not written");
       setIsError(true);
     }
     setIsLoading(false);
   }
-
 
   return (
     <>

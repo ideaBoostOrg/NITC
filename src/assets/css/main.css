@@ -3517,6 +3517,20 @@ footer {
   cursor: pointer;
 }
 
+#award .award_section_button {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#award .award_section_button #view_more_btn {
+  background-color: white;
+  color: var(--primary-blue);
+  border: 1px solid var(--primary-blue);
+  cursor: pointer;
+}
+
 .form-footer {
   margin: 2rem 0;
 }
@@ -3829,4 +3843,48 @@ footer {
   border-radius: 50%;
   /* box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5); */
   animation: spinnerAnimation 1s infinite linear;
+}
+
+/*partners*/
+.partner-logo {
+  margin: 30px 30px 30px 30px;
+}
+
+.sponsor-logo {
+  margin: 30px;
+}
+
+/*CSSl Digital Investment Summit*/
+#dis .award_section_button {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#dis .award_section_button #view_more_btn {
+  background-color: white;
+  color: var(--primary-blue);
+  border: 1px solid var(--primary-blue);
+  cursor: pointer;
+}
+
+#digital-economy .digi_econ_section_button {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.input-validate {
+  position: relative;
+}
+
+.input-validate-icon {
+  position: absolute;
+  right: 0.75rem;
+  top: 55%;
+
+  transform: translateY(-50%);
+
 }

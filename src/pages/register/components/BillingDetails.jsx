@@ -24,6 +24,12 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
     const [isError, setIsError] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
 
+    const [isEmailValid, setIsEmailValid] = useState(null);
+    const [isEmailValidating, setIsEmailValidating] = useState(null);
+
+    const [isNicValid, setIsNicValid] = useState(null);
+
+
     const handleVerify = async () => {
         setBtnState("verifing");
 
@@ -32,8 +38,6 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
 
         if (querySnapshot.docs.length > 0) {
             const member = querySnapshot.docs[0].data();
-            console.log(member);
-
             setFirstName(member.First_Name ?? "");
             setLastName(member.Last_Name ?? "");
             setEmail(member.Email_Address ?? "");
@@ -115,29 +119,70 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
         }
     }
 
-
-
     const handleNext = async () => {
-        if (firstName && lastName && email && nic && address) {
-            setInputError(false);
+        if (isEmailValid) {
+            if (firstName && lastName && email && nic && address) {
+                setInputError(false);
 
-            const data = {
-                firstName: firstName,
-                lastName: lastName,
-                email: email,
-                nic: nic,
-                organization: organization ?? "",
-                address: address,
+                const data = {
+                    firstName: firstName,
+                    lastName: lastName,
+                    email: email,
+                    nic: nic,
+                    organization: organization ?? "",
+                    address: address,
+                }
+
+                setFormData(data)
+
+
+                setIsCheckout(true);
+            } else {
+                setInputError(true);
             }
+        }
+    }
 
-            setFormData(data)
+    const handleValidateEmail = async (email) => {
 
-
-            setIsCheckout(true);
-        } else {
-            setInputError(true);
+        if (email === "") {
+            setIsEmailValid(null);
+            return;
         }
 
+        const regexEmail = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
+        if (!regexEmail.test(email)) {
+            setIsEmailValid(false);
+            return;
+        }
+
+        setIsEmailValidating(true);
+        const q = query(collection(firestore, "users"), where("email", "==", email));
+        const querySnapshot = await getDocs(q);
+        if (querySnapshot.size > 0) {
+            setIsEmailValid(false)
+        } else {
+            setIsEmailValid(true)
+        }
+        setIsEmailValidating(false)
+    }
+
+    const handleValidateNic = (nic) => {
+
+        if (nic === "") {
+            setIsNicValid(null);
+            return;
+        }
+
+        const oldEmailRegex = /^[1-9][0-9]{8}[vV]$/;
+        const newEmailRegex = /^[0-9]{12}$/;
+        const passportRegex = /^[A-Z]{2}[0-9]{7}$/;
+
+        if (oldEmailRegex.test(nic) || newEmailRegex.test(nic) || passportRegex.test(nic)) {
+            setIsNicValid(true);
+        } else {
+            setIsNicValid(false);
+        }
     }
 
     return (
@@ -239,25 +284,54 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                         <div className="row">
                             <div className="col-lg-6 col-sm-12 form-group">
                                 <label className="required-label" htmlFor="email">Email</label>
-                                {inputError && <span className="input-error">This field is required</span>}
-                                <input required
-                                    className="form-control form-control-sm f-input"
-                                    type="email"
-                                    id="email"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                    style={{ borderColor: inputError ? "#f27474" : "#ccc !important" }}
-                                />
+                                {
+
+                                    // isEmailValidating === null ? "" :
+                                    //     isEmailValid === null ? inputError && <span className="input-error">This field is required</span> :
+                                    //         isEmailValid ? "" : <span className="input-error">Email already in use.</span>
+
+                                    isEmailValidating === null ? inputError && <span className="input-error">This field is required</span> :
+                                        isEmailValidating ? "" : isEmailValid ? "" : <span className="input-error">Email already in use.</span>
+                                }
+                                <div className="input-validate">
+                                    <input required
+                                        className="form-control form-control-sm f-input"
+                                        type="email"
+                                        id="email"
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                        onInput={(e) => handleValidateEmail(e.target.value)}
+                                        style={{ borderColor: inputError ? "#f27474" : "#ccc !important" }}
+                                    />
+                                    <div className="input-validate-icon">
+                                        {
+                                            isEmailValidating === null ? "" :
+                                                isEmailValidating ?
+                                                    <div className="loading-spinner-container">
+                                                        <div className="spinner"></div>
+                                                    </div> :
+                                                    isEmailValid ? <CheckCircleFill style={{
+                                                        color: "#15b046",
+                                                    }} /> : <XCircleFill style={{
+                                                        color: "#f00"
+                                                    }} />
+                                        }
+                                    </div>
+                                </div>
                             </div>
                             <div className="col-lg-6 col-sm-12 form-group">
                                 <label className="required-label" htmlFor="nic">NIC</label>
-                                {inputError && <span className="input-error">This field is required</span>}
+                                {
+                                    isNicValid === null ? inputError && <span className="input-error">This field is required</span> :
+                                        isNicValid ? "" : <span className="input-error">Invalid NIC</span>
+                                }
                                 <input required
                                     className="form-control form-control-sm f-input"
                                     type="text"
                                     id="nic"
                                     value={nic}
                                     onChange={(e) => setNic(e.target.value)}
+                                    onInput={(e) => handleValidateNic(e.target.value)}
                                     style={{ borderColor: inputError ? "#f27474" : "#ccc" }}
                                 />
                             </div>
@@ -301,7 +375,7 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                                     handleNext()
                                 }}
 
-                            // disabled={!acceptTerm}
+                                disabled={!isEmailValid}
 
                             >
                                 Next
