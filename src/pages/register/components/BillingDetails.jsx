@@ -33,19 +33,21 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
     const handleVerify = async () => {
         setBtnState("verifing");
 
-        const q = query(collection(firestore, "members"), where("Mem_No", "==", memberId));
+        const q = query(collection(firestore, "members"), where("memNo", "==", memberId));
         const querySnapshot = await getDocs(q);
 
         if (querySnapshot.docs.length > 0) {
             const member = querySnapshot.docs[0].data();
-            setFirstName(member.First_Name ?? "");
-            setLastName(member.Last_Name ?? "");
-            setEmail(member.Email_Address ?? "");
-            setNic(member.NIC ?? "");
-            setOrganization(member.Organization ?? "");
-            setAddress(member.Address ?? "");
+            handleValidateEmail(member.email)
+            handleValidateNic(member.nic)
+            setFirstName(member.firstName ?? "");
+            setLastName(member.lastName ?? "");
+            setEmail(member.email ?? "");
+            setNic(member.nic ?? "");
+            setOrganization(member.organization ?? "");
+            setAddress(member.address ?? "");
 
-            const tq = query(collection(firestore, "tickets"), where("Mem_No", "==", memberId));
+            const tq = query(collection(firestore, "tickets"), where("memNo", "==", memberId));
             const ticketQuerySnapshot = await getDocs(tq);
 
             if (ticketQuerySnapshot.docs.length > 0) {
