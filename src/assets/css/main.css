@@ -3622,6 +3622,8 @@ footer {
   background-color: #0055ff41;
   color: #1c1c1c;
   border-radius: 10px;
+  border: 1px solid transparent;
+
   /* border-right: 1px solid #ccc; */
 }
 
@@ -3648,6 +3650,14 @@ footer {
   box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.27);
   filter: opacity(1) grayscale(0);
 
+}
+
+.package-container input[type=checkbox]:checked+.package .package-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  /* gap: 1rem; */
+  margin-bottom: 0.75rem;
 }
 
 .package-container input[type=checkbox]:checked+.package .package-heading h4 {
