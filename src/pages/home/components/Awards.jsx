@@ -69,7 +69,7 @@ function Awards_section() {
                 View more
               </span>
 
-              <a href="http://digitalcssl.lk" className="btn btn-common">
+              <a href="https://138.2.65.133" className="btn btn-common">
                 Apply Now
               </a>
             </div>
