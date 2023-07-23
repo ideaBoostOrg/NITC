@@ -18,9 +18,9 @@ function DIS() {
           <div className="col-12">
             <div className="section-title-header text-center">
               <h2 className="section-title wow fadeInUp" data-wow-delay="0.2s">
-                 Digital Investment Summit
+                Digital Investment Summit
               </h2>
-              <p className="wow fadeInDown" data-wow-delay="0.2s">
+              <p className="wow fadeInDown mb-4" data-wow-delay="0.2s">
                 Unleash the power of digital innovations and seize growth
                 opportunities at the Sri Lanka Digital
                 <br /> Investment Summit.
@@ -37,7 +37,7 @@ function DIS() {
 
           <div className="col-lg-6 col-md-12 col-xs-12">
             <p style={{ marginTop: "20px", marginBottom: "20px" }}>
-              <b>Sri Lanka Digital Investment Summit</b> is a joint industry
+              <b>Sri Lanka Digital Investment Summit</b>is a joint industry
               initiative to connect Sri Lankan startups and mature companies
               with local and foreign investors to support their next growth
               phase and global expansions. Digital investment Summit rallies all

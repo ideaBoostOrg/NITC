@@ -38,11 +38,11 @@ function Hero() {
               <div className="icon">
                 <i className="lni-mic"></i>
               </div>
-              <p className="banner-info">
+              <p className="banner-info text-center">
                 11<sup>th</sup> - 13<sup>th</sup> of Oct 2023, Shangri-La Hotel, Colombo, Sri-Lanka
               </p>
               <h2 className="head-title">National IT Conference</h2>
-              <p className="banner-desc">
+              <p className="banner-desc text-center">
                 Unlock the Early Bird Discount and save 10% until the 25<sup>th</sup> of
                 August!
               </p>

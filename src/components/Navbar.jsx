@@ -52,11 +52,11 @@ function Navbar() {
               <SLink
                 className="nav-link"
                 activeClass="active-link"
-                // spy={true}
+                spy={true}
                 offset={-100}
                 to="about"
                 duration={300}
-                // smooth={true}
+                smooth={true}
                 onClick={() => setIsOpen(!isOpen)}
               >
                 About
@@ -82,7 +82,7 @@ function Navbar() {
                 className="nav-link"
                 activeClass="active-link"
                 spy={true}
-                offset={0}
+                offset={-40}
                 to="award"
                 duration={300}
                 smooth={true}
@@ -96,7 +96,7 @@ function Navbar() {
                 className="nav-link"
                 activeClass="active-link"
                 spy={true}
-                offset={0}
+                offset={-40}
                 to="dis"
                 duration={300}
                 smooth={true}
@@ -172,7 +172,7 @@ function Navbar() {
                 className="nav-link"
                 activeClass="active-link"
                 spy={true}
-                offset={0}
+                offset={-40}
                 to="digital-economy"
                 duration={300}
                 smooth={true}
@@ -186,7 +186,7 @@ function Navbar() {
                 className="nav-link"
                 activeClass="active-link"
                 spy={true}
-                offset={0}
+                offset={-40}
                 to="gallery"
                 duration={300}
                 smooth={true}
@@ -200,7 +200,7 @@ function Navbar() {
                 className="nav-link"
                 activeClass="active-link"
                 spy={true}
-                offset={0}
+                offset={-40}
                 to="pricing"
                 duration={300}
                 smooth={true}
@@ -214,7 +214,7 @@ function Navbar() {
                 className="nav-link"
                 activeClass="active-link"
                 spy={true}
-                offset={0}
+                offset={-80}
                 to="sponsors"
                 duration={300}
                 smooth={true}

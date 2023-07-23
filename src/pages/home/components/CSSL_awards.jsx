@@ -32,13 +32,13 @@ function CSSL_awards() {
               by ICT Professionals and CSSL Elite awards will be held at the
               inauguration ceremony of the NITC Conference.
             </p>
-
+            <br></br>
             <div className="award_section_button">
               <span
                 className="btn btn-common"
                 id="view_more_btn"
                 onClick={() => setviewMoreOpen(true)}
-                // onClick={clickfun()}
+              // onClick={clickfun()}
               >
                 View more
               </span>

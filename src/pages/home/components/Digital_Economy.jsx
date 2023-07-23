@@ -6,7 +6,7 @@ function Digital_economy() {
   return (
     <section
       id="digital-economy"
-      style={{ paddingTop: "50px", paddingBottom: "50px" }}
+      style={{ paddingTop: "50px", paddingBottom: "20px" }}
     >
       <div className="container">
         <div className="row">
@@ -15,7 +15,7 @@ function Digital_economy() {
               <h2 className="section-title wow fadeInUp" data-wow-delay="0.2s">
                 DIGI-ECON
               </h2>
-              <p className="wow fadeInDown" data-wow-delay="0.2s">
+              <p className="wow fadeInDown mb-4" data-wow-delay="0.2s">
                 Empower Your Business with Digital Economy Insights: Harness
                 Growth Opportunities at the <br />
                 Digital Economy Summit

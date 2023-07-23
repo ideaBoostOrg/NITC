@@ -10,7 +10,7 @@ import logo_7 from "../../../assets/img/partners/ISACA.png";
 
 function Partners() {
   return (
-    <section id="sponsors" className="section-padding">
+    <section id="sponsors" className="section-padding mb-4">
       <div className="overlay"></div>
       <div className="container">
         <div className="row">

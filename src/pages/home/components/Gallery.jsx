@@ -7,20 +7,19 @@ import { eventImages } from '../../../assets/img'
 
 function Gallery() {
   return (
-    <section id="gallery" className="section-padding" style={{paddingTop:"50px"}}>
+    <section id="gallery" className="section-padding" style={{ paddingTop: "30px" }}>
       <div className="container-fluid">
         <div className="row">
           <div className="col-12">
             <div className="section-title-header text-center">
               <h2
                 className="section-title wow fadeInUp animated"
-                data-wow-delay="0.2s"
                 style={{
                   visibility: "visible",
                   WebkitAnimationDelay: "0.2s",
                   MozAnimationDelay: "0.2s",
                   animationDelay: "0.2s",
-                  paddingBottom:"10px",
+                  paddingBottom: "30px",
 
                 }}
               >

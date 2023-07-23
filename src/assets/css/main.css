@@ -315,6 +315,21 @@ ol li {
   border-radius: 10px;
 }
 
+@media (max-width: 768px) {
+  .img-thumb {
+    display: flex;
+    justify-content: center;
+  }
+
+  #dis .award_section_button {
+    flex-direction: column;
+  }
+
+  #digital-economy .digi_econ_section_button {
+    text-align: center !important;
+  }
+}
+
 button:focus {
   outline: none !important;
 }
@@ -1851,7 +1866,7 @@ h1 {
 }
 
 .single-intro-text {
-  height: 250px;
+  min-height: 250px;
   padding: 45px 50px 40px 60px;
   box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -2444,8 +2459,8 @@ footer {
 
 .site-info {
   position: relative;
-  padding: 30px 0;
-  margin-bottom: 30px;
+  padding: 20px 0;
+  margin-bottom: 10px;
 }
 
 .site-info p {
@@ -3854,8 +3869,8 @@ footer {
   margin: 10px;
 }
 
-.afflicant-logo{
-  margin: 10px 30px 30px 30px; 
+.afflicant-logo {
+  margin: 10px 30px 30px 30px;
 }
 
 /*CSSl Digital Investment Summit*/
@@ -3873,9 +3888,9 @@ footer {
   cursor: pointer;
 }
 
-#digital-economy .digi_econ_section_button {
+/* #digital-economy .digi_econ_section_button {
   text-align: right;
-}
+} */
 
 .input-validate {
   position: relative;
@@ -3894,10 +3909,10 @@ footer {
   color: var(--primary-blue);
   border: 1px solid var(--primary-blue);
   cursor: pointer;
-  
+
 }
 
 /*for all*/
-p{
+p {
   text-align: justify;
 }
