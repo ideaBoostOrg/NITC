@@ -3220,7 +3220,7 @@ footer {
 }
 
 .backdrop {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
@@ -3233,7 +3233,7 @@ footer {
 
 .modal {
   position: absolute;
-  top: 50%;
+  top: 52%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   /* min-width: 480px; */

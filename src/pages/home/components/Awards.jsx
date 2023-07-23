@@ -16,6 +16,7 @@ function Awards_section() {
         paddingBottom: "50px",
         paddingTop: "50px",
         backgroundColor: "rgb(0 85 255 / 8%)",
+        // position: "relative",
       }}
     >
       <div className="container">
@@ -33,7 +34,7 @@ function Awards_section() {
           </div>
         </div>
 
-        <div className="row" style={{paddingBottom:"30px"}}>
+        <div className="row" style={{ paddingBottom: "30px" }}>
           <div className="col-lg-6 col-md-12 col-xs-12">
             <div className="img-thumb">
               <img className="img-fluid" src={Awards} alt="" />
@@ -63,7 +64,7 @@ function Awards_section() {
                 className="btn btn-common"
                 id="view_more_btn"
                 onClick={() => setviewMoreOpen(true)}
-                // onClick={clickfun()}
+              // onClick={clickfun()}
               >
                 View more
               </span>
