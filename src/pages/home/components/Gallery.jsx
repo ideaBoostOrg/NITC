@@ -7,7 +7,7 @@ import { eventImages } from '../../../assets/img'
 
 function Gallery() {
   return (
-    <section id="gallery" className="section-padding">
+    <section id="gallery" className="section-padding" style={{paddingTop:"50px"}}>
       <div className="container-fluid">
         <div className="row">
           <div className="col-12">
@@ -20,6 +20,8 @@ function Gallery() {
                   WebkitAnimationDelay: "0.2s",
                   MozAnimationDelay: "0.2s",
                   animationDelay: "0.2s",
+                  paddingBottom:"10px",
+
                 }}
               >
                 Event Gallery

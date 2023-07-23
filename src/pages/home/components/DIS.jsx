@@ -18,7 +18,7 @@ function DIS() {
           <div className="col-12">
             <div className="section-title-header text-center">
               <h2 className="section-title wow fadeInUp" data-wow-delay="0.2s">
-                CSSL Digital Investment Summit
+                 Digital Investment Summit
               </h2>
               <p className="wow fadeInDown" data-wow-delay="0.2s">
                 Unleash the power of digital innovations and seize growth

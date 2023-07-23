@@ -35,9 +35,8 @@ function index() {
       <Shedule />
       <Awards />
       {/* <Introduction /> */}
-      <About_CSSL />
-      <DIS/>
-      <Digital_economy/>
+      <DIS />
+      <Digital_economy />
       {/* <CSSL_digital_investment_submit /> */}
       {/* <CSSL_awards />
       <CSSL_colloquium /> */}
@@ -46,6 +45,7 @@ function index() {
       <Event_gallery /> */}
       <Gallery />
       <Ticket_pricing />
+      <About_CSSL />
       <Sponsors />
       <Partners />
       <Afflicants />

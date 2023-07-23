@@ -40,13 +40,13 @@ function Afflicants() {
               <span href="" className="sponsor-logo">
                 <img src={logo_2} style={{ width: 100, height: 60 }} alt="" />
               </span> */}
-              <span href="" className="sponsor-logo">
+              <span href="" className="afflicant-logo">
                 <img src={logo_3} style={{ width: 150, height: 120 }} alt="" />
               </span>
-              <span href="" className="sponsor-logo">
+              <span href="" className="afflicant-logo">
                 <img src={logo_4} style={{ width: 100, height: 50 }} alt="" />
               </span>
-              <span href="" className="sponsor-logo">
+              <span href="" className="afflicant-logo">
                 <img src={logo_5} style={{ width: 80, height: 60 }} alt="" />
               </span>
               {/* <a href=""><img src={logo_6} alt="" /></a>

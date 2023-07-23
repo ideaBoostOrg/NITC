@@ -3,7 +3,6 @@ import { useState } from "react";
 import Awards from "../../../assets/img/CSSL_Awards.jpg";
 import View_more from "./View_more";
 
-
 function CSSL_awards() {
   const [viewMoreOpen, setviewMoreOpen] = useState(false);
   return (

@@ -1268,7 +1268,7 @@ h1 {
 }
 
 #sponsors .sponsors-logo span img {
-  margin: 30px;
+  margin: 10px 30px 10px 30px;
 }
 
 #sponsors .spnsors-logo:hover {
@@ -3216,7 +3216,7 @@ footer {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-210%);
   /* min-width: 480px; */
   min-height: 500px;
   border: none;
@@ -3847,11 +3847,15 @@ footer {
 
 /*partners*/
 .partner-logo {
-  margin: 30px 30px 30px 30px;
+  margin: 0px;
 }
 
 .sponsor-logo {
-  margin: 30px;
+  margin: 10px;
+}
+
+.afflicant-logo{
+  margin: 10px 30px 30px 30px; 
 }
 
 /*CSSl Digital Investment Summit*/
@@ -3870,10 +3874,7 @@ footer {
 }
 
 #digital-economy .digi_econ_section_button {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  cursor: pointer;
+  text-align: right;
 }
 
 .input-validate {
@@ -3884,7 +3885,19 @@ footer {
   position: absolute;
   right: 0.75rem;
   top: 55%;
-
   transform: translateY(-50%);
 
+}
+
+#digital-economy .digi_econ_section_button #view_more_btn {
+  background-color: white;
+  color: var(--primary-blue);
+  border: 1px solid var(--primary-blue);
+  cursor: pointer;
+  
+}
+
+/*for all*/
+p{
+  text-align: justify;
 }

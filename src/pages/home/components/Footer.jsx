@@ -49,7 +49,7 @@ function Footer(){
                 </ul>
               </div>
               <div className="site-info">
-                <p>
+                <p style={{textAlign:"center"}}>
                   2023 ©️ Powered by{" "}
                   <a href="http://ideaboost.tech" rel="nofollow">
                     ideaBoost.
