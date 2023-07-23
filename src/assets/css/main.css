@@ -328,6 +328,10 @@ ol li {
   #digital-economy .digi_econ_section_button {
     text-align: center !important;
   }
+
+  #award .award_section_button {
+    justify-content: center;
+  }
 }
 
 button:focus {
@@ -3535,7 +3539,7 @@ footer {
 #award .award_section_button {
   display: flex;
   gap: 20px;
-  justify-content: center;
+  justify-content: flex-start;
   cursor: pointer;
 }
 
