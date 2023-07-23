@@ -3226,7 +3226,7 @@ footer {
   bottom: 0;
   right: 0;
   /* min-height: 100%; */
-  z-index: 10000;
+  z-index: 1000000;
   background-color: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(2px) contrast(0.9) grayscale(0.3);
 }
@@ -3235,7 +3235,7 @@ footer {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-210%);
+  transform: translateX(-50%) translateY(-50%);
   /* min-width: 480px; */
   min-height: 500px;
   border: none;
