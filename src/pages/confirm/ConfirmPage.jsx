@@ -73,7 +73,7 @@ function ConfirmPage() {
     const sendEmail = (data) => {
         axios.post('https://api.imanage.services/api/api/nitc', data)
             .then(Response => {
-                console.table(Response.data);
+                // console.table(Response.data);
             })
             .catch((error) => {
                 console.log(error);
