@@ -25,24 +25,34 @@ function ConfirmPage() {
 
     useEffect(() => {
         setIsLoading(true)
-        const url = 'https://7kw2pe2bd8.execute-api.us-east-1.amazonaws.com/dev/confirm'
+        const url = 'https://e5ncju2y5f.execute-api.eu-west-2.amazonaws.com/prod/confirm'
+        // const url = 'https://7kw2pe2bd8.execute-api.us-east-1.amazonaws.com/dev/confirm' //bashi
         // const url = 'http://localhost:3400/confirm'
         axios.post(url, {
             clientRef: clientRef,
-            reqid: reqid
+            reqId: reqid
         }
         )
             .then(Response => {
-                setData(Response.data)
-                // console.log(Response.data);
-                if (Response.data?.responseCode) {
-                    if (Response.data?.responseCode === "00" && Response.data?.clientRef === clientRef) {
-                        updatePaymentStatus("Paid", Response.data);
+                const responseString = Response.data
+                const responseArray = responseString.split('&')
+                const results = {}
+                responseArray.forEach((item) => {
+                    const [key, value] = item.split('=')
+                    results[key] = value
+                })
+
+                // console.table(results)
+                setData(results)
+
+                if (results?.responseCode) {
+                    if (results?.responseCode === "00" && results?.clientRef === clientRef) {
+                        updatePaymentStatus("Paid", results);
                         setIsLoading(false)
                         setIsPaymentConfirmed(true)
                     }
                     else {
-                        updatePaymentStatus("Payment Failed", Response.data);
+                        updatePaymentStatus("Payment Failed", results);
                         setIsLoading(false)
                         setIsPaymentConfirmed(false)
                     }
