@@ -10,7 +10,7 @@ function DIS() {
       style={{
         paddingTop: "50px",
         paddingBottom: "50px",
-        backgroundColor: " rgb(243, 244, 243",
+        backgroundColor: " rgb(243, 244, 243)",
       }}
     >
       <div className="container">
