@@ -68,7 +68,7 @@ function ConfirmPage() {
             })
 
 
-    }, [reqid, clientRef])
+    }, [])
 
     const sendEmail = (data) => {
         axios.post('https://api.imanage.services/api/api/nitc', data)
