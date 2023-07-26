@@ -3930,3 +3930,15 @@ footer {
 p {
   text-align: justify;
 }
+
+.alert-row {
+  position: relative;
+}
+
+.double-check-alert {
+  font-size: 0.7rem;
+  color: #af992c;
+  position: absolute;
+  top: 0;
+  right: 0;
+}

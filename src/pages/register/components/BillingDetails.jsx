@@ -305,16 +305,17 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                         </div>
                         <div className="row">
                             <div className="col-lg-6 col-sm-12 form-group">
-                                <label className="required-label" htmlFor="email">Email</label>
-                                {
-
-                                    // isEmailValidating === null ? "" :
-                                    //     isEmailValid === null ? inputError && <span className="input-error">This field is required</span> :
-                                    //         isEmailValid ? "" : <span className="input-error">Email already in use.</span>
-
-                                    isEmailValidating === null ? inputError && <span className="input-error">This field is required</span> :
-                                        isEmailValidating ? "" : isEmailValid ? "" : <span className="input-error">Email already in use.</span>
-                                }
+                                <div className="alert-row">
+                                    <label className="required-label" htmlFor="email">Email</label>
+                                    {
+                                        // isEmailValidating === null ? "" :
+                                        //     isEmailValid === null ? inputError && <span className="input-error">This field is required</span> :
+                                        //         isEmailValid ? "" : <span className="input-error">Email already in use.</span>
+                                        isEmailValidating === null ? inputError && <span className="input-error">This field is required</span> :
+                                            isEmailValidating ? "" : isEmailValid ? "" : <span className="input-error">Email already in use.</span>
+                                    }
+                                    <span className="double-check-alert">Please, double-check your email address.</span>
+                                </div>
                                 <div className="input-validate">
                                     <input required
                                         className="form-control form-control-sm f-input"
