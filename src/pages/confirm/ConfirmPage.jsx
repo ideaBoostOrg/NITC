@@ -25,7 +25,7 @@ function ConfirmPage() {
 
 
 
-    useCallback(() => {
+    useEffect(() => {
         const sendEmail = (data) => {
             axios.post('https://api.imanage.services/api/api/nitc', data)
                 .then(Response => {
