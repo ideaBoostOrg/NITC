@@ -90,9 +90,9 @@ function ConfirmPage() {
                 results[key] = value
             })
 
-            console.table(results)
+            // console.table(results)
             if (results) {
-                console.log(results);
+                // console.log(results);
 
                 if (results?.responseCode) {
                     if (results?.responseCode === "00" && results?.clientRef === clientRef) {
@@ -101,22 +101,22 @@ function ConfirmPage() {
                         setIsPaymentConfirmed(true)
                     }
                     else {
-                        console.log("Payment Failed 1");
+                        console.log("Error 01: Payment Failed");
                         updatePaymentStatus("Payment Failed", results);
                         setIsLoading(false)
                         setIsPaymentConfirmed(false)
                     }
 
                 } else {
-                    console.log("Payment Failed 2");
+                    console.log("Error 02: Payment Failed");
                     setIsPaymentConfirmed(false)
                 }
             } else {
-                console.log("Payment Failed 3");
+                console.log("Error 03: Payment Failed");
                 setIsPaymentConfirmed(false)
             }
         } catch (error) {
-            console.log("reqeust error");
+            console.log("Error 04: Reqeust error");
             console.log(error)
         }
     }, [clientRef, reqid, updatePaymentStatus])

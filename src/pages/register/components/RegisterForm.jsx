@@ -163,7 +163,6 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
         memberId: memberId ?? "",
         conf_kit: 'not issued',
         clientRef: cRef,
-        comment: comm,
         paymentStatus: 'Pending',
         reg_sessions: registeredEvents,
         securityStatus: "active"
