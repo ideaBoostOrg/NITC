@@ -42,7 +42,7 @@ function ConfirmPage() {
                     results[key] = value
                 })
 
-                // console.table(results)
+                console.table(results)
                 setData(results)
 
                 if (results?.responseCode) {
