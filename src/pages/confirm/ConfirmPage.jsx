@@ -68,7 +68,7 @@ function ConfirmPage() {
         } catch (error) {
             console.log("Error updating payment status:", error);
         }
-    }, [clientRef]);
+    }, []);
 
     const confirmPg = useCallback(async () => {
         setIsLoading(true)
@@ -119,13 +119,13 @@ function ConfirmPage() {
             console.log("Error 04: Reqeust error");
             console.log(error)
         }
-    }, [clientRef, reqid, updatePaymentStatus])
+    }, [])
 
     useEffect(() => {
 
         confirmPg()
 
-    }, [clientRef, confirmPg, updatePaymentStatus])
+    }, [])
 
     return (
         <>
