@@ -25,7 +25,7 @@ function ConfirmPage() {
 
 
 
-    useEffect(() => {
+    useCallback(() => {
         const sendEmail = (data) => {
             axios.post('https://api.imanage.services/api/api/nitc', data)
                 .then(Response => {
@@ -36,17 +36,17 @@ function ConfirmPage() {
                 })
         }
 
-        const updatePaymentStatus = (status, additionalData) => {
+        const updatePaymentStatus = async (status, additionalData) => {
             try {
                 const usersCollectionRef = collection(firestore, "users");
-                const querySnapshot = getDocs(
+                const querySnapshot = await getDocs(
                     query(usersCollectionRef, where("clientRef", "==", clientRef))
                 );
                 if (!querySnapshot.empty) {
                     const userDoc = doc(firestore, "users", querySnapshot.docs[0].id);
                     const userData = querySnapshot.docs[0].data();
 
-                    updateDoc(userDoc, {
+                    await updateDoc(userDoc, {
                         paymentStatus: status,
                         transactionDetails: additionalData
                     });
@@ -72,14 +72,14 @@ function ConfirmPage() {
             }
         };
 
-        const confirmPg = () => {
+        const confirmPg = async () => {
             setIsLoading(true)
 
             const url = 'https://e5ncju2y5f.execute-api.eu-west-2.amazonaws.com/prod/confirm'
             // const url = 'https://7kw2pe2bd8.execute-api.us-east-1.amazonaws.com/dev/confirm' //bashi
             // const url = 'http://localhost:3400/confirm'
             try {
-                const response = axios.post(url, {
+                const response = await axios.post(url, {
                     clientRef: clientRef,
                     reqId: reqid
                 })
@@ -126,7 +126,7 @@ function ConfirmPage() {
 
         confirmPg()
 
-    }, [])
+    }, [clientRef, reqid])
 
     return (
         <>
