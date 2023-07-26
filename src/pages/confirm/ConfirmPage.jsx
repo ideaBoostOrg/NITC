@@ -24,104 +24,105 @@ function ConfirmPage() {
     const [isLoading, setIsLoading] = useState(true)
 
 
-    const sendEmail = (data) => {
-        axios.post('https://api.imanage.services/api/api/nitc', data)
-            .then(Response => {
-                // console.table(Response.data);
-            })
-            .catch((error) => {
-                console.log(error);
-            })
-    }
-
-    const updatePaymentStatus = useCallback(async (status, additionalData) => {
-        try {
-            const usersCollectionRef = collection(firestore, "users");
-            const querySnapshot = await getDocs(
-                query(usersCollectionRef, where("clientRef", "==", clientRef))
-            );
-            if (!querySnapshot.empty) {
-                const userDoc = doc(firestore, "users", querySnapshot.docs[0].id);
-                const userData = querySnapshot.docs[0].data();
-
-                await updateDoc(userDoc, {
-                    paymentStatus: status,
-                    transactionDetails: additionalData
-                });
-
-                // change this to "Paid"
-                if (status === 'Paid') {
-                    sendEmail({
-                        firstName: userData?.firstName,
-                        lastName: userData?.lastName,
-                        email: userData?.email,
-                        nic: userData?.nic,
-                        paymentRef: userData?.clientRef,
-                        amount: additionalData?.paymentAmount,
-                        inaguration: userData?.reg_sessions[0].isRegistered,
-                        day1: userData?.reg_sessions[1].isRegistered,
-                        day2: userData?.reg_sessions[2].isRegistered,
-                        organization: userData?.organization,
-                    })
-                }
-            }
-        } catch (error) {
-            console.log("Error updating payment status:", error);
-        }
-    }, [clientRef]);
-
-    const confirmPg = useCallback(async () => {
-        setIsLoading(true)
-
-        const url = 'https://e5ncju2y5f.execute-api.eu-west-2.amazonaws.com/prod/confirm'
-        // const url = 'https://7kw2pe2bd8.execute-api.us-east-1.amazonaws.com/dev/confirm' //bashi
-        // const url = 'http://localhost:3400/confirm'
-        try {
-            const response = await axios.post(url, {
-                clientRef: clientRef,
-                reqId: reqid
-            })
-
-            const responseString = response.data
-            const responseArray = responseString.split('&')
-            const results = {}
-            responseArray.forEach((item) => {
-                const [key, value] = item.split('=')
-                results[key] = value
-            })
-
-            // console.table(results)
-            if (results) {
-                // console.log(results);
-
-                if (results?.responseCode) {
-                    if (results?.responseCode === "00" && results?.clientRef === clientRef) {
-                        updatePaymentStatus("Paid", results);
-                        setIsLoading(false)
-                        setIsPaymentConfirmed(true)
-                    }
-                    else {
-                        console.log("Error 01: Payment Failed");
-                        updatePaymentStatus("Payment Failed", results);
-                        setIsLoading(false)
-                        setIsPaymentConfirmed(false)
-                    }
-
-                } else {
-                    console.log("Error 02: Payment Failed");
-                    setIsPaymentConfirmed(false)
-                }
-            } else {
-                console.log("Error 03: Payment Failed");
-                setIsPaymentConfirmed(false)
-            }
-        } catch (error) {
-            console.log("Error 04: Reqeust error");
-            console.log(error)
-        }
-    }, [clientRef, reqid, updatePaymentStatus])
 
     useEffect(() => {
+        const sendEmail = (data) => {
+            axios.post('https://api.imanage.services/api/api/nitc', data)
+                .then(Response => {
+                    // console.table(Response.data);
+                })
+                .catch((error) => {
+                    console.log(error);
+                })
+        }
+
+        const updatePaymentStatus = async (status, additionalData) => {
+            try {
+                const usersCollectionRef = collection(firestore, "users");
+                const querySnapshot = await getDocs(
+                    query(usersCollectionRef, where("clientRef", "==", clientRef))
+                );
+                if (!querySnapshot.empty) {
+                    const userDoc = doc(firestore, "users", querySnapshot.docs[0].id);
+                    const userData = querySnapshot.docs[0].data();
+
+                    await updateDoc(userDoc, {
+                        paymentStatus: status,
+                        transactionDetails: additionalData
+                    });
+
+                    // change this to "Paid"
+                    if (status === 'Paid') {
+                        sendEmail({
+                            firstName: userData?.firstName,
+                            lastName: userData?.lastName,
+                            email: userData?.email,
+                            nic: userData?.nic,
+                            paymentRef: userData?.clientRef,
+                            amount: additionalData?.paymentAmount,
+                            inaguration: userData?.reg_sessions[0].isRegistered,
+                            day1: userData?.reg_sessions[1].isRegistered,
+                            day2: userData?.reg_sessions[2].isRegistered,
+                            organization: userData?.organization,
+                        })
+                    }
+                }
+            } catch (error) {
+                console.log("Error updating payment status:", error);
+            }
+        };
+
+        const confirmPg = async () => {
+            setIsLoading(true)
+
+            const url = 'https://e5ncju2y5f.execute-api.eu-west-2.amazonaws.com/prod/confirm'
+            // const url = 'https://7kw2pe2bd8.execute-api.us-east-1.amazonaws.com/dev/confirm' //bashi
+            // const url = 'http://localhost:3400/confirm'
+            try {
+                const response = await axios.post(url, {
+                    clientRef: clientRef,
+                    reqId: reqid
+                })
+
+                const responseString = response.data
+                const responseArray = responseString.split('&')
+                const results = {}
+                responseArray.forEach((item) => {
+                    const [key, value] = item.split('=')
+                    results[key] = value
+                })
+
+                // console.table(results)
+                if (results) {
+                    // console.log(results);
+
+                    if (results?.responseCode) {
+                        if (results?.responseCode === "00" && results?.clientRef === clientRef) {
+                            updatePaymentStatus("Paid", results);
+                            setIsLoading(false)
+                            setIsPaymentConfirmed(true)
+                        }
+                        else {
+                            console.log("Error 01: Payment Failed");
+                            updatePaymentStatus("Payment Failed", results);
+                            setIsLoading(false)
+                            setIsPaymentConfirmed(false)
+                        }
+
+                    } else {
+                        console.log("Error 02: Payment Failed");
+                        setIsPaymentConfirmed(false)
+                    }
+                } else {
+                    console.log("Error 03: Payment Failed");
+                    setIsPaymentConfirmed(false)
+                }
+            } catch (error) {
+                console.log("Error 04: Reqeust error");
+                console.log(error)
+            }
+        }
+
 
         confirmPg()
 
