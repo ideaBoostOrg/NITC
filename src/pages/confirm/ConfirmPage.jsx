@@ -1,7 +1,7 @@
 import logo from "../../assets/img/logo-crop.png";
 
 /* eslint-disable no-unused-vars */
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 import { useSearchParams } from "react-router-dom";
 
@@ -23,52 +23,6 @@ function ConfirmPage() {
     const [isPaymentConfirmed, setIsPaymentConfirmed] = useState(false)
     const [isLoading, setIsLoading] = useState(true)
 
-    useEffect(() => {
-        setIsLoading(true)
-        const url = 'https://e5ncju2y5f.execute-api.eu-west-2.amazonaws.com/prod/confirm'
-        // const url = 'https://7kw2pe2bd8.execute-api.us-east-1.amazonaws.com/dev/confirm' //bashi
-        // const url = 'http://localhost:3400/confirm'
-        axios.post(url, {
-            clientRef: clientRef,
-            reqId: reqid
-        }
-        )
-            .then(Response => {
-                const responseString = Response.data
-                const responseArray = responseString.split('&')
-                const results = {}
-                responseArray.forEach((item) => {
-                    const [key, value] = item.split('=')
-                    results[key] = value
-                })
-
-                // console.table(results)
-                setData(results)
-
-                if (results?.responseCode) {
-                    if (results?.responseCode === "00" && results?.clientRef === clientRef) {
-                        updatePaymentStatus("Paid", results);
-                        setIsLoading(false)
-                        setIsPaymentConfirmed(true)
-                    }
-                    else {
-                        updatePaymentStatus("Payment Failed", results);
-                        setIsLoading(false)
-                        setIsPaymentConfirmed(false)
-                    }
-
-                } else {
-                    setIsPaymentConfirmed(false)
-                }
-            })
-            .catch((error) => {
-                console.log(error);
-                setIsPaymentConfirmed(false)
-
-            })
-
-
-    }, [])
 
     const sendEmail = (data) => {
         axios.post('https://api.imanage.services/api/api/nitc', data)
@@ -80,7 +34,7 @@ function ConfirmPage() {
             })
     }
 
-    const updatePaymentStatus = async (status, additionalData) => {
+    const updatePaymentStatus = useCallback(async (status, additionalData) => {
         try {
             const usersCollectionRef = collection(firestore, "users");
             const querySnapshot = await getDocs(
@@ -114,7 +68,64 @@ function ConfirmPage() {
         } catch (error) {
             console.log("Error updating payment status:", error);
         }
-    };
+    }, [clientRef]);
+
+    const confirmPg = useCallback(async () => {
+        setIsLoading(true)
+
+        const url = 'https://e5ncju2y5f.execute-api.eu-west-2.amazonaws.com/prod/confirm'
+        // const url = 'https://7kw2pe2bd8.execute-api.us-east-1.amazonaws.com/dev/confirm' //bashi
+        // const url = 'http://localhost:3400/confirm'
+        try {
+            const response = await axios.post(url, {
+                clientRef: clientRef,
+                reqId: reqid
+            })
+
+            const responseString = response.data
+            const responseArray = responseString.split('&')
+            const results = {}
+            responseArray.forEach((item) => {
+                const [key, value] = item.split('=')
+                results[key] = value
+            })
+
+            console.table(results)
+            if (results) {
+                console.log(results);
+
+                if (results?.responseCode) {
+                    if (results?.responseCode === "00" && results?.clientRef === clientRef) {
+                        updatePaymentStatus("Paid", results);
+                        setIsLoading(false)
+                        setIsPaymentConfirmed(true)
+                    }
+                    else {
+                        console.log("Payment Failed 1");
+                        updatePaymentStatus("Payment Failed", results);
+                        setIsLoading(false)
+                        setIsPaymentConfirmed(false)
+                    }
+
+                } else {
+                    console.log("Payment Failed 2");
+                    setIsPaymentConfirmed(false)
+                }
+            } else {
+                console.log("Payment Failed 3");
+                setIsPaymentConfirmed(false)
+            }
+        } catch (error) {
+            console.log("reqeust error");
+            console.log(error)
+        }
+    }, [clientRef, reqid, updatePaymentStatus])
+
+    useEffect(() => {
+
+        confirmPg()
+
+    }, [clientRef, confirmPg, updatePaymentStatus])
 
     return (
         <>
