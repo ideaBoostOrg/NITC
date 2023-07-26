@@ -200,7 +200,7 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
         const regexContactNo = /^[0-9]{10}$/
         const regexContactNoWithPluses = /^\+[0-9]{11}$/
 
-        if (regexContactNo.test(contactNo) || regexContactNo.test(contactNo)) {
+        if (regexContactNo.test(contactNo) || regexContactNoWithPluses.test(contactNo)) {
             setIsContactNoValid(true)
         } else {
             setIsContactNoValid(false)
