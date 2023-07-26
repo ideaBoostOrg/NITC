@@ -34,10 +34,10 @@ function ConfirmPage() {
             })
     }
 
-    const updatePaymentStatus = useCallback(async (status, additionalData) => {
+    const updatePaymentStatus = useCallback((status, additionalData) => {
         try {
             const usersCollectionRef = collection(firestore, "users");
-            const querySnapshot = await getDocs(
+            const querySnapshot = getDocs(
                 query(usersCollectionRef, where("clientRef", "==", clientRef))
             );
             if (!querySnapshot.empty) {
@@ -70,14 +70,14 @@ function ConfirmPage() {
         }
     }, []);
 
-    const confirmPg = useCallback(async () => {
+    const confirmPg = useCallback(() => {
         setIsLoading(true)
 
         const url = 'https://e5ncju2y5f.execute-api.eu-west-2.amazonaws.com/prod/confirm'
         // const url = 'https://7kw2pe2bd8.execute-api.us-east-1.amazonaws.com/dev/confirm' //bashi
         // const url = 'http://localhost:3400/confirm'
         try {
-            const response = await axios.post(url, {
+            const response = axios.post(url, {
                 clientRef: clientRef,
                 reqId: reqid
             })
