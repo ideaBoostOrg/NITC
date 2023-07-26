@@ -15,7 +15,6 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
     const [nic, setNic] = useState("");
     const [organization, setOrganization] = useState("");
     const [address, setAddress] = useState("");
-    const [contactNo, setContactNo] = useState("");
 
 
     const [btnState, setBtnState] = useState("verify");
@@ -27,7 +26,6 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
 
     const [isEmailValid, setIsEmailValid] = useState(null);
     const [isEmailValidating, setIsEmailValidating] = useState(null);
-    const [isValidContactNo, setIsValidContactNo] = useState(null);
 
     const [isNicValid, setIsNicValid] = useState(null);
 
@@ -133,7 +131,6 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                     lastName: lastName,
                     email: email,
                     nic: nic,
-                    contactNo: contactNo,
                     organization: organization ?? "",
                     address: address,
                 }
@@ -187,22 +184,6 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
             setIsNicValid(true);
         } else {
             setIsNicValid(false);
-        }
-    }
-
-    const validateContactNo = (contactNo) => {
-        const contactNoRegex = /^[0-9]{10}$/;
-        const contactNoRegexWithPlus = /^\+[0-9]{11}$/
-
-        if (contactNo === "") {
-            setIsValidContactNo(null)
-            return
-        }
-
-        if (contactNoRegex.test(contactNo) || contactNoRegexWithPlus.test(contactNo)) {
-            setIsValidContactNo(true)
-        } else {
-            setIsValidContactNo(false)
         }
     }
 
@@ -304,19 +285,16 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                         </div>
                         <div className="row">
                             <div className="col-lg-6 col-sm-12 form-group">
-                                <div className="flex-space-between">
-                                    <label className="required-label" htmlFor="email">Email</label>
-                                    <span className="double-check-email">Please, double-check you email address.</span>
-                                    {
+                                <label className="required-label" htmlFor="email">Email</label>
+                                {
 
-                                        // isEmailValidating === null ? "" :
-                                        //     isEmailValid === null ? inputError && <span className="input-error">This field is required</span> :
-                                        //         isEmailValid ? "" : <span className="input-error">Email already in use.</span>
+                                    // isEmailValidating === null ? "" :
+                                    //     isEmailValid === null ? inputError && <span className="input-error">This field is required</span> :
+                                    //         isEmailValid ? "" : <span className="input-error">Email already in use.</span>
 
-                                        isEmailValidating === null ? inputError && <span className="input-error">This field is required</span> :
-                                            isEmailValidating ? "" : isEmailValid ? "" : <span className="input-error">Email already in use.</span>
-                                    }
-                                </div>
+                                    isEmailValidating === null ? inputError && <span className="input-error">This field is required</span> :
+                                        isEmailValidating ? "" : isEmailValid ? "" : <span className="input-error">Email already in use.</span>
+                                }
                                 <div className="input-validate">
                                     <input required
                                         className="form-control form-control-sm f-input"
@@ -344,24 +322,6 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                                 </div>
                             </div>
                             <div className="col-lg-6 col-sm-12 form-group">
-                                <label className="required-label" htmlFor="contactNo">Contact No</label>
-                                {
-                                    isValidContactNo === null ? inputError && <span className="input-error">This field is required</span> :
-                                        isValidContactNo ? "" : <span className="input-error">Invalid Contact Number</span>
-                                }                                <input required
-                                    className="form-control form-control-sm f-input"
-                                    type="text"
-                                    id="contactNo"
-                                    value={contactNo}
-                                    onInput={(e) => validateContactNo(e.target.value)}
-                                    onChange={(e) => setContactNo(e.target.value)}
-
-                                    style={{ borderColor: inputError ? "#f27474" : "#ccc" }}
-                                />
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-lg-6 col-sm-12 form-group">
                                 <label className="required-label" htmlFor="nic">NIC</label>
                                 {
                                     isNicValid === null ? inputError && <span className="input-error">This field is required</span> :
@@ -377,22 +337,7 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                                     style={{ borderColor: inputError ? "#f27474" : "#ccc" }}
                                 />
                             </div>
-                            <div className="col-lg-6 col-sm-12 form-group">
-                                <label className="optional-label" htmlFor="organization">Organization</label>
-                                <input required
-                                    className="form-control form-control-sm f-input"
-                                    type="text"
-                                    id="organization"
-                                    value={organization}
-                                    onChange={(e) => setOrganization(e.target.value)}
-                                    style={{ borderColor: "#ccc" }}
-                                />
-
-                            </div>
-
-
                         </div>
-
                         <div className="row">
                             <div className="col-lg-6 col-sm-12 form-group">
                                 <label className="required-label" htmlFor="address">Address</label>
@@ -404,6 +349,17 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                                     value={address}
                                     onChange={(e) => setAddress(e.target.value)}
                                     style={{ borderColor: inputError ? "#f27474" : "#ccc" }}
+                                />
+                            </div>
+                            <div className="col-lg-6 col-sm-12 form-group">
+                                <label className="optional-label" htmlFor="organization">Organization</label>
+                                <input required
+                                    className="form-control form-control-sm f-input"
+                                    type="text"
+                                    id="organization"
+                                    value={organization}
+                                    onChange={(e) => setOrganization(e.target.value)}
+                                    style={{ borderColor: "#ccc" }}
                                 />
                             </div>
                         </div>
