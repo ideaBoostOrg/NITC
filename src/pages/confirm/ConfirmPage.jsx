@@ -126,7 +126,7 @@ function ConfirmPage() {
 
         confirmPg()
 
-    }, [clientRef, reqid])
+    }, [])
 
     return (
         <>
