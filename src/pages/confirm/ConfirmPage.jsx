@@ -46,8 +46,7 @@ function ConfirmPage() {
 
                 await updateDoc(userDoc, {
                     paymentStatus: status,
-                    transactionDetails: additionalData,
-                    timestamp: firestore.FieldValue.serverTimestamp(),
+                    transactionDetails: additionalData
                 });
 
                 // change this to "Paid"
