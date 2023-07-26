@@ -82,6 +82,10 @@ function ConfirmPage() {
                 const response = await axios.post(url, {
                     clientRef: clientRef,
                     reqId: reqid
+                }, {
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
                 })
 
                 const responseString = response.data
