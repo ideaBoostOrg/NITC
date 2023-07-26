@@ -15,6 +15,7 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
     const [nic, setNic] = useState("");
     const [organization, setOrganization] = useState("");
     const [address, setAddress] = useState("");
+    const [contactNumber, setContactNumber] = useState("");
 
 
     const [btnState, setBtnState] = useState("verify");
@@ -28,6 +29,7 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
     const [isEmailValidating, setIsEmailValidating] = useState(null);
 
     const [isNicValid, setIsNicValid] = useState(null);
+    const [isContactNoValid, setIsContactNoValid] = useState(null);
 
 
     const handleVerify = async () => {
@@ -122,7 +124,7 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
     }
 
     const handleNext = async () => {
-        if (isEmailValid) {
+        if (isEmailValid && isContactNoValid && isNicValid) {
             if (firstName && lastName && email && nic && address) {
                 setInputError(false);
 
@@ -133,6 +135,7 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                     nic: nic,
                     organization: organization ?? "",
                     address: address,
+                    contactNumber: contactNumber,
                 }
 
                 setFormData(data)
@@ -184,6 +187,23 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
             setIsNicValid(true);
         } else {
             setIsNicValid(false);
+        }
+    }
+
+    const handleValidateContanctNo = (contactNo) => {
+
+        if (contactNo === "") {
+            setIsContactNoValid(null)
+            return;
+        }
+
+        const regexContactNo = /^[0-9]{10}$/
+        const regexContactNoWithPluses = /^\+[0-9]{11}$/
+
+        if (regexContactNo.test(contactNo) || regexContactNo.test(contactNo)) {
+            setIsContactNoValid(true)
+        } else {
+            setIsContactNoValid(false)
         }
     }
 
@@ -322,6 +342,24 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                                 </div>
                             </div>
                             <div className="col-lg-6 col-sm-12 form-group">
+                                <label className="required-label" htmlFor="contactNumber">Contact Number</label>
+                                {
+                                    isContactNoValid === null ? inputError && <span className="input-error">This field is required</span> :
+                                        isContactNoValid ? "" : <span className="input-error">Invalid Contact Number</span>
+                                }
+                                <input required
+                                    className="form-control form-control-sm f-input"
+                                    type="text"
+                                    id="contactNumber"
+                                    value={contactNumber}
+                                    onChange={(e) => setContactNumber(e.target.value)}
+                                    onInput={(e) => handleValidateContanctNo(e.target.value)}
+                                    style={{ borderColor: inputError ? "#f27474" : "#ccc" }}
+                                />
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-lg-6 col-sm-12 form-group">
                                 <label className="required-label" htmlFor="nic">NIC</label>
                                 {
                                     isNicValid === null ? inputError && <span className="input-error">This field is required</span> :
@@ -337,7 +375,19 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                                     style={{ borderColor: inputError ? "#f27474" : "#ccc" }}
                                 />
                             </div>
+                            <div className="col-lg-6 col-sm-12 form-group">
+                                <label className="optional-label" htmlFor="organization">Organization</label>
+                                <input required
+                                    className="form-control form-control-sm f-input"
+                                    type="text"
+                                    id="organization"
+                                    value={organization}
+                                    onChange={(e) => setOrganization(e.target.value)}
+                                    style={{ borderColor: "#ccc" }}
+                                />
+                            </div>
                         </div>
+
                         <div className="row">
                             <div className="col-lg-6 col-sm-12 form-group">
                                 <label className="required-label" htmlFor="address">Address</label>
@@ -349,17 +399,6 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                                     value={address}
                                     onChange={(e) => setAddress(e.target.value)}
                                     style={{ borderColor: inputError ? "#f27474" : "#ccc" }}
-                                />
-                            </div>
-                            <div className="col-lg-6 col-sm-12 form-group">
-                                <label className="optional-label" htmlFor="organization">Organization</label>
-                                <input required
-                                    className="form-control form-control-sm f-input"
-                                    type="text"
-                                    id="organization"
-                                    value={organization}
-                                    onChange={(e) => setOrganization(e.target.value)}
-                                    style={{ borderColor: "#ccc" }}
                                 />
                             </div>
                         </div>
@@ -377,7 +416,7 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                                     handleNext()
                                 }}
 
-                                disabled={!isEmailValid}
+                                disabled={!isEmailValid || !isContactNoValid || !isNicValid}
 
                             >
                                 Next
