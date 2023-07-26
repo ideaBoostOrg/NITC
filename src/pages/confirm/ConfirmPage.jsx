@@ -44,7 +44,7 @@ function ConfirmPage() {
                 const userDoc = doc(firestore, "users", querySnapshot.docs[0].id);
                 const userData = querySnapshot.docs[0].data();
 
-                await updateDoc(userDoc, {
+                updateDoc(userDoc, {
                     paymentStatus: status,
                     transactionDetails: additionalData
                 });
