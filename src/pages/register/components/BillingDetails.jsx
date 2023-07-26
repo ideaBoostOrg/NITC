@@ -162,7 +162,7 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
         }
 
         setIsEmailValidating(true);
-        const q = query(collection(firestore, "users"), where("email", "==", email), where("paymentStatus", "!=", "Paid"));
+        const q = query(collection(firestore, "users"), where("email", "==", email), where("paymentStatus", "==", "Paid"));
         const querySnapshot = await getDocs(q);
         if (querySnapshot.size > 0) {
             setIsEmailValid(false)
