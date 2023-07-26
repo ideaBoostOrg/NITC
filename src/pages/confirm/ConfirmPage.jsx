@@ -34,17 +34,17 @@ function ConfirmPage() {
             })
     }
 
-    const updatePaymentStatus = useCallback((status, additionalData) => {
+    const updatePaymentStatus = useCallback(async (status, additionalData) => {
         try {
             const usersCollectionRef = collection(firestore, "users");
-            const querySnapshot = getDocs(
+            const querySnapshot = await getDocs(
                 query(usersCollectionRef, where("clientRef", "==", clientRef))
             );
             if (!querySnapshot.empty) {
                 const userDoc = doc(firestore, "users", querySnapshot.docs[0].id);
                 const userData = querySnapshot.docs[0].data();
 
-                updateDoc(userDoc, {
+                await updateDoc(userDoc, {
                     paymentStatus: status,
                     transactionDetails: additionalData
                 });
@@ -68,16 +68,16 @@ function ConfirmPage() {
         } catch (error) {
             console.log("Error updating payment status:", error);
         }
-    }, []);
+    }, [clientRef]);
 
-    const confirmPg = useCallback(() => {
+    const confirmPg = useCallback(async () => {
         setIsLoading(true)
 
         const url = 'https://e5ncju2y5f.execute-api.eu-west-2.amazonaws.com/prod/confirm'
         // const url = 'https://7kw2pe2bd8.execute-api.us-east-1.amazonaws.com/dev/confirm' //bashi
         // const url = 'http://localhost:3400/confirm'
         try {
-            const response = axios.post(url, {
+            const response = await axios.post(url, {
                 clientRef: clientRef,
                 reqId: reqid
             })
@@ -119,7 +119,7 @@ function ConfirmPage() {
             console.log("Error 04: Reqeust error");
             console.log(error)
         }
-    }, [])
+    }, [clientRef, reqid, updatePaymentStatus])
 
     useEffect(() => {
 
