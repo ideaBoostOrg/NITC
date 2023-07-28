@@ -27,9 +27,6 @@ function ConfirmPage() {
 
     useEffect(() => {
 
-        const data = window.sessionStorage.getItem('memberId')
-        console.log("session storage data: ", data);
-
         const sendEmail = (data) => {
             axios.post('https://api.imanage.services/api/api/nitc', data)
                 .then(Response => {

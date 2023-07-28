@@ -52,11 +52,9 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
   const registeredSessions = sessions.filter(s => s.isRegistered);
 
   useEffect(() => {
-    // console.log("sessions: ", sessions);
 
     if (sessions.length > 0) {
       // not first time
-
       const newEvents = {}
       sessions.forEach(s => {
         if (!s.isRegistered)
@@ -74,6 +72,7 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
           [Object.keys(newEvents)[0]]: true
         })
       }
+      window.sessionStorage.setItem('NITC_REGISTRATION_WEB_APP_USER_FIRST_TIME', JSON.stringify(false));
 
     } else {
       //first time
@@ -81,6 +80,8 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
         ...EVENTS,
         [type]: true
       })
+
+      window.sessionStorage.setItem('NITC_REGISTRATION_WEB_APP_USER_FIRST_TIME', JSON.stringify(true));
     }
 
     const EarlyBirdDate = new Date('2023-08-26');
@@ -106,16 +107,17 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
   }
 
   const handleInputCheck = (e) => {
+
     if (e.target.name === "Full_package") {
       setIsFullPackage(e.target.checked);
-      setSelectedEvents({
+      setEventList({
         ...EVENTS,
         Full_package: true
       })
     } else {
       setIsFullPackage(false);
-      setSelectedEvents({
-        ...selectedEvents,
+      setEventList({
+        ...eventList,
         Full_package: false,
         [e.target.name]: e.target.checked
       })
@@ -189,7 +191,6 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
     }
 
     const cRef = v4();
-    // const comm = `email: ${formData.email}, firstName: ${formData.firstName}, nic: ${formData.nic}`
     const comm = `${formData.email}`
 
     const docRef = await addDoc(collection(firestore, "users"),
@@ -205,7 +206,6 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
         memberId: memberId ?? "",
         conf_kit: 'not issued',
         clientRef: cRef,
-        paymentStatus: 'Pending',
         reg_sessions: registeredEvents,
         securityStatus: "active"
       });
@@ -248,26 +248,32 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
               <div className="container">
                 <div className="row">
                   <div className="col-md-12 col-sm-12 col-lg-6 pdt-50 pdr-50">
-                    <h5>Tickets</h5>
-                    <p>
-                      You have already registered for
-                      {
-                        registeredSessions.length > 0 && (
-                          registeredSessions.map((session, index) => {
+                    <div className="ticket-heading">
+                      <h5 style={{ fontSize: "1.2rem" }}>
+                        Tickets
+                      </h5>
+                      <p className="">Please choose the sessions you wish to register for.</p>
+                    </div>
+                    {
+                      registeredSessions.length > 0 &&
+                      <div className="alert alert-warning registered-session" role="alert">
+                        You have already registered for {
+                          registeredSessions.map((s, index) => {
                             return (
-                              <span key={index}> {session.name}{index === -1 ? "," : ""}</span>
+                              <span key={index}>{s.name.replace("_", " ")}{index === registeredSessions.length - 1 ? "" : ", "}</span>
                             )
                           })
-                        )
-                      }</p>
+                        }
+
+                      </div>
+                    }
                     <div className="package-container">
                       {
                         packages.map((pack, index) => {
                           if (pack.key in eventList) {
-                            console.log("yes");
                             return (
                               <div key={index} className="package-box">
-                                <input id={pack.key} type="checkbox" name={pack.key} value={pack.key} onChange={handleInputCheck} checked={selectedEvents[pack.key]}></input>
+                                <input id={pack.key} type="checkbox" name={pack.key} value={pack.key} onChange={handleInputCheck} checked={eventList[pack.key]}></input>
                                 <label htmlFor={pack.key}
                                   className="package"
                                 >

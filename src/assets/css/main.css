@@ -3942,3 +3942,16 @@ p {
   top: 0;
   right: 0;
 }
+
+
+.ticket-heading {
+  margin-bottom: 0.9rem;
+}
+
+.ticket-heading p {
+  font-size: 0.8rem;
+}
+
+.registered-session {
+  margin-bottom: 1.5rem;
+}

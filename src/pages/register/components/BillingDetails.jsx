@@ -125,8 +125,6 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
 
     const handleNext = async () => {
 
-        window.sessionStorage.setItem("memberId", 12345654321);
-
         if (isEmailValid && isContactNoValid && isNicValid) {
             if (firstName && lastName && email && nic && address) {
                 setInputError(false);
