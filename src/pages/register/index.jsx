@@ -12,6 +12,7 @@ function Register() {
   const [clientRef, setClientRef] = useState("");
   const [commet, setCommet] = useState("");
   const [isCheckout, setIsCheckout] = useState(false);
+  const [sessions, setSessions] = useState([]);
 
   const [formData, setFormData] = useState({})
 
@@ -37,6 +38,7 @@ function Register() {
             clientRef={clientRef}
             setClientRef={setClientRef}
             formData={formData}
+            sessions={sessions}
           />
           :
           <BillingDetails
@@ -50,6 +52,7 @@ function Register() {
             commet={commet}
             setCommet={setCommet}
             setFormData={setFormData}
+            setSessions={setSessions}
           />}
     </>
   );

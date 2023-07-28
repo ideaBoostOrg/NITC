@@ -7,7 +7,7 @@ import { CheckCircleFill } from "react-bootstrap-icons";
 import { XCircleFill } from "react-bootstrap-icons";
 import logo from "../../../assets/img/logo-crop.png";
 
-function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsCheckout, clientRef, setClientRef, commet, setCommet, setFormData }) {
+function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsCheckout, setFormData, setSessions }) {
 
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
@@ -162,13 +162,23 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
         }
 
         setIsEmailValidating(true);
-        const q = query(collection(firestore, "users"), where("email", "==", email));
-        const querySnapshot = await getDocs(q);
-        if (querySnapshot.size > 0) {
-            setIsEmailValid(false)
+        const q = query(collection(firestore, "users"), where("email", "==", email))
+        const querySnapshot = await getDocs(q)
+        if (querySnapshot.docs.length > 0) {
+            const user = querySnapshot.docs[0].data()
+            const reg_sessions = user.reg_sessions
+            setSessions(reg_sessions)
+            const unRegisteredSessions = reg_sessions.filter(session => session.isRegistered === false)
+            if (unRegisteredSessions.length < 1) {
+                setIsEmailValid(false)
+            } else {
+                setIsEmailValid(true)
+
+            }
         } else {
             setIsEmailValid(true)
         }
+
         setIsEmailValidating(false)
     }
 
