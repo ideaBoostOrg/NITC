@@ -11,6 +11,7 @@ import PaymentFailed from "./components/PaymentFailed";
 import { firestore } from "../../firebase";
 import { collection, doc, query, getDocs, where, updateDoc, arrayUnion } from "firebase/firestore";
 import PaymentProcessing from "./components/PaymentProcessing";
+import SomethingWentWrong from "../../components/SomethingWentWrong";
 
 
 function ConfirmPage() {
@@ -22,7 +23,7 @@ function ConfirmPage() {
     const [data, setData] = useState()
     const [isPaymentConfirmed, setIsPaymentConfirmed] = useState(false)
     const [isLoading, setIsLoading] = useState(true)
-
+    const [isError, setIsError] = useState(false)
 
 
     useEffect(() => {
@@ -37,41 +38,82 @@ function ConfirmPage() {
                 })
         }
 
-        const updatePaymentStatus = async (status, additionalData) => {
-            try {
-                const usersCollectionRef = collection(firestore, "users");
-                const querySnapshot = await getDocs(
-                    query(usersCollectionRef, where("clientRef", "==", clientRef))
-                );
-                if (!querySnapshot.empty) {
-                    const userDoc = doc(firestore, "users", querySnapshot.docs[0].id);
-                    const userData = querySnapshot.docs[0].data();
 
-                    await updateDoc(userDoc, {
-                        paymentStatus: status,
-                        transactionDetails: additionalData
-                    });
+        const updatePayment = async (clientRef, email, status, transactionDetails) => {
+            const eventsLocal = JSON.parse(window.sessionStorage.getItem('NITC_REGISTRATION_WEB_APP_USER_REGISTERING_SESSIONS'))
 
-                    // change this to "Paid"
-                    if (status === 'Paid') {
-                        sendEmail({
-                            firstName: userData?.firstName,
-                            lastName: userData?.lastName,
-                            email: userData?.email,
-                            nic: userData?.nic,
-                            paymentRef: userData?.clientRef,
-                            amount: additionalData?.paymentAmount,
-                            inaguration: userData?.reg_sessions[0].isRegistered,
-                            day1: userData?.reg_sessions[1].isRegistered,
-                            day2: userData?.reg_sessions[2].isRegistered,
-                            organization: userData?.organization,
-                        })
-                    }
-                }
-            } catch (error) {
-                console.log("Error updating payment status:", error);
+            if (!eventsLocal) {
+                setIsError(true)
+                return
             }
-        };
+
+            if (eventsLocal.clientRef !== clientRef) {
+                setIsError(true)
+                return
+            }
+
+            try {
+
+                const userCollection = collection(firestore, "users")
+                const userQuery = query(userCollection, where("email", "==", email))
+                const userQuerySnapshot = await getDocs(userQuery)
+                if (userQuerySnapshot.empty) {
+                    setIsError(true)
+                    return
+                }
+
+                const userDoc = doc(firestore, "users", userQuerySnapshot.docs[0].id)
+                const userData = userQuerySnapshot.docs[0].data()
+
+                let userSessions = userData.reg_sessions ?? [
+                    { name: 'Inauguration', isRegistered: false },
+                    { name: 'Day_01', isRegistered: false },
+                    { name: 'Day_02', isRegistered: false },
+                ]
+                let securityStatus = userData.securityStatus ?? "inactive"
+
+                let paymentStatus = userData.paymentStatus ?? "Payment Failed"
+
+                if (status === "Paid") {
+                    userSessions = eventsLocal.sessions
+                    securityStatus = "active"
+                    paymentStatus = "Paid"
+                }
+
+                await updateDoc(userDoc, {
+                    paymentStatus: paymentStatus,
+                    transactionDetails: arrayUnion({
+                        ...transactionDetails,
+                        status: status,
+                        timestamp: new Date().toISOString(),
+                    }),
+                    reg_sessions: userSessions,
+                    securityStatus: securityStatus,
+
+                })
+
+                if (status === "Paid") {
+                    sendEmail({
+                        firstName: userData?.firstName,
+                        lastName: userData?.lastName,
+                        email: userData?.email,
+                        nic: userData?.nic,
+                        paymentRef: clientRef,
+                        amount: transactionDetails?.paymentAmount,
+                        inaguration: userSessions[0].isRegistered,
+                        day1: userSessions[1].isRegistered,
+                        day2: userSessions[2].isRegistered,
+                        organization: userData?.organization,
+                    })
+                }
+
+                console.log(status);
+
+            } catch (error) {
+                setIsError(true)
+                console.log(error)
+            }
+        }
 
         const confirmPg = async () => {
             setIsLoading(true)
@@ -85,27 +127,23 @@ function ConfirmPage() {
                     reqId: reqid
                 })
 
-                const responseString = response.data
-                const responseArray = responseString.split('&')
-                const results = {}
-                responseArray.forEach((item) => {
-                    const [key, value] = item.split('=')
-                    results[key] = value
-                })
-
-                // console.table(results)
-                if (results) {
-
+                if (response) {
+                    const responseString = response.data
+                    const responseArray = responseString.split('&')
+                    const results = {}
+                    responseArray.forEach((item) => {
+                        const [key, value] = item.split('=')
+                        results[key] = value
+                    })
                     if (results?.responseCode) {
+
                         if (results?.responseCode === "00" && results?.clientRef === clientRef) {
-                            updatePaymentStatus("Paid", results);
-                            console.log("Payment Confirmed");
+                            updatePayment(clientRef, results?.comment, "Paid", results)
                             setIsLoading(false)
                             setIsPaymentConfirmed(true)
                         }
                         else {
-                            console.log("Error 01: Payment Failed");
-                            updatePaymentStatus("Payment Failed", results);
+                            updatePayment(clientRef, results?.comment, "Payment Failed", results)
                             setIsLoading(false)
                             setIsPaymentConfirmed(false)
                         }
@@ -113,14 +151,20 @@ function ConfirmPage() {
                     } else {
                         console.log("Error 02: Payment Failed");
                         setIsPaymentConfirmed(false)
+                        setIsError(null)
                     }
-                } else {
+
+                }
+                else {
                     console.log("Error 03: Payment Failed");
                     setIsPaymentConfirmed(false)
+                    setIsError(null)
                 }
+
             } catch (error) {
                 console.log("Error 04: Reqeust error");
                 console.log(error)
+                setIsError(null)
             }
         }
 
@@ -140,7 +184,7 @@ function ConfirmPage() {
                     </div>
                 </nav>
             </section>
-            {isLoading ? <PaymentProcessing /> : isPaymentConfirmed ? <PaymentConfirmed data={data} /> : <PaymentFailed data={data} />
+            {isLoading ? <PaymentProcessing /> : isError ? <SomethingWentWrong /> : isPaymentConfirmed ? <PaymentConfirmed data={data} /> : <PaymentFailed data={data} />
             }
         </>
     )

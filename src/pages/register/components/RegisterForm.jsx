@@ -7,12 +7,13 @@ import TermsModal from "./TermsModal";
 import { loadPaycorpPayment } from '../../../pay';
 import { packages } from "../packages";
 import { firestore } from "../../../firebase";
-import { collection, getDocs, query, where, addDoc } from "firebase/firestore";
+import { collection, getDocs, query, where, addDoc, doc, updateDoc, arrayUnion } from "firebase/firestore";
 import Loading from "../../../components/Loading";
+import SomethingWentWrong from "../../../components/SomethingWentWrong";
 
 
 
-const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef, setClientRef, comment, setComment, formData, sessions }) => {
+const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef, setClientRef, comment, setComment, formData, sessions, firstTime }) => {
 
   const EVENTS = {
     Full_package: false,
@@ -92,10 +93,8 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
       setEligbleForEarlyBird(true);
     }
 
-  }, [])
+  }, [sessions, type])
 
-
-  console.log("eventList: ", eventList);
 
   const handleAcceptTerms = (e) => {
     const value = e.target.checked;
@@ -108,6 +107,19 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
 
   const handleInputCheck = (e) => {
 
+    const trueCount = Object.values(eventList).filter(v => v === true).length
+    if (trueCount === 1 && eventList[e.target.name] === true) {
+      return
+    }
+
+    if (sessions.length === 0 && trueCount === 2 && eventList[e.target.name] === false) {
+      setEventList({
+        ...EVENTS,
+        Full_package: true
+      })
+      return
+    }
+
     if (e.target.name === "Full_package") {
       setIsFullPackage(e.target.checked);
       setEventList({
@@ -116,33 +128,26 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
       })
     } else {
       setIsFullPackage(false);
-      setEventList({
-        ...eventList,
-        Full_package: false,
-        [e.target.name]: e.target.checked
-      })
+      if (sessions.length === 0) {
+        setEventList({
+          ...eventList,
+          Full_package: false,
+          [e.target.name]: e.target.checked
+        })
+      } else {
+        setEventList({
+          ...eventList,
+          [e.target.name]: e.target.checked
+        })
+      }
     }
 
   }
 
   useEffect(() => {
-
-    if (selectedEvents.Inauguration && selectedEvents.Day_01 && selectedEvents.Day_02) {
-      setSelectedEvents({
-        ...EVENTS,
-        Full_package: true
-      })
-    }
-
-    if (!selectedEvents.Full_package && !selectedEvents.Inauguration && !selectedEvents.Day_01 && !selectedEvents.Day_02) {
-      setSelectedEvents({
-        ...EVENTS,
-        [type]: true
-      })
-    }
     let total = 0
-    for (const key in selectedEvents) {
-      if (selectedEvents[key] === true) {
+    for (const key in eventList) {
+      if (eventList[key] === true) {
         total += parseFloat(packages.find(p => p.key === key).price)
       }
     }
@@ -160,85 +165,136 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
     setNetTotal(total - d)
 
 
-  }, [selectedEvents])
+  }, [eventList, isMember, eligbleForEarlyBird])
 
+
+  const handlePaymentGatway = (cRef, comm) => {
+    if (netTotal > 0) {
+      setIsError(false);
+      const pgData = {
+        clientId: 14002485,
+        paymentAmount: parseInt(netTotal.toFixed(2) * 100),
+        currency: 'LKR',
+        // returnUrl: `https://${window.location.hostname}/payment-confirm`,
+        returnUrl: `http://127.0.0.1:5173/payment-confirm`,
+        clientRef: cRef,
+        comment: comm,
+      }
+      loadPaycorpPayment(pgData)
+    } else {
+      setIsError(true);
+    }
+
+  }
 
   const handlePayNow = async (e) => {
-    setIsLoading(true)
     e.preventDefault();
+    setIsLoading(true)
 
-    let registeredEvents = [
-      {
-        name: 'Inauguration',
-        isRegistered: selectedEvents.Inauguration
-      },
-      {
-        name: 'Day_01',
-        isRegistered: selectedEvents.Day_01
-      },
-      {
-        name: 'Day_02',
-        isRegistered: selectedEvents.Day_02
-      }
+    let fSessionData = [
+      { name: 'Inauguration', isRegistered: false },
+      { name: 'Day_01', isRegistered: false },
+      { name: 'Day_02', isRegistered: false },
     ]
 
-    if (selectedEvents.Full_package) {
-
-      for (let event in registeredEvents) {
-        registeredEvents[event].isRegistered = true
+    if (firstTime) {
+      // first time
+      if (eventList.Full_package) {
+        fSessionData = fSessionData.map(s => { return { ...s, isRegistered: true } })
+      } else {
+        fSessionData = fSessionData.map(s => {
+          if (eventList[s.name]) return { ...s, isRegistered: true }
+          else return s
+        })
       }
+    } else {
 
+      if (sessions.length > 0) fSessionData = sessions
+      fSessionData = fSessionData.map(s => {
+        if (eventList[s.name]) return { ...s, isRegistered: true }
+        else return s
+      })
     }
 
     const cRef = v4();
     const comm = `${formData.email}`
+    window.sessionStorage.setItem('NITC_REGISTRATION_WEB_APP_USER_REGISTERING_SESSIONS', JSON.stringify({
+      email: formData.email,
+      clientRef: cRef,
+      sessions: fSessionData,
+    }));
 
-    const docRef = await addDoc(collection(firestore, "users"),
-      {
-        firstName: formData.firstName,
-        lastName: formData.lastName,
-        email: formData.email,
-        nic: formData.nic,
-        organization: formData.organization ?? "",
-        address: formData.address,
-        contactNumber: formData.contactNumber,
-        isMember: isMember,
-        memberId: memberId ?? "",
-        conf_kit: 'not issued',
-        clientRef: cRef,
-        reg_sessions: registeredEvents,
-        securityStatus: "active"
-      });
-
-    if (docRef) {
-      // console.log("Document written with ID: ", docRef.id);
-      if (netTotal > 0) {
-        setIsError(false);
-        const pgData = {
-          clientId: 14002485,
-          paymentAmount: parseInt(netTotal.toFixed(2) * 100),
-          currency: 'LKR',
-          // returnUrl: `https://${window.location.hostname}/payment-confirm`,
-          returnUrl: `http://127.0.0.1:5173/payment-confirm`,
-          clientRef: cRef,
-          comment: comm,
-        }
-        loadPaycorpPayment(pgData)
-      } else {
-        setIsError(true);
+    if (firstTime) {
+      try {
+        await addDoc(collection(firestore, "users"),
+          {
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            nic: formData.nic,
+            organization: formData.organization ?? "",
+            address: formData.address,
+            contactNumber: formData.contactNumber,
+            isMember: isMember,
+            memberId: memberId ?? "",
+            conf_kit: 'not issued',
+            securityStatus: "inactive",
+            attempts: arrayUnion({
+              clientRef: cRef,
+              amount: netTotal,
+              timestamp: new Date().toLocaleString('en-US', { timeZone: 'Asia/Colombo' }),
+              eventList: Object.keys(eventList).filter(k => eventList[k] === true)
+            })
+          });
+        handlePaymentGatway(cRef, comm)
+      } catch (err) {
+        console.log(err);
+        setIsError(true)
       }
+
+
     } else {
-      // console.log("Document not written");
-      setIsError(true);
+
+      const userQuery = query(collection(firestore, "users"), where("email", "==", formData.email));
+      const querySnapshot = await getDocs(userQuery);
+      if (!querySnapshot.empty) {
+        const userDocRef = doc(firestore, "users", querySnapshot.docs[0].id);
+        try {
+          await updateDoc(userDocRef, {
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            nic: formData.nic,
+            organization: formData.organization ?? "",
+            address: formData.address,
+            contactNumber: formData.contactNumber,
+            isMember: isMember,
+            memberId: memberId ?? "",
+            attempts: arrayUnion({
+              clientRef: cRef,
+              amount: netTotal,
+              timestamp: new Date().toLocaleString('en-US', { timeZone: 'Asia/Colombo' }),
+              eventList: Object.keys(eventList).filter(k => eventList[k] === true)
+            })
+          })
+
+          handlePaymentGatway(cRef, comm)
+
+        } catch (error) {
+          console.log(error)
+          setIsError(true)
+        }
+
+      }
     }
-    setIsLoading(false);
+    setIsLoading(false)
   }
 
   return (
     <>
       {
         isError ? (
-          <h1>Something went wrong</h1>
+          <SomethingWentWrong />
         )
           :
           <>

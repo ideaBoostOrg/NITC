@@ -5,7 +5,7 @@ const PaymentFailed = () => {
 
     return (
         <>
-            <section id="" className="section-padding">
+            <section id="" className="section-padding notificaiton-pages">
                 <div className="confirm-container">
                     <XCircleFill className="icon" style={{
                         color: "#e61134"

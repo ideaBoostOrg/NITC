@@ -4,7 +4,7 @@ import { CreditCard } from "react-bootstrap-icons";
 /* eslint-disable react/no-unescaped-entities */
 function PaymentProcessing() {
     return (
-        <section id="" className="section-padding">
+        <section id="" className="section-padding notificaiton-pages">
             <div className="confirm-container payment-processing">
                 <div className="payment-processing-spinner-container">
                     <div className="payment-processing-spinner"></div>

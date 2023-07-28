@@ -20,7 +20,7 @@ const PaymentConfirmed = ({ data }) => {
 
     return (
         <>
-            <section id="" className="section-padding">
+            <section id="" className="section-padding notificaiton-pages">
                 <div className="confirm-container">
                     <CheckCircleFill className="icon" />
                     <h2>Payment Confirmed !</h2>

@@ -7,7 +7,7 @@ import { CheckCircleFill } from "react-bootstrap-icons";
 import { XCircleFill } from "react-bootstrap-icons";
 import logo from "../../../assets/img/logo-crop.png";
 
-function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsCheckout, setFormData, setSessions }) {
+function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsCheckout, setFormData, setSessions, setFirstTime }) {
 
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
@@ -166,17 +166,19 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
         const q = query(collection(firestore, "users"), where("email", "==", email))
         const querySnapshot = await getDocs(q)
         if (querySnapshot.docs.length > 0) {
+            setFirstTime(false)
             const user = querySnapshot.docs[0].data()
-            const reg_sessions = user.reg_sessions
+            const reg_sessions = user.reg_sessions ?? []
             setSessions(reg_sessions)
             const unRegisteredSessions = reg_sessions.filter(session => session.isRegistered === false)
-            if (unRegisteredSessions.length < 1) {
+            if (reg_sessions.length > 0 && unRegisteredSessions.length < 1) {
                 setIsEmailValid(false)
             } else {
                 setIsEmailValid(true)
 
             }
         } else {
+            setFirstTime(true)
             setSessions([])
             setIsEmailValid(true)
         }
