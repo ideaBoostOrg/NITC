@@ -82,10 +82,6 @@ function ConfirmPage() {
                 const response = await axios.post(url, {
                     clientRef: clientRef,
                     reqId: reqid
-                }, {
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
                 })
 
                 const responseString = response.data
@@ -96,19 +92,18 @@ function ConfirmPage() {
                     results[key] = value
                 })
 
-                // console.table(results)
+                console.table(results)
                 if (results) {
-                    // console.log(results);
 
                     if (results?.responseCode) {
                         if (results?.responseCode === "00" && results?.clientRef === clientRef) {
-                            updatePaymentStatus("Paid", results);
+                            // updatePaymentStatus("Paid", results);
                             setIsLoading(false)
                             setIsPaymentConfirmed(true)
                         }
                         else {
                             console.log("Error 01: Payment Failed");
-                            updatePaymentStatus("Payment Failed", results);
+                            // updatePaymentStatus("Payment Failed", results);
                             setIsLoading(false)
                             setIsPaymentConfirmed(false)
                         }
