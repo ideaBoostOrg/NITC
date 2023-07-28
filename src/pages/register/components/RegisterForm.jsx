@@ -47,18 +47,40 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
   const [isError, setIsError] = useState(false);
 
   //----
-  const [eventList, setEventList] = useState(EVENTS_LIST);
+  const [eventList, setEventList] = useState(EVENTS);
+
+  const registeredSessions = sessions.filter(s => s.isRegistered);
 
   useEffect(() => {
-    console.log("sessions: ", sessions);
+    // console.log("sessions: ", sessions);
 
     if (sessions.length > 0) {
-
-      const
-
       // not first time
+
+      const newEvents = {}
+      sessions.forEach(s => {
+        if (!s.isRegistered)
+          newEvents[s.name] = false
+      })
+
+      if (type in newEvents) {
+        setEventList({
+          ...newEvents,
+          [type]: true
+        })
+      } else {
+        setEventList({
+          ...newEvents,
+          [Object.keys(newEvents)[0]]: true
+        })
+      }
+
     } else {
       //first time
+      setEventList({
+        ...EVENTS,
+        [type]: true
+      })
     }
 
     const EarlyBirdDate = new Date('2023-08-26');
@@ -71,6 +93,8 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
 
   }, [])
 
+
+  console.log("eventList: ", eventList);
 
   const handleAcceptTerms = (e) => {
     const value = e.target.checked;
@@ -85,7 +109,7 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
     if (e.target.name === "Full_package") {
       setIsFullPackage(e.target.checked);
       setSelectedEvents({
-        ...events,
+        ...EVENTS,
         Full_package: true
       })
     } else {
@@ -224,31 +248,46 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
               <div className="container">
                 <div className="row">
                   <div className="col-md-12 col-sm-12 col-lg-6 pdt-50 pdr-50">
+                    <h5>Tickets</h5>
+                    <p>
+                      You have already registered for
+                      {
+                        registeredSessions.length > 0 && (
+                          registeredSessions.map((session, index) => {
+                            return (
+                              <span key={index}> {session.name}{index === -1 ? "," : ""}</span>
+                            )
+                          })
+                        )
+                      }</p>
                     <div className="package-container">
                       {
                         packages.map((pack, index) => {
-                          return (
-                            <div key={index} className="package-box">
-                              <input id={pack.key} type="checkbox" name={pack.key} value={pack.key} onChange={handleInputCheck} checked={selectedEvents[pack.key]}></input>
-                              <label htmlFor={pack.key}
-                                className="package"
-                              >
-                                <div className="package-heading">
-                                  <h4 >{pack.name}</h4>
-                                  <div className="package-price">
-                                    <p><span className="lkr">{pack.currency}</span>  {pack.price}</p>
+                          if (pack.key in eventList) {
+                            console.log("yes");
+                            return (
+                              <div key={index} className="package-box">
+                                <input id={pack.key} type="checkbox" name={pack.key} value={pack.key} onChange={handleInputCheck} checked={selectedEvents[pack.key]}></input>
+                                <label htmlFor={pack.key}
+                                  className="package"
+                                >
+                                  <div className="package-heading">
+                                    <h4 >{pack.name}</h4>
+                                    <div className="package-price">
+                                      <p><span className="lkr">{pack.currency}</span>  {pack.price}</p>
+                                    </div>
                                   </div>
-                                </div>
-                                <div className="package-features">
-                                  {pack.features.map((feature, index) => {
-                                    return (
-                                      <span key={index}>{feature}</span>
-                                    )
-                                  })}
-                                </div>
-                              </label>
-                            </div>
-                          )
+                                  <div className="package-features">
+                                    {pack.features.map((feature, index) => {
+                                      return (
+                                        <span key={index}>{feature}</span>
+                                      )
+                                    })}
+                                  </div>
+                                </label>
+                              </div>
+                            )
+                          }
                         })
                       }
                     </div>
