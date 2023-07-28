@@ -12,14 +12,22 @@ import Loading from "../../../components/Loading";
 
 
 
-const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef, setClientRef, comment, setComment, formData }) => {
+const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef, setClientRef, comment, setComment, formData, sessions }) => {
 
-  const events = {
+  const EVENTS = {
     Full_package: false,
     Inauguration: false,
     Day_01: false,
     Day_02: false,
   }
+
+  const EVENT_LIST = [
+    { name: 'Full_package', isRegistered: false },
+    { name: 'Inauguration', isRegistered: false },
+    { name: 'Day_01', isRegistered: false },
+    { name: 'Day_02', isRegistered: false },
+  ]
+
 
   const [searchParams] = useSearchParams();
   const type = searchParams.get('type');
@@ -32,17 +40,26 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
   const [netTotal, setNetTotal] = useState(0);
 
   const [eligbleForEarlyBird, setEligbleForEarlyBird] = useState(true);
-  const [selectedEvents, setSelectedEvents] = useState(events)
+  const [selectedEvents, setSelectedEvents] = useState(EVENTS)
   const [isFullPackage, setIsFullPackage] = useState(false);
 
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
+  //----
+  const [eventList, setEventList] = useState(EVENTS_LIST);
+
   useEffect(() => {
-    setSelectedEvents({
-      ...events,
-      [type]: true
-    })
+    console.log("sessions: ", sessions);
+
+    if (sessions.length > 0) {
+
+      const
+
+      // not first time
+    } else {
+      //first time
+    }
 
     const EarlyBirdDate = new Date('2023-08-26');
     const today = new Date();
@@ -86,14 +103,14 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
 
     if (selectedEvents.Inauguration && selectedEvents.Day_01 && selectedEvents.Day_02) {
       setSelectedEvents({
-        ...events,
+        ...EVENTS,
         Full_package: true
       })
     }
 
     if (!selectedEvents.Full_package && !selectedEvents.Inauguration && !selectedEvents.Day_01 && !selectedEvents.Day_02) {
       setSelectedEvents({
-        ...events,
+        ...EVENTS,
         [type]: true
       })
     }
@@ -177,8 +194,8 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
           clientId: 14002485,
           paymentAmount: parseInt(netTotal.toFixed(2) * 100),
           currency: 'LKR',
-          returnUrl: `https://${window.location.hostname}/payment-confirm`,
-          // returnUrl: `http://127.0.0.1:5173/payment-confirm`,
+          // returnUrl: `https://${window.location.hostname}/payment-confirm`,
+          returnUrl: `http://127.0.0.1:5173/payment-confirm`,
           clientRef: cRef,
           comment: comm,
         }
