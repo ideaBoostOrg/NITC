@@ -48,7 +48,7 @@ function Sponsors() {
                   textAlign: "center",
                   marginTop: "20px",
                   marginBottom: "20px",
-                  fontSize: "1.4rem",
+                  fontSize: "1rem",
                 }}
               >
                 Diamond sponsors
@@ -66,7 +66,7 @@ function Sponsors() {
                   textAlign: "center",
                   marginTop: "40px",
                   marginBottom: "20px",
-                  fontSize: "1.4rem",
+                  fontSize: "1rem",
                 }}
               >
                 Platinum sponsors
@@ -82,7 +82,7 @@ function Sponsors() {
                   textAlign: "center",
                   marginTop: "40px",
                   marginBottom: "20px",
-                  fontSize: "1.4rem",
+                  fontSize: "1rem",
                 }}
               >
                 Gold sponsors
@@ -115,7 +115,7 @@ function Sponsors() {
                   textAlign: "center",
                   marginTop: "40px",
                   marginBottom: "20px",
-                  fontSize: "1.4rem",
+                  fontSize: "1rem",
                 }}
               >
                 Partners sponsors
