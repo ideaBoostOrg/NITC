@@ -3109,7 +3109,7 @@ footer {
 .cssl-member-box {
   /* gap: 1rem; */
   min-height: 100px;
-  margin-top: 30px;
+  margin-top: 20px;
   padding-bottom: 1rem;
   border-bottom: 1px solid #ccc;
 }
@@ -3279,7 +3279,7 @@ footer {
 }
 
 .f-input {
-  height: 36px;
+  height: 32px;
   border-radius: 5px;
   border: 1px solid #ccc;
   flex: 1;
@@ -3648,7 +3648,7 @@ footer {
 
 
 .form-footer {
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .form-footer p {

@@ -335,10 +335,10 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
           <>
             {isLoading && <Loading />}
             <TermsModal isOpen={termsModalOpen} onClose={setTermsModalOpen} setAcceptTerm={setAcceptTerm} />
-            <section id="register-form" className="section-padding">
+            <section id="register-form" className="section-padding" style={{ margin: "30px 10px", padding: "0" }}>
               <div className="container">
                 <div className="row">
-                  <div className="col-md-12 col-sm-12 col-lg-6 pdt-50 pdr-50">
+                  <div className="col-md-12 col-sm-12 col-lg-7 pdt-50 pdr-50">
                     <div className="ticket-heading">
                       <h5 style={{ fontSize: "1.2rem" }}>
                         Tickets
@@ -389,7 +389,7 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
                       }
                     </div>
                   </div>
-                  <div className="col-lg-6 col-md-12">
+                  <div className="col-lg-5 col-md-12">
 
                     <div className="content">
                       <div className="content-row">

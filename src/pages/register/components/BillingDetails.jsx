@@ -222,31 +222,33 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
 
     return (
         <>
-            <section className="section-padding">
+            <section className="section-padding" style={{ margin: "30px 10px", padding: "0" }}>
                 <div className="container">
-                    <h5 style={{ fontSize: "22px", marginBottom: "20px" }}>
-                        Billing details
-                    </h5>
                     <div className="cssl-member-box row">
                         <div className="col-lg-6 col-sm-12">
-                            <div className="form-check">
-                                <input
-                                    className="form-check-input"
-                                    type="checkbox"
-                                    onChange={handleCheckbox}
-                                    value=""
-                                    id="csslMemberCheck"
-                                />
-                                <label
-                                    className="form-check-label"
-                                    htmlFor="csslMemberCheck"
-                                >
-                                    I&apos;m a CSSL member.
-                                </label>
+                            <h5 style={{ fontSize: "20px", marginBottom: "20px" }}>
+                                Billing details
+                            </h5>
+                            <div className="">
+                                <div className="form-check">
+                                    <input
+                                        className="form-check-input"
+                                        type="checkbox"
+                                        onChange={handleCheckbox}
+                                        value=""
+                                        id="csslMemberCheck"
+                                    />
+                                    <label
+                                        className="form-check-label"
+                                        htmlFor="csslMemberCheck"
+                                    >
+                                        I&apos;m a CSSL member.
+                                    </label>
+                                </div>
+                                <span className="" style={{ color: "gray" }}>
+                                    If you are a CSSL member, you will receive a 20% discount.
+                                </span>
                             </div>
-                            <span className="" style={{ color: "gray" }}>
-                                If you are a CSSL member, you will receive a 20% discount.
-                            </span>
                         </div>
                         {isMember && (
                             <div className="col-lg-6 col-sm-12">
