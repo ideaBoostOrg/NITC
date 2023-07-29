@@ -51,10 +51,21 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
   const [eventList, setEventList] = useState(EVENTS);
 
   const registeredSessions = sessions.filter(s => s.isRegistered);
+  const falseCount = sessions.filter(s => !s.isRegistered).length;
 
   useEffect(() => {
 
-    if (sessions.length > 0) {
+
+
+    if (sessions.length === 0 || falseCount === 3) {
+      //first time
+      setEventList({
+        ...EVENTS,
+        [type]: true
+      })
+
+      window.sessionStorage.setItem('NITC_REGISTRATION_WEB_APP_USER_FIRST_TIME', JSON.stringify(true));
+    } else {
       // not first time
       const newEvents = {}
       sessions.forEach(s => {
@@ -74,16 +85,40 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
         })
       }
       window.sessionStorage.setItem('NITC_REGISTRATION_WEB_APP_USER_FIRST_TIME', JSON.stringify(false));
-
-    } else {
-      //first time
-      setEventList({
-        ...EVENTS,
-        [type]: true
-      })
-
-      window.sessionStorage.setItem('NITC_REGISTRATION_WEB_APP_USER_FIRST_TIME', JSON.stringify(true));
     }
+
+
+
+    // if (sessions.length > 0) {
+    //   // not first time
+    //   const newEvents = {}
+    //   sessions.forEach(s => {
+    //     if (!s.isRegistered)
+    //       newEvents[s.name] = false
+    //   })
+
+    //   if (type in newEvents) {
+    //     setEventList({
+    //       ...newEvents,
+    //       [type]: true
+    //     })
+    //   } else {
+    //     setEventList({
+    //       ...newEvents,
+    //       [Object.keys(newEvents)[0]]: true
+    //     })
+    //   }
+    //   window.sessionStorage.setItem('NITC_REGISTRATION_WEB_APP_USER_FIRST_TIME', JSON.stringify(false));
+
+    // } else {
+    //   //first time
+    //   setEventList({
+    //     ...EVENTS,
+    //     [type]: true
+    //   })
+
+    //   window.sessionStorage.setItem('NITC_REGISTRATION_WEB_APP_USER_FIRST_TIME', JSON.stringify(true));
+    // }
 
     const EarlyBirdDate = new Date('2023-08-26');
     const today = new Date();
@@ -112,7 +147,7 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
       return
     }
 
-    if (sessions.length === 0 && trueCount === 2 && eventList[e.target.name] === false) {
+    if ((sessions.length === 0 || falseCount === 3) && trueCount === 2 && eventList[e.target.name] === false) {
       setEventList({
         ...EVENTS,
         Full_package: true
@@ -128,7 +163,7 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
       })
     } else {
       setIsFullPackage(false);
-      if (sessions.length === 0) {
+      if (sessions.length === 0 || falseCount === 3) {
         setEventList({
           ...eventList,
           Full_package: false,
