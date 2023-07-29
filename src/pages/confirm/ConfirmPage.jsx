@@ -91,7 +91,7 @@ function ConfirmPage() {
                 const userDoc = doc(firestore, "users", userQuerySnapshot.docs[0].id)
                 const userData = userQuerySnapshot.docs[0].data()
 
-                let userSessions = userData.reg_sessions ?? [
+                let userSessions = userData.regSessions ?? [
                     { name: 'Inauguration', isRegistered: false },
                     { name: 'Day_01', isRegistered: false },
                     { name: 'Day_02', isRegistered: false },
