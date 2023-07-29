@@ -2,7 +2,6 @@
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
 import { useSearchParams } from 'react-router-dom';
-import { v4 } from 'uuid';
 import TermsModal from "./TermsModal";
 import { loadPaycorpPayment } from '../../../pay';
 import { packages } from "../packages";
@@ -10,7 +9,7 @@ import { firestore } from "../../../firebase";
 import { collection, getDocs, query, where, addDoc, doc, updateDoc, arrayUnion } from "firebase/firestore";
 import Loading from "../../../components/Loading";
 import SomethingWentWrong from "../../../components/SomethingWentWrong";
-
+import cryptoRandomString from 'crypto-random-string';
 
 
 const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef, setClientRef, comment, setComment, formData, sessions, firstTime }) => {
@@ -251,7 +250,7 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
       })
     }
 
-    const cRef = v4();
+    const cRef = cryptoRandomString({ length: 20, type: 'numeric' })
     const comm = `${formData.email}`
     window.sessionStorage.setItem('NITC_REGISTRATION_WEB_APP_USER_REGISTERING_SESSIONS', JSON.stringify({
       email: formData.email,
