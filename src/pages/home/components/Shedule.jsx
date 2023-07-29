@@ -50,7 +50,7 @@ function Shedule() {
                     <h4>Inauguration</h4>
                     <h5>11<sup>th</sup> October 2023</h5>
                     <h5>
-                      6.00 PM onwards
+                      5.00 PM onwards
                     </h5>
                   </div>
                 </a>

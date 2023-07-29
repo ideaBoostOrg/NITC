@@ -1,9 +1,6 @@
 function Shedule_day_01() {
   return (
-    <section
-      id="shedule_day_01"
-      className=""
-    >
+    <section id="shedule_day_01" className="">
       <div className="container">
         <div className="moblie-title">
           <h4>Inaguration</h4>
@@ -17,34 +14,33 @@ function Shedule_day_01() {
             >
               <div className="schedule-tab-content col-12 clearfix">
                 <div className="tab-content" id="myTabContent">
-                  <div className="tab-pane fade show active" >
-
+                  <div className="tab-pane fade show active">
                     <div className="schedule-card">
                       <div className="schedule-slot-time">
-                        <span> 6 PM Onwards</span>
+                        <span> 5 PM Onwards</span>
                       </div>
-                      <div className="schedule-card-content" >
-                        <div className="schedule-card-header" >
+                      <div className="schedule-card-content">
+                        <div className="schedule-card-header">
                           <h4>Chief Guest & Guest of Hounour</h4>
                         </div>
                         <div className="schedule-card-body">
                           <span>
-                            Address by the Chief Guest - Head of State
+                            Addressed by Guest of honor - State Minister of IT
                           </span>
                           <br />
-                          <span>
+                          {/* <span>
                             Address by the Chief Guest - State Minister of IT
-                          </span>
+                          </span> */}
                         </div>
                       </div>
                     </div>
 
                     <div className="schedule-card">
                       <div className="schedule-slot-time">
-                        <span> 6 PM Onwards</span>
+                        <span> 5 PM Onwards</span>
                       </div>
-                      <div className="schedule-card-content" >
-                        <div className="schedule-card-header" >
+                      <div className="schedule-card-content">
+                        <div className="schedule-card-header">
                           <h4>Audience</h4>
                         </div>
                         <div className="schedule-card-body">
@@ -66,16 +62,16 @@ function Shedule_day_01() {
                       <div className="schedule-slot-time">
                         <span> 6 PM Onwards</span>
                       </div>
-                      <div className="schedule-card-content" >
-                        <div className="schedule-card-header"  >
+                      <div className="schedule-card-content">
+                        <div className="schedule-card-header">
                           <h4>Keynote Speech</h4>
                         </div>
                         <div className="schedule-card-body">
                           <span>Global Digital Thought Leader</span>
                           <br />
                           <span>
-                            (Successful founder of a top global cooperation or
-                            a President/CEO of a Tech MNC)
+                            (Successful founder of a top global cooperation or a
+                            President/CEO of a Tech MNC)
                           </span>
                         </div>
                       </div>
@@ -85,8 +81,8 @@ function Shedule_day_01() {
                       <div className="schedule-slot-time">
                         <span> 6 PM Onwards</span>
                       </div>
-                      <div className="schedule-card-content"  >
-                        <div className="schedule-card-header" >
+                      <div className="schedule-card-content">
+                        <div className="schedule-card-header">
                           <h4>CSSL National ICT Awards</h4>
                         </div>
                         <div className="schedule-card-body">
@@ -105,8 +101,8 @@ function Shedule_day_01() {
                       <div className="schedule-slot-time">
                         <span> 6 PM Onwards</span>
                       </div>
-                      <div className="schedule-card-content" >
-                        <div className="schedule-card-header" >
+                      <div className="schedule-card-content">
+                        <div className="schedule-card-header">
                           <h4>Gala Dinner</h4>
                         </div>
                         {/* <div className="schedule-card-body">

@@ -1,7 +1,7 @@
 import logo_1 from "../../../assets/img/partners/ACM.png";
-import logo_2 from "../../../assets/img/partners/ACS.png";
-import logo_3 from "../../../assets/img/partners/BCS.png";
-import logo_4 from "../../../assets/img/partners/FITTIS.png";
+import logo_3 from "../../../assets/img/partners/ACS.png";
+import logo_4 from "../../../assets/img/partners/BCS.png";
+import logo_2 from "../../../assets/img/partners/FITTIS.png";
 import logo_5 from "../../../assets/img/partners/IESL.png";
 import logo_6 from "../../../assets/img/partners/IET.png";
 import logo_7 from "../../../assets/img/partners/ISACA.png";
@@ -21,7 +21,7 @@ function Partners() {
                 style={{ color: "#212121" }}
                 data-wow-delay="0.2s"
               >
-                Partners
+                Supported by
               </h2>
               <p className="wow fadeInDown" data-wow-delay="0.2s">
                 A heartfelt appreciation to our esteemed partners, whose
@@ -41,22 +41,22 @@ function Partners() {
                 <img src={logo_1} style={{ width: 80, height: 60 }} alt="" />
               </span>
               <span className="partner-logo">
-                <img src={logo_2} style={{ width: 70, height: 60 }} alt="" />
+                <img src={logo_2} style={{ width: 90, height: 60 }} alt="" />
               </span>
               <span className="partner-logo">
-                <img src={logo_3} style={{ width: 80, height: 80 }} alt="" />
+                <img src={logo_3} style={{ width: 60, height: 60 }} alt="" />
               </span>
               <span className="partner-logo">
-                <img src={logo_4} style={{ width: 90, height: 60 }} alt="" />
+                <img src={logo_4} style={{ width: 70, height: 50 }} alt="" />
               </span>
               <span className="partner-logo">
                 <img src={logo_5} style={{ width: 100, height: 50 }} alt="" />
               </span>
               <span className="partner-logo">
-                <img src={logo_6} style={{ width: 100, height: 40 }} alt="" />
+                <img src={logo_6} style={{ width: 80, height: 30 }} alt="" />
               </span>
               <span className="partner-logo">
-                <img src={logo_7} style={{ width: 80, height: 40 }} alt="" />
+                <img src={logo_7} style={{ width: 100, height: 60 }} alt="" />
               </span>
               {/* <span className="partner-logo">
                 <img src={logo_8} style={{ width: 60, height: 70 }} alt="" />

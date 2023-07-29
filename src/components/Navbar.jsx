@@ -178,7 +178,7 @@ function Navbar() {
                 smooth={true}
                 onClick={() => setIsOpen(false)}
               >
-                DIGI-ECON
+                DIGIECON
               </SLink>
             </li>
             <li className="nav-item">

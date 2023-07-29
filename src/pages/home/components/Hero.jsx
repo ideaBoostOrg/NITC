@@ -38,13 +38,16 @@ function Hero() {
               <div className="icon">
                 <i className="lni-mic"></i>
               </div>
-              <p className="banner-info text-center">
-                11<sup>th</sup> - 13<sup>th</sup> of Oct 2023, Shangri-La Hotel, Colombo, Sri-Lanka
-              </p>
+              <span className="banner-info" style={{ textAlign: "cetnter" }}>
+                11<sup>th</sup> - 13<sup>th</sup> of Oct 2023, Shangri-La Hotel,
+                Colombo, Sri-Lanka
+              </span>
               <h2 className="head-title">National IT Conference</h2>
-              <p className="banner-desc text-center">
-                Unlock the Early Bird Discount and save 10% until the 25<sup>th</sup> of
-                August!
+              <h4>NITC 2023</h4>
+              <h5 style={{fontWeight:"500"}}>Towards Sustainable Digital Society</h5>
+              <p className="banner-desc">
+                Unlock the Early Bird Discount and save 10% until the 25
+                <sup>th</sup> of August!
               </p>
               <div className="banner-btn">
                 <Link

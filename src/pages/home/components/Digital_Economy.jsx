@@ -1,6 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import Awards from "../../../assets/img/Digital_economy.png";
+import DIGIECON_logo from "../../../assets/img/DIGIECON_LOGO.png";
+
 
 function Digital_economy() {
   return (
@@ -12,10 +14,21 @@ function Digital_economy() {
         <div className="row">
           <div className="col-12">
             <div className="section-title-header text-center">
-              <h2 className="section-title wow fadeInUp" data-wow-delay="0.2s">
-                DIGI-ECON
-              </h2>
-              <p className="wow fadeInDown mb-4" data-wow-delay="0.2s">
+              <span
+                className="section-title wow fadeInUp DIGIECON_logo"
+                data-wow-delay="0.2s"
+              >
+                <span className="img-thumb">
+                  <img
+                    className=""
+                    src={DIGIECON_logo}
+                    alt=""
+                    style={{ width: 50, height: 50, marginRight: 10 }}
+                  />
+                </span>
+                <span>DIGIECON</span>
+              </span>
+              <p className="wow fadeInDown" data-wow-delay="0.2s">
                 Empower Your Business with Digital Economy Insights: Harness
                 Growth Opportunities at the <br />
                 Digital Economy Summit
@@ -50,7 +63,7 @@ function Digital_economy() {
               style={{ alignItems: "center", justifyContent: "center" }}
             >
               <a
-                href="https://digiecon2030.lk/"
+                href="https://shorturl.at/efyJ4"
                 className="btn btn-common"
                 id="view_more_btn"
               >
