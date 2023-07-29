@@ -210,8 +210,8 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
         clientId: 14002485,
         paymentAmount: parseInt(netTotal.toFixed(2) * 100),
         currency: 'LKR',
-        returnUrl: `https://${window.location.hostname}/payment-confirm`,
-        // returnUrl: `http://127.0.0.1:5173/payment-confirm`,
+        // returnUrl: `https://${window.location.hostname}/payment-confirm`,
+        returnUrl: `http://127.0.0.1:5173/payment-confirm`,
         clientRef: cRef,
         comment: comm,
       }
@@ -232,7 +232,7 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
       { name: 'Day_02', isRegistered: false },
     ]
 
-    if (firstTime) {
+    if (sessions.length === 0 || falseCount === 3) {
       // first time
       if (eventList.Full_package) {
         fSessionData = fSessionData.map(s => { return { ...s, isRegistered: true } })

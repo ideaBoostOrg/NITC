@@ -580,6 +580,7 @@ a.back-to-top:focus {
 }
 
 .section-padding {
+  padding: 0 20px;
   margin-top: 30px;
 }
 
@@ -3932,15 +3933,12 @@ p {
 }
 
 .alert-row {
-  position: relative;
+  /* position: relative; */
 }
 
 .double-check-alert {
-  font-size: 0.7rem;
-  color: #af992c;
-  position: absolute;
-  top: 0;
-  right: 0;
+  font-size: 0.8rem;
+  color: #856f03;
 }
 
 
@@ -3959,3 +3957,17 @@ p {
 .notificaiton-pages {
   padding: 0 2rem;
 }
+
+
+.next-btn {
+  width: 120px;
+  padding: 0.5rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .next-btn {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+}
+

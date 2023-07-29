@@ -31,14 +31,14 @@ function ConfirmPage() {
         const sendEmail = (data) => {
             axios.post('https://api.imanage.services/api/api/nitc', data)
                 .then(Response => {
-                    // console.table(Response.data);
+                    // console.table("email", Response.data);
                 })
                 .catch((error) => {
                     console.log(error);
                 })
         }
 
-        const updateTicketCount = async (memberId) => {
+        const updateTicketCount = async (memberId, userSessions) => {
             try {
                 const memberCollection = collection(firestore, "members")
                 const memberQuery = query(memberCollection, where("memNo", "==", memberId))
@@ -50,12 +50,11 @@ function ConfirmPage() {
                 }
 
                 const memberDoc = doc(firestore, "members", memberQuerySnapshot.docs[0].id)
-                const memberData = memberQuerySnapshot.docs[0].data()
 
-                const ticketCount = memberData.ticketCount ?? 0
+                const ticketCount = userSessions.filter(session => session.isRegistered).length
 
                 await updateDoc(memberDoc, {
-                    ticketCount: ticketCount + 1
+                    ticketCount: ticketCount
                 })
 
                 console.log("Ticket Count Updated");
@@ -121,8 +120,9 @@ function ConfirmPage() {
 
                 if (status === "Paid") {
                     if (userData?.memberId) {
-                        updateTicketCount(userData.memberId)
+                        updateTicketCount(userData.memberId, userSessions)
                     }
+
                     sendEmail({
                         firstName: userData?.firstName,
                         lastName: userData?.lastName,
@@ -166,7 +166,8 @@ function ConfirmPage() {
                         results[key] = value
                     })
                     if (results?.responseCode) {
-
+                        setData(results)
+                        setIsError(false)
                         if (results?.responseCode === "00" && results?.clientRef === clientRef) {
                             updatePayment(clientRef, results?.comment, "Paid", results)
                             setIsLoading(false)
@@ -181,20 +182,22 @@ function ConfirmPage() {
                     } else {
                         console.log("Error 02: Payment Failed");
                         setIsPaymentConfirmed(false)
-                        setIsError(null)
+                        setIsLoading(false)
+                        setIsError(true)
                     }
 
                 }
                 else {
                     console.log("Error 03: Payment Failed");
                     setIsPaymentConfirmed(false)
-                    setIsError(null)
+                    setIsLoading(false)
+                    setIsError(true)
                 }
 
             } catch (error) {
                 console.log("Error 04: Reqeust error");
                 console.log(error)
-                setIsError(null)
+                setIsError(true)
             }
         }
 

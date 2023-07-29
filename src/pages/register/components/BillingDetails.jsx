@@ -42,7 +42,7 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
             const member = querySnapshot.docs[0].data();
 
             if (member.ticketCount >= 3) {
-                setErrorMsg("You have bought maximum number of tickets with this member ID");
+                setErrorMsg("You have bought the maximum number of tickets with this member ID.");
                 setBtnState("not-verified");
                 return;
             }
@@ -324,10 +324,13 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                                         // isEmailValidating === null ? "" :
                                         //     isEmailValid === null ? inputError && <span className="input-error">This field is required</span> :
                                         //         isEmailValid ? "" : <span className="input-error">Email already in use.</span>
-                                        isEmailValidating === null ? inputError && <span className="input-error">This field is required</span> :
-                                            isEmailValidating ? "" : isEmailValid ? "" : <span className="input-error">Email already in use.</span>
+                                        isEmailValidating === null ? inputError ? <span className="input-error">This field is required</span> :
+                                            <span className="input-error double-check-alert">Please, double-check your email before proceeding.</span> :
+                                            isEmailValidating ? <span className="input-error double-check-alert">Please, double-check your email before proceeding.</span> :
+                                                isEmailValid ? <span className="input-error double-check-alert">Please, double-check your email before proceeding.</span> :
+                                                    <span className="input-error">Email already in use.</span>
                                     }
-                                    <span className="double-check-alert">Please, double-check your email address.</span>
+                                    {/* <span className="double-check-alert">Please, double-check your email.</span> */}
                                 </div>
                                 <div className="input-validate">
                                     <input required
@@ -424,7 +427,7 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                         </div>
                         <div className="form-group d-flex justify-content-end">
                             <button
-                                className="submit-btn"
+                                className="submit-btn next-btn"
                                 onClick={(e) => {
                                     e.preventDefault();
                                     handleNext()
