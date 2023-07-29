@@ -158,7 +158,6 @@ function Sponsors(){
             </div>
           </div>
         </div>
-      </div>
     </section>
   );
 }
