@@ -47,11 +47,11 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                 return;
             }
 
-            handleValidateEmail(member.email)
+            // handleValidateEmail(member.email)
             handleValidateNic(member.nic)
             setFirstName(member.firstName ?? "");
             setLastName(member.lastName ?? "");
-            setEmail(member.email ?? "");
+            // setEmail(member.email ?? "");
             setNic(member.nic ?? "");
             setOrganization(member.organization ?? "");
             setAddress(member.address ?? "");
@@ -326,10 +326,9 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                                         // isEmailValidating === null ? "" :
                                         //     isEmailValid === null ? inputError && <span className="input-error">This field is required</span> :
                                         //         isEmailValid ? "" : <span className="input-error">Email already in use.</span>
-                                        isEmailValidating === null ? inputError ? <span className="input-error">This field is required</span> :
-                                            <span className="input-error double-check-alert">Please, double-check your email before proceeding.</span> :
-                                            isEmailValidating ? <span className="input-error double-check-alert">Please, double-check your email before proceeding.</span> :
-                                                isEmailValid ? <span className="input-error double-check-alert">Please, double-check your email before proceeding.</span> :
+                                        isEmailValidating === null ? inputError && <span className="input-error">This field is required</span> :
+                                            isEmailValidating ? "" :
+                                                isEmailValid ? "" :
                                                     <span className="input-error">Email already in use.</span>
                                     }
                                     {/* <span className="double-check-alert">Please, double-check your email.</span> */}

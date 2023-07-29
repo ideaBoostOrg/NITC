@@ -16,7 +16,7 @@ const PaymentConfirmed = ({ data }) => {
         setIsCopied(true)
     }
 
-    console.log(data.clientRef);
+    // console.log(data.clientRef);
 
     return (
         <>
