@@ -113,7 +113,7 @@ function ConfirmPage() {
                         status: status,
                         timestamp: new Date().toLocaleString('en-US', { timeZone: 'Asia/Colombo' }),
                     }),
-                    reg_sessions: userSessions,
+                    regSessions: userSessions,
                     securityStatus: securityStatus,
 
                 })
