@@ -272,7 +272,7 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
             contactNumber: formData.contactNumber,
             isMember: isMember,
             memberId: memberId ?? "",
-            conf_kit: 'not issued',
+            confKit: 'not issued',
             securityStatus: "inactive",
             attempts: arrayUnion({
               clientRef: cRef,
