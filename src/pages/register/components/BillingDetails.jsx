@@ -40,6 +40,13 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
 
         if (querySnapshot.docs.length > 0) {
             const member = querySnapshot.docs[0].data();
+
+            if (member.ticketCount >= 3) {
+                setErrorMsg("You have bought maximum number of tickets with this member ID");
+                setBtnState("not-verified");
+                return;
+            }
+
             handleValidateEmail(member.email)
             handleValidateNic(member.nic)
             setFirstName(member.firstName ?? "");
@@ -49,14 +56,6 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
             setOrganization(member.organization ?? "");
             setAddress(member.address ?? "");
 
-            const tq = query(collection(firestore, "tickets"), where("memNo", "==", memberId));
-            const ticketQuerySnapshot = await getDocs(tq);
-
-            if (ticketQuerySnapshot.docs.length > 0) {
-                setErrorMsg("You have already registered for the conference");
-                setBtnState("not-verified");
-                return;
-            }
             setBtnState("verified");
         } else {
             setBtnState("not-verified");

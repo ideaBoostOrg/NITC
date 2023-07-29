@@ -38,6 +38,33 @@ function ConfirmPage() {
                 })
         }
 
+        const updateTicketCount = async (memberId) => {
+            try {
+                const memberCollection = collection(firestore, "members")
+                const memberQuery = query(memberCollection, where("memNo", "==", memberId))
+                const memberQuerySnapshot = await getDocs(memberQuery)
+
+                if (memberQuerySnapshot.empty) {
+                    // setIsError(true)
+                    return
+                }
+
+                const memberDoc = doc(firestore, "members", memberQuerySnapshot.docs[0].id)
+                const memberData = memberQuerySnapshot.docs[0].data()
+
+                const ticketCount = memberData.ticketCount ?? 0
+
+                await updateDoc(memberDoc, {
+                    ticketCount: ticketCount + 1
+                })
+
+                console.log("Ticket Count Updated");
+
+            } catch (err) {
+                // setIsError(true)
+                console.log(err)
+            }
+        }
 
         const updatePayment = async (clientRef, email, status, transactionDetails) => {
             const eventsLocal = JSON.parse(window.sessionStorage.getItem('NITC_REGISTRATION_WEB_APP_USER_REGISTERING_SESSIONS'))
@@ -85,7 +112,7 @@ function ConfirmPage() {
                     transactionDetails: arrayUnion({
                         ...transactionDetails,
                         status: status,
-                        timestamp: new Date().toISOString(),
+                        timestamp: new Date().toLocaleString('en-US', { timeZone: 'Asia/Colombo' }),
                     }),
                     reg_sessions: userSessions,
                     securityStatus: securityStatus,
@@ -93,6 +120,9 @@ function ConfirmPage() {
                 })
 
                 if (status === "Paid") {
+                    if (userData?.memberId) {
+                        updateTicketCount(userData.memberId)
+                    }
                     sendEmail({
                         firstName: userData?.firstName,
                         lastName: userData?.lastName,
