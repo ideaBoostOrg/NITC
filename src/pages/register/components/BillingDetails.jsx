@@ -167,7 +167,7 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
         if (querySnapshot.docs.length > 0) {
             setFirstTime(false)
             const user = querySnapshot.docs[0].data()
-            const reg_sessions = user.reg_sessions ?? []
+            const reg_sessions = user.regSessions ?? []
             setSessions(reg_sessions)
             const unRegisteredSessions = reg_sessions.filter(session => session.isRegistered === false)
             if (reg_sessions.length > 0 && unRegisteredSessions.length < 1) {
