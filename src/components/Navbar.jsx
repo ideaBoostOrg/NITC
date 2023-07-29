@@ -67,7 +67,7 @@ function Navbar() {
                 className="nav-link"
                 activeClass="active-link"
                 spy={true}
-                offset={-40}
+                offset={-80}
                 to="schedules"
                 duration={300}
                 smooth={true}
@@ -82,7 +82,7 @@ function Navbar() {
                 className="nav-link"
                 activeClass="active-link"
                 spy={true}
-                offset={-40}
+                offset={-30}
                 to="award"
                 duration={300}
                 smooth={true}
@@ -96,7 +96,7 @@ function Navbar() {
                 className="nav-link"
                 activeClass="active-link"
                 spy={true}
-                offset={-40}
+                offset={-30}
                 to="dis"
                 duration={300}
                 smooth={true}
@@ -172,7 +172,7 @@ function Navbar() {
                 className="nav-link"
                 activeClass="active-link"
                 spy={true}
-                offset={-40}
+                offset={-80}
                 to="digital-economy"
                 duration={300}
                 smooth={true}
@@ -186,7 +186,7 @@ function Navbar() {
                 className="nav-link"
                 activeClass="active-link"
                 spy={true}
-                offset={-40}
+                offset={-50}
                 to="gallery"
                 duration={300}
                 smooth={true}
@@ -200,7 +200,7 @@ function Navbar() {
                 className="nav-link"
                 activeClass="active-link"
                 spy={true}
-                offset={-40}
+                offset={-30}
                 to="pricing"
                 duration={300}
                 smooth={true}

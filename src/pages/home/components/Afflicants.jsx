@@ -7,7 +7,7 @@ import logo_5 from "../../../assets/img/afflicants/logo-3.webp";
 
 function Afflicants() {
   return (
-    <section id="sponsors" className="section-padding">
+    <section id="sponsors" className="section-padding" style={{ marginTop: "75px" }}>
       <div className="overlay"></div>
       <div className="container">
         <div className="row">

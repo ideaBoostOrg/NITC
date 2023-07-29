@@ -18,9 +18,11 @@ function About_CSSL() {
   return (
     <section
       id="cssl"
-      className="intro"
+      className="intro  section-padding"
       style={{
-        padding: "50px 0 75px 0",
+        padding: "50px 0",
+        backgroundColor: " rgb(243, 244, 243)",
+
       }}
     >
       <div className="container">

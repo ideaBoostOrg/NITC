@@ -1,36 +1,10 @@
 import { Link } from "react-scroll";
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-
-gsap.registerPlugin(ScrollTrigger);
-
 
 function Hero() {
 
-  // useEffect(() => {
-  //   const t1 = gsap.timeline({ defaults: { ease: "power1.out" } })
-
-  //   t1.from('.banner-info', { y: 10, opacity: 0, duration: 0.5 })
-  //     .from('.head-title', { y: 10, opacity: 0, duration: 0.5 })
-  //     .from('.banner-btn', { y: 10, opacity: 0, duration: 0.5 })
-
-  //     t1.play();
-  //   // const scrollTrigger = ScrollTrigger.create({
-  //   //   trigger: '#hero-area',
-  //   //   scrub: true,
-  //   //   onEnter: () => {
-  //   //     t1.play();
-  //   //   }
-
-  //   // return () => {
-  //   //   scrollTrigger.kill();
-  //   // }
-
-  // }, [])
-
   return (
     <div id="hero-area" className="hero-area-bg">
+      <div className="hero-image"></div>
       <div className="container ">
         <div className="row justify-content-center">
           <div className="col-lg-9 col-sm-12">
@@ -44,7 +18,7 @@ function Hero() {
               </span>
               <h2 className="head-title">National IT Conference</h2>
               <h4>NITC 2023</h4>
-              <h5 style={{fontWeight:"500"}}>Towards Sustainable Digital Society</h5>
+              <h5 style={{ fontWeight: "500" }}>Towards Sustainable Digital Society</h5>
               <p className="banner-desc">
                 Unlock the Early Bird Discount and save 10% until the 25
                 <sup>th</sup> of August!

@@ -8,7 +8,8 @@ function Digital_economy() {
   return (
     <section
       id="digital-economy"
-      style={{ paddingTop: "50px", paddingBottom: "20px" }}
+      // style={{ paddingTop: "50px", paddingBottom: "20px" }}
+      className="section-padding"
     >
       <div className="container">
         <div className="row">
@@ -44,7 +45,7 @@ function Digital_economy() {
           </div>
 
           <div className="col-lg-6 col-md-12 col-xs-12">
-            <p style={{ marginTop: "20px", marginBottom: "20px" }}>
+            <p style={{ marginBottom: "2rem" }}>
               Leapfrog into Industry 4.0 and beyond; transcending to an
               Inclusive Digital Economy. Making Sri Lanka a Resilient Export
               Oriented Hub through Sustainable &amp; Tradable goods and services

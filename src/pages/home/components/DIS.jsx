@@ -10,7 +10,7 @@ function DIS() {
       style={{
         paddingTop: "50px",
         paddingBottom: "50px",
-        backgroundColor: " rgb(243, 244, 243)",
+        // backgroundColor: " rgb(243, 244, 243)",
       }}
     >
       <div className="container">
@@ -20,7 +20,7 @@ function DIS() {
               <h2 className="section-title wow fadeInUp" data-wow-delay="0.2s">
                 Digital Investment Summit
               </h2>
-              <p className="wow fadeInDown mb-4" data-wow-delay="0.2s">
+              <p className="wow fadeInDown">
                 Unleash the power of digital innovations and seize growth
                 opportunities at the Sri Lanka Digital
                 <br /> Investment Summit.
@@ -36,7 +36,7 @@ function DIS() {
           </div>
 
           <div className="col-lg-6 col-md-12 col-xs-12">
-            <p style={{ marginTop: "20px", marginBottom: "20px" }}>
+            <p style={{ marginBottom: "2rem" }}>
               <b>Sri Lanka Digital Investment Summit</b>is a joint industry
               initiative to connect Sri Lankan startups and mature companies
               with local and foreign investors to support their next growth

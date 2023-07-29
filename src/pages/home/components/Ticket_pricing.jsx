@@ -11,7 +11,7 @@ function Ticket_pricing() {
       style={{ paddingBottom: "50px", paddingTop: "50px" }}
     >
       <div className="container">
-        <div className="row mb-5">
+        <div className="row">
           <div className="col-12">
             <div className="section-title-header text-center">
               <h2 className="section-title wow fadeInUp" data-wow-delay="0.2s">

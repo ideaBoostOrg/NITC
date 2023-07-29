@@ -10,7 +10,7 @@ import logo_7 from "../../../assets/img/partners/ISACA.png";
 
 function Partners() {
   return (
-    <section id="sponsors" className="section-padding mb-4">
+    <section id="sponsors" style={{ marginTop: "75px" }} className="section-padding">
       <div className="overlay"></div>
       <div className="container">
         <div className="row">

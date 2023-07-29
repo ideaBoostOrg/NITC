@@ -15,7 +15,9 @@ function Awards_section() {
       style={{
         paddingBottom: "50px",
         paddingTop: "50px",
-        backgroundColor: "rgb(0 85 255 / 8%)",
+        // backgroundColor: "rgb(0 85 255 / 8%)",
+        backgroundColor: " rgb(243, 244, 243)",
+
         // position: "relative",
       }}
     >
@@ -34,7 +36,7 @@ function Awards_section() {
           </div>
         </div>
 
-        <div className="row" style={{ paddingBottom: "30px" }}>
+        <div className="row" style={{ padding: "30px 0" }}>
           <div className="col-lg-6 col-md-12 col-xs-12">
             <div className="img-thumb">
               <img className="img-fluid" src={Awards} alt="" />
@@ -53,7 +55,7 @@ function Awards_section() {
               </p>
             </div> */}
 
-            <p style={{ marginTop: "20px", marginBottom: "20px" }}>
+            <p style={{ marginBottom: "2rem" }}>
               <b>CSSL Awards </b>recognizes significant national contributions
               by ICT Professionals and CSSL Elite awards will be held at the
               inauguration ceremony of the NITC Conference.
