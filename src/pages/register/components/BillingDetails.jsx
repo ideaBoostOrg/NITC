@@ -7,7 +7,7 @@ import { CheckCircleFill } from "react-bootstrap-icons";
 import { XCircleFill } from "react-bootstrap-icons";
 import logo from "../../../assets/img/logo-crop.png";
 
-function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsCheckout, setFormData, setSessions, setFirstTime }) {
+function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsCheckout, setFormData, setSessions, setFirstTime, setIsValiedMember }) {
 
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
@@ -44,9 +44,10 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
             if (member.ticketCount >= 3) {
                 setErrorMsg("You have bought the maximum number of tickets with this member ID.");
                 setBtnState("not-verified");
+                setIsValiedMember(false)
                 return;
             }
-
+            setIsValiedMember(true)
             // handleValidateEmail(member.email)
             handleValidateNic(member.nic)
             setFirstName(member.firstName ?? "");
@@ -59,6 +60,7 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
             setBtnState("verified");
         } else {
             setBtnState("not-verified");
+            setIsValiedMember(false)
             setErrorMsg("Invalid member ID, Try again!");
         }
 

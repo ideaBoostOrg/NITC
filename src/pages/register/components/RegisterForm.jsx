@@ -12,7 +12,7 @@ import SomethingWentWrong from "../../../components/SomethingWentWrong";
 import cryptoRandomString from 'crypto-random-string';
 
 
-const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef, setClientRef, comment, setComment, formData, sessions, firstTime }) => {
+const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef, setClientRef, comment, setComment, formData, sessions, firstTime, isValiedMember }) => {
 
   const EVENTS = {
     Full_package: false,
@@ -188,7 +188,7 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
     setAmount(total)
 
     let d = 0
-    if (isMember) {
+    if (isValiedMember) {
       d = total * 0.2
     } else if (eligbleForEarlyBird) {
       d = total * 0.1
@@ -199,7 +199,7 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
     setNetTotal(total - d)
 
 
-  }, [eventList, isMember, eligbleForEarlyBird])
+  }, [eventList, isValiedMember, eligbleForEarlyBird])
 
 
   const handlePaymentGatway = (cRef, comm) => {
@@ -409,7 +409,7 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
                   </div>} */}
 
                       {
-                        isMember ?
+                        isValiedMember ?
                           <div className="content-row">
                             <span className="label">CSSL membership discount (20%)</span>
                             <span className="value">

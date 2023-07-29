@@ -15,6 +15,7 @@ function Register() {
   const [sessions, setSessions] = useState([]);
   const [firstTime, setFirstTime] = useState(true);
   const [formData, setFormData] = useState({})
+  const [isValiedMember, setIsValiedMember] = useState(false)
 
 
   return (
@@ -40,6 +41,7 @@ function Register() {
             formData={formData}
             sessions={sessions}
             firstTime={firstTime}
+            isValiedMember={isValiedMember}
           />
           :
           <BillingDetails
@@ -55,6 +57,7 @@ function Register() {
             setFormData={setFormData}
             setSessions={setSessions}
             setFirstTime={setFirstTime}
+            setIsValiedMember={setIsValiedMember}
           />}
     </>
   );
