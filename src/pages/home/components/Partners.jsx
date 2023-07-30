@@ -37,30 +37,32 @@ function Partners() {
         >
           <div className="col-lg-12">
             <div className="sponsors-logo text-center">
-              <span className="partner-logo">
-                <img src={logo_1} style={{ width: 80, height: 60 }} alt="" />
-              </span>
-              <span className="partner-logo">
-                <img src={logo_2} style={{ width: 90, height: 60 }} alt="" />
-              </span>
-              <span className="partner-logo">
-                <img src={logo_3} style={{ width: 60, height: 60 }} alt="" />
-              </span>
-              <span className="partner-logo">
-                <img src={logo_4} style={{ width: 70, height: 50 }} alt="" />
-              </span>
-              <span className="partner-logo">
-                <img src={logo_5} style={{ width: 100, height: 50 }} alt="" />
-              </span>
-              <span className="partner-logo">
-                <img src={logo_6} style={{ width: 80, height: 30 }} alt="" />
-              </span>
-              <span className="partner-logo">
-                <img src={logo_7} style={{ width: 100, height: 60 }} alt="" />
-              </span>
+              <div className="col-lg-12 col-md-4 col-sm-4 text-center">
+                <span className="partner-logo">
+                  <img src={logo_1}  alt="" />
+                </span>
+                <span className="partner-logo">
+                  <img src={logo_2}  alt="" />
+                </span>
+                <span className="partner-logo3">
+                  <img src={logo_3}  alt="" />
+                </span>
+                <span className="partner-logo4">
+                  <img src={logo_4}  alt="" />
+                </span>
+                <span className="partner-logo5">
+                  <img src={logo_5}  alt="" />
+                </span>
+                <span className="partner-logo">
+                  <img src={logo_6}  alt="" />
+                </span>
+                <span className="partner-logo">
+                  <img src={logo_7} alt="" />
+                </span>
               {/* <span className="partner-logo">
                 <img src={logo_8} style={{ width: 60, height: 70 }} alt="" />
               </a> */}
+              </div>
             </div>
           </div>
         </div>

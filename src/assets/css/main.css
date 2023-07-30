@@ -4073,3 +4073,47 @@ p {
     margin: 2rem 0;
   }
 }
+
+/* #sponsors .sponsors-logo .sponsor-logo img {
+  width: 275px;
+} */
+
+#sponsors .sponsors-logo .gold-sponsor-logo img{
+  width:100px;
+}
+
+#sponsors .sponsors-logo .platinum-sponsor-logo img {
+  width: 100px;
+}
+
+#sponsors .sponsors-logo .partner-sponsor-logo img {
+  width: 100px;
+}
+
+
+#sponsors .sponsors-logo .partner-logo img {
+  width: 70px;
+}
+#sponsors .sponsors-logo .partner-logo3 img {
+  width: 70px;
+  height:60px;
+
+}
+#sponsors .sponsors-logo .partner-logo4 img {
+  width: 70px;
+  height: 70px;
+}
+#sponsors .sponsors-logo .partner-logo5 img {
+  width: 70px;
+  height: 60px;
+}
+
+#sponsors .sponsors-logo .afflicants-logo1 img {
+  width: 110px;
+}
+#sponsors .sponsors-logo .afflicants-logo2 img {
+  width: 110px;
+}
+#sponsors .sponsors-logo .afflicants-logo3 img {
+  width: 80px;
+}

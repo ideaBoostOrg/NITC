@@ -129,6 +129,23 @@
     font-size: 20px;
     margin-bottom: 10px;
   }
+
+  #hero-area .contents .head-title-sub{
+    font-size:18px;
+    margin-bottom: 10px;
+  }
+
+  #hero-area .contents .head-title-discription {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+
+  #hero-area .contents .banner-desc {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+
   #hero-area .contents .btn-date {
     font-size: 12px;
   }
@@ -226,6 +243,71 @@
   #gallery .grid-of-5-cols{
     grid-template-columns: repeat(3, 1fr);
   }
+
+  #sponsors .sponsors-logo .sponsor-logo img{
+    margin:10px 0px 10px 0px;
+    width:70px;
+  }
+
+    #sponsors .sponsors-logo .platinum-sponsor-logo img {
+      margin: 10px 3px 20px 3px;
+      width: 70px;
+    }
+
+
+    #sponsors .sponsors-logo .gold-sponsor-logo img {
+      margin: 10px 3px 20px 3px;
+      width: 70px;
+    }
+
+
+    #sponsors .sponsors-logo .partner-sponsor-logo img {
+      margin: 10px 3px 20px 3px;
+      width: 70px;
+    }
+
+
+    #sponsors .sponsors-logo .partner-logo img {
+      margin: 10px 3px 20px 3px;
+      width: 70px;
+    }
+    #sponsors .sponsors-logo .partner-logo3 img {
+      margin: 10px 3px 20px 3px;
+      width: 50px;
+      height:50px;
+    }
+    #sponsors .sponsors-logo .partner-logo4 img {
+      margin: 10px 3px 20px 3px;
+      width: 50px;
+      height: 60px;
+    }
+    #sponsors .sponsors-logo .partner-logo5 img {
+      margin: 10px 3px 20px 3px;
+      width: 80px;
+      height: 50px;
+    }
+
+
+    #sponsors .sponsors-logo .afflicants-logo1 img {
+      margin: 10px 4px 20px 4px;
+      width: 80px;
+    }
+    #sponsors .sponsors-logo .afflicants-logo2 img {
+      margin: 10px 4px 20px 4px;
+      width: 75px;
+      height:30px;
+    }
+    #sponsors .sponsors-logo .afflicants-logo3 img {
+      margin: 10px 3px 20px 3px;
+      width: 55px;
+    }
+
+
+    #dis, #award{
+      padding-left:30px;
+      padding-right:30px;
+    }
+        
 }
 
 /* @media (min-width: 320px) and (max-width: 480px) {

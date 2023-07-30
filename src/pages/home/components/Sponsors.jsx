@@ -12,7 +12,11 @@ import TBA from "../../../assets/img/TBA.png";
 
 function Sponsors() {
   return (
-    <section id="sponsors" className="section-padding" style={{ marginTop: "75px" }}>
+    <section
+      id="sponsors"
+      className="section-padding"
+      style={{ marginTop: "75px" }}
+    >
       <div className="overlay"></div>
       <div className="container">
         <div className="row">
@@ -56,7 +60,7 @@ function Sponsors() {
               <span className="sponsor-logo">
                 <img
                   src={logo_3}
-                  style={{ width: 275, height: 'auto' }}
+                  style={{ width: 275, height: "auto" }}
                   alt=""
                 />
               </span>
@@ -71,8 +75,8 @@ function Sponsors() {
               >
                 Platinum sponsors
               </p>
-              <span className="sponsor-logo">
-                <img src={TBA} style={{ width: 95, height: 80 }} alt="" />
+              <span className="platinum-sponsor-logo">
+                <img src={TBA} alt="" />
               </span>
               <br />
 
@@ -87,26 +91,30 @@ function Sponsors() {
               >
                 Gold sponsors
               </p>
-              <span className="sponsor-logo">
-                <img src={logo_1} style={{ width: 100, height: 60 }} alt="" />
-              </span>
-              <span className="sponsor-logo">
-                <img src={logo_2} style={{ width: 90, height: 40 }} alt="" />
-              </span>
-              <span className="sponsor-logo">
-                <img src={logo_4} style={{ width: 120, height: 20 }} alt="" />
-              </span>
-              <br />
+              <div className="col-lg-12 col-md-4 col-sm-4 text-center">
+                <span className="gold-sponsor-logo">
+                  <img src={logo_1} alt="" />
+                </span>
+                <span className="gold-sponsor-logo">
+                  <img src={logo_2} alt="" />
+                </span>
+                <span className="gold-sponsor-logo">
+                  <img src={logo_4} alt="" />
+                </span>
+              </div>
+              {/* <br /> */}
 
-              <span className="sponsor-logo">
-                <img src={logo_5} style={{ width: 80, height: 50 }} alt="" />
-              </span>
-              <span className="sponsor-logo">
-                <img src={TBA} style={{ width: 95, height: 80 }} alt="" />
-              </span>
-              <span className="sponsor-logo">
-                <img src={TBA} style={{ width: 95, height: 80 }} alt="" />
-              </span>
+              <div className="col-lg-12 col-md-4 col-sm-4 text-center">
+                <span className="gold-sponsor-logo">
+                  <img src={logo_5} alt="" />
+                </span>
+                <span className="gold-sponsor-logo">
+                  <img src={TBA} alt="" />
+                </span>
+                <span className="gold-sponsor-logo">
+                  <img src={TBA} alt="" />
+                </span>
+              </div>
               <br />
 
               <p
@@ -120,21 +128,24 @@ function Sponsors() {
               >
                 Partners sponsors
               </p>
-              <span className="sponsor-logo">
-                <img src={TBA} style={{ width: 95, height: 80 }} alt="" />
-              </span>
-              <span className="sponsor-logo">
-                <img src={TBA} style={{ width: 95, height: 80 }} alt="" />
-              </span>
-              <span className="sponsor-logo">
-                <img src={TBA} style={{ width: 95, height: 80 }} alt="" />
-              </span>
-              <span className="sponsor-logo">
-                <img src={TBA} style={{ width: 95, height: 80 }} alt="" />
-              </span>
-              <span className="sponsor-logo">
-                <img src={TBA} style={{ width: 95, height: 80 }} alt="" />
-              </span>
+              <div className="col-lg-12 col-md-4 col-sm-4 text-center">
+                <span className="partner-sponsor-logo">
+                  <img src={TBA} alt="" />
+                </span>
+                <span className="partner-sponsor-logo">
+                  <img src={TBA}  alt="" />
+                </span>
+                <span className="partner-sponsor-logo">
+                  <img src={TBA}  alt="" />
+                </span>
+
+                <span className="partner-sponsor-logo">
+                  <img src={TBA}  alt="" />
+                </span>
+                <span className="partner-sponsor-logo">
+                  <img src={TBA} alt="" />
+                </span>
+              </div>
               <br />
             </div>
           </div>

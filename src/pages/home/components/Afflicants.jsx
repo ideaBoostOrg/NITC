@@ -5,9 +5,18 @@ import logo_4 from "../../../assets/img/afflicants/logo-5.webp";
 import logo_5 from "../../../assets/img/afflicants/logo-3.webp";
 
 
+// import logo_1 from "../../../assets/img/partners/ACM.png";
+// import logo_3 from "../../../assets/img/partners/ACS.png";
+// import logo_4 from "../../../assets/img/partners/BCS.png";
+
+
 function Afflicants() {
   return (
-    <section id="sponsors" className="section-padding" style={{ marginTop: "75px" }}>
+    <section
+      id="sponsors"
+      className="section-padding"
+      style={{ marginTop: "75px" }}
+    >
       <div className="overlay"></div>
       <div className="container">
         <div className="row">
@@ -33,26 +42,27 @@ function Afflicants() {
           data-wow-delay="0.3s"
         >
           <div className="col-lg-12">
-            <div className="sponsors-logo text-center">
-              {/* <span className="sponsor-logo">
-                <img src={logo_1} style={{ width: 100, height: 60 }} alt="" />
-              </span>
-              <span href="" className="sponsor-logo">
-                <img src={logo_2} style={{ width: 100, height: 60 }} alt="" />
-              </span> */}
-              <span href="" className="afflicant-logo">
-                <img src={logo_3} style={{ width: 150, height: 120 }} alt="" />
-              </span>
-              <span href="" className="afflicant-logo">
-                <img src={logo_4} style={{ width: 100, height: 50 }} alt="" />
-              </span>
-              <span href="" className="afflicant-logo">
-                <img src={logo_5} style={{ width: 80, height: 60 }} alt="" />
-              </span>
-              {/* <a href=""><img src={logo_6} alt="" /></a>
-                    <a href=""><img src={logo_7} alt="" /></a>
-                    <a href=""><img src={logo_8} alt="" /></a>
-                    <a href=""><img src={logo_9} alt="" /></a> */}
+            <div className="sponsors-logo">
+              <div className="col-lg-12 col-md-6 col-sm-6 text-center">
+                <span href="" className="afflicants-logo1">
+                  <img src={logo_3} alt="" />
+                </span>
+                <span href="" className="afflicants-logo2">
+                  <img src={logo_4} alt="" />
+                </span>
+                <span href="" className="afflicants-logo3">
+                  <img src={logo_5} alt="" />
+                </span>
+                {/* <span className="partner-logo">
+                  <img src={logo_1} alt="" />
+                </span>
+                <span className="partner-logo">
+                  <img src={logo_4} alt="" />
+                </span>
+                <span className="partner-logo">
+                  <img src={logo_3} alt="" />
+                </span> */}
+              </div>
             </div>
           </div>
         </div>
