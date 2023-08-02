@@ -1,5 +1,5 @@
-import logo_1 from "../../../assets/img/national_partners/ICTA.png";
-import logo_2 from "../../../assets/img/national_partners/MinistryOfTechnology1.png";
+import logo_2 from "../../../assets/img/national_partners/ICTA.png";
+import logo_1 from "../../../assets/img/national_partners/MoT-Logo-V3.png";
 // import logo_1 from "../../../assets/img/sponsors/logo-3.png";
 // import logo_2 from "../../../assets/img/sponsors/logo-4.png";
 // import logo_5 from "../../../assets/img/sponsors/logo-5.png";
@@ -39,11 +39,11 @@ function National_partners() {
             <div className="sponsors-logo">
               <div className="col-lg-12 col-md-6 col-sm-6 text-center">
                 <span className="sponsor-logo">
-                  <img src={logo_1} style={{ width: 100 }} alt="" />
+                  <img src={logo_1} style={{ width: 80 }} alt="" />
                 </span>
 
                 <span className="sponsor-logo">
-                  <img src={logo_2} style={{ width: 60 }} alt="" />
+                  <img src={logo_2} style={{ width: 110 }} alt="" />
                 </span>
               </div>
             </div>

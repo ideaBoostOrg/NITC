@@ -117,7 +117,7 @@ function About() {
                     >
                       <CheckCircle />
                     </span>
-                    InfoSec - Information Security
+                    InfoSec & E-Governance - Information Security
                   </li>
                   <li>
                     <span

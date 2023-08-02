@@ -64,7 +64,7 @@ function Digital_economy() {
               style={{ alignItems: "center", justifyContent: "center" }}
             >
               <a
-                href="https://shorturl.at/efyJ4"
+                href=" https://digiecon2030.lk/"
                 className="btn btn-common"
                 id="view_more_btn"
               >
