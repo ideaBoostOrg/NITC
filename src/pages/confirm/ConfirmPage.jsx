@@ -97,6 +97,19 @@ function ConfirmPage() {
                     { name: 'Day_01', isRegistered: false },
                     { name: 'Day_02', isRegistered: false },
                 ]
+
+                const regTime = new Date().toLocaleString('en-US', { timeZone: 'Asia/Colombo' })
+
+                userSessions = userSessions.map(session => {
+                    if (session.isRegistered === true) {
+                        return {
+                            ...session,
+                            registeredTime: regTime
+                        }
+                    }
+                    return session
+                })
+
                 let securityStatus = userData.securityStatus ?? "inactive"
 
                 let paymentStatus = userData.paymentStatus ?? "Payment Failed"
