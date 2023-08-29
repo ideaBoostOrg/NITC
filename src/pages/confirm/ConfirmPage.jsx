@@ -98,18 +98,6 @@ function ConfirmPage() {
                     { name: 'Day_02', isRegistered: false },
                 ]
 
-                const regTime = new Date().toLocaleString('en-US', { timeZone: 'Asia/Colombo' })
-
-                userSessions = userSessions.map(session => {
-                    if (session.isRegistered === true) {
-                        return {
-                            ...session,
-                            registeredTime: regTime
-                        }
-                    }
-                    return session
-                })
-
                 let securityStatus = userData.securityStatus ?? "inactive"
 
                 let paymentStatus = userData.paymentStatus ?? "Payment Failed"
@@ -118,6 +106,18 @@ function ConfirmPage() {
                     userSessions = eventsLocal.sessions
                     securityStatus = "active"
                     paymentStatus = "Paid"
+
+                    const regTime = new Date().toLocaleString('en-US', { timeZone: 'Asia/Colombo' })
+
+                    userSessions = userSessions.map(session => {
+                        if (session.isRegistered === true) {
+                            return {
+                                ...session,
+                                registeredTime: regTime
+                            }
+                        }
+                        return session
+                    })
                 }
 
                 await updateDoc(userDoc, {
