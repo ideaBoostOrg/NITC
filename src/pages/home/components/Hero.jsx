@@ -21,10 +21,10 @@ function Hero() {
               <h5 className="head-title-discription" style={{ fontWeight: "500", paddingBottom: "10px" }}>
                 Towards Sustainable Digital Society
               </h5>
-              <p className="banner-desc">
+              {/* <p className="banner-desc">
                 Unlock the Early Bird Discount and save 10% until the 25
                 <sup>th</sup> of August!
-              </p>
+              </p> */}
               <div className="banner-btn">
                 <Link
                   className="btn btn-common"
