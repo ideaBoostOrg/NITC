@@ -23,7 +23,7 @@ export const packages = [
     {
         key: "Day_02",
         name: "NITC Conference Day 02",
-        price: "15.00",
+        price: "15000.00",
         currency: "LKR",
         features: ["Keynote Presentations", "Investment Summit", "Lunch", "Conference Tracks", "CSSL Research Colloquium"]
     },
