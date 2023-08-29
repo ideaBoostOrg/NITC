@@ -108,7 +108,6 @@ function ConfirmPage() {
                     paymentStatus = "Paid"
 
                     const regTime = new Date().toLocaleString('en-US', { timeZone: 'Asia/Colombo' })
-
                     userSessions = userSessions.map(session => {
                         if (session.isRegistered === true) {
                             return {
