@@ -107,7 +107,8 @@ function ConfirmPage() {
                     securityStatus = "active"
                     paymentStatus = "Paid"
 
-                    const regTime = new Date().toLocaleString('en-US', { timeZone: 'Asia/Colombo' })
+                    const regTime = new Date().toISOString()
+
                     userSessions = userSessions.map(session => {
                         if (session.isRegistered === true) {
                             return {
