@@ -21,11 +21,11 @@ function National_partners() {
                 style={{ color: "#212121" }}
                 data-wow-delay="0.2s"
               >
-                National Partners
+                National Partner
               </h2>
               <p className="wow fadeInDown" data-wow-delay="0.2s">
                 A heartfelt appreciation goes out to our esteemed National
-                Partners, whose unwavering support and collaboration <br />
+                Partner, who unwavering support and collaboration <br />
                 have been pivotal in propelling our achievements to new heights.
               </p>
             </div>
@@ -42,9 +42,9 @@ function National_partners() {
                   <img src={logo_1} style={{ width: 80 }} alt="" />
                 </span>
 
-                <span className="sponsor-logo">
+                {/* <span className="sponsor-logo">
                   <img src={logo_2} style={{ width: 110 }} alt="" />
-                </span>
+                </span> */}
               </div>
             </div>
           </div>
