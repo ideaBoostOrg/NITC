@@ -5,12 +5,16 @@ import logo_2 from "../../../assets/img/partners/FITTIS.png";
 import logo_5 from "../../../assets/img/partners/IESL.png";
 import logo_6 from "../../../assets/img/partners/IET.png";
 import logo_7 from "../../../assets/img/partners/ISACA.png";
-// import logo_8 from '../../../assets/img/partners/SLASSCOM.png'
+import logo_8 from '../../../assets/img/partners/SLASSCOM.png'
 // import logo_9 from '../../../assets/img/sponsors/logo-9.png'
 
 function Partners() {
   return (
-    <section id="sponsors" style={{ marginTop: "75px" }} className="section-padding">
+    <section
+      id="sponsors"
+      style={{ marginTop: "75px" }}
+      className="section-padding"
+    >
       <div className="overlay"></div>
       <div className="container">
         <div className="row">
@@ -38,28 +42,31 @@ function Partners() {
           <div className="col-lg-12">
             <div className="sponsors-logo text-center">
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
-                <span className="partner-logo">
+                {/* <span className="partner-logo">
                   <img src={logo_1}  alt="" />
+                </span> */}
+                <span className="partner-logo">
+                  <img src={logo_2} alt="" />
                 </span>
                 <span className="partner-logo">
-                  <img src={logo_2}  alt="" />
+                  <img src={logo_8} alt="" />
                 </span>
-                <span className="partner-logo3">
+                {/* <span className="partner-logo3">
                   <img src={logo_3}  alt="" />
-                </span>
+                </span> */}
                 <span className="partner-logo4">
-                  <img src={logo_4}  alt="" />
+                  <img src={logo_4} alt="" />
                 </span>
-                <span className="partner-logo5">
+                {/* <span className="partner-logo5">
                   <img src={logo_5}  alt="" />
-                </span>
-                <span className="partner-logo">
+                </span> */}
+                {/* <span className="partner-logo">
                   <img src={logo_6}  alt="" />
-                </span>
+                </span> */}
                 <span className="partner-logo">
                   <img src={logo_7} alt="" />
                 </span>
-              {/* <span className="partner-logo">
+                {/* <span className="partner-logo">
                 <img src={logo_8} style={{ width: 60, height: 70 }} alt="" />
               </a> */}
               </div>
