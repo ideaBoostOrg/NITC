@@ -3,7 +3,7 @@ import logo_2 from "../../../assets/img/sponsors/logo-2.png";
 import logo_3 from "../../../assets/img/sponsors/logo-3.png";
 import logo_4 from "../../../assets/img/sponsors/logo-4.png";
 import logo_5 from "../../../assets/img/sponsors/logo-5.png";
-import logo_6 from "../../../assets/img/sponsors/education-partner.png";
+import logo_6 from "../../../assets/img/sponsors/edp.png";
 import logo_7 from "../../../assets/img/sponsors/gennext.png";
 import TBA from "../../../assets/img/TBA.png";
 // import logo_6 from '../../../assets/img/sponsors/logo-6.png'
@@ -135,14 +135,14 @@ function Sponsors() {
                   <img src={TBA} alt="" />
                 </span>
                 <span className="partner-sponsor-logo">
-                  <img src={TBA}  alt="" />
+                  <img src={TBA} alt="" />
                 </span>
                 <span className="partner-sponsor-logo">
-                  <img src={TBA}  alt="" />
+                  <img src={TBA} alt="" />
                 </span>
 
                 <span className="partner-sponsor-logo">
-                  <img src={TBA}  alt="" />
+                  <img src={TBA} alt="" />
                 </span>
                 <span className="partner-sponsor-logo">
                   <img src={TBA} alt="" />
