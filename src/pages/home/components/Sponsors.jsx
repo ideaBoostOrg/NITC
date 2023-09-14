@@ -1,10 +1,11 @@
 import logo_1 from '../../../assets/img/sponsors/logo-1.png'
 import logo_2 from "../../../assets/img/sponsors/logo-2.png";
-import logo_3 from "../../../assets/img/sponsors/logo-3.png";
+import logo_3 from "../../../assets/img/sponsors/mc_symbol_opt_45_3x.png";
 import logo_4 from "../../../assets/img/sponsors/logo-4.png";
 import logo_5 from "../../../assets/img/sponsors/logo-5.png";
 import logo_6 from "../../../assets/img/sponsors/edp.png";
 import logo_7 from "../../../assets/img/sponsors/gennext.png";
+import logo_8 from "../../../assets/img/sponsors/SLTMOBITEL.png";
 import TBA from "../../../assets/img/TBA.png";
 // import logo_6 from '../../../assets/img/sponsors/logo-6.png'
 // import logo_7 from '../../../assets/img/sponsors/logo-7.png'
@@ -57,12 +58,12 @@ function Sponsors() {
                   fontSize: "1rem",
                 }}
               >
-                Diamond sponsors
+                Diamond sponsor
               </p>
               <span className="sponsor-logo">
                 <img
                   src={logo_3}
-                  style={{ width: 275, height: "auto" }}
+                  style={{ width: 230, height: "auto" }}
                   alt=""
                 />
               </span>
@@ -75,10 +76,10 @@ function Sponsors() {
                   fontSize: "1rem",
                 }}
               >
-                Platinum sponsors
+                Platinum sponsor
               </p>
               <span className="platinum-sponsor-logo">
-                <img src={TBA} alt="" />
+                <img src={logo_8} alt="" />
               </span>
               <br />
 
@@ -110,9 +111,9 @@ function Sponsors() {
                 <span className="gold-sponsor-logo">
                   <img src={logo_5} alt="" />
                 </span>
-                <span className="gold-sponsor-logo">
+                {/* <span className="gold-sponsor-logo">
                   <img src={logo_6} alt="" />
-                </span>
+                </span> */}
                 <span className="gold-sponsor-logo">
                   <img src={logo_7} alt="" />
                 </span>
@@ -120,6 +121,23 @@ function Sponsors() {
               <br />
 
               <p
+                style={{
+                  fontWeight: "600",
+                  textAlign: "center",
+                  marginTop: "40px",
+                  marginBottom: "20px",
+                  fontSize: "1rem",
+                }}
+              >
+                Educational partner
+              </p>
+              <div className="col-lg-12 col-md-4 col-sm-4 text-center">
+                <span className="gold-sponsor-logo">
+                  <img src={logo_6} alt="" />
+                </span>
+              </div>
+
+              {/* <p
                 style={{
                   fontWeight: "600",
                   textAlign: "center",
@@ -147,7 +165,7 @@ function Sponsors() {
                 <span className="partner-sponsor-logo">
                   <img src={TBA} alt="" />
                 </span>
-              </div>
+              </div> */}
               <br />
             </div>
           </div>

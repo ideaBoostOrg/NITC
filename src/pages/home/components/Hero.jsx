@@ -19,7 +19,7 @@ function Hero() {
               <h2 className="head-title">National IT Conference</h2>
               <h4 className="head-title-sub">NITC 2023</h4>
               <h5 className="head-title-discription" style={{ fontWeight: "500", paddingBottom: "10px" }}>
-                Towards Sustainable Digital Society
+                Towards a Sustainable Digital Society
               </h5>
               {/* <p className="banner-desc">
                 Unlock the Early Bird Discount and save 10% until the 25
