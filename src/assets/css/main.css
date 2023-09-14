@@ -4082,8 +4082,12 @@ p {
   width:100px;
 }
 
+#sponsors .sponsors-logo .educational-partner-logo img {
+  width: 100px;
+}
+
 #sponsors .sponsors-logo .platinum-sponsor-logo img {
-  width: 170px;
+  width: 250px;
 }
 
 #sponsors .sponsors-logo .partner-sponsor-logo img {
