@@ -1,12 +1,12 @@
 import logo_1 from "../../../assets/img/partners/ACM.png";
 import logo_3 from "../../../assets/img/partners/ACS.png";
-import logo_4 from "../../../assets/img/partners/BCS.png";
+// import logo_4 from "../../../assets/img/partners/BCS.png";
 import logo_2 from "../../../assets/img/partners/FITTIS.png";
 import logo_5 from "../../../assets/img/partners/IESL.png";
 import logo_6 from "../../../assets/img/partners/IET.png";
 import logo_7 from "../../../assets/img/partners/ISACA.png";
-import logo_8 from '../../../assets/img/partners/SLASSCOM.png'
-// import logo_9 from '../../../assets/img/sponsors/logo-9.png'
+import logo_8 from '../../../assets/img/partners/SLASSCOMLogo.png'
+import logo_4 from "../../../assets/img/partners/BCSLogo.png";
 
 function Partners() {
   return (
@@ -69,6 +69,9 @@ function Partners() {
                 {/* <span className="partner-logo">
                 <img src={logo_8} style={{ width: 60, height: 70 }} alt="" />
               </a> */}
+                {/* <span className="partner-logo">
+                  <img src={logo_9} alt="" />
+                </span> */}
               </div>
             </div>
           </div>
