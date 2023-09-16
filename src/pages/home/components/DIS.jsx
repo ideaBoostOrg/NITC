@@ -37,7 +37,7 @@ function DIS() {
 
           <div className="col-lg-6 col-md-12 col-xs-12">
             <p style={{ marginBottom: "2rem" }}>
-              <b>Sri Lanka Digital Investment Summit</b>is a joint industry
+              <b>Sri Lanka Digital Investment Summit</b> is a joint industry
               initiative to connect Sri Lankan startups and mature companies
               with local and foreign investors to support their next growth
               phase and global expansions. Digital investment Summit rallies all
