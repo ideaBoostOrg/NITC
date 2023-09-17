@@ -16,7 +16,7 @@ function Hero() {
                 11<sup>th</sup> - 13<sup>th</sup> of Oct 2023, Shangri-La Hotel,
                 Colombo, Sri-Lanka
               </span>
-              <h2 className="head-title">National IT Conference</h2>
+              <h2 className="head-title">41<sup>st</sup> National IT Conference</h2>
               <h4 className="head-title-sub">NITC 2023</h4>
               <h5 className="head-title-discription" style={{ fontWeight: "500", paddingBottom: "10px" }}>
                 Towards a Sustainable Digital Society
