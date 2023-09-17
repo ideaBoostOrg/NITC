@@ -6,7 +6,7 @@ import logo_5 from "../../../assets/img/sponsors/logo-5.png";
 import logo_6 from "../../../assets/img/sponsors/edp.png";
 import logo_7 from "../../../assets/img/sponsors/gennext.png";
 import logo_8 from "../../../assets/img/sponsors/SLTMOBITEL.png";
-import TBA from "../../../assets/img/TBA.png";
+// import TBA from "../../../assets/img/TBA.png";
 // import logo_6 from '../../../assets/img/sponsors/logo-6.png'
 // import logo_7 from '../../../assets/img/sponsors/logo-7.png'
 // import logo_8 from '../../../assets/img/sponsors/logo-8.png'
@@ -129,7 +129,7 @@ function Sponsors() {
                   fontSize: "1rem",
                 }}
               >
-                Educational partner
+                Education partner
               </p>
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                 <span className="educational-partner-logo">
