@@ -1,11 +1,9 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { useState } from "react";
+import { CheckCircleFill, XCircleFill } from "react-bootstrap-icons";
 import { firestore } from "../../../firebase";
-import { collection, getDocs, query, where, addDoc } from "firebase/firestore";
-import { CheckCircleFill } from "react-bootstrap-icons";
-import { XCircleFill } from "react-bootstrap-icons";
-import logo from "../../../assets/img/logo-crop.png";
 
 function DisBillingDetails({ isMember, setisMember, memberId, setMemberId, setIsCheckout, setFormData, setSessions, setFirstTime, setIsValiedMember }) {
 
@@ -229,7 +227,7 @@ function DisBillingDetails({ isMember, setisMember, memberId, setMemberId, setIs
                     <div className="cssl-member-box row">
                         <div className="col-lg-6 col-sm-12">
                             <h5 style={{ fontSize: "20px", marginBottom: "20px" }}>
-                                Billing details
+                                Billing details for Digital Investment Summit
                             </h5>
                             <div className="">
                                 <div className="form-check">
@@ -423,11 +421,6 @@ function DisBillingDetails({ isMember, setisMember, memberId, setMemberId, setIs
                             </div>
                         </div>
 
-                        <div className="form-footer">
-                            <p className="star-before">For members of professional bodies (BCS, ISACA, IESL, IET,
-                                IEEE, ACM, ACS, SLASSCOM, and FITTIS), an exclusive discount awaits! Contact
-                                your secretariat to claim this benefit.</p>
-                        </div>
                         <div className="form-group d-flex justify-content-end">
                             <button
                                 className="submit-btn next-btn"

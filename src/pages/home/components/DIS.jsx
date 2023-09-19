@@ -47,11 +47,11 @@ function DIS() {
 
             <div className="award_section_button">
               <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLScyNM5zUn7EyZnvA4-ZwCvoLT265BZRrwNjKtgN3_ifD6svbg/viewform"
+                href="/disregister?type=Dis"
                 className="btn btn-common"
                 id="view_more_btn"
               >
-                Apply for pitching
+                Participant Registration
               </a>
 
               <a

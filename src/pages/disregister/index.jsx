@@ -1,7 +1,7 @@
 import { useState } from "react";
 import logo from "../../assets/img/logo-crop.png";
-import BillingDetails from "./components/BillingDetails";
-import RegisterForm from "./components/RegisterForm";
+import DisBillingDetails from "./components/DisBillingDetails";
+import DisRegisterForm from "./components/DisRegisterForm";
 
 function DisRegister() {
   const [isMember, setisMember] = useState(false);
@@ -26,7 +26,7 @@ function DisRegister() {
         </nav>
       </section>
       {isCheckout ? (
-        <RegisterForm
+        <DisRegisterForm
           isMember={isMember}
           setisMember={setisMember}
           memberId={memberId}
@@ -39,7 +39,7 @@ function DisRegister() {
           isValiedMember={isValiedMember}
         />
       ) : (
-        <BillingDetails
+        <DisBillingDetails
           isMember={isMember}
           setisMember={setisMember}
           memberId={memberId}
