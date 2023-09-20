@@ -20,8 +20,6 @@ function DisBillingDetails({ isMember, setisMember, memberId, setMemberId, setIs
 
     const [inputError, setInputError] = useState(false);
     const [errorMsg, setErrorMsg] = useState("");
-    const [isError, setIsError] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);
 
     const [isEmailValid, setIsEmailValid] = useState(null);
     const [isEmailValidating, setIsEmailValidating] = useState(null);
@@ -29,88 +27,7 @@ function DisBillingDetails({ isMember, setisMember, memberId, setMemberId, setIs
     const [isNicValid, setIsNicValid] = useState(null);
     const [isContactNoValid, setIsContactNoValid] = useState(null);
 
-
-    const handleVerify = async () => {
-        setBtnState("verifing");
-
-        const q = query(collection(firestore, "members"), where("memNo", "==", memberId));
-        const querySnapshot = await getDocs(q);
-
-        if (querySnapshot.docs.length > 0) {
-            const member = querySnapshot.docs[0].data();
-
-            if (member.ticketCount >= 3) {
-                setErrorMsg("You have bought the maximum number of tickets with this member ID.");
-                setBtnState("not-verified");
-                setIsValiedMember(false)
-                return;
-            }
-            setIsValiedMember(true)
-            // handleValidateEmail(member.email)
-            handleValidateNic(member.nic)
-            setFirstName(member.firstName ?? "");
-            setLastName(member.lastName ?? "");
-            // setEmail(member.email ?? "");
-            setNic(member.nic ?? "");
-            setOrganization(member.organization ?? "");
-            setAddress(member.address ?? "");
-
-            setBtnState("verified");
-        } else {
-            setBtnState("not-verified");
-            setIsValiedMember(false)
-            setErrorMsg("Invalid member ID, Try again!");
-        }
-
-    }
-
-    const showBtn = () => {
-        if (btnState === "verify") {
-            return (
-                <button
-                    className="verify-btn"
-                    onClick={(e) => {
-                        if (memberId === "") {
-                            setErrorMsg("Please enter your member ID");
-                            setBtnState("not-verified");
-                        } else {
-                            e.preventDefault();
-                            handleVerify();
-                        }
-                    }}
-                >
-                    Verify
-                </button>
-            )
-        } else if (btnState === "verifing") {
-            return (
-                <Checking />
-            )
-        } else if (btnState === "verified") {
-            return (
-                <Verified />
-            )
-        }
-        else if (btnState === "not-verified") {
-            return (
-                <NotVerified />
-            )
-        }
-    }
-
-    const inputBorderColor = () => {
-        if (btnState === "verify") {
-            return "gray";
-        } else if (btnState === "verifing") {
-            return "gray";
-        } else if (btnState === "verified") {
-            return "#15b046";
-        }
-        else if (btnState === "not-verified") {
-            return "#f27474";
-        }
-    }
-
+    
     const handleCheckbox = (e) => {
         const value = e.target.checked;
         if (value === true) {
@@ -123,11 +40,9 @@ function DisBillingDetails({ isMember, setisMember, memberId, setMemberId, setIs
     }
 
     const handleNext = async () => {
-
         if (isEmailValid && isContactNoValid && isNicValid) {
             if (firstName && lastName && email && nic && address) {
                 setInputError(false);
-
                 const data = {
                     firstName: firstName,
                     lastName: lastName,
@@ -137,10 +52,7 @@ function DisBillingDetails({ isMember, setisMember, memberId, setMemberId, setIs
                     address: address,
                     contactNumber: contactNumber,
                 }
-
                 setFormData(data)
-
-
                 setIsCheckout(true);
             } else {
                 setInputError(true);
@@ -149,18 +61,15 @@ function DisBillingDetails({ isMember, setisMember, memberId, setMemberId, setIs
     }
 
     const handleValidateEmail = async (email) => {
-
         if (email === "") {
             setIsEmailValid(null);
             return;
         }
-
         const regexEmail = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
         if (!regexEmail.test(email)) {
             setIsEmailValid(false);
             return;
         }
-
         setIsEmailValidating(true);
         const q = query(collection(firestore, "users"), where("email", "==", email))
         const querySnapshot = await getDocs(q)
@@ -186,7 +95,6 @@ function DisBillingDetails({ isMember, setisMember, memberId, setMemberId, setIs
     }
 
     const handleValidateNic = (nic) => {
-
         if (nic === "") {
             setIsNicValid(null);
             return;
@@ -204,7 +112,6 @@ function DisBillingDetails({ isMember, setisMember, memberId, setMemberId, setIs
     }
 
     const handleValidateContanctNo = (contactNo) => {
-
         if (contactNo === "") {
             setIsContactNoValid(null)
             return;
@@ -250,45 +157,6 @@ function DisBillingDetails({ isMember, setisMember, memberId, setMemberId, setIs
                                 </span>
                             </div>
                         </div>
-                        {isMember && (
-                            <div className="col-lg-6 col-sm-12">
-                                <div className="memberid">
-                                    <label htmlFor="memberId">CSSL Member ID</label>
-                                    <div className="" style={{ display: "flex" }}>
-                                        <input
-                                            autoFocus={isMember}
-                                            className="memberId-input"
-
-                                            type="text"
-                                            id="memberId"
-                                            value={memberId}
-                                            onChange={(e) => {
-                                                setMemberId(e.target.value)
-                                                setBtnState("verify")
-                                                // setDiscount(0);
-                                                // setNetTotal(parseFloat(pack.price))
-                                            }
-                                            }
-                                            onKeyDown={(e) => {
-                                                if (e.key === 'Enter') {
-                                                    if (memberId === "") {
-                                                        setErrorMsg("Please enter your member ID");
-                                                        setBtnState("not-verified");
-                                                    } else {
-                                                        handleVerify()
-                                                        e.preventDefault();
-                                                        e.target.blur();
-                                                    }
-                                                }
-                                            }}
-                                            style={{ borderColor: inputBorderColor(), width: '250px' }}
-                                        />
-                                        {showBtn()}
-                                    </div>
-                                </div>
-                                {btnState === 'not-verified' && <p style={{ color: '#f27474', marginTop: "0" }}>{errorMsg}</p>}
-                            </div>
-                        )}
                     </div>
                     <br></br>
                     <form>
@@ -445,29 +313,3 @@ function DisBillingDetails({ isMember, setisMember, memberId, setMemberId, setIs
 }
 
 export default DisBillingDetails
-
-const Checking = () => {
-    return (
-        <div className=" checking">
-            <div className="loading-spinner-container">
-                <div className="spinner"></div>
-            </div>
-        </div>
-    )
-}
-
-const Verified = () => {
-    return (
-        <div className="verified">
-            <CheckCircleFill />
-        </div>
-    )
-}
-
-const NotVerified = () => {
-    return (
-        <div className="not-verified">
-            <XCircleFill />
-        </div>
-    )
-}
