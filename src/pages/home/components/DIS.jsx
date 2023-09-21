@@ -45,6 +45,10 @@ function DIS() {
               eco system to accelerate the economic resurgence.
             </p>
 
+            <p
+              style={{ marginBottom: "16px", fontWeight: "bold" }}
+            >Ticket Price : $45.00 (LKR 15,300.00)</p>
+
             <div className="award_section_button">
               <a
                 href="/disregister?type=Dis"

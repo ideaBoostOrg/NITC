@@ -3,7 +3,7 @@
 import cryptoRandomString from 'crypto-random-string';
 import { addDoc, arrayUnion, collection, doc, getDocs, query, updateDoc, where } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import Loading from "../../../components/Loading";
 import SomethingWentWrong from "../../../components/SomethingWentWrong";
 import { firestore } from "../../../firebase";
@@ -11,20 +11,22 @@ import { loadPaycorpPayment } from '../../../pay';
 import TermsModal from "./DisTermsModal";
 
 const packages = [{
-        key: "Full_package",
-        name: "Full Conference With Inauguration",
-        price: "50000.00",
-        currency: "LKR",
-        features: ["Keynote Speech", "Keynote Presentations", "CSSL National ICT Awards", "Panel Discussion and Q&A", "Investment Summit", "Lunch", "Conference Tracks", "CSSL Research Colloquium", "Gala Dinner"]
-    }];
+  key: "DIS",
+  name: "Digital Investment Summit",
+  price: 15300.00,
+  currency: "LKR",
+}];
 
-const DisRegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef, setClientRef, comment, setComment, formData, sessions, firstTime, isValiedMember }) => {
+const DisRegisterForm = ({ clientRef, setClientRef, comment, setComment, formData, sessions, firstTime }) => {
+
+
 
   const EVENTS = {
     Full_package: false,
     Inauguration: false,
     Day_01: false,
     Day_02: false,
+    DIS: false
   }
 
   const EVENT_LIST = [
@@ -32,18 +34,18 @@ const DisRegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientR
     { name: 'Inauguration', isRegistered: false },
     { name: 'Day_01', isRegistered: false },
     { name: 'Day_02', isRegistered: false },
+    { name: 'DIS', isRegistered: false },
   ]
 
+  const navigate = useNavigate()
 
-  const [searchParams] = useSearchParams();
-  const type = searchParams.get('type');
   const pack = packages[0];
 
   const [termsModalOpen, setTermsModalOpen] = useState(false);
   const [acceptTerm, setAcceptTerm] = useState(false);
   const [amount, setAmount] = useState(parseFloat(pack.price));
   const [discount, setDiscount] = useState(0);
-  const [netTotal, setNetTotal] = useState(0);
+  const [netTotal, setNetTotal] = useState(pack.price);
 
   const [eligbleForEarlyBird, setEligbleForEarlyBird] = useState(true);
   const [selectedEvents, setSelectedEvents] = useState(EVENTS)
@@ -59,81 +61,33 @@ const DisRegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientR
   const falseCount = sessions.filter(s => !s.isRegistered).length;
 
   useEffect(() => {
-
-
-
-    if (sessions.length === 0 || falseCount === 3) {
+    if (sessions.length === 0 || falseCount === 4) {
       //first time
+      window.sessionStorage.setItem('NITC_REGISTRATION_WEB_APP_USER_FIRST_TIME', JSON.stringify(true));
       setEventList({
         ...EVENTS,
-        [type]: true
+        DIS: true
       })
 
-      window.sessionStorage.setItem('NITC_REGISTRATION_WEB_APP_USER_FIRST_TIME', JSON.stringify(true));
     } else {
       // not first time
+      window.sessionStorage.setItem('NITC_REGISTRATION_WEB_APP_USER_FIRST_TIME', JSON.stringify(false));
       const newEvents = {}
       sessions.forEach(s => {
         if (!s.isRegistered)
           newEvents[s.name] = false
       })
 
-      if (type in newEvents) {
-        setEventList({
-          ...newEvents,
-          [type]: true
-        })
-      } else {
-        setEventList({
-          ...newEvents,
-          [Object.keys(newEvents)[0]]: true
-        })
-      }
-      window.sessionStorage.setItem('NITC_REGISTRATION_WEB_APP_USER_FIRST_TIME', JSON.stringify(false));
+      setEventList({
+        ...newEvents,
+        DIS: true
+      })
+
     }
 
+  }, [sessions])
 
 
-    // if (sessions.length > 0) {
-    //   // not first time
-    //   const newEvents = {}
-    //   sessions.forEach(s => {
-    //     if (!s.isRegistered)
-    //       newEvents[s.name] = false
-    //   })
-
-    //   if (type in newEvents) {
-    //     setEventList({
-    //       ...newEvents,
-    //       [type]: true
-    //     })
-    //   } else {
-    //     setEventList({
-    //       ...newEvents,
-    //       [Object.keys(newEvents)[0]]: true
-    //     })
-    //   }
-    //   window.sessionStorage.setItem('NITC_REGISTRATION_WEB_APP_USER_FIRST_TIME', JSON.stringify(false));
-
-    // } else {
-    //   //first time
-    //   setEventList({
-    //     ...EVENTS,
-    //     [type]: true
-    //   })
-
-    //   window.sessionStorage.setItem('NITC_REGISTRATION_WEB_APP_USER_FIRST_TIME', JSON.stringify(true));
-    // }
-
-    const EarlyBirdDate = new Date('2023-08-26');
-    const today = new Date();
-    if (today > EarlyBirdDate) {
-      setEligbleForEarlyBird(false);
-    } else {
-      setEligbleForEarlyBird(true);
-    }
-
-  }, [sessions, type])
 
 
   const handleAcceptTerms = (e) => {
@@ -145,69 +99,6 @@ const DisRegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientR
     }
   }
 
-  const handleInputCheck = (e) => {
-
-    const trueCount = Object.values(eventList).filter(v => v === true).length
-    if (trueCount === 1 && eventList[e.target.name] === true) {
-      return
-    }
-
-    if ((sessions.length === 0 || falseCount === 3) && trueCount === 2 && eventList[e.target.name] === false) {
-      setEventList({
-        ...EVENTS,
-        Full_package: true
-      })
-      return
-    }
-
-    if (e.target.name === "Full_package") {
-      setIsFullPackage(e.target.checked);
-      setEventList({
-        ...EVENTS,
-        Full_package: true
-      })
-    } else {
-      setIsFullPackage(false);
-      if (sessions.length === 0 || falseCount === 3) {
-        setEventList({
-          ...eventList,
-          Full_package: false,
-          [e.target.name]: e.target.checked
-        })
-      } else {
-        setEventList({
-          ...eventList,
-          [e.target.name]: e.target.checked
-        })
-      }
-    }
-
-  }
-
-  useEffect(() => {
-    let total = 0
-    for (const key in eventList) {
-      if (eventList[key] === true) {
-        total += parseFloat(packages.find(p => p.key === key).price)
-      }
-    }
-    setAmount(total)
-
-    let d = 0
-    if (isValiedMember) {
-      d = total * 0.2
-    } else if (eligbleForEarlyBird) {
-      d = total * 0.1
-    } else {
-      d = 0
-    }
-    setDiscount(d)
-    setNetTotal(total - d)
-
-
-  }, [eventList, isValiedMember, eligbleForEarlyBird])
-
-
   const handlePaymentGatway = (cRef, comm) => {
     if (netTotal > 0) {
       setIsError(false);
@@ -215,8 +106,8 @@ const DisRegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientR
         clientId: 14002485,
         paymentAmount: parseInt(netTotal.toFixed(2) * 100),
         currency: 'LKR',
-        returnUrl: `https://${window.location.hostname}/payment-confirm`,
-        // returnUrl: `http://127.0.0.1:5173/payment-confirm`,
+        // returnUrl: `https://${window.location.hostname}/payment-confirm`,
+        returnUrl: `http://127.0.0.1:5173/payment-confirm`,
         clientRef: cRef,
         comment: comm,
       }
@@ -235,9 +126,10 @@ const DisRegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientR
       { name: 'Inauguration', isRegistered: false },
       { name: 'Day_01', isRegistered: false },
       { name: 'Day_02', isRegistered: false },
+      { name: 'DIS', isRegistered: false }
     ]
 
-    if (sessions.length === 0 || falseCount === 3) {
+    if (sessions.length === 0 || falseCount === 4) {
       // first time
       if (eventList.Full_package) {
         fSessionData = fSessionData.map(s => { return { ...s, isRegistered: true } })
@@ -247,13 +139,16 @@ const DisRegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientR
           else return s
         })
       }
+
     } else {
 
       if (sessions.length > 0) fSessionData = sessions
+
       fSessionData = fSessionData.map(s => {
         if (eventList[s.name]) return { ...s, isRegistered: true }
         else return s
       })
+      fSessionData.push({ name: 'DIS', isRegistered: true })
     }
 
     const cRef = cryptoRandomString({ length: 20, type: 'numeric' })
@@ -275,9 +170,8 @@ const DisRegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientR
             organization: formData.organization ?? "",
             address: formData.address,
             contactNumber: formData.contactNumber,
-            isMember: isMember,
-            memberId: memberId ?? "",
             confKit: 'Not Issued',
+            isInvitee: true,
             securityStatus: "inactive",
             attempts: arrayUnion({
               clientRef: cRef,
@@ -291,10 +185,7 @@ const DisRegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientR
         console.log(err);
         setIsError(true)
       }
-
-
     } else {
-
       const userQuery = query(collection(firestore, "users"), where("email", "==", formData.email));
       const querySnapshot = await getDocs(userQuery);
       if (!querySnapshot.empty) {
@@ -308,8 +199,6 @@ const DisRegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientR
             organization: formData.organization ?? "",
             address: formData.address,
             contactNumber: formData.contactNumber,
-            isMember: isMember,
-            memberId: memberId ?? "",
             attempts: arrayUnion({
               clientRef: cRef,
               amount: netTotal,
@@ -327,6 +216,8 @@ const DisRegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientR
 
       }
     }
+
+
     setIsLoading(false)
   }
 
@@ -348,9 +239,9 @@ const DisRegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientR
                       <h5 style={{ fontSize: "1.2rem" }}>
                         Tickets
                       </h5>
-                      <p className="">Please choose the sessions you wish to register for.</p>
+                      {/* <p className="">Please choose the sessions you wish to register for.</p> */}
                     </div>
-                    {
+                    {/* {
                       registeredSessions.length > 0 &&
                       <div className="alert alert-warning registered-session" role="alert">
                         You have already registered for {
@@ -362,9 +253,9 @@ const DisRegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientR
                         }
 
                       </div>
-                    }
+                    } */}
                     <div className="package-container">
-                      {
+                      {/* {
                         packages.map((pack, index) => {
                           if (pack.key in eventList) {
                             return (
@@ -391,7 +282,24 @@ const DisRegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientR
                             )
                           }
                         })
-                      }
+                      } */}
+
+
+                      <div className="package-box">
+                        <label
+                          className="package"
+                          style={{ backgroundColor: '#0055ff', minHeight: '75px' }}
+                        >
+                          <div className="package-heading" >
+                            <h4 style={{ color: '#fff' }} >Digital Investment Summit</h4>
+                            <div className="package-price">
+                              <p style={{ color: '#fff' }}><span style={{ color: '#fff', paddingRight: '0.5rem' }} className="lkr">LKR </span> 12000</p>
+                            </div>
+                          </div>
+                        </label>
+                      </div>
+
+
                     </div>
                   </div>
                   <div className="col-lg-5 col-md-12">
@@ -414,8 +322,8 @@ const DisRegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientR
                     </span>
                   </div>} */}
 
-                      {
-                        isValiedMember ?
+                      {/* {
+                        eventList ?
                           <div className="content-row">
                             <span className="label">CSSL membership discount (20%)</span>
                             <span className="value">
@@ -431,7 +339,7 @@ const DisRegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientR
                             </div>
                             :
                             ""
-                      }
+                      } */}
 
 
 

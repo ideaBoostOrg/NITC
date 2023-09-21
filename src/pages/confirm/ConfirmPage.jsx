@@ -96,6 +96,7 @@ function ConfirmPage() {
                     { name: 'Inauguration', isRegistered: false },
                     { name: 'Day_01', isRegistered: false },
                     { name: 'Day_02', isRegistered: false },
+                    { name: 'DIS', isRegistered: false },
                 ]
 
                 let securityStatus = userData.securityStatus ?? "inactive"

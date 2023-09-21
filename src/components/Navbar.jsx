@@ -96,82 +96,6 @@ function Navbar() {
                 className="nav-link"
                 activeClass="active-link"
                 spy={true}
-                offset={-30}
-                to="dis"
-                duration={300}
-                smooth={true}
-                onClick={() => setIsOpen(false)}
-              >
-                DIS
-              </SLink>
-              {/* <div class="dropdown">
-                <button
-                  class="dropdown-toggle"
-                  className="nav-link"
-                  activeClass="active-link"
-                  type="button"
-                  data-toggle="dropdown"
-                  aria-expanded="false"
-                  style={{ background: "transparent", border: "none" }}
-                >
-                  CSSL
-                </button>
-                <div class="dropdown-menu">
-                  <SLink
-                    className="dropdown-item"
-                    activeClass="active-link"
-                    spy={true}
-                    offset={0}
-                    to="cssl"
-                    duration={300}
-                    smooth={true}
-                  >
-                    CSSL
-                  </SLink>
-
-                  <SLink
-                    className="dropdown-item"
-                    activeClass="active-link"
-                    spy={true}
-                    offset={0}
-                    to="cssl-digita-investment-summit"
-                    duration={300}
-                    smooth={true}
-                  >
-                    CSSL Digital Investment Summit
-                  </SLink>
-
-                  <SLink
-                    className="dropdown-item"
-                    activeClass="active-link"
-                    spy={true}
-                    offset={0}
-                    to="cssl-awards"
-                    duration={300}
-                    smooth={true}
-                  >
-                    CSSL Awards
-                  </SLink>
-
-                  <SLink
-                    className="dropdown-item"
-                    activeClass="active-link"
-                    spy={true}
-                    offset={0}
-                    to="cssl-colloquium"
-                    duration={300}
-                    smooth={true}
-                  >
-                    CSSL Colloquium
-                  </SLink>
-                </div>
-              </div> */}
-            </li>
-            <li className="nav-item">
-              <SLink
-                className="nav-link"
-                activeClass="active-link"
-                spy={true}
                 offset={-80}
                 to="digital-economy"
                 duration={300}
@@ -223,11 +147,21 @@ function Navbar() {
                 Sponsors
               </SLink>
             </li>
-            {/* <li className="nav-item">
-              <a className="nav-link" href="#google-map-area">
-                Contact
-              </a>
-            </li> */}
+
+            <div className="dis-btn-container">
+              <SLink
+                spy={true}
+                offset={-30}
+                to="dis"
+                duration={300}
+                smooth={true}
+                onClick={() => setIsOpen(false)}
+              >
+                <p
+                  className="disBtn"
+                >Digital Investment Summit</p>
+              </SLink>
+            </div>
           </ul>
         </div>
       </div>

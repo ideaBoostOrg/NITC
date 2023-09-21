@@ -11,6 +11,7 @@ import Register from './pages/register'
 import PaymentConfirm from './pages/confirm/ConfirmPage'
 import DisRegister from './pages/disregister'
 
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import PaymentConfirmed from './pages/confirm/components/PaymentConfirmed'
 // import PaymentFailed from './pages/confirm/components/PaymentFailed'

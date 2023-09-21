@@ -209,8 +209,8 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
         clientId: 14002485,
         paymentAmount: parseInt(netTotal.toFixed(2) * 100),
         currency: 'LKR',
-        returnUrl: `https://${window.location.hostname}/payment-confirm`,
-        // returnUrl: `http://127.0.0.1:5173/payment-confirm`,
+        // returnUrl: `https://${window.location.hostname}/payment-confirm`,
+        returnUrl: `http://127.0.0.1:5173/payment-confirm`,
         clientRef: cRef,
         comment: comm,
       }
@@ -229,6 +229,7 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
       { name: 'Inauguration', isRegistered: false },
       { name: 'Day_01', isRegistered: false },
       { name: 'Day_02', isRegistered: false },
+
     ]
 
     if (sessions.length === 0 || falseCount === 3) {
@@ -342,7 +343,7 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
                       <h5 style={{ fontSize: "1.2rem" }}>
                         Tickets
                       </h5>
-                      <p className="">Please choose the sessions you wish to register for.</p>
+                      <p style={{ marginBottom: '12px' }}>Please choose the sessions you wish to register for.</p>
                     </div>
                     {
                       registeredSessions.length > 0 &&
