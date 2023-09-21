@@ -45,13 +45,17 @@ function DIS() {
               eco system to accelerate the economic resurgence.
             </p>
 
+            <p
+              style={{ marginBottom: "16px", fontWeight: "bold" }}
+            >Ticket Price : $45.00 (LKR 15,300.00)</p>
+
             <div className="award_section_button">
               <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLScyNM5zUn7EyZnvA4-ZwCvoLT265BZRrwNjKtgN3_ifD6svbg/viewform"
+                href="/disregister?type=Dis"
                 className="btn btn-common"
                 id="view_more_btn"
               >
-                Apply for pitching
+                Participant Registration
               </a>
 
               <a

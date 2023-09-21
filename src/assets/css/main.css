@@ -718,15 +718,16 @@ a.back-to-top:focus {
   color: #212121 !important;
 }
 
-.top-nav-collapse .navbar-nav .nav-link:hover {
-  color: var(--primary-blue) !important;
+/* .top-nav-collapse .navbar-nav .nav-link:hover {
+  color: red !important;
 
-}
+} */
+
+
 
 .top-nav-collapse .navbar-nav .active-link {
   color: var(--primary-blue) !important;
 }
-
 
 /* .navbar-expand-lg .navbar-toggler {
   background: transparent;
@@ -4119,4 +4120,20 @@ p {
 }
 #sponsors .sponsors-logo .afflicants-logo3 img {
   width: 80px;
+}
+
+.dis-btn-container {
+  margin: 0.5rem 0;
+  /* display: flex; */
+}
+
+.disBtn {
+  font-size: 0.8rem;
+  text-align: left;
+  font-weight: 400;
+  background-color: #0055ff;
+  padding: 0.5rem;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
 }

@@ -9,6 +9,8 @@ import './assets/css/responsive.css'
 import Home from './pages/home'
 import Register from './pages/register'
 import PaymentConfirm from './pages/confirm/ConfirmPage'
+import DisRegister from './pages/disregister'
+
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import PaymentConfirmed from './pages/confirm/components/PaymentConfirmed'
@@ -29,6 +31,7 @@ function App() {
           <Routes>
             <Route path="" element={<Home />} />
             <Route path="register" element={<Register />} />
+            <Route path="disregister" element={<DisRegister />} />
             <Route path="payment-confirm" element={<PaymentConfirm />} />
             {/* <Route path="pa" element={<PaymentConfirmed />} />
             <Route path="pr" element={<PaymentFailed />} />
