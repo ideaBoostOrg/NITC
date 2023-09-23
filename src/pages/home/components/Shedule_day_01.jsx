@@ -21,7 +21,7 @@ function Shedule_day_01() {
                       </div>
                       <div className="schedule-card-content">
                         <div className="schedule-card-header">
-                          <h4>Chief Guest & Guest of Hounour</h4>
+                          <h4>Chief Guest & Guest of Honour</h4>
                         </div>
                         <div className="schedule-card-body">
                           <span>
