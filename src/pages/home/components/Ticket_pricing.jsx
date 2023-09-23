@@ -101,7 +101,7 @@ function Ticket_pricing() {
                       <strike>Panel Discussion and Q&A</strike>
                     </span>
                   </li>
-                  <li>
+                  {/* <li>
                     <span
                       style={{
                         paddingRight: "10px",
@@ -115,7 +115,7 @@ function Ticket_pricing() {
                     <span className="text">
                       <strike>Investment Summit</strike>
                     </span>
-                  </li>
+                  </li> */}
                   <li>
                     <span
                       style={{
@@ -256,7 +256,7 @@ function Ticket_pricing() {
                     </span>
                     <span className="text">Panel Discussion and Q&A</span>
                   </li>
-                  <li>
+                  {/* <li>
                     <span
                       style={{
                         paddingRight: "10px",
@@ -270,7 +270,7 @@ function Ticket_pricing() {
                     <span className="text">
                       <strike>Investment Summit</strike>
                     </span>
-                  </li>
+                  </li> */}
                   <li>
                     <span
                       style={{
@@ -411,7 +411,7 @@ function Ticket_pricing() {
                       <strike>Panel Discussion and Q&A</strike>
                     </span>
                   </li>
-                  <li>
+                  {/* <li>
                     <span
                       style={{
                         paddingRight: "10px",
@@ -423,7 +423,7 @@ function Ticket_pricing() {
                       <CheckCircleFill />
                     </span>
                     <span className="text">Investment Summit</span>
-                  </li>
+                  </li> */}
                   <li>
                     <span
                       style={{
@@ -552,7 +552,7 @@ function Ticket_pricing() {
                     </span>
                     <span className="text">Panel Discussion and Q&A</span>
                   </li>
-                  <li>
+                  {/* <li>
                     <span
                       style={{
                         paddingRight: "10px",
@@ -563,7 +563,7 @@ function Ticket_pricing() {
                       <CheckCircleFill />
                     </span>
                     <span className="text">Investment Summit</span>
-                  </li>
+                  </li> */}
                   <li>
                     <span
                       style={{
