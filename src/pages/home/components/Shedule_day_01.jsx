@@ -25,7 +25,7 @@ function Shedule_day_01() {
                         </div>
                         <div className="schedule-card-body">
                           <span>
-                            Addressed by Guest of honor - State Minister of IT
+                            Addressed by Guest of honour - State Minister of IT
                           </span>
                           <br />
                           {/* <span>
