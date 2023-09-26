@@ -6,6 +6,9 @@ import logo_5 from "../../../assets/img/sponsors/logo-5.png";
 import logo_6 from "../../../assets/img/sponsors/edp.png";
 import logo_7 from "../../../assets/img/sponsors/gennext.png";
 import logo_8 from "../../../assets/img/sponsors/SLTMOBITEL.png";
+import logo_9 from "../../../assets/img/sponsors/ADL.png";
+import logo_10 from "../../../assets/img/sponsors/Informatics.png";
+
 // import TBA from "../../../assets/img/TBA.png";
 // import logo_6 from '../../../assets/img/sponsors/logo-6.png'
 // import logo_7 from '../../../assets/img/sponsors/logo-7.png'
@@ -134,6 +137,38 @@ function Sponsors() {
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                 <span className="educational-partner-logo">
                   <img src={logo_6} alt="" />
+                </span>
+              </div>
+              <p
+                style={{
+                  fontWeight: "600",
+                  textAlign: "center",
+                  marginTop: "40px",
+                  marginBottom: "20px",
+                  fontSize: "1rem",
+                }}
+              >
+                Exclusive Innovation Partner
+              </p>
+              <div className="col-lg-12 col-md-4 col-sm-4 text-center">
+                <span className="educational-partner-logo">
+                  <img src={logo_9} alt="" />
+                </span>
+              </div>
+              <p
+                style={{
+                  fontWeight: "600",
+                  textAlign: "center",
+                  marginTop: "40px",
+                  marginBottom: "20px",
+                  fontSize: "1rem",
+                }}
+              >
+                Partner
+              </p>
+              <div className="col-lg-12 col-md-4 col-sm-4 text-center">
+                <span className="educational-partner-logo">
+                  <img src={logo_10} alt="" />
                 </span>
               </div>
 
