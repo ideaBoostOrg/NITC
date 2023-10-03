@@ -23,6 +23,7 @@ import Partners from "./components/Partners";
 import Afflicants from "./components/Afflicants";
 import Map from "./components/Map";
 import Footer from "./components/Footer";
+import Speakers from "./components/Speakers";
 
 function index() {
   return (
@@ -38,6 +39,7 @@ function index() {
       {/* <Introduction /> */}
       <DIS />
       <Digital_economy />
+      {/* <Speakers/> */}
       {/* <CSSL_digital_investment_submit /> */}
       {/* <CSSL_awards />
       <CSSL_colloquium /> */}
