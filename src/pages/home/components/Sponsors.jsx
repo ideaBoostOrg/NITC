@@ -167,7 +167,7 @@ function Sponsors() {
                 Partner
               </p>
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
-                <span className="educational-partner-logo">
+                <span className="informatics-partner-logo">
                   <img src={logo_10} alt="" />
                 </span>
               </div>
