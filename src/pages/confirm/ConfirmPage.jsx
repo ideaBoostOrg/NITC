@@ -148,7 +148,7 @@ function ConfirmPage() {
                         inaguration: userSessions[0].isRegistered,
                         day1: userSessions[1].isRegistered,
                         day2: userSessions[2].isRegistered,
-                        dis:userSessions[3].isRegistered,
+                        // dis:userSessions[3].isRegistered,
                         organization: userData?.organization,
                     })
                 }
