@@ -140,19 +140,37 @@ function ConfirmPage() {
 
                     console.log(userSessions);
 
-                    sendEmail({
-                        firstName: userData?.firstName,
-                        lastName: userData?.lastName,
-                        email: userData?.email,
-                        nic: userData?.nic,
-                        paymentRef: clientRef,
-                        amount: transactionDetails?.paymentAmount,
-                        inaguration: userSessions[0].isRegistered,
-                        day1: userSessions[1].isRegistered,
-                        day2: userSessions[2].isRegistered,
-                        dis: userSessions[3].isRegistered,
-                        organization: userData?.organization,
-                    })
+
+                    if (userSessions.length === 4 && userSessions[3]?.isRegistered) {
+                        sendEmail({
+                            firstName: userData?.firstName,
+                            lastName: userData?.lastName,
+                            email: userData?.email,
+                            nic: userData?.nic,
+                            paymentRef: clientRef,
+                            amount: transactionDetails?.paymentAmount,
+                            inaguration: userSessions[0].isRegistered,
+                            day1: userSessions[1].isRegistered,
+                            day2: userSessions[2].isRegistered,
+                            dis: userSessions[3].isRegistered,
+                            organization: userData?.organization,
+                        })
+                    } else {
+                        sendEmail({
+                            firstName: userData?.firstName,
+                            lastName: userData?.lastName,
+                            email: userData?.email,
+                            nic: userData?.nic,
+                            paymentRef: clientRef,
+                            amount: transactionDetails?.paymentAmount,
+                            inaguration: userSessions[0].isRegistered,
+                            day1: userSessions[1].isRegistered,
+                            day2: userSessions[2].isRegistered,
+                            dis: false,
+                            organization: userData?.organization,
+                        })
+                    }
+
                 }
 
                 console.log(status);
