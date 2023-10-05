@@ -54,7 +54,7 @@ function DisBillingDetails({ setIsCheckout, setFormData, setSessions, setFirstTi
                     contactNumber: contactNumber,
                     confKit: 'Not Issued',
                     isInvitee: true,
-                         securityStatus: "inactive",
+                    securityStatus: "active",
                 });
             setIsRegistered(true);
         } catch (err) {
