@@ -57,13 +57,13 @@ function DIS() {
               >
                 Participant Registration
               </a>
-
+              {/* 
               <a
                 href="https://forms.gle/BpxqFa2TmknPo21PA"
                 className="btn btn-common"
               >
                 Investor Registration
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
