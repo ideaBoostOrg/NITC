@@ -13,7 +13,7 @@ import TermsModal from "./DisTermsModal";
 const packages = [{
   key: "DIS",
   name: "Digital Investment Summit",
-  price: 15300.00,
+  price: 8.00, //15300.00
   currency: "LKR",
 }];
 
