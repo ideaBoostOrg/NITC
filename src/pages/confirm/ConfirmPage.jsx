@@ -138,18 +138,39 @@ function ConfirmPage() {
                         updateTicketCount(userData.memberId, userSessions)
                     }
 
-                    sendEmail({
-                        firstName: userData?.firstName,
-                        lastName: userData?.lastName,
-                        email: userData?.email,
-                        nic: userData?.nic,
-                        paymentRef: clientRef,
-                        amount: transactionDetails?.paymentAmount,
-                        inaguration: userSessions[0].isRegistered,
-                        day1: userSessions[1].isRegistered,
-                        day2: userSessions[2].isRegistered,
-                        organization: userData?.organization,
-                    })
+                    console.log(userSessions);
+
+
+                    if (userSessions.length === 4 && userSessions[3]?.isRegistered) {
+                        sendEmail({
+                            firstName: userData?.firstName,
+                            lastName: userData?.lastName,
+                            email: userData?.email,
+                            nic: userData?.nic,
+                            paymentRef: clientRef,
+                            amount: transactionDetails?.paymentAmount,
+                            inaguration: userSessions[0].isRegistered,
+                            day1: userSessions[1].isRegistered,
+                            day2: userSessions[2].isRegistered,
+                            dis: userSessions[3].isRegistered,
+                            organization: userData?.organization,
+                        })
+                    } else {
+                        sendEmail({
+                            firstName: userData?.firstName,
+                            lastName: userData?.lastName,
+                            email: userData?.email,
+                            nic: userData?.nic,
+                            paymentRef: clientRef,
+                            amount: transactionDetails?.paymentAmount,
+                            inaguration: userSessions[0].isRegistered,
+                            day1: userSessions[1].isRegistered,
+                            day2: userSessions[2].isRegistered,
+                            dis: false,
+                            organization: userData?.organization,
+                        })
+                    }
+
                 }
 
                 console.log(status);
@@ -184,11 +205,14 @@ function ConfirmPage() {
                         setData(results)
                         setIsError(false)
                         if (results?.responseCode === "00" && results?.clientRef === clientRef) {
+                            //payment success
                             updatePayment(clientRef, results?.comment, "Paid", results)
                             setIsLoading(false)
                             setIsPaymentConfirmed(true)
                         }
                         else {
+
+                            //payment failed
                             updatePayment(clientRef, results?.comment, "Payment Failed", results)
                             setIsLoading(false)
                             setIsPaymentConfirmed(false)
