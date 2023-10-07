@@ -188,11 +188,9 @@ function DisBillingDetails({ setIsCheckout, setFormData, setSessions, setFirstTi
                                             >Attendence method</p>
                                             <div style={{
                                                 display: "flex",
-                                                flexDirection: "row",
-                                                gap: "20px",
-
+                                                flexDirection: "column",
                                             }}>
-                                                <div className="form-check">
+                                                <div className="form-check" style={{marginBottom:'10px'}}>
                                                     <input
                                                         className="form-check-input"
                                                         type="radio"
@@ -206,7 +204,8 @@ function DisBillingDetails({ setIsCheckout, setFormData, setSessions, setFirstTi
                                                         className="form-check-label"
                                                         htmlFor="online"
                                                     >
-                                                        Online
+                                                       Online - Attend the Digital Investment Summit online
+                            free of charge
                                                     </label>
                                                 </div>
                                                 <div className="form-check">
@@ -222,7 +221,8 @@ function DisBillingDetails({ setIsCheckout, setFormData, setSessions, setFirstTi
                                                         className="form-check-label"
                                                         htmlFor="physical"
                                                     >
-                                                        Physical
+                                                        Physical - Attend the conference in person for $45.00
+                                                        (15300.00 LKR)
                                                     </label>
                                                 </div>
                                             </div>
