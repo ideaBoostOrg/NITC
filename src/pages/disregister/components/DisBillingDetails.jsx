@@ -177,7 +177,7 @@ function DisBillingDetails({ setIsCheckout, setFormData, setSessions, setFirstTi
                         <section className="section-padding" style={{ margin: "30px 10px", padding: "0" }}>
                             <div className="container">
                                 <div className="cssl-member-box row">
-                                    <div className="col-lg-6 col-sm-12">
+                                    <div className="col-lg-12 col-md-12 col-sm-12">
                                         <h5 style={{ fontSize: "20px", marginBottom: "30px" }}>
                                             Billing details for Digital Investment Summit
                                         </h5>
