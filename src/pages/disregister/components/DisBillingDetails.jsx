@@ -54,7 +54,7 @@ function DisBillingDetails({ setIsCheckout, setFormData, setSessions, setFirstTi
                     contactNumber: contactNumber,
                     confKit: 'Not Issued',
                     isInvitee: true,
-                         securityStatus: "inactive",
+                    securityStatus: "active",
                 });
             setIsRegistered(true);
         } catch (err) {
@@ -177,7 +177,7 @@ function DisBillingDetails({ setIsCheckout, setFormData, setSessions, setFirstTi
                         <section className="section-padding" style={{ margin: "30px 10px", padding: "0" }}>
                             <div className="container">
                                 <div className="cssl-member-box row">
-                                    <div className="col-lg-6 col-sm-12">
+                                    <div className="col-lg-12 col-md-12 col-sm-12">
                                         <h5 style={{ fontSize: "20px", marginBottom: "30px" }}>
                                             Billing details for Digital Investment Summit
                                         </h5>
@@ -188,11 +188,9 @@ function DisBillingDetails({ setIsCheckout, setFormData, setSessions, setFirstTi
                                             >Attendence method</p>
                                             <div style={{
                                                 display: "flex",
-                                                flexDirection: "row",
-                                                gap: "20px",
-
+                                                flexDirection: "column",
                                             }}>
-                                                <div className="form-check">
+                                                <div className="form-check" style={{marginBottom:'10px'}}>
                                                     <input
                                                         className="form-check-input"
                                                         type="radio"
@@ -206,7 +204,8 @@ function DisBillingDetails({ setIsCheckout, setFormData, setSessions, setFirstTi
                                                         className="form-check-label"
                                                         htmlFor="online"
                                                     >
-                                                        Online
+                                                       Online - Attend the Digital Investment Summit online
+                            free of charge
                                                     </label>
                                                 </div>
                                                 <div className="form-check">
@@ -222,7 +221,8 @@ function DisBillingDetails({ setIsCheckout, setFormData, setSessions, setFirstTi
                                                         className="form-check-label"
                                                         htmlFor="physical"
                                                     >
-                                                        Physical
+                                                        Physical - Attend the conference in person for $45.00
+                                                        (15300.00 LKR)
                                                     </label>
                                                 </div>
                                             </div>

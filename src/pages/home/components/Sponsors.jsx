@@ -1,4 +1,4 @@
-import logo_1 from '../../../assets/img/sponsors/logo-1.png'
+import logo_1 from "../../../assets/img/sponsors/logo-1.png";
 import logo_2 from "../../../assets/img/sponsors/logo-2.png";
 import logo_3 from "../../../assets/img/sponsors/mc_symbol_opt_45_3x.png";
 import logo_4 from "../../../assets/img/sponsors/logo-4.png";
@@ -8,13 +8,14 @@ import logo_7 from "../../../assets/img/sponsors/gennext.png";
 import logo_8 from "../../../assets/img/sponsors/SLTMOBITEL.png";
 import logo_9 from "../../../assets/img/sponsors/ADL.png";
 import logo_10 from "../../../assets/img/sponsors/Informatics.png";
+import logo_11 from "../../../assets/img/sponsors/MITWhite.png";
+import logo_12 from "../../../assets/img/sponsors/AllStations.png";
 
 // import TBA from "../../../assets/img/TBA.png";
 // import logo_6 from '../../../assets/img/sponsors/logo-6.png'
 // import logo_7 from '../../../assets/img/sponsors/logo-7.png'
 // import logo_8 from '../../../assets/img/sponsors/logo-8.png'
 // import logo_9 from '../../../assets/img/sponsors/logo-9.png'
-
 
 function Sponsors() {
   return (
@@ -120,6 +121,9 @@ function Sponsors() {
                 <span className="gold-sponsor-logo">
                   <img src={logo_7} alt="" />
                 </span>
+                <span className="gold-sponsor-logo">
+                  <img src={logo_11} alt="" />
+                </span>
               </div>
               <br />
 
@@ -169,6 +173,22 @@ function Sponsors() {
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                 <span className="informatics-partner-logo">
                   <img src={logo_10} alt="" />
+                </span>
+              </div>
+              <p
+                style={{
+                  fontWeight: "600",
+                  textAlign: "center",
+                  marginTop: "40px",
+                  marginBottom: "20px",
+                  fontSize: "1rem",
+                }}
+              >
+                Electronic Media Partner
+              </p>
+              <div className="col-lg-12 col-md-4 col-sm-4 text-center">
+                <span className="electronic-media-partner-logo">
+                  <img src={logo_12} alt=""  />
                 </span>
               </div>
 
