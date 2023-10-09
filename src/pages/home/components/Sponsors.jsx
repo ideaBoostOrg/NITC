@@ -11,8 +11,6 @@ import logo_10 from "../../../assets/img/sponsors/Informatics.png";
 import logo_11 from "../../../assets/img/sponsors/MITWhite.png";
 import logo_12 from "../../../assets/img/sponsors/AllStations.png";
 
-
-
 // import TBA from "../../../assets/img/TBA.png";
 // import logo_6 from '../../../assets/img/sponsors/logo-6.png'
 // import logo_7 from '../../../assets/img/sponsors/logo-7.png'
@@ -123,6 +121,9 @@ function Sponsors() {
                 <span className="gold-sponsor-logo">
                   <img src={logo_7} alt="" />
                 </span>
+                <span className="educational-partner-logo">
+                  <img src={logo_11} alt="" />
+                </span>
               </div>
               <br />
 
@@ -155,12 +156,6 @@ function Sponsors() {
               </p>
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                 <span className="educational-partner-logo">
-                  <img src={logo_11} alt="" />
-                </span>
-              </div>
-
-              <div className="col-lg-12 col-md-4 col-sm-4 text-center">
-                <span className="educational-partner-logo">
                   <img src={logo_9} alt="" />
                 </span>
               </div>
@@ -180,9 +175,20 @@ function Sponsors() {
                   <img src={logo_10} alt="" />
                 </span>
               </div>
+              <p
+                style={{
+                  fontWeight: "600",
+                  textAlign: "center",
+                  marginTop: "40px",
+                  marginBottom: "20px",
+                  fontSize: "1rem",
+                }}
+              >
+                Electronic Media Partner
+              </p>
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                 <span className="informatics-partner-logo">
-                  <img src={logo_12} alt="" />
+                  <img src={logo_12} alt="" style={{ width: "30%" }} />
                 </span>
               </div>
 
