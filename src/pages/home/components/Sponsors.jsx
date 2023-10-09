@@ -121,7 +121,7 @@ function Sponsors() {
                 <span className="gold-sponsor-logo">
                   <img src={logo_7} alt="" />
                 </span>
-                <span className="educational-partner-logo">
+                <span className="gold-sponsor-logo">
                   <img src={logo_11} alt="" />
                 </span>
               </div>
