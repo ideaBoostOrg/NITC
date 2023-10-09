@@ -187,8 +187,8 @@ function Sponsors() {
                 Electronic Media Partner
               </p>
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
-                <span className="informatics-partner-logo">
-                  <img src={logo_12} alt="" style={{ width: "30%" }} />
+                <span className="electronic-media-partner-logo">
+                  <img src={logo_12} alt=""  />
                 </span>
               </div>
 
