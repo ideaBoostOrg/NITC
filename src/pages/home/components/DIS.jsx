@@ -55,7 +55,7 @@ function DIS() {
                 className="btn btn-common"
                 id="view_more_btn"
               >
-                Participant Registration
+                Investor Registration
               </a>
               {/* 
               <a
