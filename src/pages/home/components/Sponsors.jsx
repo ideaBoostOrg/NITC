@@ -10,7 +10,7 @@ import logo_9 from "../../../assets/img/sponsors/ADL.png";
 import logo_10 from "../../../assets/img/sponsors/Informatics.png";
 import logo_11 from "../../../assets/img/sponsors/MITWhite.png";
 import logo_12 from "../../../assets/img/sponsors/AllStations.png";
-
+import logo_13 from "../../../assets/img/sponsors/logo-6.png";
 // import TBA from "../../../assets/img/TBA.png";
 // import logo_6 from '../../../assets/img/sponsors/logo-6.png'
 // import logo_7 from '../../../assets/img/sponsors/logo-7.png'
@@ -101,6 +101,9 @@ function Sponsors() {
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                 <span className="gold-sponsor-logo">
                   <img src={logo_1} alt="" />
+                </span>
+                <span className="gold-sponsor-logo">
+                  <img src={logo_13} alt="" style={{height:'30px', width:'auto'}}/>
                 </span>
                 <span className="gold-sponsor-logo">
                   <img src={logo_2} alt="" />
