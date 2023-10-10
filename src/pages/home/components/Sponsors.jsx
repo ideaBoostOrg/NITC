@@ -175,7 +175,7 @@ function Sponsors() {
               </p>
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                 <span className="informatics-partner-logo">
-                  <img src={logo_10} alt="" />
+                  <img src={logo_10} alt="" style={{height:'20px', width:'auto'}}/>
                 </span>
               </div>
               <p
@@ -191,7 +191,7 @@ function Sponsors() {
               </p>
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                 <span className="electronic-media-partner-logo">
-                  <img src={logo_12} alt=""  />
+                  <img src={logo_12} alt="" style={{height:'55px', width:'auto'}} />
                 </span>
               </div>
 
