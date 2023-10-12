@@ -204,7 +204,6 @@ function DisBillingDetails({ setIsCheckout, setFormData, setSessions, setFirstTi
                             value="Online"
                             id="online"
                               disabled
-{/*                             checked */}
                           />
                           <label className="form-check-label" htmlFor="online">
                             Online - Attend the Digital Investment Summit online
