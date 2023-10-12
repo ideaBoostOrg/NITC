@@ -11,7 +11,7 @@ function Ticket_pricing() {
       style={{ paddingBottom: "50px", paddingTop: "50px" }}
     >
       <div className="container">
-        <div className="row mb-5">
+        <div className="row">
           <div className="col-12">
             <div className="section-title-header text-center">
               <h2 className="section-title wow fadeInUp" data-wow-delay="0.2s">
@@ -101,7 +101,7 @@ function Ticket_pricing() {
                       <strike>Panel Discussion and Q&A</strike>
                     </span>
                   </li>
-                  <li>
+                  {/* <li>
                     <span
                       style={{
                         paddingRight: "10px",
@@ -115,7 +115,7 @@ function Ticket_pricing() {
                     <span className="text">
                       <strike>Investment Summit</strike>
                     </span>
-                  </li>
+                  </li> */}
                   <li>
                     <span
                       style={{
@@ -146,7 +146,7 @@ function Ticket_pricing() {
                       <strike>Conference Tracks</strike>
                     </span>
                   </li>
-                  <li>
+                  {/* <li>
                     <span
                       style={{
                         paddingRight: "10px",
@@ -160,7 +160,7 @@ function Ticket_pricing() {
                     <span className="text">
                       <strike>CSSL Research Colloquium</strike>
                     </span>
-                  </li>
+                  </li> */}
                   <li>
                     <span
                       style={{
@@ -256,7 +256,7 @@ function Ticket_pricing() {
                     </span>
                     <span className="text">Panel Discussion and Q&A</span>
                   </li>
-                  <li>
+                  {/* <li>
                     <span
                       style={{
                         paddingRight: "10px",
@@ -270,7 +270,7 @@ function Ticket_pricing() {
                     <span className="text">
                       <strike>Investment Summit</strike>
                     </span>
-                  </li>
+                  </li> */}
                   <li>
                     <span
                       style={{
@@ -297,7 +297,7 @@ function Ticket_pricing() {
                     </span>
                     <span className="text">Conference Tracks</span>
                   </li>
-                  <li>
+                  {/* <li>
                     <span
                       style={{
                         paddingRight: "10px",
@@ -311,7 +311,7 @@ function Ticket_pricing() {
                     <span className="text">
                       <strike>CSSL Research Colloquium</strike>
                     </span>
-                  </li>
+                  </li> */}
                   <li>
                     <span
                       style={{
@@ -411,7 +411,7 @@ function Ticket_pricing() {
                       <strike>Panel Discussion and Q&A</strike>
                     </span>
                   </li>
-                  <li>
+                  {/* <li>
                     <span
                       style={{
                         paddingRight: "10px",
@@ -423,7 +423,7 @@ function Ticket_pricing() {
                       <CheckCircleFill />
                     </span>
                     <span className="text">Investment Summit</span>
-                  </li>
+                  </li> */}
                   <li>
                     <span
                       style={{
@@ -450,7 +450,7 @@ function Ticket_pricing() {
                     </span>
                     <span className="text">Conference Tracks</span>
                   </li>
-                  <li>
+                  {/* <li>
                     <span
                       style={{
                         paddingRight: "10px",
@@ -462,7 +462,7 @@ function Ticket_pricing() {
                       <CheckCircleFill />
                     </span>
                     <span className="text">CSSL Research Colloquium</span>
-                  </li>
+                  </li> */}
                   <li>
                     <span
                       style={{
@@ -552,7 +552,7 @@ function Ticket_pricing() {
                     </span>
                     <span className="text">Panel Discussion and Q&A</span>
                   </li>
-                  <li>
+                  {/* <li>
                     <span
                       style={{
                         paddingRight: "10px",
@@ -563,7 +563,7 @@ function Ticket_pricing() {
                       <CheckCircleFill />
                     </span>
                     <span className="text">Investment Summit</span>
-                  </li>
+                  </li> */}
                   <li>
                     <span
                       style={{
@@ -588,7 +588,7 @@ function Ticket_pricing() {
                     </span>
                     <span className="text">Conference Tracks</span>
                   </li>
-                  <li>
+                  {/* <li>
                     <span
                       style={{
                         paddingRight: "10px",
@@ -599,7 +599,7 @@ function Ticket_pricing() {
                       <CheckCircleFill />
                     </span>
                     <span className="text">CSSL Research Colloquium</span>
-                  </li>
+                  </li> */}
                   <li>
                     <span
                       style={{

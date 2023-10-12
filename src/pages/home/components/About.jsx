@@ -1,4 +1,4 @@
-import img1 from "../../../assets/img/about/img1.webp";
+import img1 from "../../../assets/img/about/img1.jpg";
 
 import { CheckCircle } from "react-bootstrap-icons";
 
@@ -117,7 +117,7 @@ function About() {
                     >
                       <CheckCircle />
                     </span>
-                    InfoSec - Information Security
+                    InfoSec & E-Governance - Information Security
                   </li>
                   <li>
                     <span

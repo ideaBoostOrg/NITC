@@ -71,8 +71,8 @@ function Shedule_day_03() {
                       </div>
                       <div className="schedule-card-body">
                         <span>Conference Tracks</span>
-                        <br />
-                        <span>SSL Research Colloquium</span>
+                        {/* <br /> */}
+                        {/* <span>SSL Research Colloquium</span> */}
                       </div>
                     </div>
                   </div>

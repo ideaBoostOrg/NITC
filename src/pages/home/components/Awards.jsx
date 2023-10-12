@@ -1,13 +1,25 @@
 /* icon */
 import { Award } from "react-bootstrap-icons";
 
+/*new section*/
+import { useState } from "react";
+import Awards from "../../../assets/img/CSSL_Awards.jpg";
+import View_more from "./View_more";
 
-function Awards() {
+function Awards_section() {
+  const [viewMoreOpen, setviewMoreOpen] = useState(false);
   return (
     <section
       id="award"
       className=""
-      style={{ paddingBottom: "50px", paddingTop: "50px" }}
+      style={{
+        paddingBottom: "50px",
+        paddingTop: "50px",
+        // backgroundColor: "rgb(0 85 255 / 8%)",
+        backgroundColor: " rgb(243, 244, 243)",
+
+        // position: "relative",
+      }}
     >
       <div className="container">
         <div className="row">
@@ -18,11 +30,57 @@ function Awards() {
               </h2>
               <p className="wow fadeInDown" data-wow-delay="0.2s">
                 At the NITC Awards 2022, come celebrate the outstanding
-                achievements of the industry's shining stars.
+                achievements of the industrys shining stars.
               </p>
             </div>
           </div>
         </div>
+
+        <div className="row" style={{ padding: "30px 0" }}>
+          <div className="col-lg-6 col-md-12 col-xs-12">
+            <div className="img-thumb">
+              <img className="img-fluid" src={Awards} alt="" />
+            </div>
+          </div>
+          <View_more isOpen={viewMoreOpen} onClose={setviewMoreOpen} />
+          <div className="col-lg-6 col-md-12 col-xs-12">
+            {/* <div className="section-title-header mt-4 text-left">
+              <h2 className="section-title wow fadeInUp" data-wow-delay="0.2s">
+                CSSL NITC Awards
+              </h2>
+              <p className="wow fadeInDown" data-wow-delay="0.2s">
+                Join us as we commemorate the extraordinary accomplishments of
+                <br />
+                the industrys brightest stars at the NITC Awards 2022.
+              </p>
+            </div> */}
+
+            <p style={{ marginBottom: "2rem" }}>
+              <b>CSSL Awards </b>recognizes significant national contributions
+              by ICT Professionals and CSSL Elite awards will be held at the
+              inauguration ceremony of the NITC Conference.
+            </p>
+
+            <div className="award_section_button">
+              <span
+                className="btn btn-common"
+                id="view_more_btn"
+                onClick={() => setviewMoreOpen(true)}
+              // onClick={clickfun()}
+              >
+                View more
+              </span>
+
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfatgdOhVgiEsBF5-fHhHAdq7U0D1LF8CEUL4RCeM_ozAzT8g/viewform?fbclid=IwAR2wK3mp-nFBQC0NZy_aoqRAV-7Mvkl4oYmMcc_bfHLzNz0T6Auv6MPobUc"
+                className="btn btn-common"
+              >
+                Apply Now
+              </a>
+            </div>
+          </div>
+        </div>
+
         <div className="row intro-wrapper">
           <div className="col-lg-6 col-md-12 col-xs-12">
             <div className="single-intro-text">
@@ -242,11 +300,9 @@ function Awards() {
             </div>
           </div>
         </div>
-
-        
       </div>
     </section>
   );
 }
 
-export default Awards;
+export default Awards_section;

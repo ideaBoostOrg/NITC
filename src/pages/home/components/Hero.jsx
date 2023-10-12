@@ -1,51 +1,36 @@
 import { Link } from "react-scroll";
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-
-gsap.registerPlugin(ScrollTrigger);
-
 
 function Hero() {
 
-  // useEffect(() => {
-  //   const t1 = gsap.timeline({ defaults: { ease: "power1.out" } })
-
-  //   t1.from('.banner-info', { y: 10, opacity: 0, duration: 0.5 })
-  //     .from('.head-title', { y: 10, opacity: 0, duration: 0.5 })
-  //     .from('.banner-btn', { y: 10, opacity: 0, duration: 0.5 })
-
-  //     t1.play();
-  //   // const scrollTrigger = ScrollTrigger.create({
-  //   //   trigger: '#hero-area',
-  //   //   scrub: true,
-  //   //   onEnter: () => {
-  //   //     t1.play();
-  //   //   }
-
-  //   // return () => {
-  //   //   scrollTrigger.kill();
-  //   // }
-
-  // }, [])
-
   return (
     <div id="hero-area" className="hero-area-bg">
+      <div className="hero-image"></div>
       <div className="container ">
         <div className="row justify-content-center">
-          <div className="col-lg-9 col-sm-12">
+          <div className="col-lg-10 col-sm-12">
             <div className="contents text-center">
               <div className="icon">
                 <i className="lni-mic"></i>
               </div>
-              <p className="banner-info">
-                11<sup>th</sup> - 13<sup>th</sup> of Oct 2023, Shangri-La Hotel, Colombo, Sri-Lanka
-              </p>
-              <h2 className="head-title">National IT Conference</h2>
-              <p className="banner-desc">
-                Unlock the Early Bird Discount and save 10% until the 25<sup>th</sup> of
-                August!
-              </p>
+              <span className="banner-info" style={{ textAlign: "cetnter" }}>
+                11<sup>th</sup> - 13<sup>th</sup> of Oct 2023, Shangri-La Hotel,
+                Colombo, Sri-Lanka
+              </span>
+              <h2 className="head-title">
+                41<sup className="text-lowercase">st</sup> National IT
+                Conference
+              </h2>
+              <h4 className="head-title-sub">NITC 2023</h4>
+              <h5
+                className="head-title-discription"
+                style={{ fontWeight: "500", paddingBottom: "10px" }}
+              >
+                Towards a Sustainable Digital Society
+              </h5>
+              {/* <p className="banner-desc">
+                Unlock the Early Bird Discount and save 10% until the 25
+                <sup>th</sup> of August!
+              </p> */}
               <div className="banner-btn">
                 <Link
                   className="btn btn-common"

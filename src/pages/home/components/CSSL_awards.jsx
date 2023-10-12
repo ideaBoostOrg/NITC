@@ -1,17 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
-import Awards from "../../../assets/img/Awards-2.webp";
+import Awards from "../../../assets/img/CSSL_Awards.jpg";
 import View_more from "./View_more";
-
-
-// const [viewMoreOpen, setViewMoreOpen] = useState(false);
 
 function CSSL_awards() {
   const [viewMoreOpen, setviewMoreOpen] = useState(false);
-  // const clickfun = () => {
-  //   console.log("click");
-  // };
-
   return (
     <section id="cssl-awards" style={{ paddingTop: "10px" }}>
       <div className="container">
@@ -39,7 +32,7 @@ function CSSL_awards() {
               by ICT Professionals and CSSL Elite awards will be held at the
               inauguration ceremony of the NITC Conference.
             </p>
-
+            <br></br>
             <div className="award_section_button">
               <span
                 className="btn btn-common"
@@ -50,7 +43,10 @@ function CSSL_awards() {
                 View more
               </span>
 
-              <a href="" className="btn btn-common">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfatgdOhVgiEsBF5-fHhHAdq7U0D1LF8CEUL4RCeM_ozAzT8g/viewform?fbclid=IwAR2wK3mp-nFBQC0NZy_aoqRAV-7Mvkl4oYmMcc_bfHLzNz0T6Auv6MPobUc"
+                className="btn btn-common"
+              >
                 Apply Now
               </a>
             </div>

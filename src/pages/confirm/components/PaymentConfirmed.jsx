@@ -16,11 +16,11 @@ const PaymentConfirmed = ({ data }) => {
         setIsCopied(true)
     }
 
-    console.log(data.clientRef);
+    // console.log(data.clientRef);
 
     return (
         <>
-            <section id="" className="section-padding">
+            <section id="" className="section-padding notificaiton-pages">
                 <div className="confirm-container">
                     <CheckCircleFill className="icon" />
                     <h2>Payment Confirmed !</h2>

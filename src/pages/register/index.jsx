@@ -12,8 +12,10 @@ function Register() {
   const [clientRef, setClientRef] = useState("");
   const [commet, setCommet] = useState("");
   const [isCheckout, setIsCheckout] = useState(false);
-
+  const [sessions, setSessions] = useState([]);
+  const [firstTime, setFirstTime] = useState(true);
   const [formData, setFormData] = useState({})
+  const [isValiedMember, setIsValiedMember] = useState(false)
 
 
   return (
@@ -37,6 +39,9 @@ function Register() {
             clientRef={clientRef}
             setClientRef={setClientRef}
             formData={formData}
+            sessions={sessions}
+            firstTime={firstTime}
+            isValiedMember={isValiedMember}
           />
           :
           <BillingDetails
@@ -50,6 +55,9 @@ function Register() {
             commet={commet}
             setCommet={setCommet}
             setFormData={setFormData}
+            setSessions={setSessions}
+            setFirstTime={setFirstTime}
+            setIsValiedMember={setIsValiedMember}
           />}
     </>
   );

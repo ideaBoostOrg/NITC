@@ -1,4 +1,4 @@
-import Digital_investment_summit from "../../../assets/img/Digital_investment_summit.webp";
+import Digital_investment_summit from "../../../assets/img/CSSL_Investment_Summit.jpg";
 function CSSL_digital_investment_summit() {
   return (
     <section id="cssl-colloquium" style={{ paddingTop: "10px" }}>
@@ -17,7 +17,7 @@ function CSSL_digital_investment_summit() {
           <div className="col-lg-6 col-md-12 col-xs-12">
             <div className="section-title-header mt-4 text-left">
               <h2 className="section-title wow fadeInUp" data-wow-delay="0.2s">
-                CSSL Digital Investment Summit
+                Digital Investment Summit
               </h2>
               <p className="wow fadeInDown" data-wow-delay="0.2s">
                 Unleash the power of digital investments and seize growth

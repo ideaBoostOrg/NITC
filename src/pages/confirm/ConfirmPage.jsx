@@ -1,7 +1,7 @@
 import logo from "../../assets/img/logo-crop.png";
 
 /* eslint-disable no-unused-vars */
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 import { useSearchParams } from "react-router-dom";
 
@@ -11,6 +11,7 @@ import PaymentFailed from "./components/PaymentFailed";
 import { firestore } from "../../firebase";
 import { collection, doc, query, getDocs, where, updateDoc, arrayUnion } from "firebase/firestore";
 import PaymentProcessing from "./components/PaymentProcessing";
+import SomethingWentWrong from "../../components/SomethingWentWrong";
 
 
 function ConfirmPage() {
@@ -22,86 +23,227 @@ function ConfirmPage() {
     const [data, setData] = useState()
     const [isPaymentConfirmed, setIsPaymentConfirmed] = useState(false)
     const [isLoading, setIsLoading] = useState(true)
+    const [isError, setIsError] = useState(false)
+
 
     useEffect(() => {
-        setIsLoading(true)
-        axios.post('http://localhost:3400/confirm', {
-            clientRef: clientRef,
-            reqid: reqid
-        })
-            .then(Response => {
-                setData(Response.data)
-                console.table(Response.data);
-                if (Response.data?.responseCode) {
-                    if (Response.data?.responseCode === "00" && Response.data?.clientRef === clientRef) {
-                        updatePaymentStatus("Paid", Response.data);
-                        setIsLoading(false)
-                        setIsPaymentConfirmed(true)
-                    }
-                    else {
-                        updatePaymentStatus("Payment Failed", Response.data);
-                        setIsLoading(false)
-                        setIsPaymentConfirmed(false)
-                    }
 
-                } else {
-                    setIsPaymentConfirmed(false)
+        const sendEmail = (data) => {
+            axios.post('https://api.imanage.services/api/api/nitc', data)
+                .then(Response => {
+                    // console.table("email", Response.data);
+                    console.log("email sent");
+                })
+                .catch((error) => {
+                    console.log(error);
+                })
+        }
+
+        const updateTicketCount = async (memberId, userSessions) => {
+            try {
+                const memberCollection = collection(firestore, "members")
+                const memberQuery = query(memberCollection, where("memNo", "==", memberId))
+                const memberQuerySnapshot = await getDocs(memberQuery)
+
+                if (memberQuerySnapshot.empty) {
+                    // setIsError(true)
+                    return
                 }
-            })
-            .catch((error) => {
-                console.log(error);
-                setIsPaymentConfirmed(false)
 
-            })
+                const memberDoc = doc(firestore, "members", memberQuerySnapshot.docs[0].id)
 
+                const ticketCount = userSessions.filter(session => session.isRegistered).length
 
-    }, [reqid, clientRef])
+                await updateDoc(memberDoc, {
+                    ticketCount: ticketCount
+                })
 
-    const sendEmail = (data) => {
-        axios.post('https://api.imanage.services/api/api/nitc', data)
-            .then(Response => {
-                console.table(Response.data);
-            })
-            .catch((error) => {
-                console.log(error);
-            })
-    }
+                console.log("Ticket Count Updated");
 
-    const updatePaymentStatus = async (status, additionalData) => {
-        try {
-            const usersCollectionRef = collection(firestore, "users");
-            const querySnapshot = await getDocs(
-                query(usersCollectionRef, where("clientRef", "==", clientRef))
-            );
-            if (!querySnapshot.empty) {
-                const userDoc = doc(firestore, "users", querySnapshot.docs[0].id);
-                const userData = querySnapshot.docs[0].data();
+            } catch (err) {
+                // setIsError(true)
+                console.log(err)
+            }
+        }
 
-                await updateDoc(userDoc, {
-                    paymentStatus: status,
-                    transactionDetails: additionalData
-                });
+        const updatePayment = async (clientRef, email, status, transactionDetails) => {
+            const eventsLocal = JSON.parse(window.sessionStorage.getItem('NITC_REGISTRATION_WEB_APP_USER_REGISTERING_SESSIONS'))
 
-                // change this to "Paid"
-                if (status === 'Payment Failed') {
-                    sendEmail({
-                        firstName: userData?.firstName,
-                        lastName: userData?.lastName,
-                        email: userData?.email,
-                        nic: userData?.nic,
-                        paymentRef: userData?.clientRef,
-                        amount: additionalData?.paymentAmount,
-                        inaguration: userData?.reg_sessions[0].isRegistered,
-                        day1: userData?.reg_sessions[1].isRegistered,
-                        day2: userData?.reg_sessions[2].isRegistered,
-                        organization: userData?.organization,
+            if (!eventsLocal) {
+                setIsError(true)
+                return
+            }
+
+            if (eventsLocal.clientRef !== clientRef) {
+                setIsError(true)
+                return
+            }
+
+            try {
+
+                const userCollection = collection(firestore, "users")
+                const userQuery = query(userCollection, where("email", "==", email))
+                const userQuerySnapshot = await getDocs(userQuery)
+                if (userQuerySnapshot.empty) {
+                    setIsError(true)
+                    return
+                }
+
+                const userDoc = doc(firestore, "users", userQuerySnapshot.docs[0].id)
+                const userData = userQuerySnapshot.docs[0].data()
+
+                let userSessions = userData.regSessions ?? [
+                    { name: 'Inauguration', isRegistered: false },
+                    { name: 'Day_01', isRegistered: false },
+                    { name: 'Day_02', isRegistered: false },
+                    { name: 'DIS', isRegistered: false },
+                ]
+
+                let securityStatus = userData.securityStatus ?? "inactive"
+
+                let paymentStatus = userData.paymentStatus ?? "Payment Failed"
+
+                if (status === "Paid") {
+                    userSessions = eventsLocal.sessions
+                    securityStatus = "active"
+                    paymentStatus = "Paid"
+
+                    const regTime = new Date().toISOString()
+
+                    userSessions = userSessions.map(session => {
+                        if (session.isRegistered === true) {
+                            return {
+                                ...session,
+                                registeredTime: regTime
+                            }
+                        }
+                        return session
                     })
                 }
+
+                await updateDoc(userDoc, {
+                    paymentStatus: paymentStatus,
+                    transactionDetails: arrayUnion({
+                        ...transactionDetails,
+                        status: status,
+                        timestamp: new Date().toLocaleString('en-US', { timeZone: 'Asia/Colombo' }),
+                    }),
+                    regSessions: userSessions,
+                    securityStatus: securityStatus,
+
+                })
+
+                if (status === "Paid") {
+                    if (userData?.memberId) {
+                        updateTicketCount(userData.memberId, userSessions)
+                    }
+
+                    console.log(userSessions);
+
+
+                    if (userSessions.length === 4 && userSessions[3]?.isRegistered) {
+                        sendEmail({
+                            firstName: userData?.firstName,
+                            lastName: userData?.lastName,
+                            email: userData?.email,
+                            nic: userData?.nic,
+                            paymentRef: clientRef,
+                            amount: transactionDetails?.paymentAmount,
+                            inaguration: userSessions[0].isRegistered,
+                            day1: userSessions[1].isRegistered,
+                            day2: userSessions[2].isRegistered,
+                            dis: userSessions[3].isRegistered,
+                            organization: userData?.organization,
+                        })
+                    } else {
+                        sendEmail({
+                            firstName: userData?.firstName,
+                            lastName: userData?.lastName,
+                            email: userData?.email,
+                            nic: userData?.nic,
+                            paymentRef: clientRef,
+                            amount: transactionDetails?.paymentAmount,
+                            inaguration: userSessions[0].isRegistered,
+                            day1: userSessions[1].isRegistered,
+                            day2: userSessions[2].isRegistered,
+                            dis: false,
+                            organization: userData?.organization,
+                        })
+                    }
+
+                }
+
+                console.log(status);
+
+            } catch (error) {
+                setIsError(true)
+                console.log(error)
             }
-        } catch (error) {
-            console.log("Error updating payment status:", error);
         }
-    };
+
+        const confirmPg = async () => {
+            setIsLoading(true)
+
+            const url = 'https://e5ncju2y5f.execute-api.eu-west-2.amazonaws.com/prod/confirm'
+            // const url = 'https://7kw2pe2bd8.execute-api.us-east-1.amazonaws.com/dev/confirm' //bashi
+            // const url = 'http://localhost:3400/confirm'
+            try {
+                const response = await axios.post(url, {
+                    clientRef: clientRef,
+                    reqId: reqid
+                })
+
+                if (response) {
+                    const responseString = response.data
+                    const responseArray = responseString.split('&')
+                    const results = {}
+                    responseArray.forEach((item) => {
+                        const [key, value] = item.split('=')
+                        results[key] = value
+                    })
+                    if (results?.responseCode) {
+                        setData(results)
+                        setIsError(false)
+                        if (results?.responseCode === "00" && results?.clientRef === clientRef) {
+                            //payment success
+                            updatePayment(clientRef, results?.comment, "Paid", results)
+                            setIsLoading(false)
+                            setIsPaymentConfirmed(true)
+                        }
+                        else {
+
+                            //payment failed
+                            updatePayment(clientRef, results?.comment, "Payment Failed", results)
+                            setIsLoading(false)
+                            setIsPaymentConfirmed(false)
+                        }
+
+                    } else {
+                        console.log("Error 02: Payment Failed");
+                        setIsPaymentConfirmed(false)
+                        setIsLoading(false)
+                        setIsError(true)
+                    }
+
+                }
+                else {
+                    console.log("Error 03: Payment Failed");
+                    setIsPaymentConfirmed(false)
+                    setIsLoading(false)
+                    setIsError(true)
+                }
+
+            } catch (error) {
+                console.log("Error 04: Reqeust error");
+                console.log(error)
+                setIsError(true)
+            }
+        }
+
+
+        confirmPg()
+
+    }, [])
 
     return (
         <>
@@ -114,7 +256,7 @@ function ConfirmPage() {
                     </div>
                 </nav>
             </section>
-            {isLoading ? <PaymentProcessing /> : isPaymentConfirmed ? <PaymentConfirmed data={data} /> : <PaymentFailed data={data} />
+            {isLoading ? <PaymentProcessing /> : isError ? <SomethingWentWrong /> : isPaymentConfirmed ? <PaymentConfirmed data={data} /> : <PaymentFailed data={data} />
             }
         </>
     )
