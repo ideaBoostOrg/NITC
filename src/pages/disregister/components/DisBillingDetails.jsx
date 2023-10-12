@@ -203,7 +203,8 @@ function DisBillingDetails({ setIsCheckout, setFormData, setSessions, setFirstTi
                             onChange={handleRadioBtn}
                             value="Online"
                             id="online"
-                            checked
+                              disabled
+{/*                             checked */}
                           />
                           <label className="form-check-label" htmlFor="online">
                             Online - Attend the Digital Investment Summit online
@@ -218,6 +219,7 @@ function DisBillingDetails({ setIsCheckout, setFormData, setSessions, setFirstTi
                             onChange={handleRadioBtn}
                             value="Physical"
                             id="physical"
+                            checked
                           />
                           <label
                             className="form-check-label"
