@@ -1,7 +1,6 @@
 /* icon */
 import { Award } from "react-bootstrap-icons";
 
-
 function Awards() {
   return (
     <section
@@ -12,13 +11,17 @@ function Awards() {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <div className="section-title-header text-center mb-4">
-              <h2 className="section-title wow fadeInUp" data-wow-delay="0.2s">
-                NITC Awards 2022
-              </h2>
-              <p className="wow fadeInDown" data-wow-delay="0.2s">
-                At the NITC Awards 2022, come celebrate the outstanding
-                achievements of the industry's shining stars.
+            <div className="section-title-header text-center">
+              <h1 className="section-title">
+                <span>Awards</span>
+              </h1>{" "}
+              this may be a greate place to add some text
+              <p>
+                The CSSL ICT Awards is the most prestigious event in the ICT
+                industry in Sri Lanka. The CSSL ICT Awards is a unique
+                opportunity to celebrate the achievements of ICT professionals
+                and organizations, who have significantly contributed to the
+                development of the ICT industry in Sri Lanka.
               </p>
             </div>
           </div>
@@ -242,8 +245,6 @@ function Awards() {
             </div>
           </div>
         </div>
-
-        
       </div>
     </section>
   );
