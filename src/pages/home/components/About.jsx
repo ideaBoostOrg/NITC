@@ -10,7 +10,6 @@ import { CheckCircle } from "react-bootstrap-icons";
 // gsap.registerPlugin(ScrollTrigger);
 
 function About() {
-
   // const t1 = gsap.timeline({ defaults: { ease: "power1.out" } });
   // const t2 = gsap.timeline({ defaults: { ease: "power1.out" } });
 
@@ -58,7 +57,7 @@ function About() {
           <div className="col-lg-6 col-md-12 col-xs-12">
             <div className="about-content">
               <div>
-                <div className="about-text">
+                {/* <div className="about-text">
                   <h2>About the Conference</h2>
                   <p>
                     <b>NITC 2023 Conference</b> will feature 6 tracks and will
@@ -68,7 +67,16 @@ function About() {
                     President Ranil Wickremesinghe and symbolizes a new chapter
                     in Sri Lanka’s quest to create an inclusive digital economy.
                   </p>
+                </div> */}
+
+                <div className="temp">
+                  <h2>this use for temp</h2>
+                  <p>
+                    <b>this is new one </b> will feature 6 tracks and will have
+                  </p>
                 </div>
+
+                
                 <ul id="stylish-list" className="stylish-list mb-3">
                   <li>
                     <span
