@@ -25,7 +25,7 @@ function Gallery() {
                 Event Gallery
               </h2>
 
-              <p
+              {/* <p
                 className="wow fadeInDown animated"
                 data-wow-delay="0.2s"
                 style={{
@@ -37,7 +37,7 @@ function Gallery() {
               >
                 Lorem ipsum dolor sit amet, in quodsi vulputate pro. Ius illum
                 vocent mediocritatem an <br /> cule dicta iriure at phaedrum.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

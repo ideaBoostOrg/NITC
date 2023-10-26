@@ -3,9 +3,9 @@ import logo_IdeaBoost from "../../../assets/img/logo-IdeaBoost.png";
 
 /* icon */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
-import { faPinterest } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 function Footer(){
     return (
@@ -26,34 +26,36 @@ function Footer(){
               >
                 <ul>
                   <li className="facebook">
-                    <a target="_blank" href="3">
+                    <a
+                      target="_blank"
+                      href="https://www.facebook.com/ComputerSocietySriLanka/"
+                    >
                       <FontAwesomeIcon icon={faFacebook} />
                     </a>
                   </li>
-                  <li className="twitter">
-                    <a target="_blank" href="3">
-                      <FontAwesomeIcon icon={faTwitter} />
+                  <li className="linkedin">
+                    <a
+                      target="_blank"
+                      href="https://www.linkedin.com/company/computer-society-of-sri-lanka-secretariat"
+                    >
+                      <FontAwesomeIcon icon={faLinkedin} />
                     </a>
                   </li>
-                  <li className="pinterest">
-                    <a target="_blank" href="3">
-                      <FontAwesomeIcon icon={faPinterest} />
+                  <li className="email">
+                    <a target="_blank" href="info@cssl.lk">
+                      <FontAwesomeIcon icon={faEnvelope} />
                     </a>
                   </li>
                 </ul>
               </div>
               <div className="site-info">
                 <p>
-                  Designed and Developed by{" "}
+                  2023 ©️ Powered by{" "}
                   <a href="http://ideaboost.tech" rel="nofollow">
                     ideaBoost.
                   </a>
                 </p>
-                <img
-                  src={logo_IdeaBoost}
-                  alt=""
-                  style={{ width: 150 }}
-                />
+                {/* <img src={logo_IdeaBoost} alt="" style={{ width: 150 }} /> */}
               </div>
             </div>
           </div>

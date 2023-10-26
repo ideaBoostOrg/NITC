@@ -1,8 +1,8 @@
-import logo_1 from '../../../assets/img/sponsors/logo-1.png'
-import logo_2 from '../../../assets/img/sponsors/logo-2.jpg'
-import logo_3 from '../../../assets/img/sponsors/logo-3.png'
-import logo_4 from '../../../assets/img/sponsors/logo-4.png'
-import logo_5 from '../../../assets/img/sponsors/logo-5.gif'
+import logo_1 from '../../../assets/img/sponsors/logo-1.webp'
+import logo_2 from '../../../assets/img/sponsors/logo-2.webp'
+import logo_3 from '../../../assets/img/sponsors/logo-3.webp'
+import logo_4 from "../../../assets/img/sponsors/logo-4.webp";
+import logo_5 from "../../../assets/img/sponsors/logo-5.webp";
 // import logo_6 from '../../../assets/img/sponsors/logo-6.png'
 // import logo_7 from '../../../assets/img/sponsors/logo-7.png'
 // import logo_8 from '../../../assets/img/sponsors/logo-8.png'
@@ -18,14 +18,16 @@ function Sponsors(){
             <div className="col-12">
               <div className="section-title-header text-center">
                 <h2
-                  className="section-title wow fadeInUp"
+                  // className="section-title wow fadeInUp"
+                  style={{ color: "#212121" }}
                   data-wow-delay="0.2s"
                 >
                   Sponsors
                 </h2>
                 <p className="wow fadeInDown" data-wow-delay="0.2s">
                   A special thank you to our valued sponsors, whose support has
-                  <br />been instrumental in driving our success.
+                  <br />
+                  been instrumental in driving our success.
                 </p>
               </div>
             </div>
@@ -36,7 +38,7 @@ function Sponsors(){
           >
             <div className="col-lg-12">
               <div className="sponsors-logo text-center">
-                <a href="" className="sponsor-logo">
+                {/* <a href="" className="sponsor-logo">
                   <img src={logo_1} style={{ width: 100, height: 60 }} alt="" />
                 </a>
                 <a href="" className="sponsor-logo">
@@ -50,11 +52,9 @@ function Sponsors(){
                 </a>
                 <a href="" className="sponsor-logo">
                   <img src={logo_5} style={{ width: 100, height: 60 }} alt="" />
-                </a>
-                {/* <a href=""><img src={logo_6} alt="" /></a>
-                    <a href=""><img src={logo_7} alt="" /></a>
-                    <a href=""><img src={logo_8} alt="" /></a>
-                    <a href=""><img src={logo_9} alt="" /></a> */}
+                </a> */}
+
+               <p>===content will be provided===</p>
               </div>
             </div>
           </div>

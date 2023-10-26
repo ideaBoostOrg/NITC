@@ -62,8 +62,7 @@
     font-size: 36px;
   }
   #information-bar ul {
-    text-align: left;
-    margin: 10px;
+    text-align: center;
   }
   .about-content .about-text h2 {
     font-size: 30px;
@@ -143,8 +142,7 @@
     padding: 0 10px;
   }
   #information-bar ul {
-    text-align: left;
-    margin-bottom: 30px;
+    text-align: center;
   }
   .about-content .about-text h2 {
     font-size: 22px;
@@ -229,9 +227,9 @@
   }
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+/* @media (min-width: 320px) and (max-width: 480px) {
   .btn {
     padding: 5px 7px;
     font-size: 13px;
   }
-}
+} */
