@@ -16,7 +16,7 @@ function DisBillingDetails({ setIsCheckout, setFormData, setSessions, setFirstTi
     const [organization, setOrganization] = useState("");
     const [address, setAddress] = useState("");
     const [contactNumber, setContactNumber] = useState("");
-    const [mode, setMode] = useState("Online");
+    const [mode, setMode] = useState("Physical");
 
 
     const [btnState, setBtnState] = useState("verify");
@@ -204,7 +204,6 @@ function DisBillingDetails({ setIsCheckout, setFormData, setSessions, setFirstTi
                             value="Online"
                             id="online"
                               disabled
-{/*                             checked */}
                           />
                           <label className="form-check-label" htmlFor="online">
                             Online - Attend the Digital Investment Summit online

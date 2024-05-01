@@ -30,7 +30,7 @@ function index() {
     <>
       <Navbar />
       <Hero />
-      <Countbar />
+      {/* <Countbar /> */}
       <About />
       {/* <Vedio_section /> */}
       <Vedio />
