@@ -1,4 +1,4 @@
-import logo_NITC from '../../../assets/img/logo.png'
+import logo_NITC from '../../../assets/img/NITC-Logo.png'
 // import logo_IdeaBoost from "../../../assets/img/logo-IdeaBoost.png";
 
 /* icon */
@@ -52,7 +52,7 @@ function Footer() {
             </div>
             <div className="site-info">
               <p style={{ textAlign: "center" }}>
-                2023 ©️ Powered by{" "}
+                2024 ©️ Powered by{" "}
                 <a href="http://ideaboost.tech" rel="nofollow">
                   ideaBoost.
                 </a>

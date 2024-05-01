@@ -18,7 +18,7 @@ function Information_bar() {
           <Calendar3 className="info-card__icon" />
           <div className="info-card__content">
             <h3>Date</h3>
-            <p>11<sup>th</sup> October - 13<sup>th</sup> October</p>
+            <p>12<sup>th</sup> November - 14<sup>th</sup> November</p>
           </div>
         </div>
       </div>
