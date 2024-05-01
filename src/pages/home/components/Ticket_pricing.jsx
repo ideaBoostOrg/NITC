@@ -36,7 +36,8 @@ function Ticket_pricing() {
                 <h5>Inauguration Ceremony</h5>
               </div>
               <div className="price">
-                <h2>LKR 20000</h2>
+                <h2>LKR 1000</h2>
+                <h1>that prices are changed</h1>
                 {/* <span>Per Day</span> */}
               </div>
               <div className="pricing-list">

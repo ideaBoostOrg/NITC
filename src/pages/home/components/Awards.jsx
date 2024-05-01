@@ -1,6 +1,7 @@
 /* icon */
 import { Award } from "react-bootstrap-icons";
 
+
 /*new section*/
 import { useState } from "react";
 import Awards from "../../../assets/img/CSSL_Awards.jpg";
@@ -52,6 +53,19 @@ function Awards_section() {
                 Join us as we commemorate the extraordinary accomplishments of
                 <br />
                 the industrys brightest stars at the NITC Awards 2022.
+
+            <div className="section-title-header text-center">
+              <h1 className="section-title">
+                <span>Awards</span>
+              </h1>{" "}
+              this may be a greate place to add some text
+              <p>
+                The CSSL ICT Awards is the most prestigious event in the ICT
+                industry in Sri Lanka. The CSSL ICT Awards is a unique
+                opportunity to celebrate the achievements of ICT professionals
+                and organizations, who have significantly contributed to the
+                development of the ICT industry in Sri Lanka.
+
               </p>
             </div> */}
 
