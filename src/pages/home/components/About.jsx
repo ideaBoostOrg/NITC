@@ -61,12 +61,9 @@ function About() {
                 <div className="about-text">
                   <h2>About the Conference</h2>
                   <p>
-                    <b>NITC 2023 Conference</b> will feature 6 tracks and will
+                    <b>NITC 2024 Conference</b> will feature 6 tracks and will
                     have 30+ local and foreign high-profile speakers and a
-                    series of prior events. This year, NITC 2023 will be held in
-                    conjunction with DIGI-ECON 2023, which was initiated by H.E.
-                    President Ranil Wickremesinghe and symbolizes a new chapter
-                    in Sri Lanka’s quest to create an inclusive digital economy.
+                    series of prior events. 
                   </p>
                 </div>
                 <ul id="stylish-list" className="stylish-list mb-3">
