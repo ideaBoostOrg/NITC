@@ -97,7 +97,7 @@ function Sponsors() {
               >
                 Gold sponsors
               </p>
-              <div className="col-lg-12 col-md-12 col-sm-12 text-center">
+              <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                 <span className="sponsor-logo-common">
                   <img src={TBA} alt="" />
                 </span>
@@ -113,7 +113,7 @@ function Sponsors() {
               </div>
               {/* <br /> */}
 
-              <div className="col-lg-12 col-md-12 col-sm-12 text-center">
+              <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                 <span className="sponsor-logo-common">
                   <img src={TBA} alt="" />
                 </span>
@@ -140,7 +140,7 @@ function Sponsors() {
               >
                 Education partner
               </p>
-              <div className="col-lg-12 col-md-12 col-sm-12 text-center">
+              <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                 <span className="sponsor-logo-common">
                   <img src={TBA} alt="" />
                 </span>
@@ -156,7 +156,7 @@ function Sponsors() {
               >
                 Exclusive Innovation Partner
               </p>
-              <div className="col-lg-12 col-md-12 col-sm-12 text-center">
+              <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                 <span className="sponsor-logo-common">
                   <img src={TBA} alt="" />
                 </span>
@@ -172,7 +172,7 @@ function Sponsors() {
               >
                 Partner
               </p>
-              <div className="col-lg-12 col-md-12 col-sm-12 text-center">
+              <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                 <span className="sponsor-logo-common">
                   <img src={TBA} alt="" />
                 </span>
@@ -188,7 +188,7 @@ function Sponsors() {
               >
                 Electronic Media Partner
               </p>
-              <div className="col-lg-12 col-md-12 col-sm-12 text-center">
+              <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                 <span className="sponsor-logo-common">
                   <img src={TBA} alt="" />
                 </span>
