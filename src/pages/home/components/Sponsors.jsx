@@ -12,12 +12,6 @@
 // import logo_12 from "../../../assets/img/sponsors/AllStations.png";
 // import logo_13 from "../../../assets/img/sponsors/logo-6.png";
 import TBA from "../../../assets/img/TBA.png";
-import ap_logo_1 from "../../../assets/img/sponsors/annualPartners/Altria.png";
-import ap_logo_2 from "../../../assets/img/sponsors/annualPartners/Connex.png";
-import ap_logo_3 from "../../../assets/img/sponsors/annualPartners/CryptoGen.png";
-import ap_logo_4 from "../../../assets/img/sponsors/annualPartners/FiniQe.png";
-import ap_logo_5 from "../../../assets/img/sponsors/annualPartners/NuMind.png";
-import ap_logo_6 from "../../../assets/img/sponsors/annualPartners/IdeaBoost.png";
 // import logo_6 from '../../../assets/img/sponsors/logo-6.png'
 // import logo_7 from '../../../assets/img/sponsors/logo-7.png'
 // import logo_8 from '../../../assets/img/sponsors/logo-8.png'
@@ -59,39 +53,6 @@ function Sponsors() {
         >
           <div className="col-lg-12">
             <div className="sponsors-logo text-center">
-              <p
-                style={{
-                  fontWeight: "600",
-                  textAlign: "center",
-                  marginTop: "40px",
-                  marginBottom: "20px",
-                  fontSize: "1rem",
-                }}
-              >
-                CSSL Annual Partners 
-              </p>
-              <div className="col-lg-12 col-md-12 col-sm-12 text-center">
-                <span className="sponsor-logo-common">
-                  <img src={ap_logo_1} alt="" style={{ width: 100, height: 30 }}/>
-                </span>
-                <span className="sponsor-logo-common">
-                  <img src={ap_logo_2} alt="" />
-                </span>
-                <span>
-                  <img src={ap_logo_3} alt="" style={{ width: 300, height: 50 }}/>
-                </span>
-              </div>
-              <div className="col-lg-12 col-md-12 col-sm-12 text-center">
-                <span className="sponsor-logo-common">
-                  <img src={ap_logo_4} alt="" />
-                </span>
-                <span className="sponsor-logo-common">
-                  <img src={ap_logo_5} alt="" />
-                </span>
-                <span className="sponsor-logo-common">
-                  <img src={ap_logo_6} alt="" />
-                </span>
-              </div>
               <p
                 style={{
                   fontWeight: "600",

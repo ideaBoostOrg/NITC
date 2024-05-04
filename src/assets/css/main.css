@@ -692,7 +692,10 @@ a.back-to-top:focus {
 
 .navbar-brand img {
   width: 120px;
-  padding: 15px 0px 15px 0px;
+}
+
+.navbar-brand-reg img {
+  width: 110px;
 }
 
 .top-nav-collapse {
