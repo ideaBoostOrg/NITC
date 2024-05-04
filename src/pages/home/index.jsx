@@ -19,7 +19,7 @@ import Gallery from "./components/Gallery";
 import Ticket_pricing from "./components/Ticket_pricing";
 import Sponsors from "./components/Sponsors";
 import National_partners from "./components/National_partners";
-import Annual_partners from "./components/Annual_partners";
+import Annual_partners from "./components/Annual_Partners";
 import Partners from "./components/Partners";
 import Afflicants from "./components/Afflicants";
 import Map from "./components/Map";
