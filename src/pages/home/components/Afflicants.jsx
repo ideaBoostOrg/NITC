@@ -43,7 +43,7 @@ function Afflicants() {
         >
           <div className="col-lg-12">
             <div className="sponsors-logo">
-              <div className="col-lg-12 col-md-6 col-sm-6 text-center">
+              <div className="col-lg-12 col-md-12 col-sm-12 text-center">
                 <span href="" className="afflicants-logo1">
                   <img src={logo_3} alt="" />
                 </span>

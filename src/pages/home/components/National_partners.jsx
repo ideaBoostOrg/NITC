@@ -1,4 +1,4 @@
-import logo_2 from "../../../assets/img/national_partners/ICTA.png";
+// import logo_2 from "../../../assets/img/national_partners/ICTA.png";
 import logo_1 from "../../../assets/img/national_partners/MoT-Logo-V3.png";
 // import logo_1 from "../../../assets/img/sponsors/logo-3.png";
 // import logo_2 from "../../../assets/img/sponsors/logo-4.png";
@@ -37,7 +37,7 @@ function National_partners() {
         >
           <div className="col-lg-12">
             <div className="sponsors-logo">
-              <div className="col-lg-12 col-md-6 col-sm-6 text-center">
+              <div className="col-lg-12 col-md-12 col-sm-12 text-center">
                 <span className="sponsor-logo">
                   <img src={logo_1} style={{ width: 80 }} alt="" />
                 </span>

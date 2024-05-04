@@ -1,9 +1,9 @@
-import logo_1 from "../../../assets/img/partners/ACM.png";
-import logo_3 from "../../../assets/img/partners/ACS.png";
+// import logo_1 from "../../../assets/img/partners/ACM.png";
+// import logo_3 from "../../../assets/img/partners/ACS.png";
 // import logo_4 from "../../../assets/img/partners/BCS.png";
 import logo_2 from "../../../assets/img/partners/FITTIS.png";
-import logo_5 from "../../../assets/img/partners/IESL.png";
-import logo_6 from "../../../assets/img/partners/IET.png";
+// import logo_5 from "../../../assets/img/partners/IESL.png";
+// import logo_6 from "../../../assets/img/partners/IET.png";
 import logo_7 from "../../../assets/img/partners/ISACA.png";
 import logo_8 from '../../../assets/img/partners/SLASSCOMLogo.png'
 import logo_4 from "../../../assets/img/partners/BCSLogo.png";
@@ -41,7 +41,7 @@ function Partners() {
         >
           <div className="col-lg-12">
             <div className="sponsors-logo text-center">
-              <div className="col-lg-12 col-md-4 col-sm-4 text-center">
+              <div className="col-lg-12 col-md-12 col-sm-12 text-center">
                 {/* <span className="partner-logo">
                   <img src={logo_1}  alt="" />
                 </span> */}

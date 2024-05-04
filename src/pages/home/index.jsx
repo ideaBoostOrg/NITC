@@ -1,7 +1,7 @@
 import Navbar from "../../components/Navbar";
 import About from "./components/About";
 import Hero from "./components/Hero";
-import Countbar from "./components/Countbar";
+// import Countbar from "./components/Countbar";
 import Vedio from "./components/Vedio";
 import Shedule from "./components/Shedule";
 import DIS from "./components/DIS";
@@ -19,11 +19,12 @@ import Gallery from "./components/Gallery";
 import Ticket_pricing from "./components/Ticket_pricing";
 import Sponsors from "./components/Sponsors";
 import National_partners from "./components/National_partners";
+import Annual_partners from "./components/Annual_partners";
 import Partners from "./components/Partners";
 import Afflicants from "./components/Afflicants";
 import Map from "./components/Map";
 import Footer from "./components/Footer";
-import Speakers from "./components/Speakers";
+// import Speakers from "./components/Speakers";
 
 function index() {
   return (
@@ -50,6 +51,7 @@ function index() {
       <Ticket_pricing />
       <About_CSSL />
       <National_partners />
+      <Annual_partners />
       <Sponsors />
       <Partners />
       <Afflicants />

@@ -691,8 +691,11 @@ a.back-to-top:focus {
 }
 
 .navbar-brand img {
-  width: 140px;
-  padding: 15px 0px 15px 0px;
+  width: 120px;
+}
+
+.navbar-brand-reg img {
+  width: 110px;
 }
 
 .top-nav-collapse {
@@ -1375,6 +1378,11 @@ h1 {
 
   #cssl-digita-investment-summit .section-title h2 {
     text-align: center;
+  }
+
+  .navbar-brand img {
+    width: 110px;
+    padding: 0px;
   }
 }
 
@@ -4153,6 +4161,11 @@ p {
 
 #sponsors .sponsors-logo .afflicants-logo3 img {
   width: 80px;
+}
+
+/* only for the demo */
+#sponsors .sponsors-logo .sponsor-logo-common img {
+  width: 150px;
 }
 
 .dis-btn-container {
