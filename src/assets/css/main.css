@@ -4123,6 +4123,14 @@ p {
   width: 100px;
 }
 
+#sponsors .sponsors-logo .strategic-partner-logo-common img {
+  width: 350px;
+}
+
+#sponsors .sponsors-logo .electronic-media-partner-logo img {
+  width: 500px !important;
+}
+
 #sponsors .sponsors-logo .platinum-sponsor-logo img {
   width: 250px;
 }
@@ -4166,6 +4174,14 @@ p {
 /* only for the demo */
 #sponsors .sponsors-logo .sponsor-logo-common img {
   width: 150px;
+}
+
+#sponsors .sponsors-logo .diamond-sponsor-logo img {
+  width: 180px;
+}
+
+#sponsors .sponsors-logo .diamond-sponsor-logo-common img {
+  width: 130px;
 }
 
 .dis-btn-container {
