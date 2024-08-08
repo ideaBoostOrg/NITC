@@ -16,7 +16,7 @@ import TBA from "../../../assets/img/TBA.png";
 // import logo_7 from '../../../assets/img/sponsors/logo-7.png'
 // import logo_8 from '../../../assets/img/sponsors/logo-8.png'
 // import logo_9 from '../../../assets/img/sponsors/logo-9.png'
-import master from '../../../assets/img/sponsors/strategicPartners/master.png';
+import master from '../../../assets/img/sponsors/strategicPartner/master.png';
 import dell from '../../../assets/img/sponsors/goldSponsors/DELL.png';
 import fortinet from '../../../assets/img/sponsors/goldSponsors/Fortinet.png';
 import gennext from '../../../assets/img/sponsors/goldSponsors/gennext.png';
