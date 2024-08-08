@@ -80,6 +80,7 @@ function Sponsors() {
               </p>
               <span className="strategic-partner-logo-common">
                 <img
+                  style={{width:'150px'}}
                   src={master}
                   alt=""
                 />
@@ -98,6 +99,7 @@ function Sponsors() {
               <span className="diamond-sponsor-logo">
                 <img
                   src={DMS}
+                  style={{marginBottom:'30px'}}
                   alt=""
                 />
               </span>
