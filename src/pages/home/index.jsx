@@ -51,7 +51,6 @@ function index() {
       <Ticket_pricing />
       <About_CSSL />
       <National_partners />
-      <Annual_partners />
       <Sponsors />
       <Partners />
       <Afflicants />
