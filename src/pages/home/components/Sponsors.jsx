@@ -67,37 +67,39 @@ function Sponsors() {
                   alt=""
                 />
               </span>
-              <p
-                style={{
-                  fontWeight: "600",
-                  textAlign: "center",
-                  marginTop: "20px",
-                  marginBottom: "20px",
-                  fontSize: "1rem",
-                }}
-              >
-                Diamond sponsors
-              </p>
-              <span className="diamond-sponsor-logo">
-                <img
-                  src={DMS}
-                  style={{marginBottom:'30px'}}
-                  alt=""
-                />
-              </span>
-              <div className="col-lg-12 col-md-4 col-sm-4 text-center">
-                <span className="diamond-sponsor-logo-common">
-                  <img src={Asset6} alt="" />
+              <div className="diamond-sponsor-section">
+                <p
+                  style={{
+                    fontWeight: "600",
+                    textAlign: "center",
+                    marginTop: "20px",
+                    marginBottom: "20px",
+                    fontSize: "1rem",
+                  }}
+                >
+                  Diamond sponsors
+                </p>
+                <span className="diamond-sponsor-logo">
+                  <img
+                    src={DMS}
+                    style={{marginBottom:'30px'}}
+                    alt=""
+                  />
                 </span>
-                <span className="diamond-sponsor-logo-common">
-                  <img src={SafeProject} alt="" />
-                </span>
-                <span className="diamond-sponsor-logo-common">
-                  <img src={Sanfer} alt="" />
-                </span>
-                <span className="diamond-sponsor-logo-common">
-                  <img src={Orin} alt="" />
-                </span>
+                <div className="col-lg-12 col-md-4 col-sm-4 text-center border">
+                  <span className="diamond-sponsor-logo-common">
+                    <img src={Asset6} alt="" />
+                  </span>
+                  <span className="diamond-sponsor-logo-common">
+                    <img src={SafeProject} alt="" />
+                  </span>
+                  <span className="diamond-sponsor-logo-common">
+                    <img src={Sanfer} alt="" />
+                  </span>
+                  <span className="diamond-sponsor-logo-common">
+                    <img src={Orin} alt="" />
+                  </span>
+                </div>
               </div>
               <p
                 style={{

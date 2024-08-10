@@ -4114,6 +4114,10 @@ p {
 /* #sponsors .sponsors-logo .sponsor-logo img {
   width: 275px;
 } */
+.diamond-sponsor-section{
+  margin-left: 150px;
+  margin-right: 150px;
+}
 
 #sponsors .sponsors-logo .strategic-partner-logo-common img {
   width: 200px;

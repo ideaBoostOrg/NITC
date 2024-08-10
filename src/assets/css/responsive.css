@@ -305,6 +305,11 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .diamond-sponsor-section{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
   #sponsors .sponsors-logo .sponsor-logo img {
     margin: 10px 0px 10px 0px;
     width: 70px;
