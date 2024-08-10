@@ -371,6 +371,9 @@
     width: 55px;
   }
 
+  #sponsors .sponsors-logo .electronic-media-partner-logo img {
+    width: 200px;
+  }
 
   #dis,
   #award {
@@ -383,11 +386,6 @@
 #sponsors .sponsors-logo .informatics-partner-logo img {
   margin: 10px 3px 20px 3px;
   width: 150px;
-}
-
-#sponsors .sponsors-logo .electronic-media-partner-logo img {
-  margin: 10px 3px 20px 3px;
-  width: 250px;
 }
 
 /* @media (min-width: 320px) and (max-width: 480px) {

@@ -4111,31 +4111,27 @@ p {
   }
 }
 
-/* #sponsors .sponsors-logo .sponsor-logo img {
-  width: 275px;
-} */
-
-#sponsors .sponsors-logo .gold-sponsor-logo img {
-  width: 100px;
+#sponsors .sponsors-logo .strategic-partner-logo img {
+  width: 230px;
 }
 
-#sponsors .sponsors-logo .educational-partner-logo img {
-  width: 100px;
+#sponsors .sponsors-logo .diamond-sponsor-logo img {
+  width: 200px;
 }
 
-#sponsors .sponsors-logo .strategic-partner-logo-common img {
-  width: 350px;
-}
-
-#sponsors .sponsors-logo .electronic-media-partner-logo img {
-  width: 500px !important;
+#sponsors .sponsors-logo .diamond-sponsor-logo-common img {
+  width: 130px;
 }
 
 #sponsors .sponsors-logo .platinum-sponsor-logo img {
   width: 250px;
 }
 
-#sponsors .sponsors-logo .partner-sponsor-logo img {
+#sponsors .sponsors-logo .gold-sponsor-logo img {
+  width: 140px !important;
+}
+
+#sponsors .sponsors-logo .educational-partner-logo img {
   width: 100px;
 }
 
@@ -4144,10 +4140,23 @@ p {
   width: 70px;
 }
 
+#sponsors .sponsors-logo .electronic-media-partner-logo img {
+  width: 500px;
+}
+
+/* only for the demo */
+#sponsors .sponsors-logo .sponsor-logo-common img {
+  width: 150px;
+}
+
+/* #sponsors .sponsors-logo .partner-sponsor-logo img {
+  width: 100px;
+} */
+
+/*for partner logo*/
 #sponsors .sponsors-logo .partner-logo3 img {
   width: 70px;
   height: 60px;
-
 }
 
 #sponsors .sponsors-logo .partner-logo4 img {
@@ -4159,6 +4168,7 @@ p {
   height: 60px;
 }
 
+/* only for the afflicants */
 #sponsors .sponsors-logo .afflicants-logo1 img {
   width: 110px;
 }
@@ -4169,19 +4179,6 @@ p {
 
 #sponsors .sponsors-logo .afflicants-logo3 img {
   width: 80px;
-}
-
-/* only for the demo */
-#sponsors .sponsors-logo .sponsor-logo-common img {
-  width: 150px;
-}
-
-#sponsors .sponsors-logo .diamond-sponsor-logo img {
-  width: 180px;
-}
-
-#sponsors .sponsors-logo .diamond-sponsor-logo-common img {
-  width: 130px;
 }
 
 .dis-btn-container {
