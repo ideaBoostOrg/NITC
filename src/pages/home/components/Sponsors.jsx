@@ -76,7 +76,7 @@ function Sponsors() {
                   fontSize: "1rem",
                 }}
               >
-                Strategic partners
+                Strategic partner
               </p>
               <span className="strategic-partner-logo-common">
                 <img
@@ -94,7 +94,7 @@ function Sponsors() {
                   fontSize: "1rem",
                 }}
               >
-                Diamond sponsor
+                Diamond sponsors
               </p>
               <span className="diamond-sponsor-logo">
                 <img

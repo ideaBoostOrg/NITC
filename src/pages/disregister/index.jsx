@@ -1,5 +1,4 @@
 import { useState } from "react";
-// import logo from "../../assets/img/logo-crop.png";
 import logo from "../../assets/img/NITC-Logo.png";
 import DisBillingDetails from "./components/DisBillingDetails";
 import DisRegisterForm from "./components/DisRegisterForm";

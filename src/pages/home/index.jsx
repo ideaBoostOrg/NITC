@@ -9,7 +9,7 @@ import DIS from "./components/DIS";
 // import Introduction from "./components/Introduction";
 import Awards from "./components/Awards";
 import About_CSSL from "./components/About_CSSL";
-import Digital_economy from "./components/Digital_Economy";
+// import Digital_economy from "./components/Digital_Economy";
 // import Counter_area from "./components/Counter_area";
 // import Event_gallery from "./components/Event_gallery";
 // import CSSL_digital_investment_submit from "./components/CSSL_digital_investment_submit";
@@ -19,9 +19,9 @@ import Gallery from "./components/Gallery";
 import Ticket_pricing from "./components/Ticket_pricing";
 import Sponsors from "./components/Sponsors";
 import National_partners from "./components/National_partners";
-import Annual_partners from "./components/Annual_Partners";
 import Partners from "./components/Partners";
 import Afflicants from "./components/Afflicants";
+import Annual_partners from "./components/Annual_Partners";
 import Map from "./components/Map";
 import Footer from "./components/Footer";
 // import Speakers from "./components/Speakers";
@@ -39,7 +39,7 @@ function index() {
       <Awards />
       {/* <Introduction /> */}
       <DIS />
-      <Digital_economy />
+      {/* <Digital_economy /> */}
       {/* <Speakers/> */}
       {/* <CSSL_digital_investment_submit /> */}
       {/* <CSSL_awards />
@@ -55,6 +55,7 @@ function index() {
       <Sponsors />
       <Partners />
       <Afflicants />
+      <Annual_partners />
       <Map />
       <Footer />
     </>

@@ -1,4 +1,4 @@
-import logo from "../../assets/img/logo-crop.png";
+import logo from "../../assets/img/NITC-Logo.png";
 
 /* eslint-disable no-unused-vars */
 import { useCallback, useEffect, useState } from "react";
