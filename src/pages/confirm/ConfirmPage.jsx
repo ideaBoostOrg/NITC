@@ -81,7 +81,7 @@ function ConfirmPage() {
 
             try {
 
-                const userCollection = collection(firestore, "users")
+                const userCollection = collection(firestore, "users-2024")
                 const userQuery = query(userCollection, where("email", "==", email))
                 const userQuerySnapshot = await getDocs(userQuery)
                 if (userQuerySnapshot.empty) {
@@ -89,7 +89,7 @@ function ConfirmPage() {
                     return
                 }
 
-                const userDoc = doc(firestore, "users", userQuerySnapshot.docs[0].id)
+                const userDoc = doc(firestore, "users-2024", userQuerySnapshot.docs[0].id)
                 const userData = userQuerySnapshot.docs[0].data()
 
                 let userSessions = userData.regSessions ?? [

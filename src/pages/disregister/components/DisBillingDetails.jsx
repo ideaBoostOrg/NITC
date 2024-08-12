@@ -42,7 +42,7 @@ function DisBillingDetails({ setIsCheckout, setFormData, setSessions, setFirstTi
         setIsLoading(true);
         setIsRegistered(false);
         try {
-            await addDoc(collection(firestore, "online"),
+            await addDoc(collection(firestore, "online-2024"),
                 {
                     firstName: firstName,
                     lastName: lastName,
@@ -112,7 +112,7 @@ function DisBillingDetails({ setIsCheckout, setFormData, setSessions, setFirstTi
             return;
         }
         setIsEmailValidating(true);
-        const q = query(collection(firestore, "users"), where("email", "==", email))
+        const q = query(collection(firestore, "users-2024"), where("email", "==", email))
         const querySnapshot = await getDocs(q)
         if (querySnapshot.docs.length > 0) {
             setFirstTime(false)
