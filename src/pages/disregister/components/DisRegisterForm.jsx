@@ -161,7 +161,7 @@ const DisRegisterForm = ({ clientRef, setClientRef, comment, setComment, formDat
 
     if (firstTime) {
       try {
-        await addDoc(collection(firestore, "users"),
+        await addDoc(collection(firestore, "users-2024"),
           {
             firstName: formData.firstName,
             lastName: formData.lastName,
@@ -186,10 +186,10 @@ const DisRegisterForm = ({ clientRef, setClientRef, comment, setComment, formDat
         setIsError(true)
       }
     } else {
-      const userQuery = query(collection(firestore, "users"), where("email", "==", formData.email));
+      const userQuery = query(collection(firestore, "users-2024"), where("email", "==", formData.email));
       const querySnapshot = await getDocs(userQuery);
       if (!querySnapshot.empty) {
-        const userDocRef = doc(firestore, "users", querySnapshot.docs[0].id);
+        const userDocRef = doc(firestore, "users-2024", querySnapshot.docs[0].id);
         try {
           await updateDoc(userDocRef, {
             firstName: formData.firstName,

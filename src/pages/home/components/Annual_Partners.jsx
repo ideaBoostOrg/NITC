@@ -41,7 +41,7 @@ function Annual_partners() {
                   <img src={ap_logo_2} alt="" />
                 </span>
                 <span>
-                  <img src={ap_logo_3} alt="" style={{ width: 300, height: 50 }}/>
+                  <img src={ap_logo_3} alt="" style={{ width: 250, height: 50 }}/>
                 </span>
               </div>
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">

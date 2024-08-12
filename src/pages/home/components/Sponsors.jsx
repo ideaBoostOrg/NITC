@@ -1,21 +1,4 @@
-// import logo_1 from "../../../assets/img/sponsors/logo-1.png";
-// import logo_2 from "../../../assets/img/sponsors/logo-2.png";
-// import logo_3 from "../../../assets/img/sponsors/mc_symbol_opt_45_3x.png";
-// import logo_4 from "../../../assets/img/sponsors/logo-4.png";
-// import logo_5 from "../../../assets/img/sponsors/logo-5.png";
-// import logo_6 from "../../../assets/img/sponsors/edp.png";
-// import logo_7 from "../../../assets/img/sponsors/gennext.png";
-// import logo_8 from "../../../assets/img/sponsors/SLTMOBITEL.png";
-// import logo_9 from "../../../assets/img/sponsors/ADL.png";
-// import logo_10 from "../../../assets/img/sponsors/Informatics.png";
-// import logo_11 from "../../../assets/img/sponsors/MITWhite.png";
-// import logo_12 from "../../../assets/img/sponsors/AllStations.png";
-// import logo_13 from "../../../assets/img/sponsors/logo-6.png";
 import TBA from "../../../assets/img/TBA.png";
-// import logo_6 from '../../../assets/img/sponsors/logo-6.png'
-// import logo_7 from '../../../assets/img/sponsors/logo-7.png'
-// import logo_8 from '../../../assets/img/sponsors/logo-8.png'
-// import logo_9 from '../../../assets/img/sponsors/logo-9.png'
 import master from '../../../assets/img/sponsors/strategicPartner/master.png';
 import dell from '../../../assets/img/sponsors/goldSponsors/DELL.png';
 import fortinet from '../../../assets/img/sponsors/goldSponsors/Fortinet.png';
@@ -76,46 +59,47 @@ function Sponsors() {
                   fontSize: "1rem",
                 }}
               >
-                Strategic partners
+                Strategic partner
               </p>
               <span className="strategic-partner-logo-common">
                 <img
-                  style={{width:'150px'}}
                   src={master}
                   alt=""
                 />
               </span>
-              <p
-                style={{
-                  fontWeight: "600",
-                  textAlign: "center",
-                  marginTop: "20px",
-                  marginBottom: "20px",
-                  fontSize: "1rem",
-                }}
-              >
-                Diamond sponsor
-              </p>
-              <span className="diamond-sponsor-logo">
-                <img
-                  src={DMS}
-                  style={{marginBottom:'30px'}}
-                  alt=""
-                />
-              </span>
-              <div className="col-lg-12 col-md-4 col-sm-4 text-center">
-                <span className="diamond-sponsor-logo-common">
-                  <img src={Asset6} alt="" />
+              <div className="diamond-sponsor-section">
+                <p
+                  style={{
+                    fontWeight: "600",
+                    textAlign: "center",
+                    marginTop: "20px",
+                    marginBottom: "20px",
+                    fontSize: "1rem",
+                  }}
+                >
+                  Diamond sponsors
+                </p>
+                <span className="diamond-sponsor-logo">
+                  <img
+                    src={DMS}
+                    style={{marginBottom:'30px'}}
+                    alt=""
+                  />
                 </span>
-                <span className="diamond-sponsor-logo-common">
-                  <img src={SafeProject} alt="" />
-                </span>
-                <span className="diamond-sponsor-logo-common">
-                  <img src={Sanfer} alt="" />
-                </span>
-                <span className="diamond-sponsor-logo-common">
-                  <img src={Orin} alt="" />
-                </span>
+                <div className="col-lg-12 col-md-4 col-sm-4 text-center border">
+                  <span className="diamond-sponsor-logo-common">
+                    <img src={Asset6} alt="" />
+                  </span>
+                  <span className="diamond-sponsor-logo-common">
+                    <img src={SafeProject} alt="" />
+                  </span>
+                  <span className="diamond-sponsor-logo-common">
+                    <img src={Sanfer} alt="" />
+                  </span>
+                  <span className="diamond-sponsor-logo-common">
+                    <img src={Orin} alt="" />
+                  </span>
+                </div>
               </div>
               <p
                 style={{
@@ -145,29 +129,29 @@ function Sponsors() {
                 Gold sponsors
               </p>
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
-                <span className="sponsor-logo-common">
+                <span className="gold-sponsor-logo">
                   <img src={dell} alt="" />
                 </span>
-                <span className="sponsor-logo-common">
+                <span className="gold-sponsor-logo">
                   <img src={fortinet} alt="" />
                 </span>
-                <span className="sponsor-logo-common">
+                <span className="gold-sponsor-logo">
                   <img src={gennext} alt="" />
                 </span>
-                <span className="sponsor-logo-common">
+                <span className="gold-sponsor-logo">
                   <img src={JIT} alt="" />
                 </span>
               </div>
               {/* <br /> */}
 
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
-                <span className="sponsor-logo-common">
+                <span className="gold-sponsor-logo">
                   <img src={LEAFFoundation} alt="" />
                 </span>
                 {/* <span className="gold-sponsor-logo">
                   <img src={logo_6} alt="" />
                 </span> */}
-                <span className="sponsor-logo-common">
+                <span className="gold-sponsor-logo">
                   <img src={MIT} alt="" />
                 </span>
                 {/* <span className="sponsor-logo-common">
