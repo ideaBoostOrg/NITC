@@ -164,7 +164,7 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
         }
 
         setIsEmailValidating(true);
-        const q = query(collection(firestore, "users"), where("email", "==", email))
+        const q = query(collection(firestore, "users-2024"), where("email", "==", email))
         const querySnapshot = await getDocs(q)
         if (querySnapshot.docs.length > 0) {
             setFirstTime(false)
@@ -425,7 +425,7 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
 
                         <div className="form-footer">
                             <p className="star-before">For members of professional bodies (BCS, ISACA, IESL, IET,
-                                IEEE, ACM, ACS, SLASSCOM, and FITTIS), an exclusive discount awaits! Contact
+                                IEEE, ACM, and ACS), an exclusive discount awaits! Contact
                                 your secretariat to claim this benefit.</p>
                         </div>
                         <div className="form-group d-flex justify-content-end">
