@@ -305,6 +305,11 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .diamond-sponsor-section{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
   #sponsors .sponsors-logo .sponsor-logo img {
     margin: 10px 0px 10px 0px;
     width: 70px;
@@ -318,7 +323,6 @@
 
   #sponsors .sponsors-logo .gold-sponsor-logo img {
     margin: 10px 3px 20px 3px;
-    width: 70px;
   }
 
   #sponsors .sponsors-logo .educational-partner-logo img {
@@ -371,6 +375,9 @@
     width: 55px;
   }
 
+  #sponsors .sponsors-logo .electronic-media-partner-logo img {
+    width: 250px;
+  }
 
   #dis,
   #award {
@@ -387,7 +394,6 @@
 
 #sponsors .sponsors-logo .electronic-media-partner-logo img {
   margin: 10px 3px 20px 3px;
-  width: 250px;
 }
 
 /* @media (min-width: 320px) and (max-width: 480px) {
