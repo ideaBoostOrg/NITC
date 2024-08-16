@@ -4182,6 +4182,10 @@ p {
   width: 80px;
 }
 
+#sponsors .sponsors-logo .annual-partner-logo img {
+  width: 70px;
+}
+
 /* only for the demo */
 #sponsors .sponsors-logo .sponsor-logo-common img {
   width: 150px;
