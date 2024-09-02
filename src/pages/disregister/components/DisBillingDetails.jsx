@@ -225,7 +225,7 @@ function DisBillingDetails({ setIsCheckout, setFormData, setSessions, setFirstTi
                             htmlFor="physical"
                           >
                             Physical - Attend the conference in person for $45.00
-                            (15300.00 LKR)
+                            (15000.00 LKR)
                           </label>
                         </div>
                       </div>

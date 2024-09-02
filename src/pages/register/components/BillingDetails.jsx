@@ -6,6 +6,7 @@ import { collection, getDocs, query, where, addDoc } from "firebase/firestore";
 import { CheckCircleFill } from "react-bootstrap-icons";
 import { XCircleFill } from "react-bootstrap-icons";
 import logo from "../../../assets/img/logo-crop.png";
+import ModalPopup from "../../../components/ModalPopup";
 
 function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsCheckout, setFormData, setSessions, setFirstTime, setIsValiedMember }) {
 
@@ -13,10 +14,12 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [nic, setNic] = useState("");
+    const [tempnic, setTempnic] = useState("");
     const [organization, setOrganization] = useState("");
     const [address, setAddress] = useState("");
     const [contactNumber, setContactNumber] = useState("");
 
+    const [modalShow, setModalShow] = useState(false);
 
     const [btnState, setBtnState] = useState("verify");
 
@@ -50,12 +53,12 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
             setIsValiedMember(true)
             // handleValidateEmail(member.email)
             handleValidateNic(member.nic)
-            setFirstName(member.firstName ?? "");
-            setLastName(member.lastName ?? "");
+            // setFirstName(member.firstName ?? "");
+            // setLastName(member.lastName ?? "");
             // setEmail(member.email ?? "");
-            setNic(member.nic ?? "");
+            setTempnic(member.nic ?? "");
             setOrganization(member.organization ?? "");
-            setAddress(member.address ?? "");
+            // setAddress(member.address ?? "");
 
             setBtnState("verified");
         } else {
@@ -130,6 +133,14 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
             if (firstName && lastName && email && nic && address) {
                 setInputError(false);
 
+                if (isMember) {
+                    if (nic !== tempnic) {
+                    // Display a popup warning message
+                    setModalShow(true)
+                    return;
+                    }
+                }
+
                 const data = {
                     firstName: firstName,
                     lastName: lastName,
@@ -193,6 +204,16 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
             setIsNicValid(null);
             return;
         }
+
+        //check if the member entered the same NIC as the member nic
+        // if(isMember) {
+        //     if (nic === tempnic) {
+        //         setIsNicValid(true);
+        //     } else {
+        //         setIsNicValid(false);
+        //     }
+        //     return
+        // }
 
         const oldEmailRegex = /^[1-9][0-9]{8}[vV]$/;
         const newEmailRegex = /^[0-9]{12}$/;
@@ -441,6 +462,10 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                             >
                                 Next
                             </button>
+                            <ModalPopup
+                                show={modalShow}
+                                onHide={() => setModalShow(false)}
+                            />
                         </div>
                     </form>
                 </div>
