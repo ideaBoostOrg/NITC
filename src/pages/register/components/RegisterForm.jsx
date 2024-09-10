@@ -119,7 +119,7 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
     //   window.sessionStorage.setItem('NITC_REGISTRATION_WEB_APP_USER_FIRST_TIME', JSON.stringify(true));
     // }
 
-    const EarlyBirdDate = new Date('2023-08-26');
+    const EarlyBirdDate = new Date('2024-08-26');
     const today = new Date();
     if (today > EarlyBirdDate) {
       setEligbleForEarlyBird(false);

@@ -224,7 +224,7 @@ function DisBillingDetails({ setIsCheckout, setFormData, setSessions, setFirstTi
                             className="form-check-label"
                             htmlFor="physical"
                           >
-                            Physical - Attend the conference in person for $45.00
+                            Physical - Attend the conference in person for $75.00
                             (15000.00 LKR)
                           </label>
                         </div>
