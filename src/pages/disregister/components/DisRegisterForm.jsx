@@ -72,21 +72,34 @@ const DisRegisterForm = ({ clientRef, setClientRef, comment, setComment, formDat
   };
 
   const handlePaymentGateway = (cRef, comm) => {
-    if (netTotal > 0) {
+    if (netTotal > 0 && currency =="LKR") {
       setIsError(false);
       const pgData = {
         clientId: 14002485,
-        paymentAmount: parseInt(0.25.toFixed(2) * 100),
-        currency: currency,
+        paymentAmount: netTotal.toFixed(2) * 100,
+        currency: 'LKR',
         returnUrl: `https://${window.location.hostname}/payment-confirm`,
+        // returnUrl: `http://127.0.0.1:5173/payment-confirm`,
         clientRef: cRef,
         comment: comm,
-      };
-      loadPaycorpPayment(pgData);
+      }
+      loadPaycorpPayment(pgData)
+    } else if (netTotal > 0 && currency =="USD") {
+      setIsError(false);
+      const pgData = {
+        clientId: 14002485,
+        paymentAmount: netTotal.toFixed(2) * 100 * 300,
+        currency: 'LKR',
+        returnUrl: `https://${window.location.hostname}/payment-confirm`,
+        // returnUrl: `http://127.0.0.1:5173/payment-confirm`,
+        clientRef: cRef,
+        comment: comm,
+      }
+      loadPaycorpPayment(pgData)
     } else {
       setIsError(true);
     }
-  };
+  }
 
   const handlePayNow = async (e) => {
     e.preventDefault();
