@@ -19,6 +19,27 @@ const packages = [{
 
 const DisRegisterForm = ({ clientRef, setClientRef, comment, setComment, formData, sessions, firstTime }) => {
 
+  const EVENTS = {
+    Full_package: false,
+    Inauguration: false,
+    Day_01: false,
+    Day_02: false,
+    DSI: false,
+  }
+
+  const EVENT_LIST = [
+    { name: 'Full_package', isRegistered: false },
+    { name: 'Inauguration', isRegistered: false },
+    { name: 'Day_01', isRegistered: false },
+    { name: 'Day_02', isRegistered: false },
+    { name: 'DSI', isRegistered: false },
+  ]
+
+  const [selectedEvents, setSelectedEvents] = useState(EVENTS)
+
+  //----
+  const [eventList, setEventList] = useState(EVENTS);
+
   const [termsModalOpen, setTermsModalOpen] = useState(false);
   const [acceptTerm, setAcceptTerm] = useState(false);
   const [discount, setDiscount] = useState(0);
@@ -55,7 +76,7 @@ const DisRegisterForm = ({ clientRef, setClientRef, comment, setComment, formDat
       setIsError(false);
       const pgData = {
         clientId: 14002485,
-        paymentAmount: parseInt(netTotal.toFixed(2) * 100),
+        paymentAmount: parseInt(0.25.toFixed(2) * 100),
         currency: currency,
         returnUrl: `https://${window.location.hostname}/payment-confirm`,
         clientRef: cRef,
