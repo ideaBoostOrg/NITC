@@ -37,7 +37,7 @@ function Ticket_pricing() {
               </div>
               <div className="price">
                 <h2>LKR 20000</h2>
-                <h2>(USD 100 - Foreign Registrations)</h2>
+                <h3>(USD 100 - Foreign Registrations)</h3>
                 {/* <span>Per Day</span> */}
               </div>
               <div className="pricing-list">
@@ -184,11 +184,9 @@ function Ticket_pricing() {
                         verticalAlign: "middle",
                       }}
                     >
-                      {/* <XCircle /> */}
+                      <CheckCircleFill />
                     </span>
-                    {/* <span className="text">
-                      <strike>Gala Dinner</strike>
-                    </span> */}
+                    <span className="text">Networking</span>
                   </li>
                   <li>
                     <span
@@ -253,7 +251,7 @@ function Ticket_pricing() {
               </div>
               <div className="price">
                 <h2>LKR 15000</h2>
-                <h2>(USD 75 - Foreign Registrations)</h2>
+                <h3>(USD 75 - Foreign Registrations)</h3>
                 {/* <span>Per Day</span> */}
               </div>
               <div className="pricing-list">
@@ -344,7 +342,7 @@ function Ticket_pricing() {
                     >
                       <CheckCircleFill />
                     </span>
-                    <span className="text">Lunch</span>
+                    <span className="text">Tea, Snacks & Lunch</span>
                   </li>
                   <li>
                     <span
@@ -452,7 +450,7 @@ function Ticket_pricing() {
               </div>
               <div className="price">
                 <h2>LKR 15000</h2>
-                <h2>(USD 75 - Foreign Registrations)</h2>
+                <h3>(USD 75 - Foreign Registrations)</h3>
                 {/* <span>Per Day</span> */}
               </div>
               <div className="pricing-list">
@@ -543,7 +541,7 @@ function Ticket_pricing() {
                     >
                       <CheckCircleFill />
                     </span>
-                    <span className="text">Lunch</span>
+                    <span className="text">Tea, Snacks & Lunch</span>
                   </li>
                   <li>
                     <span
@@ -649,7 +647,7 @@ function Ticket_pricing() {
               </div>
               <div className="price">
                 <h2>LKR 50000</h2>
-                <h2>(USD 200 - Foreign Registrations)</h2>
+                <h3>(USD 250 - Foreign Registrations)</h3>
                 {/* <span>Per Day</span> */}
               </div>
               <div className="pricing-list">
