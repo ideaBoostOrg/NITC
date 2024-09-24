@@ -3,7 +3,7 @@ export const packages = [
         key: "Full_package",
         name: "Full Conference With Inauguration",
         price: 50000,
-        priceUSD: 200,
+        priceUSD: 250,
         currencyLKR: "LKR",
         currencyUSD: "USD",
         features: ["Keynote Speech", "Keynote Presentations", "CSSL National ICT Awards", "Panel Discussion and Q&A", "Investment Summit", "Lunch", "Conference Tracks", "Gala Dinner"]
