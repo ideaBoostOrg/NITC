@@ -233,6 +233,21 @@ function Ticket_pricing() {
                       <strike>Gala Dinner</strike>
                     </span> */}
                   </li>
+                  <li>
+                    <span
+                      style={{
+                        paddingRight: "10px",
+                        fontSize: "15px",
+                        color: "var(--primary-blue)",
+                        verticalAlign: "middle",
+                      }}
+                    >
+                      {/* <XCircle /> */}
+                    </span>
+                    {/* <span className="text">
+                      <strike>Gala Dinner</strike>
+                    </span> */}
+                  </li>
                 </ul>
               </div>
               <a href="/register?type=Inauguration" className="btn btn-common">
@@ -387,6 +402,21 @@ function Ticket_pricing() {
                       <strike>Gala Dinner</strike>
                     </span>
                   </li> */}
+                  <li>
+                    <span
+                      style={{
+                        paddingRight: "10px",
+                        fontSize: "15px",
+                        color: "var(--primary-blue)",
+                        verticalAlign: "middle",
+                      }}
+                    >
+                      {/* <XCircle /> */}
+                    </span>
+                    {/* <span className="text">
+                      <strike>Gala Dinner</strike>
+                    </span> */}
+                  </li>
                   <li>
                     <span
                       style={{
@@ -629,6 +659,21 @@ function Ticket_pricing() {
                       <strike>Gala Dinner</strike>
                     </span> */}
                   </li>
+                  <li>
+                    <span
+                      style={{
+                        paddingRight: "10px",
+                        fontSize: "15px",
+                        color: "var(--primary-blue)",
+                        verticalAlign: "middle",
+                      }}
+                    >
+                      {/* <XCircle /> */}
+                    </span>
+                    {/* <span className="text">
+                      <strike>Gala Dinner</strike>
+                    </span> */}
+                  </li>
                 </ul>
               </div>
               <a href="/register?type=Day_02" className="btn btn-common">
@@ -726,7 +771,7 @@ function Ticket_pricing() {
                     >
                       <CheckCircleFill />
                     </span>
-                    <span className="text">Lunch - Day 1, Day 2</span>
+                    <span className="text">Tea, Snacks & Lunch - Day 1, Day 2</span>
                   </li>
                   <li>
                     <span
@@ -756,6 +801,7 @@ function Ticket_pricing() {
                     <span
                       style={{
                         paddingRight: "10px",
+                        paddingBottom: "10px",
                         fontSize: "15px",
                         verticalAlign: "middle",
                       }}
