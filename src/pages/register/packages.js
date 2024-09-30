@@ -6,7 +6,7 @@ export const packages = [
         priceUSD: 250,
         currencyLKR: "LKR",
         currencyUSD: "USD",
-        features: ["Keynote Speech", "Keynote Presentations", "CSSL National ICT Awards", "Panel Discussion and Q&A", "Investment Summit", "Lunch", "Conference Tracks", "Gala Dinner"]
+        features: ["Keynote Speech", "Keynote Presentations", "CSSL National ICT Awards", "Panel Discussion and Q&A", "Investment Summit", "Tea, Snacks & Lunch", "Conference Tracks", "Gala Dinner"]
     },
     {
         key: "Inauguration",
@@ -15,7 +15,7 @@ export const packages = [
         priceUSD: 100,
         currencyLKR: "LKR",
         currencyUSD: "USD",
-        features: ["Keynote Speech", "CSSL National ICT Awards", "Gala Dinner"],
+        features: ["Keynote Speech", "CSSL National ICT Awards", "Gala Dinner", "Networking"],
     },
     {
         key: "Day_01",
@@ -24,7 +24,7 @@ export const packages = [
         priceUSD: 75,
         currencyLKR: "LKR",
         currencyUSD: "USD",
-        features: ["Keynote Presentations", "Panel Discussion and Q&A", "Lunch", "Conference Tracks"]
+        features: ["Keynote Presentations", "Panel Discussion and Q&A", "Tea, Snacks & Lunch", "Conference Tracks"]
     },
     {
         key: "Day_02",
@@ -33,7 +33,7 @@ export const packages = [
         priceUSD: 75,
         currencyLKR: "LKR",
         currencyUSD: "USD",
-        features: ["Keynote Presentations", "Investment Summit", "Lunch", "Conference Tracks", "CSSL Research Colloquium"]
+        features: ["Keynote Presentations", "Investment Summit", "Tea, Snacks & Lunch", "Conference Tracks", "CSSL Research Colloquium"]
     },
 ];
 
