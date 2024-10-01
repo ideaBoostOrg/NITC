@@ -448,6 +448,7 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                             <p className="star-before">For members of professional bodies (BCS, ISACA, IESL, IET,
                                 IEEE, ACM, and ACS), an exclusive discount awaits! Contact
                                 your secretariat to claim this benefit.</p>
+                                <p>Early Bird 10 % Discount Valid Till 15th October 2024</p>
                         </div>
                         <div className="form-group d-flex justify-content-end">
                             <button

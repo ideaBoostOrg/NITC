@@ -101,20 +101,6 @@ function Sponsors() {
                   </span>
                 </div>
               </div>
-              <p
-                style={{
-                  fontWeight: "600",
-                  textAlign: "center",
-                  marginTop: "40px",
-                  marginBottom: "20px",
-                  fontSize: "1rem",
-                }}
-              >
-                Platinum sponsor
-              </p>
-              <span className="sponsor-logo-common">
-                <img src={TBA} alt="" />
-              </span>
               <br />
 
               <p
@@ -151,9 +137,9 @@ function Sponsors() {
                 {/* <span className="gold-sponsor-logo">
                   <img src={logo_6} alt="" />
                 </span> */}
-                <span className="gold-sponsor-logo">
+                {/* <span className="gold-sponsor-logo">
                   <img src={MIT} alt="" />
-                </span>
+                </span> */}
                 {/* <span className="sponsor-logo-common">
                   <img src={TBA} alt="" />
                 </span> */}
