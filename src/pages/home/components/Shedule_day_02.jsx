@@ -1,10 +1,11 @@
 import { CiLinkedin } from "react-icons/ci";
 
-import image_1 from "../../../assets/img/Speakers/1.jpg";
-import image_2 from "../../../assets/img/Speakers/2.png";
-import image_3 from "../../../assets/img/Speakers/3.png";
-import image_4 from "../../../assets/img/Speakers/4.jpg";
-import image_5 from "../../../assets/img/Speakers/5.jpg";
+import image_1 from "../../../assets/img/Speakers/1.png";
+import image_2 from "../../../assets/img/Speakers/2.jpeg";
+import image_3 from "../../../assets/img/Speakers/3.jpg";
+import image_4 from "../../../assets/img/Speakers/4.png";
+import image_7 from "../../../assets/img/Speakers/7.png";
+import image_8 from "../../../assets/img/Speakers/8.png";
 
 function Shedule_day_02() {
   return (
@@ -29,10 +30,7 @@ function Shedule_day_02() {
                       </div>
                       <div className="schedule-card-content">
                         <div className="schedule-card-header">
-                          <h4>
-                            Keynote Session - Second Wave of IT Transformation:
-                            From Digital to GenerativeAI
-                          </h4>
+                          <h4>Keynote Session - 1</h4>
                         </div>
                         <div className="schedule-card-body">
                           <div className="row d-none d-sm-block">
@@ -49,9 +47,9 @@ function Shedule_day_02() {
                                 <div className="col-18">
                                   <p className="speaker-head d-flex align-items-center">
                                     {" "}
-                                    Mr. Nitendra Rajput{" "}
+                                    Ms. Connie Cheng{" "}
                                     <a
-                                      href="https://www.linkedin.com/in/nitendra-rajput/?originalSubdomain=in"
+                                      href="https://www.linkedin.com/in/connie-cheng-a5350116?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BmVpUR6zJTKOQhqYEyr5nog%3D%3D"
                                       rel="noreferrer"
                                       target="_blank"
                                     >
@@ -62,12 +60,11 @@ function Shedule_day_02() {
                                     </a>
                                   </p>
                                   <p className="speaker-subhead">
-                                    Senior Vice President,
+                                    Vice President,
                                   </p>
                                   <p className="speaker-subhead">
                                     {" "}
-                                    AI Products, Cyber and Intelligence
-                                    Solutions (CAI),
+                                    Foundry (Asia Pacific),
                                   </p>
                                   <p className="speaker-subhead">MasterCard</p>
                                 </div>
@@ -83,9 +80,7 @@ function Shedule_day_02() {
                       </div>
                       <div className="schedule-card-content">
                         <div className="schedule-card-header">
-                          <h4>
-                            Panel Discussion - Tech industry in ChatGPT era
-                          </h4>
+                          <h4>Panel Discussion - Towards Society 5.0</h4>
                         </div>
                         <div className="schedule-card-body d-none d-sm-block">
                           <div className="row">
@@ -102,7 +97,7 @@ function Shedule_day_02() {
                                 <div className="col-18">
                                   <p className="speaker-head d-flex align-items-center">
                                     {" "}
-                                    Mr. Nitendra Rajput{" "}
+                                    Ms. Connie Cheng{" "}
                                     <a
                                       // href="https://www.linkedin.com/in/nitendra-rajput/?originalSubdomain=in"
                                       rel="noreferrer"
@@ -115,16 +110,13 @@ function Shedule_day_02() {
                                     </a>
                                   </p>
                                   <p className="speaker-subhead">
-                                    Senior Vice President,
+                                    Vice President,
                                   </p>
                                   <p className="speaker-subhead">
                                     {" "}
-                                    AI Products,
+                                    Foundry (Asia Pacific)
                                   </p>
-                                  <p className="speaker-subhead">
-                                    {" "}
-                                    Cyber and Intelligence Solutions (CAI)
-                                  </p>
+
                                   <p className="speaker-subhead">MasterCard</p>
                                 </div>
                               </div>
@@ -142,7 +134,7 @@ function Shedule_day_02() {
                                 <div className="col-18">
                                   <p className="speaker-head d-flex align-items-center">
                                     {" "}
-                                    Ms. Surbhi Singla{" "}
+                                    Mr. Arulmoly Kanagasabapathy{" "}
                                     <a
                                       // href="https://www.linkedin.com/in/nitendra-rajput/?originalSubdomain=in"
                                       rel="noreferrer"
@@ -154,8 +146,10 @@ function Shedule_day_02() {
                                       />
                                     </a>
                                   </p>
-                                  <p className="speaker-subhead">Director,</p>
                                   <p className="speaker-subhead">
+                                    Regional Manager
+                                  </p>
+                                  {/* <p className="speaker-subhead">
                                     {" "}
                                     Vice President
                                   </p>
@@ -166,8 +160,11 @@ function Shedule_day_02() {
                                   <p className="speaker-subhead">
                                     {" "}
                                     Data & Services,South Asia
+                                  </p> */}
+                                  <p className="speaker-subhead">
+                                    {" "}
+                                    Oracle Application
                                   </p>
-                                  <p className="speaker-subhead"> Mastercard</p>
                                   {/* <p className="speaker-subhead">MasterCard</p> */}
                                 </div>
                               </div>
@@ -185,7 +182,7 @@ function Shedule_day_02() {
                                 <div className="col-18">
                                   <p className="speaker-head d-flex align-items-center">
                                     {" "}
-                                    Dr. Ruvan Weerasinghe{" "}
+                                    Mr. Anush M{" "}
                                     <a
                                       // href="https://www.linkedin.com/in/nitendra-rajput/?originalSubdomain=in"
                                       rel="noreferrer"
@@ -198,11 +195,47 @@ function Shedule_day_02() {
                                     </a>
                                   </p>
                                   <p className="speaker-subhead">
-                                    Senior Lecturer,
+                                    Senior Technical Consultant
                                   </p>
                                   <p className="speaker-subhead">
-                                    University of Colombo School of Computing
-                                    (UCSC)
+                                    Manage Engine
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="col-6 mt-2">
+                              <div className="row align-items-center">
+                                <div className="col-2 mr-2">
+                                  <img
+                                    src={image_4}
+                                    alt=""
+                                    className="speaker-img"
+                                    style={{ objectFit: "cover" }}
+                                  />
+                                </div>
+                                <div className="col-18">
+                                  <p className="speaker-head d-flex align-items-center">
+                                    {" "}
+                                    Mr. Condrad Dias{" "}
+                                    <a
+                                      // href="https://www.linkedin.com/in/nitendra-rajput/?originalSubdomain=in"
+                                      rel="noreferrer"
+                                      target="_blank"
+                                    >
+                                      <CiLinkedin
+                                        className="ms-4 linkedin-icon"
+                                        size={18}
+                                      />
+                                    </a>
+                                  </p>
+                                  <p className="speaker-subhead">
+                                    Director, LOLC Holdings PLC
+                                  </p>
+                                  <p className="speaker-subhead">
+                                    CEO , LOLC Finance PLC
+                                  </p>
+                                  <p className="speaker-subhead">
+                                    Chairman of LOLC Technology Limited
                                   </p>
                                 </div>
                               </div>
@@ -223,14 +256,11 @@ function Shedule_day_02() {
                     </div>
                     <div className="schedule-card">
                       <div className="schedule-slot-time">
-                        <span> 11.00 AM - 11.40 AM</span>
+                        <span> 11.00 AM - 11.30 AM</span>
                       </div>
                       <div className="schedule-card-content">
                         <div className="schedule-card-header">
-                          <h4>
-                            Keynote Session - Creating Hope in the Age of
-                            Generative AI
-                          </h4>
+                          <h4>Keynote Session - 2</h4>
                         </div>
                         <div className="schedule-card-body d-none d-sm-block">
                           {/* <div className="schedule-card-body"> */}
@@ -239,7 +269,7 @@ function Shedule_day_02() {
                               <div className="row align-items-center">
                                 <div className="col-2 mr-2">
                                   <img
-                                    src={image_5}
+                                    src={image_7}
                                     alt=""
                                     className="speaker-img"
                                     style={{ objectFit: "fill" }}
@@ -247,8 +277,7 @@ function Shedule_day_02() {
                                 </div>
                                 <div className="col-18">
                                   <p className="speaker-head d-flex align-items-center">
-                                    {" "}
-                                    Mr. Emmanuel Lusinchi{" "}
+                                    Mr. Chan Yu Ka{" "}
                                     <a
                                       // href="https://www.linkedin.com/in/nitendra-rajput/?originalSubdomain=in"
                                       rel="noreferrer"
@@ -261,11 +290,10 @@ function Shedule_day_02() {
                                     </a>
                                   </p>
                                   <p className="speaker-subhead">
-                                    Co-founder of Mercenaries.ai,
+                                    Director, Cloud Engineering
                                   </p>
                                   <p className="speaker-subhead">
-                                    {" "}
-                                    Developer of the Omnitool.ai platform
+                                    Oracle ASEAN
                                   </p>
                                   {/* <p className="speaker-subhead">MasterCard</p> */}
                                   {/* </div> */}
@@ -278,20 +306,18 @@ function Shedule_day_02() {
                     </div>
                     <div className="schedule-card">
                       <div className="schedule-slot-time">
-                        <span> 11.45 AM - 12.25 AM</span>
+                        <span> 11.30 AM - 12.00 AM</span>
                       </div>
                       <div className="schedule-card-content">
                         <div className="schedule-card-header">
-                          <h4>
-                            Keynote Session - The 55-billion dollar mindset
-                          </h4>
+                          <h4>Keynote Session - 3</h4>
                         </div>
                         <div className="schedule-card-body d-none d-sm-block">
                           <div className="col-6">
                             <div className="row align-items-center">
                               <div className="col-2 mr-2">
                                 <img
-                                  src={image_4}
+                                  src={image_3}
                                   alt=""
                                   className="speaker-img"
                                   style={{ objectFit: "cover" }}
@@ -299,8 +325,7 @@ function Shedule_day_02() {
                               </div>
                               <div className="col-18">
                                 <p className="speaker-head d-flex align-items-center">
-                                  {" "}
-                                  Mr. Ramindu Randeniya{" "}
+                                  Mr. Anush M
                                   <a
                                     // href="https://www.linkedin.com/in/nitendra-rajput/?originalSubdomain=in"
                                     rel="noreferrer"
@@ -313,7 +338,56 @@ function Shedule_day_02() {
                                   </a>
                                 </p>
                                 <p className="speaker-subhead">
-                                  Business and Corporate Leadership Coach,
+                                  Senior Technical Consultant,Manage Engine
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          {/* <span>Mr. Ramindu Randeniya</span>
+                          <br />
+                          <span>Business and Corporate Leadership Coach</span> */}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="schedule-card">
+                      <div className="schedule-slot-time">
+                        <span> 12.00 AM - 12.30 AM</span>
+                      </div>
+                      <div className="schedule-card-content">
+                        <div className="schedule-card-header">
+                          <h4>Keynote Session - 4</h4>
+                        </div>
+                        <div className="schedule-card-body d-none d-sm-block">
+                          <div className="col-6">
+                            <div className="row align-items-center">
+                              <div className="col-2 mr-2">
+                                <img
+                                  src={image_8}
+                                  alt=""
+                                  className="speaker-img"
+                                  style={{ objectFit: "cover" }}
+                                />
+                              </div>
+                              <div className="col-18">
+                                <p className="speaker-head d-flex align-items-center">
+                                  Dr. Rohini Srivathsa
+                                  <a
+                                    // href="https://www.linkedin.com/in/nitendra-rajput/?originalSubdomain=in"
+                                    rel="noreferrer"
+                                    target="_blank"
+                                  >
+                                    <CiLinkedin
+                                      className="ms-4 linkedin-icon"
+                                      size={18}
+                                    />
+                                  </a>
+                                </p>
+                                <p className="speaker-subhead">
+                                  Chief Technology Officer
+                                </p>
+                                <p className="speaker-subhead">Microsoft</p>
+                                <p className="speaker-subhead">
+                                  India, and South Asia
                                 </p>
                               </div>
                             </div>
@@ -547,6 +621,16 @@ function Shedule_day_02() {
                             </div>
                           </div>
                         </div> */}
+                      </div>
+                    </div>
+                    <div className="schedule-card">
+                      <div className="schedule-slot-time">
+                        <span>5.00 PM - 5.30 PM</span>
+                      </div>
+                      <div className="schedule-card-content">
+                        <div className="schedule-card-header">
+                          <h4>Raffel Draw</h4>
+                        </div>
                       </div>
                     </div>
                   </div>

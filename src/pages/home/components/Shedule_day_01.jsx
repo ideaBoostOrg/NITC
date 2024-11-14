@@ -17,108 +17,121 @@ function Shedule_day_01() {
                   <div className="tab-pane fade show active">
                     <div className="schedule-card">
                       <div className="schedule-slot-time">
-                        <span> 5 PM Onwards</span>
+                        <span> 6 PM Onwards</span>
                       </div>
                       <div className="schedule-card-content">
                         <div className="schedule-card-header">
                           <h4>Chief Guest & Guest of Honour</h4>
                         </div>
+                      </div>
+                    </div>
+                    <div className="schedule-card">
+                      <div className="schedule-slot-time">
+                        <span> 6.20 PM Onwards</span>
+                      </div>
+                      <div className="schedule-card-content">
+                        <div className="schedule-card-header">
+                          <h4>Welcome Address</h4>
+                        </div>
                         <div className="schedule-card-body">
                           <span>
-                            Addressed by Chief Guest & Guest of Honour
+                            Address by Dr. Ajantha Atukorale, President CSSL
                           </span>
                           <br />
-                          {/* <span>
-                            Address by the Chief Guest - State Minister of IT
-                          </span> */}
                         </div>
                       </div>
                     </div>
-
                     <div className="schedule-card">
                       <div className="schedule-slot-time">
-                        <span> 5 PM Onwards</span>
+                        <span> 6.30 PM Onwards</span>
                       </div>
                       <div className="schedule-card-content">
                         <div className="schedule-card-header">
-                          <h4>Audience</h4>
+                          <h4>CSSL National ICT Awards 2024 - Session 1</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="schedule-card">
+                      <div className="schedule-slot-time">
+                        <span> 6.45 PM Onwards</span>
+                      </div>
+                      <div className="schedule-card-content">
+                        <div className="schedule-card-header">
+                          <h4>Address by the Chief Guest</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="schedule-card">
+                      <div className="schedule-slot-time">
+                        <span> 7.10 PM Onwards</span>
+                      </div>
+                      <div className="schedule-card-content">
+                        <div className="schedule-card-header">
+                          <h4>Keynote Address</h4>
                         </div>
                         <div className="schedule-card-body">
                           <span>
-                            Distinguished invitees from State, Private Sector,
-                            Industry, Academia
+                            Address by Mr. Sandun Hapugoda , Country Manager -
+                            Sri Lanka and Maldives Mastercards
                           </span>
                           <br />
-                          <span>
-                            Conference Delegates (CXOs/ Heads IT/ IT
-                            Professionals/ Risk Management Professionals/
-                            Startup Founders)
-                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="schedule-card">
+                      <div className="schedule-slot-time">
+                        <span> 7.30 PM Onwards</span>
+                      </div>
+                      <div className="schedule-card-content">
+                        <div className="schedule-card-header">
+                          <h4>CSSL National ICT Awards 2024 - Session 2</h4>
                         </div>
                       </div>
                     </div>
 
                     <div className="schedule-card">
                       <div className="schedule-slot-time">
-                        <span> 6 PM Onwards</span>
+                        <span> 7.45 PM Onwards</span>
                       </div>
                       <div className="schedule-card-content">
                         <div className="schedule-card-header">
-                          <h4>Keynote Speech</h4>
+                          <h4>Keynote Address</h4>
                         </div>
                         <div className="schedule-card-body">
-                          <span>Global Digital Thought Leader</span>
+                          <span>
+                            Address by Mr. Lasantha Bogoda, Director/CEO , DMS
+                            Software Technologies (Pvt) Ltd
+                          </span>
                           <br />
-                          <span>
-                            (Successful founder of a top global cooperation or a
-                            President/CEO of a Tech MNC)
-                          </span>
                         </div>
                       </div>
                     </div>
-
                     <div className="schedule-card">
                       <div className="schedule-slot-time">
-                        <span> 6 PM Onwards</span>
+                        <span> 7.55 PM Onwards</span>
                       </div>
                       <div className="schedule-card-content">
                         <div className="schedule-card-header">
-                          <h4>CSSL National ICT Awards</h4>
+                          <h4>Keynote Address</h4>
                         </div>
                         <div className="schedule-card-body">
-                          <p>
-                            The annual CSSL ICT AWARDS has been organized for
-                            the 10th consecutive year to encourage, recognize,
-                            and celebrate the excellence in ICT practice by
-                            rewarding the best and the finest of ICT
-                            professionals in the country.
-                          </p>
+                          <span>
+                            Address by Mr. Shanaka de Silva, Group Finance
+                            Director at South Asian Technologies Group
+                          </span>
+                          <br />
                         </div>
                       </div>
                     </div>
 
                     <div className="schedule-card">
                       <div className="schedule-slot-time">
-                        <span> 6 PM Onwards</span>
+                        <span> 8.45 PM Onwards</span>
                       </div>
                       <div className="schedule-card-content">
                         <div className="schedule-card-header">
-                          <h4>Gala Dinner</h4>
+                          <h4>Fellowship and Cocktail</h4>
                         </div>
-                        {/* <div className="schedule-card-body">
-                            <span>
-                              The annual CSSL ICT AWARDS has been organized for
-                              the 10th consecutive year to encourage, recognize,
-                              and celebrate the excellence in ICT practice by
-                              rewarding the best and the finest of ICT
-                              professionals in the country.
-                            </span>
-
-                            <div className="location">
-                              <span>Location:</span> Hall 1 , Building A, Golden
-                              Street, Southafrica
-                            </div> 
-                          </div> */}
                       </div>
                     </div>
                   </div>

@@ -11,11 +11,7 @@ function Shedule() {
   };
 
   return (
-    <section
-      id="schedules"
-      className="schedule section-padding"
-      style={{}}
-    >
+    <section id="schedules" className="schedule section-padding" style={{}}>
       <div className="container">
         <div className="row">
           <div className="col-12">
@@ -48,10 +44,10 @@ function Shedule() {
                 >
                   <div className="item-text">
                     <h4>Inauguration</h4>
-                    <h5>12<sup>th</sup> November 2024</h5>
                     <h5>
-                      5.00 PM onwards
+                      24<sup>th</sup> November 2024
                     </h5>
+                    <h5>6.00 PM onwards</h5>
                   </div>
                 </a>
               </li>
@@ -67,10 +63,10 @@ function Shedule() {
                 >
                   <div className="item-text">
                     <h4>Day 01</h4>
-                    <h5>13<sup>th</sup> November 2024</h5>
                     <h5>
-                      9.00 AM - 5.00 PM
+                      25<sup>th</sup> November 2024
                     </h5>
+                    <h5>9.00 AM - 5.00 PM</h5>
                   </div>
                 </a>
               </li>
@@ -86,10 +82,10 @@ function Shedule() {
                 >
                   <div className="item-text">
                     <h4>Day 02</h4>
-                    <h5>14<sup>th</sup> November 2024</h5>
                     <h5>
-                      9.00 AM - 5.00 PM
+                      26<sup>th</sup> November 2024
                     </h5>
+                    <h5>9.00 AM - 5.00 PM</h5>
                   </div>
                 </a>
               </li>

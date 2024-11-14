@@ -11,8 +11,6 @@
 // import { loadPaycorpPayment } from '../../../pay';
 // import TermsModal from "./TermsModal";
 
-
-
 // const RegisterForm = () => {
 
 //   const packages = {
@@ -165,7 +163,6 @@
 //     }
 //   }
 
-
 //   // console.log("netTotal : ", netTotal);
 
 //   const buildPayment = () => {
@@ -193,8 +190,6 @@
 //     }
 
 //   }
-
-
 
 //   return (
 //     <>
@@ -427,8 +422,6 @@
 // };
 
 // export default RegisterForm;
-
-
 
 // const Checking = () => {
 //   const [dots, setDots] = useState("..");

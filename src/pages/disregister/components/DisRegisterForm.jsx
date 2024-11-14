@@ -13,7 +13,7 @@ import TermsModal from "./DisTermsModal";
 const packages = [{
   key: "DIS",
   name: "Digital Investment Summit",
-  price: 15300.00,
+  price: 5000.00,
   currency: "LKR",
 }];
 
@@ -293,7 +293,7 @@ const DisRegisterForm = ({ clientRef, setClientRef, comment, setComment, formDat
                           <div className="package-heading" >
                             <h4 style={{ color: '#fff' }} >Digital Investment Summit</h4>
                             <div className="package-price">
-                              <p style={{ color: '#fff' }}><span style={{ color: '#fff', paddingRight: '0.5rem' }} className="lkr">LKR </span> 12000</p>
+                              <p style={{ color: '#fff' }}><span style={{ color: '#fff', paddingRight: '0.5rem' }} className="lkr">LKR </span> 5000</p>
                             </div>
                           </div>
                         </label>
