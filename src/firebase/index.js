@@ -20,6 +20,7 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID,
   measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
+
 // const firebaseConfig = {
 //   apiKey: "AIzaSyBBGuQaz-Ap2R2VDlQ82BM9hA-h_AEifbQ",
 //   authDomain: "nitc-cb497.firebaseapp.com",
