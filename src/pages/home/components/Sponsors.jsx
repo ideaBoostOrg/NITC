@@ -5,7 +5,6 @@ import fortinet from "../../../assets/img/sponsors/goldSponsors/Fortinet.png";
 import gennext from "../../../assets/img/sponsors/goldSponsors/gennext.png";
 import JIT from "../../../assets/img/sponsors/goldSponsors/JIT.png";
 import LEAFFoundation from "../../../assets/img/sponsors/goldSponsors/LEAFFoundation.png";
-import MIT from "../../../assets/img/sponsors/goldSponsors/MIT.png";
 import ITN from "../../../assets/img/sponsors/electronicMediaPartners/ITN.png";
 import Asset6 from "../../../assets/img/sponsors/diamondSponsors/Asset6.png";
 import DMS from "../../../assets/img/sponsors/diamondSponsors/DMS.png";
