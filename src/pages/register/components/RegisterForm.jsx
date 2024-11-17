@@ -35,9 +35,10 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
 
   const [termsModalOpen, setTermsModalOpen] = useState(false);
   const [acceptTerm, setAcceptTerm] = useState(false);
-  const [amount, setAmount] = useState(parseFloat(pack.price));
+  const [amount, setAmount] = useState(pack.price);
   const [discount, setDiscount] = useState(0);
-  const [netTotal, setNetTotal] = useState(0);
+  const [currency, setCurrency] = useState("LKR"); // Default currency
+  const [netTotal, setNetTotal] = useState(pack.price);// Default to local net total
 
   const [eligbleForEarlyBird, setEligbleForEarlyBird] = useState(true);
   const [selectedEvents, setSelectedEvents] = useState(EVENTS)
@@ -119,7 +120,7 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
     //   window.sessionStorage.setItem('NITC_REGISTRATION_WEB_APP_USER_FIRST_TIME', JSON.stringify(true));
     // }
 
-    const EarlyBirdDate = new Date('2023-08-26');
+    const EarlyBirdDate = new Date('2024-10-15');
     const today = new Date();
     if (today > EarlyBirdDate) {
       setEligbleForEarlyBird(false);
@@ -178,11 +179,29 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
 
   }
 
+    // Handle currency change for local/foreign payments
+    const handleCurrencyChange = (event) => {
+      const selectedCurrency = event.target.value;
+      if (selectedCurrency === "LKR") {
+        setCurrency(pack.currencyLKR);
+        setAmount(pack.price);
+        setNetTotal(pack.price - discount); // Apply any discounts to net total if applicable
+      } else if (selectedCurrency === "USD") {
+        setCurrency(pack.currencyUSD);
+        setAmount(pack.priceUSD);
+        setNetTotal(pack.priceUSD - discount);
+      }
+    };
+
   useEffect(() => {
     let total = 0
     for (const key in eventList) {
       if (eventList[key] === true) {
-        total += parseFloat(packages.find(p => p.key === key).price)
+        if(currency === "LKR"){
+          total += packages.find(p => p.key === key).price
+        } else {
+          total += packages.find(p => p.key === key).priceUSD
+        }        
       }
     }
     setAmount(total)
@@ -203,11 +222,23 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
 
 
   const handlePaymentGatway = (cRef, comm) => {
-    if (netTotal > 0) {
+    if (netTotal > 0 && currency =="LKR") {
       setIsError(false);
       const pgData = {
         clientId: 14002485,
-        paymentAmount: parseInt(netTotal.toFixed(2) * 100),
+        paymentAmount: netTotal.toFixed(2) * 100,
+        currency: 'LKR',
+        returnUrl: `https://${window.location.hostname}/payment-confirm`,
+        // returnUrl: `http://127.0.0.1:5173/payment-confirm`,
+        clientRef: cRef,
+        comment: comm,
+      }
+      loadPaycorpPayment(pgData)
+    } else if (netTotal > 0 && currency =="USD") {
+      setIsError(false);
+      const pgData = {
+        clientId: 14002485,
+        paymentAmount: netTotal.toFixed(2) * 100 * 300,
         currency: 'LKR',
         returnUrl: `https://${window.location.hostname}/payment-confirm`,
         // returnUrl: `http://127.0.0.1:5173/payment-confirm`,
@@ -218,7 +249,6 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
     } else {
       setIsError(true);
     }
-
   }
 
   const handlePayNow = async (e) => {
@@ -371,7 +401,7 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
                                   <div className="package-heading">
                                     <h4 >{pack.name}</h4>
                                     <div className="package-price">
-                                      <p><span className="lkr">{pack.currency}</span>  {pack.price}</p>
+                                      <p><span className="lkr">{pack.currencyLKR}</span>  {pack.price} (<span className="lkr">{pack.currencyUSD}</span> {pack.priceUSD})</p>
                                     </div>
                                   </div>
                                   <div className="package-features">
@@ -391,23 +421,41 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
                   </div>
                   <div className="col-lg-5 col-md-12">
 
-                    <div className="content">
-                      <div className="content-row">
-                        <span className="label">
-                          Amount
-                        </span>
-                        <span className="value">
-                          <span className="lkr">{pack.currency}</span> {amount.toFixed(2)}
-                        </span>
-                      </div>
+                  <div className="content">
+                    {/* Currency Selection */}
+                    <div className="form-check">
+                      <input
+                        className="form-check-input"
+                        type="radio"
+                        name="mode"
+                        value="LKR"
+                        id="lkr"
+                        checked={currency === "LKR"}
+                        onChange={handleCurrencyChange}
+                      />
+                      <label className="form-check-label" htmlFor="lkr">Local Registration</label>
+                    </div>
+                    <div className="form-check">
+                      <input
+                        className="form-check-input"
+                        type="radio"
+                        name="mode"
+                        value="USD"
+                        id="usd"
+                        checked={currency === "USD"}
+                        onChange={handleCurrencyChange}
+                      />
+                      <label className="form-check-label" htmlFor="usd">Foreign Registration</label>
+                    </div>
 
-                      {/* {btnState === 'verified' &&
-                  <div className="content-row">
-                    <span className="label">Discount (20%)</span>
-                    <span className="value">
-                      - {discount.toFixed(2)} <span className="lkr">{pack.currency}</span>
-                    </span>
-                  </div>} */}
+                    {/* Amount Display */}
+                    <div className="content-row">
+                      <span className="label">Amount</span>
+                      <span className="value">
+                        <span className="currency">{currency}</span> {amount.toFixed(2)}
+                      </span>
+                    </div>
+
 
                       {
                         isValiedMember ?
@@ -430,16 +478,18 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
 
 
 
-                      <hr />
-                      <div className="content-row net-total">
-                        <span className="label">
-                          Net Amount
-                        </span>
-                        <span className="value">
-                          <span className="lkr">{pack.currency}</span> {netTotal.toFixed(2)}
-                        </span>
-                      </div>
+  
+                    <hr />
+
+                    {/* Net Amount Display */}
+                    <div className="content-row net-total">
+                      <span className="label">Net Amount</span>
+                      <span className="value">
+                        <span className="currency">{currency}</span> {netTotal.toFixed(2)}
+                      </span>
                     </div>
+                    </div>
+
                     <div className="form-check flexCheckDefault flex-row-col" style={{
                       display: "flex",
                       alignItems: "center",

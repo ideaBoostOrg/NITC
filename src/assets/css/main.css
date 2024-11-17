@@ -2835,6 +2835,17 @@ footer {
   margin-bottom: 7px;
 }
 
+#pricing .price-block-wrapper .price h3 {
+  font-size: 20px;
+  background-color: var(--pressed-blue);
+  /* background-image: linear-gradient(65deg, #141466 0, #2929cc 100%); */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 35px;
+  margin-bottom: 7px;
+}
+
 #pricing .price-block-wrapper .price span {
   text-transform: uppercase;
   font-size: 13px;
@@ -2900,6 +2911,13 @@ footer {
 }
 
 #pricing .active .price h2 {
+  background-image: linear-gradient(120deg, #fff 0%, #fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+#pricing .active .price h3 {
   background-image: linear-gradient(120deg, #fff 0%, #fff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

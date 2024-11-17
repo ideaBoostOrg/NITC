@@ -37,6 +37,7 @@ function Ticket_pricing() {
               </div>
               <div className="price">
                 <h2>LKR 20000</h2>
+                <h3>(USD 100 - Foreign Registrations)</h3>
                 {/* <span>Per Day</span> */}
               </div>
               <div className="pricing-list">
@@ -58,7 +59,7 @@ function Ticket_pricing() {
                     </span>
                     <span className="text">Keynote Speech</span>
                   </li>
-                  <li>
+                  {/* <li>
                     <span
                       style={{
                         paddingRight: "10px",
@@ -72,7 +73,7 @@ function Ticket_pricing() {
                     <span className="text">
                       <strike>Keynote Presentations</strike>
                     </span>
-                  </li>
+                  </li> */}
                   <li>
                     <span
                       style={{
@@ -86,7 +87,7 @@ function Ticket_pricing() {
                     </span>
                     <span className="text">CSSL National ICT Awards</span>
                   </li>
-                  <li>
+                  {/* <li>
                     <span
                       style={{
                         paddingRight: "10px",
@@ -100,7 +101,7 @@ function Ticket_pricing() {
                     <span className="text">
                       <strike>Panel Discussion and Q&A</strike>
                     </span>
-                  </li>
+                  </li> */}
                   {/* <li>
                     <span
                       style={{
@@ -116,7 +117,7 @@ function Ticket_pricing() {
                       <strike>Investment Summit</strike>
                     </span>
                   </li> */}
-                  <li>
+                  {/* <li>
                     <span
                       style={{
                         paddingRight: "10px",
@@ -130,8 +131,8 @@ function Ticket_pricing() {
                     <span className="text">
                       <strike>Lunch</strike>
                     </span>
-                  </li>
-                  <li>
+                  </li> */}
+                  {/* <li>
                     <span
                       style={{
                         paddingRight: "10px",
@@ -145,7 +146,7 @@ function Ticket_pricing() {
                     <span className="text">
                       <strike>Conference Tracks</strike>
                     </span>
-                  </li>
+                  </li> */}
                   {/* <li>
                     <span
                       style={{
@@ -174,6 +175,79 @@ function Ticket_pricing() {
                     </span>
                     <span className="text">Gala Dinner</span>
                   </li>
+                  <li>
+                    <span
+                      style={{
+                        paddingRight: "10px",
+                        fontSize: "15px",
+                        color: "var(--primary-blue)",
+                        verticalAlign: "middle",
+                      }}
+                    >
+                      <CheckCircleFill />
+                    </span>
+                    <span className="text">Networking</span>
+                  </li>
+                  <li>
+                    <span
+                      style={{
+                        paddingRight: "10px",
+                        fontSize: "15px",
+                        color: "var(--primary-blue)",
+                        verticalAlign: "middle",
+                      }}
+                    >
+                      {/* <XCircle /> */}
+                    </span>
+                    {/* <span className="text">
+                      <strike>Gala Dinner</strike>
+                    </span> */}
+                  </li>
+                  <li>
+                    <span
+                      style={{
+                        paddingRight: "10px",
+                        fontSize: "15px",
+                        color: "var(--primary-blue)",
+                        verticalAlign: "middle",
+                      }}
+                    >
+                      {/* <XCircle /> */}
+                    </span>
+                    {/* <span className="text">
+                      <strike>Gala Dinner</strike>
+                    </span> */}
+                  </li>
+                  <li>
+                    <span
+                      style={{
+                        paddingRight: "10px",
+                        fontSize: "15px",
+                        color: "var(--primary-blue)",
+                        verticalAlign: "middle",
+                      }}
+                    >
+                      {/* <XCircle /> */}
+                    </span>
+                    {/* <span className="text">
+                      <strike>Gala Dinner</strike>
+                    </span> */}
+                  </li>
+                  <li>
+                    <span
+                      style={{
+                        paddingRight: "10px",
+                        fontSize: "15px",
+                        color: "var(--primary-blue)",
+                        verticalAlign: "middle",
+                      }}
+                    >
+                      {/* <XCircle /> */}
+                    </span>
+                    {/* <span className="text">
+                      <strike>Gala Dinner</strike>
+                    </span> */}
+                  </li>
                 </ul>
               </div>
               <a href="/register?type=Inauguration" className="btn btn-common">
@@ -192,6 +266,7 @@ function Ticket_pricing() {
               </div>
               <div className="price">
                 <h2>LKR 15000</h2>
+                <h3>(USD 75 - Foreign Registrations)</h3>
                 {/* <span>Per Day</span> */}
               </div>
               <div className="pricing-list">
@@ -200,7 +275,7 @@ function Ticket_pricing() {
                       <i className="lni-check-mark-circle"></i>
                       <span className="text">Entrance</span>
                     </li> */}
-                  <li>
+                  {/* <li>
                     <span
                       style={{
                         paddingRight: "10px",
@@ -214,7 +289,7 @@ function Ticket_pricing() {
                     <span className="text">
                       <strike>Keynote Speech</strike>
                     </span>
-                  </li>
+                  </li> */}
                   <li>
                     <span
                       style={{
@@ -228,7 +303,7 @@ function Ticket_pricing() {
                     </span>
                     <span className="text">Keynote Presentations</span>
                   </li>
-                  <li>
+                  {/* <li>
                     <span
                       style={{
                         paddingRight: "10px",
@@ -242,7 +317,7 @@ function Ticket_pricing() {
                     <span className="text">
                       <strike>CSSL National ICT Awards</strike>
                     </span>
-                  </li>
+                  </li> */}
                   <li>
                     <span
                       style={{
@@ -282,7 +357,7 @@ function Ticket_pricing() {
                     >
                       <CheckCircleFill />
                     </span>
-                    <span className="text">Lunch</span>
+                    <span className="text">Tea, Snacks & Lunch</span>
                   </li>
                   <li>
                     <span
@@ -312,7 +387,7 @@ function Ticket_pricing() {
                       <strike>CSSL Research Colloquium</strike>
                     </span>
                   </li> */}
-                  <li>
+                  {/* <li>
                     <span
                       style={{
                         paddingRight: "10px",
@@ -326,6 +401,66 @@ function Ticket_pricing() {
                     <span className="text">
                       <strike>Gala Dinner</strike>
                     </span>
+                  </li> */}
+                  <li>
+                    <span
+                      style={{
+                        paddingRight: "10px",
+                        fontSize: "15px",
+                        color: "var(--primary-blue)",
+                        verticalAlign: "middle",
+                      }}
+                    >
+                      {/* <XCircle /> */}
+                    </span>
+                    {/* <span className="text">
+                      <strike>Gala Dinner</strike>
+                    </span> */}
+                  </li>
+                  <li>
+                    <span
+                      style={{
+                        paddingRight: "10px",
+                        fontSize: "15px",
+                        color: "var(--primary-blue)",
+                        verticalAlign: "middle",
+                      }}
+                    >
+                      {/* <XCircle /> */}
+                    </span>
+                    {/* <span className="text">
+                      <strike>Gala Dinner</strike>
+                    </span> */}
+                  </li>
+                  <li>
+                    <span
+                      style={{
+                        paddingRight: "10px",
+                        fontSize: "15px",
+                        color: "var(--primary-blue)",
+                        verticalAlign: "middle",
+                      }}
+                    >
+                      {/* <XCircle /> */}
+                    </span>
+                    {/* <span className="text">
+                      <strike>Gala Dinner</strike>
+                    </span> */}
+                  </li>
+                  <li>
+                    <span
+                      style={{
+                        paddingRight: "10px",
+                        fontSize: "15px",
+                        color: "var(--primary-blue)",
+                        verticalAlign: "middle",
+                      }}
+                    >
+                      {/* <XCircle /> */}
+                    </span>
+                    {/* <span className="text">
+                      <strike>Gala Dinner</strike>
+                    </span> */}
                   </li>
                 </ul>
               </div>
@@ -345,6 +480,7 @@ function Ticket_pricing() {
               </div>
               <div className="price">
                 <h2>LKR 15000</h2>
+                <h3>(USD 75 - Foreign Registrations)</h3>
                 {/* <span>Per Day</span> */}
               </div>
               <div className="pricing-list">
@@ -353,7 +489,7 @@ function Ticket_pricing() {
                       <i className="lni-check-mark-circle"></i>
                       <span className="text">Entrance</span>
                     </li> */}
-                  <li>
+                  {/* <li>
                     <span
                       style={{
                         paddingRight: "10px",
@@ -367,7 +503,7 @@ function Ticket_pricing() {
                     <span className="text">
                       <strike>Keynote Speech</strike>
                     </span>
-                  </li>
+                  </li> */}
                   <li>
                     <span
                       style={{
@@ -381,7 +517,7 @@ function Ticket_pricing() {
                     </span>
                     <span className="text">Keynote Presentations</span>
                   </li>
-                  <li>
+                  {/* <li>
                     <span
                       style={{
                         paddingRight: "10px",
@@ -395,8 +531,8 @@ function Ticket_pricing() {
                     <span className="text">
                       <strike>CSSL National ICT Awards</strike>
                     </span>
-                  </li>
-                  <li>
+                  </li> */}
+                  {/* <li>
                     <span
                       style={{
                         paddingRight: "10px",
@@ -410,7 +546,7 @@ function Ticket_pricing() {
                     <span className="text">
                       <strike>Panel Discussion and Q&A</strike>
                     </span>
-                  </li>
+                  </li> */}
                   {/* <li>
                     <span
                       style={{
@@ -435,7 +571,7 @@ function Ticket_pricing() {
                     >
                       <CheckCircleFill />
                     </span>
-                    <span className="text">Lunch</span>
+                    <span className="text">Tea, Snacks & Lunch</span>
                   </li>
                   <li>
                     <span
@@ -472,11 +608,71 @@ function Ticket_pricing() {
                         verticalAlign: "middle",
                       }}
                     >
-                      <XCircle />
+                      {/* <XCircle /> */}
                     </span>
-                    <span className="text">
+                    {/* <span className="text">
                       <strike>Gala Dinner</strike>
+                    </span> */}
+                  </li>
+                  <li>
+                    <span
+                      style={{
+                        paddingRight: "10px",
+                        fontSize: "15px",
+                        color: "var(--primary-blue)",
+                        verticalAlign: "middle",
+                      }}
+                    >
+                      {/* <XCircle /> */}
                     </span>
+                    {/* <span className="text">
+                      <strike>Gala Dinner</strike>
+                    </span> */}
+                  </li>
+                  <li>
+                    <span
+                      style={{
+                        paddingRight: "10px",
+                        fontSize: "15px",
+                        color: "var(--primary-blue)",
+                        verticalAlign: "middle",
+                      }}
+                    >
+                      {/* <XCircle /> */}
+                    </span>
+                    {/* <span className="text">
+                      <strike>Gala Dinner</strike>
+                    </span> */}
+                  </li>
+                  <li>
+                    <span
+                      style={{
+                        paddingRight: "10px",
+                        fontSize: "15px",
+                        color: "var(--primary-blue)",
+                        verticalAlign: "middle",
+                      }}
+                    >
+                      {/* <XCircle /> */}
+                    </span>
+                    {/* <span className="text">
+                      <strike>Gala Dinner</strike>
+                    </span> */}
+                  </li>
+                  <li>
+                    <span
+                      style={{
+                        paddingRight: "10px",
+                        fontSize: "15px",
+                        color: "var(--primary-blue)",
+                        verticalAlign: "middle",
+                      }}
+                    >
+                      {/* <XCircle /> */}
+                    </span>
+                    {/* <span className="text">
+                      <strike>Gala Dinner</strike>
+                    </span> */}
                   </li>
                 </ul>
               </div>
@@ -496,6 +692,7 @@ function Ticket_pricing() {
               </div>
               <div className="price">
                 <h2>LKR 50000</h2>
+                <h3>(USD 250 - Foreign Registrations)</h3>
                 {/* <span>Per Day</span> */}
               </div>
               <div className="pricing-list">
@@ -574,7 +771,7 @@ function Ticket_pricing() {
                     >
                       <CheckCircleFill />
                     </span>
-                    <span className="text">Lunch - Day 1, Day 2</span>
+                    <span className="text">Tea, Snacks & Lunch - Day 1, Day 2</span>
                   </li>
                   <li>
                     <span
@@ -604,6 +801,7 @@ function Ticket_pricing() {
                     <span
                       style={{
                         paddingRight: "10px",
+                        paddingBottom: "10px",
                         fontSize: "15px",
                         verticalAlign: "middle",
                       }}
