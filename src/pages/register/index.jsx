@@ -4,9 +4,7 @@ import logo from "../../assets/img/NITC-Logo.png";
 import BillingDetails from "./components/BillingDetails";
 import RegisterForm from "./components/RegisterForm";
 
-
 function Register() {
-
   const [isMember, setisMember] = useState(false);
   const [memberId, setMemberId] = useState("");
   const [clientRef, setClientRef] = useState("");
@@ -14,9 +12,8 @@ function Register() {
   const [isCheckout, setIsCheckout] = useState(false);
   const [sessions, setSessions] = useState([]);
   const [firstTime, setFirstTime] = useState(true);
-  const [formData, setFormData] = useState({})
-  const [isValiedMember, setIsValiedMember] = useState(false)
-
+  const [formData, setFormData] = useState({});
+  const [isValiedMember, setIsValiedMember] = useState(false);
 
   return (
     <>
@@ -29,36 +26,36 @@ function Register() {
           </div>
         </nav>
       </section>
-      {
-        isCheckout ?
-          <RegisterForm
-            isMember={isMember}
-            setisMember={setisMember}
-            memberId={memberId}
-            setMemberId={setMemberId}
-            clientRef={clientRef}
-            setClientRef={setClientRef}
-            formData={formData}
-            sessions={sessions}
-            firstTime={firstTime}
-            isValiedMember={isValiedMember}
-          />
-          :
-          <BillingDetails
-            isMember={isMember}
-            setisMember={setisMember}
-            memberId={memberId}
-            setMemberId={setMemberId}
-            setIsCheckout={setIsCheckout}
-            clientRef={clientRef}
-            setClientRef={setClientRef}
-            commet={commet}
-            setCommet={setCommet}
-            setFormData={setFormData}
-            setSessions={setSessions}
-            setFirstTime={setFirstTime}
-            setIsValiedMember={setIsValiedMember}
-          />}
+      {isCheckout ? (
+        <RegisterForm
+          isMember={isMember}
+          setisMember={setisMember}
+          memberId={memberId}
+          setMemberId={setMemberId}
+          clientRef={clientRef}
+          setClientRef={setClientRef}
+          formData={formData}
+          sessions={sessions}
+          firstTime={firstTime}
+          isValiedMember={isValiedMember}
+        />
+      ) : (
+        <BillingDetails
+          isMember={isMember}
+          setisMember={setisMember}
+          memberId={memberId}
+          setMemberId={setMemberId}
+          setIsCheckout={setIsCheckout}
+          clientRef={clientRef}
+          setClientRef={setClientRef}
+          commet={commet}
+          setCommet={setCommet}
+          setFormData={setFormData}
+          setSessions={setSessions}
+          setFirstTime={setFirstTime}
+          setIsValiedMember={setIsValiedMember}
+        />
+      )}
     </>
   );
 }
