@@ -512,37 +512,32 @@ function BillingDetails({
               </div>
             </div>
 
-                        <div className="form-footer">
-                            <p className="star-before">For members of professional bodies (BCS, ISACA, IESL, IET,
-                                IEEE, ACM, and ACS), an exclusive discount awaits! Contact
-                                your secretariat to claim this benefit.</p>
-                                <p>Early Bird 10 % Discount Valid Till 15th October 2024</p>
-                        </div>
-                        <div className="form-group d-flex justify-content-end">
-                            <button
-                                className="submit-btn next-btn"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    handleNext()
-                                }}
-
-                                disabled={!isEmailValid || !isContactNoValid || !isNicValid}
-
-                            >
-                                Next
-                            </button>
-                            <ModalPopup
-                                show={modalShow}
-                                onHide={() => setModalShow(false)}
-                            />
-                        </div>
-                    </form>
-                </div>
-            </section>
-
-
-        </>
-    )
+            <div className="form-footer">
+              <p className="star-before">
+                For members of professional bodies (BCS, ISACA, IESL, IET, IEEE,
+                ACM, and ACS), an exclusive discount awaits! Contact your
+                secretariat to claim this benefit.
+              </p>
+              <p>Early Bird 10 % Discount Valid Till 15th October 2024</p>
+            </div>
+            <div className="form-group d-flex justify-content-end">
+              <button
+                className="submit-btn next-btn"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNext();
+                }}
+                disabled={!isEmailValid || !isContactNoValid || !isNicValid}
+              >
+                Next
+              </button>
+              <ModalPopup show={modalShow} onHide={() => setModalShow(false)} />
+            </div>
+          </form>
+        </div>
+      </section>
+    </>
+  );
 }
 
 export default BillingDetails;
