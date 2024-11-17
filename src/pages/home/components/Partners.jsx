@@ -5,7 +5,7 @@ import logo_2 from "../../../assets/img/partners/FITTIS.png";
 // import logo_5 from "../../../assets/img/partners/IESL.png";
 // import logo_6 from "../../../assets/img/partners/IET.png";
 import logo_7 from "../../../assets/img/partners/ISACA.png";
-import logo_8 from '../../../assets/img/partners/SLASSCOMLogo.png'
+import logo_8 from "../../../assets/img/partners/SLASSCOMLogo.png";
 import logo_4 from "../../../assets/img/partners/BCSLogo.png";
 
 function Partners() {

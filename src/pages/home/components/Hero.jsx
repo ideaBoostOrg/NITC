@@ -1,7 +1,6 @@
 import { Link } from "react-scroll";
 
 function Hero() {
-
   return (
     <div id="hero-area" className="hero-area-bg">
       <div className="hero-image"></div>

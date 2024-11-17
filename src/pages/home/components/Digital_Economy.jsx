@@ -3,7 +3,6 @@
 import Awards from "../../../assets/img/Digital_economy.png";
 import DIGIECON_logo from "../../../assets/img/DIGIECON_LOGO.png";
 
-
 function Digital_economy() {
   return (
     <section
