@@ -38,7 +38,7 @@ function CSSL_awards() {
                 className="btn btn-common"
                 id="view_more_btn"
                 onClick={() => setviewMoreOpen(true)}
-              // onClick={clickfun()}
+                // onClick={clickfun()}
               >
                 View more
               </span>

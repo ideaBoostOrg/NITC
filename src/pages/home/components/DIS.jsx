@@ -2,7 +2,6 @@
 
 import Awards from "../../../assets/img/DIGI_ECON.jpg";
 
-
 function DIS() {
   return (
     <section
@@ -38,11 +37,17 @@ function DIS() {
           <div className="col-lg-6 col-md-12 col-xs-12">
             <p style={{ marginBottom: "2rem" }}>
               <b>Sri Lanka Digital Investment Summit</b> is a joint industry
-              initiative to connect Sri Lankan startups and mature companies
+              initiative to connect Sri Lankan Startups and mature companies
               with local and foreign investors to support their next growth
-              phase and global expansions. Digital investment Summit rallies all
-              industry stakeholders in order to create a vibrant tech investment
-              eco system to accelerate the economic resurgence.
+              phase and global expansions and serves as a gateway to delve into
+              Sri Lanka's dynamic digital investment ecosystem. This summit
+              rallies all industries and sectors nationwide, fostering
+              partnerships with government officials, venture capitalists,
+              investor groups, multinational corporates, entrepreneurs and
+              thought leaders in the global stage. It also engages bilateral and
+              multilateral associations and acts as a catalyst for economic
+              resurgence while accelerating digital advancements for the
+              country.
             </p>
 
             {/* hide this for the time being */}

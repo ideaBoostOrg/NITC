@@ -1,13 +1,16 @@
-
 /*icon */
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
-import { eventImages } from '../../../assets/img'
+import { eventImages } from "../../../assets/img";
 
 function Gallery() {
   return (
-    <section id="gallery" className="section-padding" style={{ padding: "30px 0" }}>
+    <section
+      id="gallery"
+      className="section-padding"
+      style={{ padding: "30px 0" }}
+    >
       <div className="container-fluid">
         <div className="row">
           <div className="col-12">
@@ -20,7 +23,6 @@ function Gallery() {
                   MozAnimationDelay: "0.2s",
                   animationDelay: "0.2s",
                   paddingBottom: "30px",
-
                 }}
               >
                 Event Gallery

@@ -4,11 +4,9 @@ import logo_3 from "../../../assets/img/afflicants/logo-4.webp";
 import logo_4 from "../../../assets/img/afflicants/logo-5.webp";
 import logo_5 from "../../../assets/img/afflicants/logo-3.webp";
 
-
 // import logo_1 from "../../../assets/img/partners/ACM.png";
 // import logo_3 from "../../../assets/img/partners/ACS.png";
 // import logo_4 from "../../../assets/img/partners/BCS.png";
-
 
 function Afflicants() {
   return (

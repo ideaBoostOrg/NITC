@@ -11,10 +11,8 @@ import SomethingWentWrong from "../../../components/SomethingWentWrong";
 const packages = [{
   key: "DIS",
   name: "Digital Investment Summit",
-  priceLKR: 15000.00, // Local price in LKR
-  priceUSD: 75.00,    // Foreign price in USD
-  currencyLKR: "LKR",
-  currencyUSD: "USD",
+  price: 5000.00,
+  currency: "LKR",
 }];
 
 const DisRegisterForm = ({ clientRef, setClientRef, comment, setComment, formData, sessions, firstTime }) => {

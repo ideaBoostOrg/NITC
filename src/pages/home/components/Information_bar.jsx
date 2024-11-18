@@ -13,7 +13,6 @@ function Information_bar() {
         </div>
       </div>
       <div className="border-info">
-
         <div className="info-card">
           <Calendar3 className="info-card__icon" />
           <div className="info-card__content">
@@ -23,7 +22,6 @@ function Information_bar() {
         </div>
       </div>
       <div className="border-info">
-
         <div className="info-card">
           <Mic className="info-card__icon" />
           <div className="info-card__content">
@@ -31,10 +29,8 @@ function Information_bar() {
             <p>25 Professionals</p>
           </div>
         </div>
-
       </div>
       <div className="border-info">
-
         <div className="info-card">
           <Person className="info-card__icon" />
           <div className="info-card__content">
@@ -44,7 +40,7 @@ function Information_bar() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default Information_bar;

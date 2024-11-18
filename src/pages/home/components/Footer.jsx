@@ -1,4 +1,4 @@
-import logo_NITC from '../../../assets/img/NITC-Logo.png'
+import logo_NITC from "../../../assets/img/NITC-Logo.png";
 // import logo_IdeaBoost from "../../../assets/img/logo-IdeaBoost.png";
 
 /* icon */
@@ -14,11 +14,7 @@ function Footer() {
         <div className="row justify-content-center">
           <div className="col-lg-8 col-md-12 col-xs-12">
             <div className="NITC-logo" style={{ padding: "20px 0 0 0" }}>
-              <img
-                src={logo_NITC}
-                alt=""
-                style={{ width: 150, height: 100 }}
-              />
+              <img src={logo_NITC} alt="" style={{ width: 150, height: 100 }} />
             </div>
             <div
               className="social-icons-footer"

@@ -1,6 +1,5 @@
 import Digital_investment_summit from "../../../assets/img/DIGI_ECON.jpg";
 
-
 function CSSL_digital_investment_submit() {
   return (
     <section id="cssl-digita-investment-summit" style={{ paddingTop: "10px" }}>
@@ -19,7 +18,6 @@ function CSSL_digital_investment_submit() {
           <div className="col-lg-6 col-md-12 col-xs-12">
             <div className="section-title-header mt-4 text-left">
               <h2 className="section-title wow fadeInUp" data-wow-delay="0.2s">
-
                 DIGIECON Inauguration
               </h2>
               <p className="wow fadeInDown" data-wow-delay="0.2s">

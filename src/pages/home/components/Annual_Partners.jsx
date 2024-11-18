@@ -21,8 +21,10 @@ function Annual_partners() {
                 CSSL Annual Partners
               </h2>
               <p className="wow fadeInDown" data-wow-delay="0.2s">
-                Deeply grateful to our CSSL Annual Partners for their unwavering support and collaborative spirit, 
-								<br />propelling our collective success to new heights.
+                Deeply grateful to our CSSL Annual Partners for their unwavering
+                support and collaborative spirit,
+                <br />
+                propelling our collective success to new heights.
               </p>
             </div>
           </div>
@@ -35,13 +37,17 @@ function Annual_partners() {
             <div className="sponsors-logo">
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                 <span className="annual-partner-logo">
-									<img src={ap_logo_1} alt="" style={{ height: 17 }}/>
+                  <img src={ap_logo_1} alt="" style={{ height: 17 }} />
                 </span>
                 <span className="annual-partner-logo">
                   <img src={ap_logo_2} alt="" />
                 </span>
                 <span>
-                  <img src={ap_logo_3} alt="" style={{ width: 200, height: 45 }}/>
+                  <img
+                    src={ap_logo_3}
+                    alt=""
+                    style={{ width: 200, height: 45 }}
+                  />
                 </span>
               </div>
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
