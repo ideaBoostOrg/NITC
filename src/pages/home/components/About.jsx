@@ -10,7 +10,6 @@ import { CheckCircle } from "react-bootstrap-icons";
 // gsap.registerPlugin(ScrollTrigger);
 
 function About() {
-
   // const t1 = gsap.timeline({ defaults: { ease: "power1.out" } });
   // const t2 = gsap.timeline({ defaults: { ease: "power1.out" } });
 
@@ -63,7 +62,7 @@ function About() {
                   <p>
                     <b>NITC 2024 Conference</b> will feature 6 tracks and will
                     have 30+ local and foreign high-profile speakers and a
-                    series of prior events. 
+                    series of prior events.
                   </p>
                 </div>
                 <ul id="stylish-list" className="stylish-list mb-3">

@@ -1,7 +1,6 @@
 import { Link } from "react-scroll";
 
 function Hero() {
-
   return (
     <div id="hero-area" className="hero-area-bg">
       <div className="hero-image"></div>
@@ -13,7 +12,7 @@ function Hero() {
                 <i className="lni-mic"></i>
               </div>
               <span className="banner-info" style={{ textAlign: "cetnter" }}>
-                12<sup>th</sup> - 14<sup>th</sup> of Nov 2024, Shangri-La Hotel,
+                24<sup>th</sup> - 26<sup>th</sup> of Nov 2024, Shangri-La Hotel,
                 Colombo, Sri-Lanka
               </span>
               <h2 className="head-title">

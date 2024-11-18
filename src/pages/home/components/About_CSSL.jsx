@@ -6,10 +6,7 @@ import logo_CSSL from "../../../assets/img/CSSL_logo.png";
 // import DIGI_ECON_Inauguration from "./DIGI-ECON_Inauguration";
 // import CSSL_awards from "./CSSL_awards";
 
-
-
 function About_CSSL() {
-
   // const [toggleState, setToggleState] = useState(1);
   // const toggleTab = (index) => {
   //   setToggleState(index);
@@ -22,7 +19,6 @@ function About_CSSL() {
       style={{
         padding: "50px 0",
         backgroundColor: " rgb(243, 244, 243)",
-
       }}
     >
       <div className="container">

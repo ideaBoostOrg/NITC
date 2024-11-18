@@ -1,7 +1,6 @@
 import { XLg } from "react-bootstrap-icons";
 import CSSL_Awards_Flyer from "../../../assets/img/CSSL_Awards_Flyer.jpg";
 
-
 const View_more = (props) => {
   // eslint-disable-next-line react/prop-types
   const { isOpen, onClose } = props;
@@ -12,11 +11,8 @@ const View_more = (props) => {
       style={{
         display: isOpen ? "block" : "none",
         backgroundColor: "transparent",
-
       }}
     >
-
-
       <div
         className="modal view-more-modal"
         style={{

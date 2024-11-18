@@ -1,31 +1,63 @@
 export const packages = [
-    {
-        key: "Full_package",
-        name: "Full Conference With Inauguration",
-        price: "5.00",
-        currency: "LKR",
-        features: ["Keynote Speech", "Keynote Presentations", "CSSL National ICT Awards", "Panel Discussion and Q&A", "Investment Summit", "Lunch", "Conference Tracks", "Gala Dinner"]
-    },
-    {
-        key: "Inauguration",
-        name: "Inauguration Ceremony",
-        price: "2.00",
-        currency: "LKR",
-        features: ["Keynote Speech", "CSSL National ICT Awards", "Gala Dinner"],
-    },
-    {
-        key: "Day_01",
-        name: "NITC Conference Day 01",
-        price: "1.5",
-        currency: "LKR",
-        features: ["Keynote Presentations", "Panel Discussion and Q&A", "Lunch", "Conference Tracks"]
-    },
-    {
-        key: "Day_02",
-        name: "NITC Conference Day 02",
-        price: "1.5",
-        currency: "LKR",
-        features: ["Keynote Presentations", "Investment Summit", "Lunch", "Conference Tracks", "CSSL Research Colloquium"]
-    },
+  {
+    key: "Full_package",
+    name: "Full Conference With Inauguration",
+    price: 50000,
+    priceUSD: 250,
+    currencyLKR: "LKR",
+    currencyUSD: "USD",
+    features: [
+      "Keynote Speech",
+      "Keynote Presentations",
+      "CSSL National ICT Awards",
+      "Panel Discussion and Q&A",
+      "Investment Summit",
+      "Tea, Snacks & Lunch",
+      "Conference Tracks",
+      "Gala Dinner",
+    ],
+  },
+  {
+    key: "Inauguration",
+    name: "Inauguration Ceremony",
+    price: 20000,
+    priceUSD: 100,
+    currencyLKR: "LKR",
+    currencyUSD: "USD",
+    features: [
+      "Keynote Speech",
+      "CSSL National ICT Awards",
+      "Gala Dinner",
+      "Networking",
+    ],
+  },
+  {
+    key: "Day_01",
+    name: "NITC Conference Day 01",
+    price: 15000,
+    priceUSD: 75,
+    currencyLKR: "LKR",
+    currencyUSD: "USD",
+    features: [
+      "Keynote Presentations",
+      "Panel Discussion and Q&A",
+      "Tea, Snacks & Lunch",
+      "Conference Tracks",
+    ],
+  },
+  {
+    key: "Day_02",
+    name: "NITC Conference Day 02",
+    price: 15000,
+    priceUSD: 75,
+    currencyLKR: "LKR",
+    currencyUSD: "USD",
+    features: [
+      "Keynote Presentations",
+      "Investment Summit",
+      "Tea, Snacks & Lunch",
+      "Conference Tracks",
+      "CSSL Research Colloquium",
+    ],
+  },
 ];
-

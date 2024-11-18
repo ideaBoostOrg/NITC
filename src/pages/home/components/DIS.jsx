@@ -46,8 +46,8 @@ function DIS() {
               investor groups, multinational corporates, entrepreneurs and
               thought leaders in the global stage. It also engages bilateral and
               multilateral associations and acts as a catalyst for economic
-              resurgence while accelerating digital advancements
-              for the country.
+              resurgence while accelerating digital advancements for the
+              country.
             </p>
 
             {/* hide this for the time being */}

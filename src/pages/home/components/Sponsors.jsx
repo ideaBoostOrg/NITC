@@ -1,18 +1,16 @@
 import TBA from "../../../assets/img/TBA.png";
-import master from '../../../assets/img/sponsors/strategicPartner/master.png';
-import dell from '../../../assets/img/sponsors/goldSponsors/DELL.png';
-import fortinet from '../../../assets/img/sponsors/goldSponsors/Fortinet.png';
-import gennext from '../../../assets/img/sponsors/goldSponsors/gennext.png';
-import JIT from '../../../assets/img/sponsors/goldSponsors/JIT.png';
-import LEAFFoundation from '../../../assets/img/sponsors/goldSponsors/LEAFFoundation.png';
-import MIT from '../../../assets/img/sponsors/goldSponsors/MIT.png';
-import ITN from '../../../assets/img/sponsors/electronicMediaPartners/ITN.png';
-import Asset6 from '../../../assets/img/sponsors/diamondSponsors/Asset6.png';
-import DMS from '../../../assets/img/sponsors/diamondSponsors/DMS.png';
-import SafeProject from '../../../assets/img/sponsors/diamondSponsors/SafeProject.png';
-import Sanfer from '../../../assets/img/sponsors/diamondSponsors/Sanfer.png';
-import Orin from '../../../assets/img/sponsors/diamondSponsors/Orin.png';
-
+import master from "../../../assets/img/sponsors/strategicPartner/master.png";
+import dell from "../../../assets/img/sponsors/goldSponsors/DELL.png";
+import fortinet from "../../../assets/img/sponsors/goldSponsors/Fortinet.png";
+import gennext from "../../../assets/img/sponsors/goldSponsors/gennext.png";
+import JIT from "../../../assets/img/sponsors/goldSponsors/JIT.png";
+import LEAFFoundation from "../../../assets/img/sponsors/goldSponsors/LEAFFoundation.png";
+import ITN from "../../../assets/img/sponsors/electronicMediaPartners/ITN.png";
+import Asset6 from "../../../assets/img/sponsors/diamondSponsors/Asset6.png";
+import DMS from "../../../assets/img/sponsors/diamondSponsors/DMS.png";
+import SafeProject from "../../../assets/img/sponsors/diamondSponsors/SafeProject.png";
+import Sanfer from "../../../assets/img/sponsors/diamondSponsors/Sanfer.png";
+import Orin from "../../../assets/img/sponsors/diamondSponsors/Orin.png";
 
 function Sponsors() {
   return (
@@ -50,7 +48,7 @@ function Sponsors() {
         >
           <div className="col-lg-12">
             <div className="sponsors-logo text-center">
-            <p
+              <p
                 style={{
                   fontWeight: "600",
                   textAlign: "center",
@@ -62,10 +60,7 @@ function Sponsors() {
                 Strategic partner
               </p>
               <span className="strategic-partner-logo-common">
-                <img
-                  src={master}
-                  alt=""
-                />
+                <img src={master} alt="" />
               </span>
               <div className="diamond-sponsor-section">
                 <p
@@ -80,11 +75,7 @@ function Sponsors() {
                   Diamond sponsors
                 </p>
                 <span className="diamond-sponsor-logo">
-                  <img
-                    src={DMS}
-                    style={{marginBottom:'30px'}}
-                    alt=""
-                  />
+                  <img src={DMS} style={{ marginBottom: "30px" }} alt="" />
                 </span>
                 <div className="col-lg-12 col-md-4 col-sm-4 text-center border">
                   <span className="diamond-sponsor-logo-common">
@@ -101,20 +92,6 @@ function Sponsors() {
                   </span>
                 </div>
               </div>
-              <p
-                style={{
-                  fontWeight: "600",
-                  textAlign: "center",
-                  marginTop: "40px",
-                  marginBottom: "20px",
-                  fontSize: "1rem",
-                }}
-              >
-                Platinum sponsor
-              </p>
-              <span className="sponsor-logo-common">
-                <img src={TBA} alt="" />
-              </span>
               <br />
 
               <p
@@ -151,9 +128,9 @@ function Sponsors() {
                 {/* <span className="gold-sponsor-logo">
                   <img src={logo_6} alt="" />
                 </span> */}
-                <span className="gold-sponsor-logo">
+                {/* <span className="gold-sponsor-logo">
                   <img src={MIT} alt="" />
-                </span>
+                </span> */}
                 {/* <span className="sponsor-logo-common">
                   <img src={TBA} alt="" />
                 </span> */}
