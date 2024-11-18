@@ -45,9 +45,7 @@ function Shedule() {
                   <div className="item-text">
                     <h4>Inauguration</h4>
                     <h5>24<sup>th</sup> November 2024</h5>
-                    <h5>
-                      24<sup>th</sup> November 2024
-                    </h5>
+                 
                     <h5>6.00 PM onwards</h5>
                   </div>
                 </a>
@@ -65,9 +63,7 @@ function Shedule() {
                   <div className="item-text">
                     <h4>Day 01</h4>
                     <h5>25<sup>th</sup> November 2024</h5>
-                    <h5>
-                      25<sup>th</sup> November 2024
-                    </h5>
+                 
                     <h5>9.00 AM - 5.00 PM</h5>
                   </div>
                 </a>
@@ -85,9 +81,7 @@ function Shedule() {
                   <div className="item-text">
                     <h4>Day 02</h4>
                     <h5>26<sup>th</sup> November 2024</h5>
-                    <h5>
-                      26<sup>th</sup> November 2024
-                    </h5>
+                   
                     <h5>9.00 AM - 5.00 PM</h5>
                   </div>
                 </a>
