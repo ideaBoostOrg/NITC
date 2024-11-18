@@ -17,6 +17,7 @@ import Google from '../../../assets/img/sponsors/diamondSponsors/Google.png';
 import Huawei from '../../../assets/img/sponsors/goldSponsors/Huawei.jpg';
 import Commsc from '../../../assets/img/sponsors/goldSponsors/Commsc.jpeg';
 import SLT from '../../../assets/img/sponsors/SLTMOBITEL.png';
+import Emojot from '../../../assets/img/sponsors/Emojot.png';
 
 function Sponsors() {
   return (
@@ -87,6 +88,9 @@ function Sponsors() {
                 <span className="diamond-sponsor-logo">
                   <img src={Sanfer} alt="" />
                 </span>
+                <span className="diamond-sponsor-logo">
+                    <img src={Orin} alt="" />
+                  </span>
               </div>
                 <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                   <span className="diamond-sponsor-logo-common">
@@ -100,9 +104,6 @@ function Sponsors() {
                   </span>
                   <span className="diamond-sponsor-logo-common">
                     <img src={SafeProject} alt="" />
-                  </span>
-                  <span className="diamond-sponsor-logo-common">
-                    <img src={Orin} alt="" />
                   </span>
                 </div>
               </div>
@@ -120,24 +121,25 @@ function Sponsors() {
                 Gold sponsors
               </p>
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
-                <span className="gold-sponsor-logo">
-                  <img src={dell} alt="" />
-                </span>
-                <span className="gold-sponsor-logo">
-                  <img src={fortinet} alt="" />
-                </span>
-                <span className="gold-sponsor-logo">
+              <span className="gold-sponsor-logo">
                   <img src={gennext} alt="" />
                 </span>
                 <span className="gold-sponsor-logo">
                   <img src={JIT} alt="" />
                 </span>
+ 
+                <span className="gold-sponsor-logo">
+                  <img src={dell} alt="" />
+                </span>
               </div>
               {/* <br /> */}
 
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
-                <span className="gold-sponsor-logo">
+              <span className="gold-sponsor-logo">
                   <img src={LEAFFoundation} alt="" />
+                </span>
+              <span className="gold-sponsor-logo">
+                  <img src={fortinet} alt="" />
                 </span>
                 <span className="gold-sponsor-logo">
                   <img src={Huawei} alt="" />
@@ -179,7 +181,7 @@ function Sponsors() {
               </p>
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                 <span className="sponsor-logo-common">
-                  <img src={TBA} alt="" />
+                  <img src={Emojot} alt="" />
                 </span>
               </div>
               <p
