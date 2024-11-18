@@ -1,3 +1,4 @@
+import { text } from "@fortawesome/fontawesome-svg-core";
 import Shedule_day_01 from "./Shedule_day_01";
 import Shedule_day_02 from "./Shedule_day_02";
 import Shedule_day_03 from "./Shedule_day_03";
@@ -101,6 +102,9 @@ function Shedule() {
         {toggleState === 2 && <Shedule_day_02 />}
         {toggleState === 3 && <Shedule_day_03 />}
       </div>
+      <p className="text-center">
+        Please find the attached <a href="https://drive.google.com/file/d/1acLMSInRUX-t-L5DsntnAiAM_26XuOkA/view?usp=sharing">NITC Agenda</a>
+      </p>
     </section>
   );
 }
