@@ -18,6 +18,8 @@ import Huawei from '../../../assets/img/sponsors/goldSponsors/Huawei.jpg';
 import Commsc from '../../../assets/img/sponsors/goldSponsors/Commsc.jpeg';
 import SLT from '../../../assets/img/sponsors/SLTMOBITEL.png';
 import Emojot from '../../../assets/img/sponsors/Emojot.png';
+import Garvi from '../../../assets/img/sponsors/Garvi.png';
+import Prime from '../../../assets/img/sponsors/Prime.png';
 
 function Sponsors() {
   return (
@@ -213,7 +215,7 @@ function Sponsors() {
               </p>
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                 <span className="sponsor-logo-common">
-                  <img src={TBA} alt="" />
+                  <img src={Prime} alt="" />
                 </span>
               </div>
               <p
@@ -229,7 +231,7 @@ function Sponsors() {
               </p>
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                 <span className="sponsor-logo-common">
-                  <img src={TBA} alt="" />
+                  <img src={Garvi} alt="" />
                 </span>
               </div>
 
