@@ -44,25 +44,25 @@ const DisRegisterForm = ({ clientRef, setClientRef, comment, setComment, formDat
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
   const [currency, setCurrency] = useState("LKR"); // Default currency
-  const [amount, setAmount] = useState(packages[0].priceLKR); // Default to local price
-  const [netTotal, setNetTotal] = useState(packages[0].priceLKR); // Default to local net total
+  const [amount, setAmount] = useState(packages[0].price); // Default to local price
+  const [netTotal, setNetTotal] = useState(packages[0].price); // Default to local net total
 
   const navigate = useNavigate();
   const pack = packages[0];
 
   // Handle currency change for local/foreign payments
-  const handleCurrencyChange = (event) => {
-    const selectedCurrency = event.target.value;
-    if (selectedCurrency === "LKR") {
-      setCurrency(pack.currencyLKR);
-      setAmount(pack.priceLKR);
-      setNetTotal(pack.priceLKR - discount); // Apply any discounts to net total if applicable
-    } else if (selectedCurrency === "USD") {
-      setCurrency(pack.currencyUSD);
-      setAmount(pack.priceUSD);
-      setNetTotal(pack.priceUSD - discount);
-    }
-  };
+  // const handleCurrencyChange = (event) => {
+  //   const selectedCurrency = event.target.value;
+  //   if (selectedCurrency === "LKR") {
+  //     setCurrency(pack.currencyLKR);
+  //     setAmount(pack.priceLKR);
+  //     setNetTotal(pack.priceLKR - discount); // Apply any discounts to net total if applicable
+  //   } else if (selectedCurrency === "USD") {
+  //     setCurrency(pack.currencyUSD);
+  //     setAmount(pack.priceUSD);
+  //     setNetTotal(pack.priceUSD - discount);
+  //   }
+  // };
 
   const handleAcceptTerms = (e) => {
     const value = e.target.checked;
@@ -75,18 +75,6 @@ const DisRegisterForm = ({ clientRef, setClientRef, comment, setComment, formDat
       const pgData = {
         clientId: 14002485,
         paymentAmount: netTotal.toFixed(2) * 100,
-        currency: 'LKR',
-        returnUrl: `https://${window.location.hostname}/payment-confirm`,
-        // returnUrl: `http://127.0.0.1:5173/payment-confirm`,
-        clientRef: cRef,
-        comment: comm,
-      }
-      loadPaycorpPayment(pgData)
-    } else if (netTotal > 0 && currency =="USD") {
-      setIsError(false);
-      const pgData = {
-        clientId: 14002485,
-        paymentAmount: netTotal.toFixed(2) * 100 * 300,
         currency: 'LKR',
         returnUrl: `https://${window.location.hostname}/payment-confirm`,
         // returnUrl: `http://127.0.0.1:5173/payment-confirm`,
@@ -227,7 +215,7 @@ const DisRegisterForm = ({ clientRef, setClientRef, comment, setComment, formDat
                           <h4 style={{ color: '#fff' }}>Digital Investment Summit</h4>
                           <div className="package-price">
                             <p style={{ color: '#fff' }}>
-                              <span style={{ color: '#fff', paddingRight: '0.5rem' }} className="lkr">LKR 15000 (USD 75)</span>
+                              <span style={{ color: '#fff', paddingRight: '0.5rem' }} className="lkr">LKR 5000</span>
                             </p>
                           </div>
                         </div>
@@ -239,7 +227,7 @@ const DisRegisterForm = ({ clientRef, setClientRef, comment, setComment, formDat
                 <div className="col-lg-5 col-md-12">
                   <div className="content">
                     {/* Currency Selection */}
-                    <div className="form-check">
+                    {/* <div className="form-check">
                       <input
                         className="form-check-input"
                         type="radio"
@@ -250,8 +238,8 @@ const DisRegisterForm = ({ clientRef, setClientRef, comment, setComment, formDat
                         onChange={handleCurrencyChange}
                       />
                       <label className="form-check-label" htmlFor="lkr">Local Registration</label>
-                    </div>
-                    <div className="form-check">
+                    </div> */}
+                    {/* <div className="form-check">
                       <input
                         className="form-check-input"
                         type="radio"
@@ -262,7 +250,7 @@ const DisRegisterForm = ({ clientRef, setClientRef, comment, setComment, formDat
                         onChange={handleCurrencyChange}
                       />
                       <label className="form-check-label" htmlFor="usd">Foreign Registration</label>
-                    </div>
+                    </div> */}
 
                     {/* Amount Display */}
                     <div className="content-row">
