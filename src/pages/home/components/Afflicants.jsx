@@ -3,6 +3,7 @@
 import logo_3 from "../../../assets/img/afflicants/logo-4.webp";
 import logo_4 from "../../../assets/img/afflicants/logo-5.webp";
 import logo_5 from "../../../assets/img/afflicants/logo-3.webp";
+import logo_6 from "../../../assets/img/afflicants/logo-6.png"
 
 // import logo_1 from "../../../assets/img/partners/ACM.png";
 // import logo_3 from "../../../assets/img/partners/ACS.png";
@@ -42,6 +43,9 @@ function Afflicants() {
           <div className="col-lg-12">
             <div className="sponsors-logo">
               <div className="col-lg-12 col-md-12 col-sm-12 text-center">
+              <span className="afflicants-logo1">
+                  <img src={logo_6} alt="" />
+                </span>
                 <span href="" className="afflicants-logo1">
                   <img src={logo_3} alt="" />
                 </span>
@@ -51,10 +55,8 @@ function Afflicants() {
                 <span href="" className="afflicants-logo3">
                   <img src={logo_5} alt="" />
                 </span>
+
                 {/* <span className="partner-logo">
-                  <img src={logo_1} alt="" />
-                </span>
-                <span className="partner-logo">
                   <img src={logo_4} alt="" />
                 </span>
                 <span className="partner-logo">

@@ -1,16 +1,25 @@
 import TBA from "../../../assets/img/TBA.png";
-import master from "../../../assets/img/sponsors/strategicPartner/master.png";
-import dell from "../../../assets/img/sponsors/goldSponsors/DELL.png";
-import fortinet from "../../../assets/img/sponsors/goldSponsors/Fortinet.png";
-import gennext from "../../../assets/img/sponsors/goldSponsors/gennext.png";
-import JIT from "../../../assets/img/sponsors/goldSponsors/JIT.png";
-import LEAFFoundation from "../../../assets/img/sponsors/goldSponsors/LEAFFoundation.png";
-import ITN from "../../../assets/img/sponsors/electronicMediaPartners/ITN.png";
-import Asset6 from "../../../assets/img/sponsors/diamondSponsors/Asset6.png";
-import DMS from "../../../assets/img/sponsors/diamondSponsors/DMS.png";
-import SafeProject from "../../../assets/img/sponsors/diamondSponsors/SafeProject.png";
-import Sanfer from "../../../assets/img/sponsors/diamondSponsors/Sanfer.png";
-import Orin from "../../../assets/img/sponsors/diamondSponsors/Orin.png";
+import master from '../../../assets/img/sponsors/strategicPartner/master.png';
+import dell from '../../../assets/img/sponsors/goldSponsors/DELL.png';
+import fortinet from '../../../assets/img/sponsors/goldSponsors/Fortinet.png';
+import gennext from '../../../assets/img/sponsors/goldSponsors/gennext.png';
+import JIT from '../../../assets/img/sponsors/goldSponsors/JIT.png';
+import LEAFFoundation from '../../../assets/img/sponsors/goldSponsors/LEAFFoundation.png';
+import MIT from '../../../assets/img/sponsors/goldSponsors/MIT.png';
+import ITN from '../../../assets/img/sponsors/electronicMediaPartners/ITN.png';
+import Asset6 from '../../../assets/img/sponsors/diamondSponsors/Asset6.png';
+import DMS from '../../../assets/img/sponsors/diamondSponsors/DMS.png';
+import SafeProject from '../../../assets/img/sponsors/diamondSponsors/SafeProject.png';
+import Sanfer from '../../../assets/img/sponsors/diamondSponsors/Sanfer.png';
+import Orin from '../../../assets/img/sponsors/diamondSponsors/Orin.png';
+import Oracle from '../../../assets/img/sponsors/diamondSponsors/Oracle.png';
+import Google from '../../../assets/img/sponsors/diamondSponsors/Google.png';
+import Huawei from '../../../assets/img/sponsors/goldSponsors/Huawei.jpg';
+import Commsc from '../../../assets/img/sponsors/goldSponsors/Commsc.jpeg';
+import SLT from '../../../assets/img/sponsors/SLTMOBITEL.png';
+import Emojot from '../../../assets/img/sponsors/Emojot.png';
+import Garvi from '../../../assets/img/sponsors/Garvi.png';
+import Prime from '../../../assets/img/sponsors/Prime.png';
 
 function Sponsors() {
   return (
@@ -74,21 +83,29 @@ function Sponsors() {
                 >
                   Diamond sponsors
                 </p>
+                <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                 <span className="diamond-sponsor-logo">
                   <img src={DMS} style={{ marginBottom: "30px" }} alt="" />
                 </span>
-                <div className="col-lg-12 col-md-4 col-sm-4 text-center border">
+                <span className="diamond-sponsor-logo">
+                  <img src={Sanfer} alt="" />
+                </span>
+                <span className="diamond-sponsor-logo">
+                    <img src={Orin} alt="" />
+                  </span>
+              </div>
+                <div className="col-lg-12 col-md-4 col-sm-4 text-center">
+                  <span className="diamond-sponsor-logo-common">
+                    <img src={Oracle} alt="" />
+                  </span>
+                  <span className="diamond-sponsor-logo-common">
+                    <img src={Google} alt="" />
+                  </span>
                   <span className="diamond-sponsor-logo-common">
                     <img src={Asset6} alt="" />
                   </span>
                   <span className="diamond-sponsor-logo-common">
                     <img src={SafeProject} alt="" />
-                  </span>
-                  <span className="diamond-sponsor-logo-common">
-                    <img src={Sanfer} alt="" />
-                  </span>
-                  <span className="diamond-sponsor-logo-common">
-                    <img src={Orin} alt="" />
                   </span>
                 </div>
               </div>
@@ -106,37 +123,37 @@ function Sponsors() {
                 Gold sponsors
               </p>
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
-                <span className="gold-sponsor-logo">
-                  <img src={dell} alt="" />
-                </span>
-                <span className="gold-sponsor-logo">
-                  <img src={fortinet} alt="" />
-                </span>
-                <span className="gold-sponsor-logo">
+              <span className="gold-sponsor-logo">
                   <img src={gennext} alt="" />
                 </span>
                 <span className="gold-sponsor-logo">
                   <img src={JIT} alt="" />
                 </span>
+ 
+                <span className="gold-sponsor-logo">
+                  <img src={dell} alt="" />
+                </span>
               </div>
               {/* <br /> */}
 
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
-                <span className="gold-sponsor-logo">
+              <span className="gold-sponsor-logo">
                   <img src={LEAFFoundation} alt="" />
                 </span>
-                {/* <span className="gold-sponsor-logo">
-                  <img src={logo_6} alt="" />
-                </span> */}
-                {/* <span className="gold-sponsor-logo">
-                  <img src={MIT} alt="" />
-                </span> */}
+              <span className="gold-sponsor-logo">
+                  <img src={fortinet} alt="" />
+                </span>
+                <span className="gold-sponsor-logo">
+                  <img src={Huawei} alt="" />
+                </span>
+                <span className="gold-sponsor-logo">
+                  <img src={Commsc} alt="" />
+                </span>
                 {/* <span className="sponsor-logo-common">
                   <img src={TBA} alt="" />
                 </span> */}
               </div>
               <br />
-
               <p
                 style={{
                   fontWeight: "600",
@@ -146,11 +163,11 @@ function Sponsors() {
                   fontSize: "1rem",
                 }}
               >
-                Education partner
+                Telecommunication Partner
               </p>
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                 <span className="sponsor-logo-common">
-                  <img src={TBA} alt="" />
+                  <img src={SLT} alt="" />
                 </span>
               </div>
               <p
@@ -162,27 +179,11 @@ function Sponsors() {
                   fontSize: "1rem",
                 }}
               >
-                Exclusive Innovation Partner
+                Engagement Partner
               </p>
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                 <span className="sponsor-logo-common">
-                  <img src={TBA} alt="" />
-                </span>
-              </div>
-              <p
-                style={{
-                  fontWeight: "600",
-                  textAlign: "center",
-                  marginTop: "40px",
-                  marginBottom: "20px",
-                  fontSize: "1rem",
-                }}
-              >
-                Partner
-              </p>
-              <div className="col-lg-12 col-md-4 col-sm-4 text-center">
-                <span className="sponsor-logo-common">
-                  <img src={TBA} alt="" />
+                  <img src={Emojot} alt="" />
                 </span>
               </div>
               <p
@@ -199,6 +200,38 @@ function Sponsors() {
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                 <span className="electronic-media-partner-logo">
                   <img src={ITN} alt="" />
+                </span>
+              </div>
+              <p
+                style={{
+                  fontWeight: "600",
+                  textAlign: "center",
+                  marginTop: "40px",
+                  marginBottom: "20px",
+                  fontSize: "1rem",
+                }}
+              >
+                Event Partner
+              </p>
+              <div className="col-lg-12 col-md-4 col-sm-4 text-center">
+                <span className="sponsor-logo-common">
+                  <img src={Prime} alt="" />
+                </span>
+              </div>
+              <p
+                style={{
+                  fontWeight: "600",
+                  textAlign: "center",
+                  marginTop: "40px",
+                  marginBottom: "20px",
+                  fontSize: "1rem",
+                }}
+              >
+                Design Partner
+              </p>
+              <div className="col-lg-12 col-md-4 col-sm-4 text-center">
+                <span className="sponsor-logo-common">
+                  <img src={Garvi} alt="" />
                 </span>
               </div>
 
