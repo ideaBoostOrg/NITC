@@ -35,7 +35,7 @@ function Shedule_day_02() {
                         <div className="schedule-card-body">
                           <div className="row d-none d-sm-block">
                             <div className="col-6">
-                              <div className="row align-items-center">
+                              {/* <div className="row align-items-center">
                                 <div className="col-2 mr-2">
                                   <img
                                     src={image_1}
@@ -68,7 +68,7 @@ function Shedule_day_02() {
                                   </p>
                                   <p className="speaker-subhead">MasterCard</p>
                                 </div>
-                              </div>
+                              </div> */}
                             </div>
                           </div>
                         </div>
@@ -82,7 +82,7 @@ function Shedule_day_02() {
                         <div className="schedule-card-header">
                           <h4>Panel Discussion - Towards Society 5.0</h4>
                         </div>
-                        <div className="schedule-card-body d-none d-sm-block">
+                        {/* <div className="schedule-card-body d-none d-sm-block">
                           <div className="row">
                             <div className="col-6">
                               <div className="row align-items-center">
@@ -161,11 +161,11 @@ function Shedule_day_02() {
                                     {" "}
                                     Data & Services,South Asia
                                   </p> */}
-                                  <p className="speaker-subhead">
+                                  {/* <p className="speaker-subhead">
                                     {" "}
                                     Oracle Application
                                   </p>
-                                  {/* <p className="speaker-subhead">MasterCard</p> */}
+                                  {/* <p className="speaker-subhead">MasterCard</p>
                                 </div>
                               </div>
                             </div>
@@ -241,7 +241,7 @@ function Shedule_day_02() {
                               </div>
                             </div>
                           </div>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                     <div className="schedule-card">
@@ -262,8 +262,8 @@ function Shedule_day_02() {
                         <div className="schedule-card-header">
                           <h4>Keynote Session - 2</h4>
                         </div>
-                        <div className="schedule-card-body d-none d-sm-block">
-                          {/* <div className="schedule-card-body"> */}
+                        {/* <div className="schedule-card-body d-none d-sm-block">
+                          {/* <div className="schedule-card-body">
                           <div className="row">
                             <div className="col-6">
                               <div className="row align-items-center">
@@ -296,12 +296,12 @@ function Shedule_day_02() {
                                     Oracle ASEAN
                                   </p>
                                   {/* <p className="speaker-subhead">MasterCard</p> */}
-                                  {/* </div> */}
+                                  {/* </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                     <div className="schedule-card">
@@ -312,7 +312,7 @@ function Shedule_day_02() {
                         <div className="schedule-card-header">
                           <h4>Keynote Session - 3</h4>
                         </div>
-                        <div className="schedule-card-body d-none d-sm-block">
+                        {/* <div className="schedule-card-body d-none d-sm-block">
                           <div className="col-6">
                             <div className="row align-items-center">
                               <div className="col-2 mr-2">
@@ -343,10 +343,10 @@ function Shedule_day_02() {
                               </div>
                             </div>
                           </div>
-                          {/* <span>Mr. Ramindu Randeniya</span>
+                          <span>Mr. Ramindu Randeniya</span>
                           <br />
-                          <span>Business and Corporate Leadership Coach</span> */}
-                        </div>
+                          <span>Business and Corporate Leadership Coach</span>
+                        </div> */}
                       </div>
                     </div>
                     <div className="schedule-card">
@@ -357,7 +357,7 @@ function Shedule_day_02() {
                         <div className="schedule-card-header">
                           <h4>Keynote Session - 4</h4>
                         </div>
-                        <div className="schedule-card-body d-none d-sm-block">
+                        {/* <div className="schedule-card-body d-none d-sm-block">
                           <div className="col-6">
                             <div className="row align-items-center">
                               <div className="col-2 mr-2">
@@ -392,10 +392,10 @@ function Shedule_day_02() {
                               </div>
                             </div>
                           </div>
-                          {/* <span>Mr. Ramindu Randeniya</span>
+                          <span>Mr. Ramindu Randeniya</span>
                           <br />
-                          <span>Business and Corporate Leadership Coach</span> */}
-                        </div>
+                          <span>Business and Corporate Leadership Coach</span>
+                        </div> */}
                       </div>
                     </div>
                     <div className="schedule-card">
