@@ -95,8 +95,8 @@ function Shedule() {
         {toggleState === 2 && <Shedule_day_02 />}
         {toggleState === 3 && <Shedule_day_03 />}
       </div>
-      <p className="text-center">
-        Please find the attached <a href="https://drive.google.com/file/d/1acLMSInRUX-t-L5DsntnAiAM_26XuOkA/view?usp=sharing">NITC Agenda</a>
+      <p className="text-center" style={{ fontSize: '1.2rem' }}>
+        Please find the attached <a href="https://drive.google.com/file/d/1943oQkBK511vHYj1SE4fsi2UyHCQvKpL/view?usp=sharing">NITC Agenda</a>
       </p>
     </section>
   );

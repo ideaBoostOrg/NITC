@@ -17,7 +17,7 @@ function Shedule_day_01() {
                   <div className="tab-pane fade show active">
                     <div className="schedule-card">
                       <div className="schedule-slot-time">
-                        <span> 6 PM Onwards</span>
+                        <span> 6.00 PM Onwards</span>
                       </div>
                       <div className="schedule-card-content">
                         <div className="schedule-card-header">
@@ -45,7 +45,7 @@ function Shedule_day_01() {
                         </div>
                         <div className="schedule-card-body">
                           <span>
-                            Address by Dr. Ajantha Atukorale, President CSSL
+                            Address by <strong>Dr. Ajantha Atukorale</strong>, President CSSL
                           </span>
                           <br />
                         </div>
@@ -67,7 +67,7 @@ function Shedule_day_01() {
                       </div>
                       <div className="schedule-card-content">
                         <div className="schedule-card-header">
-                          <h4>Address by the Chief Guest</h4>
+                          <h4>Address by the <strong>Chief Guest</strong></h4>
                         </div>
                       </div>
                     </div>
@@ -77,7 +77,7 @@ function Shedule_day_01() {
                       </div>
                       <div className="schedule-card-content">
                         <div className="schedule-card-header">
-                          <h4>Address by the Guest of Honor</h4>
+                          <h4>Address by the <strong>Guest of Honor</strong></h4>
                         </div>
                       </div>
                     </div>
@@ -91,7 +91,7 @@ function Shedule_day_01() {
                         </div>
                         <div className="schedule-card-body">
                           <span>
-                            Address by Mr. Sandun Hapugoda , Country Manager -
+                            Address by <strong>Mr. Sandun Hapugoda</strong> , Country Manager -
                             Sri Lanka and Maldives Mastercards
                           </span>
                           <br />
@@ -119,7 +119,7 @@ function Shedule_day_01() {
                         </div>
                         <div className="schedule-card-body">
                           <span>
-                            Address by Mr. Lasantha Bogoda, Director/CEO , DMS
+                            Address by <strong>Mr. Lasantha Bogoda</strong>, Director/CEO , DMS
                             Software Technologies (Pvt) Ltd
                           </span>
                           <br />
@@ -136,7 +136,7 @@ function Shedule_day_01() {
                         </div>
                         <div className="schedule-card-body">
                           <span>
-                            Address by Mr. Shanaka de Silva, Group Finance
+                            Address by <strong>Mr. Shanaka de Silva</strong>, Group Finance
                             Director at South Asian Technologies Group
                           </span>
                           <br />
@@ -173,7 +173,7 @@ function Shedule_day_01() {
                         </div>
                         <div className="schedule-card-body">
                           <span>
-                          Address by Mr. Udesh Seneviratna, Conference Chair
+                          Address by <strong>Mr. Udesh Seneviratna</strong>, Conference Chair
                           </span>
                           <br />
                         </div>
