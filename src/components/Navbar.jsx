@@ -18,7 +18,7 @@ function Navbar() {
     >
       <div className="container">
         <a href="/" className="navbar-brand">
-          <img src={logo} alt="" />
+          <img src={logo} style={{ height: "50px" }} alt="" />
         </a>
         <button
           className="navbar-toggler border-0"
