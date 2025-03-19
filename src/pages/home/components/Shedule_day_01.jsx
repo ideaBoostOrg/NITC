@@ -57,7 +57,7 @@ function Shedule_day_01() {
                       </div>
                       <div className="schedule-card-content">
                         <div className="schedule-card-header">
-                          <h4>CSSL National ICT Awards 2024 - Session 1</h4>
+                          <h4>CSSL National ICT Awards 2025 - Session 1</h4>
                         </div>
                       </div>
                     </div>
@@ -104,7 +104,7 @@ function Shedule_day_01() {
                       </div>
                       <div className="schedule-card-content">
                         <div className="schedule-card-header">
-                          <h4>CSSL National ICT Awards 2024 - Session 2</h4>
+                          <h4>CSSL National ICT Awards 2025 - Session 2</h4>
                         </div>
                       </div>
                     </div>
@@ -159,7 +159,7 @@ function Shedule_day_01() {
                       </div>
                       <div className="schedule-card-content">
                         <div className="schedule-card-header">
-                          <h4>Recognition of Sponsors NITC 2024</h4>
+                          <h4>Recognition of Sponsors NITC 2025</h4>
                         </div>
                       </div>
                     </div>
