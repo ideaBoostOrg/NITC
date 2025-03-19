@@ -12,19 +12,19 @@ function Hero() {
                 <i className="lni-mic"></i>
               </div>
               <span className="banner-info" style={{ textAlign: "cetnter" }}>
-                24<sup>th</sup> - 26<sup>th</sup> of Nov 2024, Shangri-La Hotel,
+                14<sup>th</sup> - 16<sup>th</sup> of Oct 2025, Shangri-La Hotel,
                 Colombo, Sri-Lanka
               </span>
               <h2 className="head-title">
-                42<sup className="text-lowercase">nd</sup> National IT
+                43<sup className="text-lowercase">rd</sup> National IT
                 Conference
               </h2>
-              <h4 className="head-title-sub">NITC 2024</h4>
+              <h4 className="head-title-sub">NITC 2025</h4>
               <h5
                 className="head-title-discription"
                 style={{ fontWeight: "500", paddingBottom: "10px" }}
               >
-                Catalyzing a Progressive Future: Towards Society 5.0
+                Fostering a Human Centric Nation: Towards Society 5.0
               </h5>
               {/* <p className="banner-desc">
                 Unlock the Early Bird Discount and save 10% until the 25

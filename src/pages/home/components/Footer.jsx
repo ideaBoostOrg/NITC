@@ -48,7 +48,7 @@ function Footer() {
             </div>
             <div className="site-info">
               <p style={{ textAlign: "center" }}>
-                2024 ©️ Powered by{" "}
+                2025 ©️ Powered by{" "}
                 <a href="http://ideaboost.tech" rel="nofollow">
                   ideaBoost.
                 </a>

@@ -518,7 +518,7 @@ function BillingDetails({
                 ACM, and ACS), an exclusive discount awaits! Contact your
                 secretariat to claim this benefit.
               </p>
-              <p>Early Bird 10 % Discount Valid Till 15th October 2024</p>
+              <p>Early Bird 10 % Discount Valid Till 15th September 2025</p>
             </div>
             <div className="form-group d-flex justify-content-end">
               <button
