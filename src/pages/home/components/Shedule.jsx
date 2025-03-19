@@ -1,3 +1,4 @@
+import { text } from "@fortawesome/fontawesome-svg-core";
 import Shedule_day_01 from "./Shedule_day_01";
 import Shedule_day_02 from "./Shedule_day_02";
 import Shedule_day_03 from "./Shedule_day_03";
@@ -45,9 +46,7 @@ function Shedule() {
                   <div className="item-text">
                     <h4>Inauguration</h4>
                     <h5>24<sup>th</sup> November 2024</h5>
-                    <h5>
-                      24<sup>th</sup> November 2024
-                    </h5>
+                 
                     <h5>6.00 PM onwards</h5>
                   </div>
                 </a>
@@ -65,9 +64,7 @@ function Shedule() {
                   <div className="item-text">
                     <h4>Day 01</h4>
                     <h5>25<sup>th</sup> November 2024</h5>
-                    <h5>
-                      25<sup>th</sup> November 2024
-                    </h5>
+                 
                     <h5>9.00 AM - 5.00 PM</h5>
                   </div>
                 </a>
@@ -85,9 +82,7 @@ function Shedule() {
                   <div className="item-text">
                     <h4>Day 02</h4>
                     <h5>26<sup>th</sup> November 2024</h5>
-                    <h5>
-                      26<sup>th</sup> November 2024
-                    </h5>
+                   
                     <h5>9.00 AM - 5.00 PM</h5>
                   </div>
                 </a>
@@ -100,6 +95,9 @@ function Shedule() {
         {toggleState === 2 && <Shedule_day_02 />}
         {toggleState === 3 && <Shedule_day_03 />}
       </div>
+      <p className="text-center" style={{ fontSize: '1.2rem' }}>
+        Please find the attached <a href="https://drive.google.com/file/d/1943oQkBK511vHYj1SE4fsi2UyHCQvKpL/view?usp=sharing">NITC Agenda</a>
+      </p>
     </section>
   );
 }

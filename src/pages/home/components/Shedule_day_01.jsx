@@ -17,11 +17,21 @@ function Shedule_day_01() {
                   <div className="tab-pane fade show active">
                     <div className="schedule-card">
                       <div className="schedule-slot-time">
-                        <span> 6 PM Onwards</span>
+                        <span> 6.00 PM Onwards</span>
                       </div>
                       <div className="schedule-card-content">
                         <div className="schedule-card-header">
-                          <h4>Chief Guest & Guest of Honour</h4>
+                          <h4>Arrival of the Chief Guest & the Guest of Honour</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="schedule-card">
+                      <div className="schedule-slot-time">
+                        <span> 6.05 PM Onwards</span>
+                      </div>
+                      <div className="schedule-card-content">
+                        <div className="schedule-card-header">
+                          <h4>National Anthem / Lighting the Digital Lamp</h4>
                         </div>
                       </div>
                     </div>
@@ -35,7 +45,7 @@ function Shedule_day_01() {
                         </div>
                         <div className="schedule-card-body">
                           <span>
-                            Address by Dr. Ajantha Atukorale, President CSSL
+                            Address by <strong>Dr. Ajantha Atukorale</strong>, President CSSL
                           </span>
                           <br />
                         </div>
@@ -57,7 +67,17 @@ function Shedule_day_01() {
                       </div>
                       <div className="schedule-card-content">
                         <div className="schedule-card-header">
-                          <h4>Address by the Chief Guest</h4>
+                          <h4>Address by the <strong>Chief Guest</strong></h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="schedule-card">
+                      <div className="schedule-slot-time">
+                        <span> 6.55 PM Onwards</span>
+                      </div>
+                      <div className="schedule-card-content">
+                        <div className="schedule-card-header">
+                          <h4>Address by the <strong>Guest of Honor</strong></h4>
                         </div>
                       </div>
                     </div>
@@ -71,7 +91,7 @@ function Shedule_day_01() {
                         </div>
                         <div className="schedule-card-body">
                           <span>
-                            Address by Mr. Sandun Hapugoda , Country Manager -
+                            Address by <strong>Mr. Sandun Hapugoda</strong> , Country Manager -
                             Sri Lanka and Maldives Mastercards
                           </span>
                           <br />
@@ -99,7 +119,7 @@ function Shedule_day_01() {
                         </div>
                         <div className="schedule-card-body">
                           <span>
-                            Address by Mr. Lasantha Bogoda, Director/CEO , DMS
+                            Address by <strong>Mr. Lasantha Bogoda</strong>, Director/CEO , DMS
                             Software Technologies (Pvt) Ltd
                           </span>
                           <br />
@@ -116,8 +136,44 @@ function Shedule_day_01() {
                         </div>
                         <div className="schedule-card-body">
                           <span>
-                            Address by Mr. Shanaka de Silva, Group Finance
+                            Address by <strong>Mr. Shanaka de Silva</strong>, Group Finance
                             Director at South Asian Technologies Group
+                          </span>
+                          <br />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="schedule-card">
+                      <div className="schedule-slot-time">
+                        <span> 8.05 PM Onwards</span>
+                      </div>
+                      <div className="schedule-card-content">
+                        <div className="schedule-card-header">
+                          <h4>Awarding of CSSL Fellow Membership</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="schedule-card">
+                      <div className="schedule-slot-time">
+                        <span> 8.15 PM Onwards</span>
+                      </div>
+                      <div className="schedule-card-content">
+                        <div className="schedule-card-header">
+                          <h4>Recognition of Sponsors NITC 2024</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="schedule-card">
+                      <div className="schedule-slot-time">
+                        <span> 8.35 PM Onwards</span>
+                      </div>
+                      <div className="schedule-card-content">
+                        <div className="schedule-card-header">
+                          <h4>Vote of Thanks</h4>
+                        </div>
+                        <div className="schedule-card-body">
+                          <span>
+                          Address by <strong>Mr. Udesh Seneviratna</strong>, Conference Chair
                           </span>
                           <br />
                         </div>
