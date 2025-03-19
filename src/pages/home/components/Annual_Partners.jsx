@@ -4,6 +4,7 @@ import ap_logo_3 from "../../../assets/img/sponsors/annualPartners/CryptoGen.png
 import ap_logo_4 from "../../../assets/img/sponsors/annualPartners/FiniQe.png";
 import ap_logo_5 from "../../../assets/img/sponsors/annualPartners/NuMind.png";
 import ap_logo_6 from "../../../assets/img/sponsors/annualPartners/IdeaBoost.png";
+import TBA from "../../../assets/img/TBA.png";
 
 function Annual_partners() {
   return (
@@ -37,9 +38,9 @@ function Annual_partners() {
             <div className="sponsors-logo">
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                 <span className="annual-partner-logo">
-                  <img src={ap_logo_1} alt="" style={{ height: 17 }} />
+                  <img src={TBA} alt="" />
                 </span>
-                <span className="annual-partner-logo">
+                {/* <span className="annual-partner-logo">
                   <img src={ap_logo_2} alt="" />
                 </span>
                 <span>
@@ -59,7 +60,7 @@ function Annual_partners() {
                 </span>
                 <span className="annual-partner-logo">
                   <img src={ap_logo_6} alt="" />
-                </span>
+                </span> */}
               </div>
             </div>
           </div>

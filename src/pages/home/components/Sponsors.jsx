@@ -22,6 +22,8 @@ import Garvi from '../../../assets/img/sponsors/Garvi.png';
 import Prime from '../../../assets/img/sponsors/Prime.png';
 import BlueChip from '../../../assets/img/sponsors/bluechip.png';
 import AIKEN from '../../../assets/img/sponsors/AIKEN.png';
+import informatics from '../../../assets/img/sponsors/informatics.png';
+import SAT from '../../../assets/img/sponsors/SAT GROUP.png';
 
 function Sponsors() {
   return (
@@ -90,11 +92,9 @@ function Sponsors() {
                   <img src={DMS} style={{ marginBottom: "30px" }} alt="" />
                 </span>
                 <span className="diamond-sponsor-logo">
-                  <img src={Sanfer} alt="" />
+                  <img src={SAT} style={{ marginBottom: "30px" }} alt="" />
                 </span>
-                <span className="diamond-sponsor-logo">
-                    <img src={Orin} alt="" />
-                  </span>
+                
               </div>
                 <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                   <span className="diamond-sponsor-logo-common">
@@ -102,6 +102,12 @@ function Sponsors() {
                   </span>
                   <span className="diamond-sponsor-logo-common">
                     <img src={Google} alt="" />
+                  </span>
+                  <span className="diamond-sponsor-logo-common">
+                  <img src={Sanfer} alt="" />
+                </span>
+                <span className="diamond-sponsor-logo-common">
+                    <img src={Orin} alt="" />
                   </span>
                   <span className="diamond-sponsor-logo-common">
                     <img src={Asset6} alt="" />
@@ -172,8 +178,11 @@ function Sponsors() {
                 Partners
               </p>
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
+              <span className="sponsor-logo-common">
+                  <img src={informatics} alt="" />
+                </span>
                 <span className="sponsor-logo-common">
-                  <img src={BlueChip} alt="" />
+                  <img src={BlueChip}  style={{ height: "80px", width: "150px" }} alt="" />
                 </span>
               </div>
               <p
