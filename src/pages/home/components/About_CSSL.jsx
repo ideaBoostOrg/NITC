@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import logo_CSSL from "../../../assets/img/CSSL_logo.png";
+import logo_CSSL from '../../../assets/img/CSSL_logo.png';
 // import { useState } from "react";
 
 // import CSSL_digital_investment_summit from "./CSSL_digital_investment_summit";
@@ -7,47 +7,47 @@ import logo_CSSL from "../../../assets/img/CSSL_logo.png";
 // import CSSL_awards from "./CSSL_awards";
 
 function About_CSSL() {
-  // const [toggleState, setToggleState] = useState(1);
-  // const toggleTab = (index) => {
-  //   setToggleState(index);
-  // };
+	// const [toggleState, setToggleState] = useState(1);
+	// const toggleTab = (index) => {
+	//   setToggleState(index);
+	// };
 
-  return (
-    <section
-      id="cssl"
-      className="intro  section-padding"
-      style={{
-        padding: "50px 0",
-        backgroundColor: " rgb(243, 244, 243)",
-      }}
-    >
-      <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <div className="section-title-header text-center">
-              <h2 className="section-title wow fadeInUp" data-wow-delay="0.2s">
+	return (
+		<section
+			id="cssl"
+			className="intro  section-padding"
+			style={{
+				padding: '50px 0',
+				backgroundColor: ' rgb(243, 244, 243)',
+			}}
+		>
+			<div className="container">
+				<div className="row">
+					<div className="col-12">
+						<div className="section-title-header text-center">
+							<h2 className="section-title wow fadeInUp" data-wow-delay="0.2s">
                 About CSSL
-              </h2>
-              <img
-                className=""
-                src={logo_CSSL}
-                alt=""
-                style={{ marginBottom: "10px", height: "50px" }}
-              />
-              {/* <p className="wow fadeInDown" data-wow-delay="0.2s">
+							</h2>
+							<img
+								className=""
+								src={logo_CSSL}
+								alt=""
+								style={{ marginBottom: '10px', height: '50px' }}
+							/>
+							{/* <p className="wow fadeInDown" data-wow-delay="0.2s">
                 Join us as we commemorate the extraordinary accomplishments of
                 the industry's brightest stars <br />
                 at the NITC Awards 2022.
               </p> */}
-            </div>
-          </div>
-        </div>
-        <p style={{ marginTop: "20px", marginBottom: "20px" }}>
+						</div>
+					</div>
+				</div>
+				<p style={{ marginTop: '20px', marginBottom: '20px' }}>
           The Computer Society of Sri Lanka (CSSL) is the premier professional
           association for individuals and Organisations leading the Information
           Communication Technology (ICT) industry in Sri Lanka.
-        </p>
-        <p style={{ marginTop: "20px", marginBottom: "20px" }}>
+				</p>
+				<p style={{ marginTop: '20px', marginBottom: '20px' }}>
           It is a rallying point for ICT professionals throughout the country
           and espouses the shared vision of over five thousand individuals
           ranging from over 300 CXOs, ICT practitioners, academics and policy
@@ -55,8 +55,8 @@ function About_CSSL() {
           business community. Today, the CSSL is widely regarded as both the
           "voice" of this influential industry segment and a "key player" in ICT
           development, nationally.
-        </p>
-        <p style={{ marginTop: "20px", marginBottom: "20px" }}>
+				</p>
+				<p style={{ marginTop: '20px', marginBottom: '20px' }}>
           The passion, vision and commitment of the CSSL founders, who foresaw
           the pivotal role ICT would eventually have in shaping and advancing
           human life, has left a lasting impression on the minds of Sri Lankan
@@ -69,8 +69,8 @@ function About_CSSL() {
           Seoul Accord, an internationally acclaimed degree accreditation
           program through which CSSL brings international standards on ICT
           related degrees to Sri Lanka.
-        </p>
-        {/* <div className="schedule" style={{ marginTop: "60px" }}>
+				</p>
+				{/* <div className="schedule" style={{ marginTop: "60px" }}>
           <div className="col-12 mb-4 text-center">
             <ul className="nav nav-tabs" id="myTab" role="tablist">
               <li className="nav-item">
@@ -132,12 +132,12 @@ function About_CSSL() {
           </div>
         </div> */}
 
-        {/* {toggleState === 1 && <DIGI_ECON_Inauguration />}
+				{/* {toggleState === 1 && <DIGI_ECON_Inauguration />}
         {toggleState === 2 && <CSSL_awards />}
         {toggleState === 3 && <CSSL_digital_investment_summit />} */}
-      </div>
-    </section>
-  );
+			</div>
+		</section>
+	);
 }
 
 export default About_CSSL;

@@ -1,105 +1,113 @@
-import { text } from "@fortawesome/fontawesome-svg-core";
-import Shedule_day_01 from "./Shedule_day_01";
-import Shedule_day_02 from "./Shedule_day_02";
-import Shedule_day_03 from "./Shedule_day_03";
+import SheduleDay01 from './SheduleDay01';
+import SheduleDay02 from './SheduleDay02';
+import SheduleDay03 from './SheduleDay03';
 
-import { useState } from "react";
+import { useState } from 'react';
 
 function Shedule() {
-  const [toggleState, setToggleState] = useState(1);
-  const toggleTab = (index) => {
-    setToggleState(index);
-  };
+	const [toggleState, setToggleState] = useState(1);
+	const toggleTab = (index) => {
+		setToggleState(index);
+	};
 
-  return (
-    <section id="schedules" className="schedule section-padding" style={{}}>
-      <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <div className="section-title-header text-center">
-              <h2 className="section-title wow fadeInUp" data-wow-delay="0.2s">
+	return (
+		<section id="schedules" className="schedule section-padding" style={{}}>
+			<div className="container">
+				<div className="row">
+					<div className="col-12">
+						<div className="section-title-header text-center">
+							<h2 className="section-title wow fadeInUp" data-wow-delay="0.2s">
                 Event Schedules
-              </h2>
-              <p className="wow fadeInDown" data-wow-delay="0.2s">
+							</h2>
+							<p className="wow fadeInDown" data-wow-delay="0.2s">
                 Discover the cutting-edge event schedules at the NITC
                 Conference, bringing together tech enthusiasts <br /> to explore
                 the latest industry trends.
-              </p>
-            </div>
-          </div>
-        </div>
+							</p>
+						</div>
+					</div>
+				</div>
 
-        <div className="row">
-          <div className="col-12 mb-5 text-center">
-            <ul className="nav nav-tabs" id="myTab" role="tablist">
-              <li className="nav-item">
-                <a
-                  className={toggleState === 1 ? "nav-link active" : "nav-link"}
-                  id="monday-tab"
-                  data-toggle="tab"
-                  // href="#monday"
-                  role="tab"
-                  aria-controls="monday"
-                  aria-expanded="true"
-                  onClick={() => toggleTab(1)}
-                >
-                  <div className="item-text">
-                    <h4>Inauguration</h4>
-                    <h5>14<sup>th</sup> October 2025</h5>
-                 
-                    <h5>6.00 PM onwards</h5>
-                  </div>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className={toggleState === 2 ? "nav-link active" : "nav-link"}
-                  id="tuesday-tab"
-                  data-toggle="tab"
-                  // href="#tuesday"
-                  role="tab"
-                  aria-controls="tuesday"
-                  onClick={() => toggleTab(2)}
-                >
-                  <div className="item-text">
-                    <h4>Day 01</h4>
-                    <h5>15<sup>th</sup> October 2025</h5>
-                 
-                    <h5>9.00 AM - 5.00 PM</h5>
-                  </div>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className={toggleState === 3 ? "nav-link active" : "nav-link"}
-                  id="wednesday-tab"
-                  data-toggle="tab"
-                  // href="#wednesday"
-                  role="tab"
-                  aria-controls="wednesday"
-                  onClick={() => toggleTab(3)}
-                >
-                  <div className="item-text">
-                    <h4>Day 02</h4>
-                    <h5>16<sup>th</sup> October 2025</h5>
-                   
-                    <h5>9.00 AM - 5.00 PM</h5>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+				<div className="row">
+					<div className="col-12 mb-5 text-center">
+						<ul className="nav nav-tabs" id="myTab" role="tablist">
+							<li className="nav-item">
+								<a
+									className={toggleState === 1 ? 'nav-link active' : 'nav-link'}
+									id="monday-tab"
+									data-toggle="tab"
+									// href="#monday"
+									role="tab"
+									aria-controls="monday"
+									aria-expanded="true"
+									onClick={() => toggleTab(1)}
+								>
+									<div className="item-text">
+										<h4>Inauguration</h4>
+										<h5>
+                      14<sup>th</sup> October 2025
+										</h5>
 
-        {toggleState === 1 && <Shedule_day_01 />}
-        {toggleState === 2 && <Shedule_day_02 />}
-        {toggleState === 3 && <Shedule_day_03 />}
-      </div>
-      <p className="text-center" style={{ fontSize: '1.2rem' }}>
-        Please find the attached <a href="https://drive.google.com/file/d/1943oQkBK511vHYj1SE4fsi2UyHCQvKpL/view?usp=sharing">NITC Agenda</a>
-      </p>
-    </section>
-  );
+										<h5>6.00 PM onwards</h5>
+									</div>
+								</a>
+							</li>
+							<li className="nav-item">
+								<a
+									className={toggleState === 2 ? 'nav-link active' : 'nav-link'}
+									id="tuesday-tab"
+									data-toggle="tab"
+									// href="#tuesday"
+									role="tab"
+									aria-controls="tuesday"
+									onClick={() => toggleTab(2)}
+								>
+									<div className="item-text">
+										<h4>Day 01</h4>
+										<h5>
+                      15<sup>th</sup> October 2025
+										</h5>
+
+										<h5>9.00 AM - 5.00 PM</h5>
+									</div>
+								</a>
+							</li>
+							<li className="nav-item">
+								<a
+									className={toggleState === 3 ? 'nav-link active' : 'nav-link'}
+									id="wednesday-tab"
+									data-toggle="tab"
+									// href="#wednesday"
+									role="tab"
+									aria-controls="wednesday"
+									onClick={() => toggleTab(3)}
+								>
+									<div className="item-text">
+										<h4>Day 02</h4>
+										<h5>
+                      16<sup>th</sup> October 2025
+										</h5>
+
+										<h5>9.00 AM - 5.00 PM</h5>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				{toggleState === 1 && <SheduleDay01 />}
+				{toggleState === 2 && <SheduleDay02 />}
+				{toggleState === 3 && <SheduleDay03 />}
+			</div>
+			<p className="text-center" style={{ fontSize: '1.2rem' }}>
+        Please find the attached{' '}
+				<a href="https://drive.google.com/file/d/1943oQkBK511vHYj1SE4fsi2UyHCQvKpL/view?usp=sharing">
+          NITC Agenda
+				</a>
+			</p>
+		</section>
+	);
 }
 
 export default Shedule;
