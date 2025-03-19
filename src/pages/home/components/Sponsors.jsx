@@ -20,6 +20,8 @@ import SLT from '../../../assets/img/sponsors/SLTMOBITEL.png';
 import Emojot from '../../../assets/img/sponsors/Emojot.png';
 import Garvi from '../../../assets/img/sponsors/Garvi.png';
 import Prime from '../../../assets/img/sponsors/Prime.png';
+import BlueChip from '../../../assets/img/sponsors/bluechip.png';
+import AIKEN from '../../../assets/img/sponsors/AIKEN.png';
 
 function Sponsors() {
   return (
@@ -123,32 +125,36 @@ function Sponsors() {
                 Gold sponsors
               </p>
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
-              <span className="gold-sponsor-logo">
+              {/* <span className="gold-sponsor-logo">
                   <img src={gennext} alt="" />
                 </span>
                 <span className="gold-sponsor-logo">
                   <img src={JIT} alt="" />
-                </span>
+                </span> */}
  
                 <span className="gold-sponsor-logo">
                   <img src={dell} alt="" />
+                </span>
+                <span className="gold-sponsor-logo">
+                  <img src={fortinet} alt="" />
+                </span>
+                <span className="gold-sponsor-logo">
+                  <img src={AIKEN} alt="" />
                 </span>
               </div>
               {/* <br /> */}
 
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
-              <span className="gold-sponsor-logo">
-                  <img src={LEAFFoundation} alt="" />
-                </span>
-              <span className="gold-sponsor-logo">
-                  <img src={fortinet} alt="" />
-                </span>
-                <span className="gold-sponsor-logo">
+              {/* <span className="gold-sponsor-logo">
+                  <img src={AIKEN} alt="" />
+                </span> */}
+              
+                {/* <span className="gold-sponsor-logo">
                   <img src={Huawei} alt="" />
                 </span>
                 <span className="gold-sponsor-logo">
                   <img src={Commsc} alt="" />
-                </span>
+                </span> */}
                 {/* <span className="sponsor-logo-common">
                   <img src={TBA} alt="" />
                 </span> */}
@@ -163,11 +169,11 @@ function Sponsors() {
                   fontSize: "1rem",
                 }}
               >
-                Telecommunication Partner
+                Partners
               </p>
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                 <span className="sponsor-logo-common">
-                  <img src={SLT} alt="" />
+                  <img src={BlueChip} alt="" />
                 </span>
               </div>
               <p
@@ -183,10 +189,10 @@ function Sponsors() {
               </p>
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                 <span className="sponsor-logo-common">
-                  <img src={Emojot} alt="" />
+                  <img src={TBA} alt="" />
                 </span>
               </div>
-              <p
+              {/* <p
                 style={{
                   fontWeight: "600",
                   textAlign: "center",
@@ -199,9 +205,9 @@ function Sponsors() {
               </p>
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                 <span className="electronic-media-partner-logo">
-                  <img src={ITN} alt="" />
+                  <img src={TBA} alt="" />
                 </span>
-              </div>
+              </div> */}
               <p
                 style={{
                   fontWeight: "600",
@@ -215,7 +221,7 @@ function Sponsors() {
               </p>
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                 <span className="sponsor-logo-common">
-                  <img src={Prime} alt="" />
+                  <img src={TBA} alt="" />
                 </span>
               </div>
               <p
@@ -231,7 +237,7 @@ function Sponsors() {
               </p>
               <div className="col-lg-12 col-md-4 col-sm-4 text-center">
                 <span className="sponsor-logo-common">
-                  <img src={Garvi} alt="" />
+                  <img src={TBA} alt="" />
                 </span>
               </div>
 

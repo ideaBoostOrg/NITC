@@ -60,7 +60,7 @@ function About() {
                 <div className="about-text">
                   <h2>About the Conference</h2>
                   <p>
-                    <b>NITC 2024 Conference</b> will feature 6 tracks and will
+                    <b>NITC 2025 Conference</b> will feature 6 tracks and will
                     have 30+ local and foreign high-profile speakers and a
                     series of prior events.
                   </p>
