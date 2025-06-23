@@ -1,49 +1,22 @@
-import { Link } from "react-scroll";
+import React from 'react';
+import '../../../assets/css/Hero.css';
+import heroData from '../../../data/components/hero';
 
-function Hero() {
+const Hero = () => {
   return (
-    <div id="hero-area" className="hero-area-bg">
-      <div className="hero-image"></div>
-      <div className="container ">
-        <div className="row justify-content-center">
-          <div className="col-lg-10 col-sm-12">
-            <div className="contents text-center">
-              <div className="icon">
-                <i className="lni-mic"></i>
-              </div>
-              <span className="banner-info" style={{ textAlign: "cetnter" }}>
-                14<sup>th</sup> - 16<sup>th</sup> of Oct 2025, Shangri-La Hotel,
-                Colombo, Sri-Lanka
-              </span>
-              <h2 className="head-title">
-                43<sup className="text-lowercase">rd</sup> National IT
-                Conference
-              </h2>
-              <h4 className="head-title-sub">NITC 2025</h4>
-              <h5
-                className="head-title-discription"
-                style={{ fontWeight: "500", paddingBottom: "10px" }}
-              >
-                Fostering a Human Centric Nation: Towards Society 5.0
-              </h5>
-              <div className="banner-btn">
-                <Link
-                  className="btn btn-common"
-                  spy={true}
-                  to="pricing"
-                  offset={-80}
-                  duration={300}
-                  smooth={true}
-                >
-                  Register Now
-                </Link>
-              </div>
-            </div>
-          </div>
+    <section className="nt-hero">
+      <div className="nt-hero-overlay">
+        <div className="nt-hero-content">
+          <h2 className="nt-hero-subtitle">{heroData.subtitle}</h2>
+          <h1 className="nt-hero-title">
+            {heroData.title}
+          </h1>
+          <p className="nt-hero-tagline">{heroData.tagline}</p>
+          <button className="nt-hero-button">{heroData.buttonText}</button>
         </div>
       </div>
-    </div>
+    </section>
   );
-}
+};
 
 export default Hero;

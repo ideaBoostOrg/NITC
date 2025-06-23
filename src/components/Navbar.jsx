@@ -2,7 +2,7 @@ import React from "react";
 import { Link as SLink } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
-import "./Navbar.css";
+import "../assets/css/Navbar.css";
 
 const navLinks = [
   { label: "Home", to: "hero-area", icon: null, offset: -50 },
