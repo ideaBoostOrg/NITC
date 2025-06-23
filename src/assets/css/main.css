@@ -2751,6 +2751,7 @@ footer {
 3. Hero Area
 ========================================================================== */
 
+/*
 @keyframes infiniteZoom {
   0% {
     transform: scale(1);
@@ -2872,7 +2873,7 @@ footer {
 
 .dropdown:hover .dropdown-menu {
   display: block;
-}
+} */
 
 /* vedio section */
 .vedio-area-bg {
