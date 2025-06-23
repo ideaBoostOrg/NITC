@@ -1,12 +1,3 @@
-import { CiLinkedin } from "react-icons/ci";
-
-import image_1 from "../../../assets/img/Speakers/1.png";
-import image_2 from "../../../assets/img/Speakers/2.jpeg";
-import image_3 from "../../../assets/img/Speakers/3.jpg";
-import image_4 from "../../../assets/img/Speakers/4.png";
-import image_7 from "../../../assets/img/Speakers/7.png";
-import image_8 from "../../../assets/img/Speakers/8.png";
-
 function Shedule_day_02() {
   return (
     <section id="shedule_day_02" className="">
@@ -14,7 +5,6 @@ function Shedule_day_02() {
         <div className="moblie-title">
           <h4>Day 01</h4>
         </div>
-
         <div className="row">
           <div className="col-12">
             <div
@@ -146,8 +136,7 @@ Finance PLC, Chairman of LOLC Technology Limited
                       </div>
                       <div className="schedule-card-content">
                         <div className="schedule-card-header">
-                          <h4>FinTech</h4>
-                          
+                          <h4>FinTech</h4>  
                         </div>
                         <div className="schedule-card-body">
                           <span>
@@ -182,8 +171,7 @@ Finance PLC, Chairman of LOLC Technology Limited
                       </div>
                       <div className="schedule-card-content">
                         <div className="schedule-card-header">
-                          <h4>Digital Economy</h4>
-                          
+                          <h4>Digital Economy</h4>  
                         </div>
                         <div className="schedule-card-body">
                           <span>
@@ -210,8 +198,7 @@ Finance PLC, Chairman of LOLC Technology Limited
                       </div>
                       <div className="schedule-card-content">
                         <div className="schedule-card-header">
-                          <h4>EduTech</h4>
-                          
+                          <h4>EduTech</h4> 
                         </div>
                         <div className="schedule-card-body">
                           <span>

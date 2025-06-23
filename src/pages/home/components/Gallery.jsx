@@ -1,7 +1,3 @@
-/*icon */
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faPlus } from "@fortawesome/free-solid-svg-icons";
-
 import { eventImages } from "../../../assets/img";
 
 function Gallery() {
@@ -30,7 +26,6 @@ function Gallery() {
             </div>
           </div>
         </div>
-
         <div className="grid-of-5-cols">
           {eventImages.map((image, index) => (
             <div key={index} className="">

@@ -26,10 +26,6 @@ function Hero() {
               >
                 Fostering a Human Centric Nation: Towards Society 5.0
               </h5>
-              {/* <p className="banner-desc">
-                Unlock the Early Bird Discount and save 10% until the 25
-                <sup>th</sup> of August!
-              </p> */}
               <div className="banner-btn">
                 <Link
                   className="btn btn-common"
@@ -41,9 +37,6 @@ function Hero() {
                 >
                   Register Now
                 </Link>
-                {/* <a href="#pricing" className="btn btn-common">
-                    Register Now
-                  </a> */}
               </div>
             </div>
           </div>

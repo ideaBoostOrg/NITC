@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import TermsModal from "./TermsModal";
@@ -58,15 +56,10 @@ const RegisterForm = ({
   const [discount, setDiscount] = useState(0);
   const [currency, setCurrency] = useState("LKR"); // Default currency
   const [netTotal, setNetTotal] = useState(pack.price); // Default to local net total
-
   const [eligbleForEarlyBird, setEligbleForEarlyBird] = useState(true);
-  const [selectedEvents, setSelectedEvents] = useState(EVENTS);
   const [isFullPackage, setIsFullPackage] = useState(false);
-
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
-
-  //----
   const [eventList, setEventList] = useState(EVENTS);
 
   const registeredSessions = sessions.filter((s) => s.isRegistered);
@@ -107,38 +100,6 @@ const RegisterForm = ({
         JSON.stringify(false)
       );
     }
-
-    // if (sessions.length > 0) {
-    //   // not first time
-    //   const newEvents = {}
-    //   sessions.forEach(s => {
-    //     if (!s.isRegistered)
-    //       newEvents[s.name] = false
-    //   })
-
-    //   if (type in newEvents) {
-    //     setEventList({
-    //       ...newEvents,
-    //       [type]: true
-    //     })
-    //   } else {
-    //     setEventList({
-    //       ...newEvents,
-    //       [Object.keys(newEvents)[0]]: true
-    //     })
-    //   }
-    //   window.sessionStorage.setItem('NITC_REGISTRATION_WEB_APP_USER_FIRST_TIME', JSON.stringify(false));
-
-    // } else {
-    //   //first time
-    //   setEventList({
-    //     ...EVENTS,
-    //     [type]: true
-    //   })
-
-    //   window.sessionStorage.setItem('NITC_REGISTRATION_WEB_APP_USER_FIRST_TIME', JSON.stringify(true));
-    // }
-
     const EarlyBirdDate = new Date("2025-09-15");
     const today = new Date();
     if (today > EarlyBirdDate) {
@@ -245,7 +206,6 @@ const RegisterForm = ({
         paymentAmount: netTotal.toFixed(2) * 100,
         currency: "LKR",
         returnUrl: `https://${window.location.hostname}/payment-confirm`,
-        // returnUrl: `http://127.0.0.1:5173/payment-confirm`,
         clientRef: cRef,
         comment: comm,
       };
@@ -257,7 +217,6 @@ const RegisterForm = ({
         paymentAmount: netTotal.toFixed(2) * 100 * 300,
         currency: "LKR",
         returnUrl: `https://${window.location.hostname}/payment-confirm`,
-        // returnUrl: `http://127.0.0.1:5173/payment-confirm`,
         clientRef: cRef,
         comment: comm,
       };

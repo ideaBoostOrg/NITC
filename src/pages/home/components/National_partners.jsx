@@ -1,12 +1,4 @@
-// import logo_2 from "../../../assets/img/national_partners/ICTA.png";
 import logo_1 from "../../../assets/img/national_partners/MoT-Logo-V3.png";
-// import logo_1 from "../../../assets/img/sponsors/logo-3.png";
-// import logo_2 from "../../../assets/img/sponsors/logo-4.png";
-// import logo_5 from "../../../assets/img/sponsors/logo-5.png";
-// import logo_6 from '../../../assets/img/sponsors/logo-6.png'
-// import logo_7 from '../../../assets/img/sponsors/logo-7.png'
-// import logo_8 from '../../../assets/img/sponsors/logo-8.png'
-// import logo_9 from '../../../assets/img/sponsors/logo-9.png'
 
 function National_partners() {
   return (
@@ -17,7 +9,6 @@ function National_partners() {
           <div className="col-12">
             <div className="section-title-header text-center">
               <h2
-                // className="section-title wow fadeInUp"
                 style={{ color: "#212121" }}
                 data-wow-delay="0.2s"
               >
@@ -41,10 +32,6 @@ function National_partners() {
                 <span className="sponsor-logo">
                   <img src={logo_1} style={{ width: 80 }} alt="" />
                 </span>
-
-                {/* <span className="sponsor-logo">
-                  <img src={logo_2} style={{ width: 110 }} alt="" />
-                </span> */}
               </div>
             </div>
           </div>

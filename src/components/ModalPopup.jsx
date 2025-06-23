@@ -2,7 +2,6 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import '../assets/css/ModalPopup.css';  // Import the custom CSS file
 
-
 function ModalPopup(props) {
   return (
     <Modal

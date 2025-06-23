@@ -1,16 +1,6 @@
-/* eslint-disable react/no-unescaped-entities */
 import logo_CSSL from "../../../assets/img/CSSL_logo.png";
-// import { useState } from "react";
-
-// import CSSL_digital_investment_summit from "./CSSL_digital_investment_summit";
-// import DIGI_ECON_Inauguration from "./DIGI-ECON_Inauguration";
-// import CSSL_awards from "./CSSL_awards";
 
 function About_CSSL() {
-  // const [toggleState, setToggleState] = useState(1);
-  // const toggleTab = (index) => {
-  //   setToggleState(index);
-  // };
 
   return (
     <section
@@ -34,11 +24,6 @@ function About_CSSL() {
                 alt=""
                 style={{ marginBottom: "10px", height: "50px" }}
               />
-              {/* <p className="wow fadeInDown" data-wow-delay="0.2s">
-                Join us as we commemorate the extraordinary accomplishments of
-                the industry's brightest stars <br />
-                at the NITC Awards 2022.
-              </p> */}
             </div>
           </div>
         </div>
@@ -70,71 +55,6 @@ function About_CSSL() {
           program through which CSSL brings international standards on ICT
           related degrees to Sri Lanka.
         </p>
-        {/* <div className="schedule" style={{ marginTop: "60px" }}>
-          <div className="col-12 mb-4 text-center">
-            <ul className="nav nav-tabs" id="myTab" role="tablist">
-              <li className="nav-item">
-                <a
-                  className={toggleState === 1 ? "nav-link active" : "nav-link"}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    height: "80px",
-                    color: "red",
-                  }}
-                  onClick={() => toggleTab(1)}
-                >
-                  <div className="item-text">
-                    <h4>
-                      DIGI-ECON <br /> Inauguration
-                    </h4>
-                  </div>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className={toggleState === 2 ? "nav-link active" : "nav-link"}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    height: "80px",
-                    color: "red",
-                  }}
-                  onClick={() => toggleTab(2)}
-                >
-                  <div className="item-text">
-                    <h4>CSSL NITC Award</h4>
-                  </div>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className={toggleState === 3 ? "nav-link active" : "nav-link"}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    height: "80px",
-                    color: "red",
-                  }}
-                  onClick={() => toggleTab(3)}
-                >
-                  <div className="item-text">
-                    <h4>
-                      Sri Lanka Digital <br /> Investment Summit
-                    </h4>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div> */}
-
-        {/* {toggleState === 1 && <DIGI_ECON_Inauguration />}
-        {toggleState === 2 && <CSSL_awards />}
-        {toggleState === 3 && <CSSL_digital_investment_summit />} */}
       </div>
     </section>
   );

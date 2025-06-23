@@ -1,46 +1,8 @@
 import img1 from "../../../assets/img/about/img1.jpg";
-
 import { CheckCircle } from "react-bootstrap-icons";
 
-// import { useEffect } from "react";
-
-// import { gsap } from 'gsap';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-// gsap.registerPlugin(ScrollTrigger);
-
 function About() {
-  // const t1 = gsap.timeline({ defaults: { ease: "power1.out" } });
-  // const t2 = gsap.timeline({ defaults: { ease: "power1.out" } });
-
-  // useEffect(() => {
-  //   const scrollTrigger = ScrollTrigger.create({
-  //     trigger: '.about-text',
-  //     scrub: true,
-  //     onEnter: () => {
-  //       t1.from('.about-text', { x: 10, opacity: 0, duration: 0.5 })
-  //         .from('.about-text p', { x: 10, opacity: 0, duration: 0.5 })
-  //         .from('#stylish-list', { x: 10, opacity: 0, duration: 0.5 })
-
-  //       t2.from('.img-thumb', { x: -10, opacity: 0, duration: 1 })
-  //     },
-  //     onLeave: () => {
-  //       t1.reverse();
-  //       t2.reverse();
-  //     },
-
-  //     onEnterBack: () => {
-  //       t1.play();
-  //       t2.play();
-  //     }
-
-  //   })
-
-  //   return () => {
-  //     scrollTrigger.kill();
-  //   }
-  // }, []);
-
+  
   return (
     <section
       id="about"
@@ -140,9 +102,6 @@ function About() {
                     eHealth - Electronic Health care
                   </li>
                 </ul>
-                {/* <a className="btn btn-common" href="#">
-                  Learn More
-                </a> */}
               </div>
             </div>
           </div>

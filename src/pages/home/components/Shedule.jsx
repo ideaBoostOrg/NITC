@@ -1,4 +1,3 @@
-import { text } from "@fortawesome/fontawesome-svg-core";
 import Shedule_day_01 from "./Shedule_day_01";
 import Shedule_day_02 from "./Shedule_day_02";
 import Shedule_day_03 from "./Shedule_day_03";
@@ -37,7 +36,6 @@ function Shedule() {
                   className={toggleState === 1 ? "nav-link active" : "nav-link"}
                   id="monday-tab"
                   data-toggle="tab"
-                  // href="#monday"
                   role="tab"
                   aria-controls="monday"
                   aria-expanded="true"
@@ -56,7 +54,6 @@ function Shedule() {
                   className={toggleState === 2 ? "nav-link active" : "nav-link"}
                   id="tuesday-tab"
                   data-toggle="tab"
-                  // href="#tuesday"
                   role="tab"
                   aria-controls="tuesday"
                   onClick={() => toggleTab(2)}
@@ -74,7 +71,6 @@ function Shedule() {
                   className={toggleState === 3 ? "nav-link active" : "nav-link"}
                   id="wednesday-tab"
                   data-toggle="tab"
-                  // href="#wednesday"
                   role="tab"
                   aria-controls="wednesday"
                   onClick={() => toggleTab(3)}

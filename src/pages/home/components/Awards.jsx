@@ -1,7 +1,4 @@
-/* icon */
 import { Award } from "react-bootstrap-icons";
-
-/*new section*/
 import { useState } from "react";
 import Awards from "../../../assets/img/CSSL_Awards.jpg";
 import View_more from "./View_more";
@@ -15,10 +12,7 @@ function Awards_section() {
       style={{
         paddingBottom: "50px",
         paddingTop: "50px",
-        // backgroundColor: "rgb(0 85 255 / 8%)",
         backgroundColor: " rgb(243, 244, 243)",
-
-        // position: "relative",
       }}
     >
       <div className="container">
@@ -44,17 +38,6 @@ function Awards_section() {
           </div>
           <View_more isOpen={viewMoreOpen} onClose={setviewMoreOpen} />
           <div className="col-lg-6 col-md-12 col-xs-12">
-            {/* <div className="section-title-header mt-4 text-left">
-              <h2 className="section-title wow fadeInUp" data-wow-delay="0.2s">
-                CSSL NITC Awards
-              </h2>
-              <p className="wow fadeInDown" data-wow-delay="0.2s">
-                Join us as we commemorate the extraordinary accomplishments of
-                <br />
-                the industrys brightest stars at the NITC Awards 2022.
-              </p>
-            </div> */}
-
             <p style={{ marginBottom: "2rem" }}>
               <b>CSSL Awards </b>recognizes significant national contributions
               by ICT Professionals and CSSL Elite awards will be held at the
@@ -66,7 +49,6 @@ function Awards_section() {
                 className="btn btn-common"
                 id="view_more_btn"
                 onClick={() => setviewMoreOpen(true)}
-                // onClick={clickfun()}
               >
                 View more
               </span>

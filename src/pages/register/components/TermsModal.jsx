@@ -1,7 +1,7 @@
 import { XLg } from "react-bootstrap-icons";
 import { useState } from "react";
+
 const TermsModal = (props) => {
-  // eslint-disable-next-line react/prop-types
   const { isOpen, onClose, setAcceptTerm } = props;
 
   const [selectedValue, setSelectedValue] = useState("decline");
@@ -352,10 +352,6 @@ const TermsModal = (props) => {
               </li>
             </ol>
           </div>
-          {/* <div className="section">
-            <h5>Product and Services sold</h5>
-            <p>This is an academic institution.</p>
-          </div> */}
         </div>
         <div className="term-footer">
           <div className="radio-group">

@@ -1,15 +1,11 @@
-import logo from "../assets/img/NITC-Logo.png";
+import { useState } from "react";
 import { Link as SLink } from "react-scroll";
-/*icon */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-
-import { useState } from "react";
+import logo from "../assets/img/NITC-Logo.png";
 
 function Navbar() {
-
   const [isOpen, setIsOpen] = useState(false);
-
 
   return (
     <nav

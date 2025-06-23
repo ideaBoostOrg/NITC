@@ -1,11 +1,8 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { firestore } from "../../../firebase";
 import { collection, getDocs, query, where, addDoc } from "firebase/firestore";
 import { CheckCircleFill } from "react-bootstrap-icons";
 import { XCircleFill } from "react-bootstrap-icons";
-import logo from "../../../assets/img/logo-crop.png";
 import ModalPopup from "../../../components/ModalPopup";
 
 function BillingDetails({
@@ -27,19 +24,12 @@ function BillingDetails({
   const [organization, setOrganization] = useState("");
   const [address, setAddress] = useState("");
   const [contactNumber, setContactNumber] = useState("");
-
   const [modalShow, setModalShow] = useState(false);
-
   const [btnState, setBtnState] = useState("verify");
-
   const [inputError, setInputError] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
-  const [isError, setIsError] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
   const [isEmailValid, setIsEmailValid] = useState(null);
   const [isEmailValidating, setIsEmailValidating] = useState(null);
-
   const [isNicValid, setIsNicValid] = useState(null);
   const [isContactNoValid, setIsContactNoValid] = useState(null);
 
@@ -50,6 +40,7 @@ function BillingDetails({
       collection(firestore, "members"),
       where("memNo", "==", memberId)
     );
+
     const querySnapshot = await getDocs(q);
 
     if (querySnapshot.docs.length > 0) {
@@ -64,15 +55,9 @@ function BillingDetails({
         return;
       }
       setIsValiedMember(true);
-      // handleValidateEmail(member.email)
       handleValidateNic(member.nic);
-      // setFirstName(member.firstName ?? "");
-      // setLastName(member.lastName ?? "");
-      // setEmail(member.email ?? "");
       setTempnic(member.nic ?? "");
       setOrganization(member.organization ?? "");
-      // setAddress(member.address ?? "");
-
       setBtnState("verified");
     } else {
       setBtnState("not-verified");
@@ -155,7 +140,6 @@ function BillingDetails({
         };
 
         setFormData(data);
-
         setIsCheckout(true);
       } else {
         setInputError(true);
@@ -208,16 +192,6 @@ function BillingDetails({
       setIsNicValid(null);
       return;
     }
-
-    //check if the member entered the same NIC as the member nic
-    // if(isMember) {
-    //     if (nic === tempnic) {
-    //         setIsNicValid(true);
-    //     } else {
-    //         setIsNicValid(false);
-    //     }
-    //     return
-    // }
 
     const oldEmailRegex = /^[1-9][0-9]{8}[vV]$/;
     const newEmailRegex = /^[0-9]{12}$/;
@@ -297,8 +271,6 @@ function BillingDetails({
                       onChange={(e) => {
                         setMemberId(e.target.value);
                         setBtnState("verify");
-                        // setDiscount(0);
-                        // setNetTotal(parseFloat(pack.price))
                       }}
                       onKeyDown={(e) => {
                         if (e.key === "Enter") {
@@ -371,9 +343,6 @@ function BillingDetails({
                     Email
                   </label>
                   {
-                    // isEmailValidating === null ? "" :
-                    //     isEmailValid === null ? inputError && <span className="input-error">This field is required</span> :
-                    //         isEmailValid ? "" : <span className="input-error">Email already in use.</span>
                     isEmailValidating === null ? (
                       inputError && (
                         <span className="input-error">
@@ -388,7 +357,6 @@ function BillingDetails({
                       <span className="input-error">Email already in use.</span>
                     )
                   }
-                  {/* <span className="double-check-alert">Please, double-check your email.</span> */}
                 </div>
                 <div className="input-validate">
                   <input

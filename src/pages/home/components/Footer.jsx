@@ -1,7 +1,4 @@
 import logo_NITC from "../../../assets/img/NITC-Logo.png";
-// import logo_IdeaBoost from "../../../assets/img/logo-IdeaBoost.png";
-
-/* icon */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
@@ -53,7 +50,6 @@ function Footer() {
                   ideaBoost.
                 </a>
               </p>
-              {/* <img src={logo_IdeaBoost} alt="" style={{ width: 150 }} /> */}
             </div>
           </div>
         </div>

@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
 import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
 import { useState } from "react";
 import { CheckCircleFill, XCircleFill } from "react-bootstrap-icons";
@@ -293,9 +291,6 @@ function DisBillingDetails({
                         Email
                       </label>
                       {
-                        // isEmailValidating === null ? "" :
-                        //     isEmailValid === null ? inputError && <span className="input-error">This field is required</span> :
-                        //         isEmailValid ? "" : <span className="input-error">Email already in use.</span>
                         isEmailValidating === null ? (
                           inputError && (
                             <span className="input-error">
@@ -312,7 +307,6 @@ function DisBillingDetails({
                           </span>
                         )
                       }
-                      {/* <span className="double-check-alert">Please, double-check your email.</span> */}
                     </div>
                     <div className="input-validate">
                       <input

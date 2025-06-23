@@ -2,8 +2,8 @@
 import { CheckCircleFill } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-const PaymentConfirmed = ({ data }) => {
 
+const PaymentConfirmed = ({ data }) => {
     const [isCopied, setIsCopied] = useState(false)
 
     const copyToClipboard = async (text) => {
@@ -15,8 +15,6 @@ const PaymentConfirmed = ({ data }) => {
         }
         setIsCopied(true)
     }
-
-    // console.log(data.clientRef);
 
     return (
         <>

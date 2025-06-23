@@ -7,8 +7,6 @@ const Modal = (props) => {
     loadPaycorpPayment(buildPayment(), "paycorp-payment");
   }, []);
 
-  // console.log("netTotal : ", netTotal);
-
   const buildPayment = () => {
     return {
       // NOTE: this is the QuickWeb DEMO client ID.
@@ -18,7 +16,6 @@ const Modal = (props) => {
       clientId: 14002582,
       paymentAmount: 100.0,
       currency: "LKR",
-      // returnUrl: `https://${window.location.hostname}/payment-confirm?success=true`,
       returnUrl: `http://127.0.0.1:5173/payment-confirm?success=true`,
       clientRef: "CREF-12345",
       comment: "This is a demo payment",
