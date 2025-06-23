@@ -1,0 +1,92 @@
+.nt-navbar {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0px auto;
+  height: 70px;
+  padding: 0 80px;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.nt-nav-links {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  flex: 1;
+}
+
+.nt-nav-link {
+  color: #0b143f;
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.nt-nav-link:hover, .nt-active {
+  color: #65558f !important;
+  text-decoration: underline !important;
+}
+
+.nt-nav-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.nt-btn {
+  font-size: 13px;
+  padding: 5px 22px;
+  border-radius: 25px;
+  border: 2px solid #0b143f;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nt-btn-filled {
+  background: #0b143f;
+  color: #fff;
+  border: 2px solid #0b143f;
+}
+
+.nt-btn-filled:hover {
+  background: #65558f;
+  border-color: #65558f;
+}
+
+.nt-btn-outlined {
+  background: #fff;
+  color: #0b143f;
+  border: 2px solid #0b143f;
+}
+
+.nt-btn-outlined:hover {
+  background: #f3f3f3;
+  color: #65558f;
+  border-color: #65558f;
+}
+
+@media (max-width: 900px) {
+  .nt-navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 12px 8px;
+  }
+  .nt-nav-links {
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+  .nt-logo {
+    margin-bottom: 8px;
+  }
+  .nt-nav-actions {
+    margin-top: 8px;
+  }
+}
