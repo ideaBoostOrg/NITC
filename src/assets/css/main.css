@@ -1825,7 +1825,7 @@ h1 {
 }
 
 /* Gallery Section */
-#gallery {
+/* #gallery {
   background: #f3f4f3;
   position: relative;
 }
@@ -1898,8 +1898,8 @@ h1 {
 @media screen and (max-width: 1024px) {
   #gallery .grid-of-5-cols {
     grid-template-columns: repeat(3, 1fr);
-  }
-}
+  } */
+/* } */
 
 /* Team Item */
 .team-item:hover {

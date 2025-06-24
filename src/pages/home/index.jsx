@@ -25,9 +25,9 @@ function index() {
       <InformationBar />
       <Awards />
       <AboutCSSL />
+      <Gallery />
       <Shedule />
       <DIS />
-      <Gallery />
       <Ticket_pricing />
       <National_partners />
       <Sponsors />
