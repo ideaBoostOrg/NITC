@@ -1567,7 +1567,7 @@ h1 {
 }
 
 /* Inforamation Bar */
-#information-bar {
+/* #information-bar {
   background: #fff;
   position: relative;
 }
@@ -1750,7 +1750,7 @@ h1 {
   font-weight: bold;
   margin-bottom: 5px;
   display: block;
-}
+} */
 
 /* Services Item */
 .intro {
@@ -2876,7 +2876,7 @@ footer {
 } */
 
 /* vedio section */
-.vedio-area-bg {
+/* .vedio-area-bg {
   background: url(../img/vedio_image.webp) no-repeat;
   background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: overlay;
@@ -2885,7 +2885,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 
 .pdr-50 {

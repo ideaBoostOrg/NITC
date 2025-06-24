@@ -1,7 +1,7 @@
 import Navbar from "../../components/Navbar";
 import About from "./components/About";
 import Hero from "./components/Hero";
-import Vedio from "./components/Vedio";
+import InformationBar from "./components/InformationBar";
 import Shedule from "./components/Shedule";
 import DIS from "./components/DIS";
 import Awards from "./components/Awards";
@@ -22,7 +22,7 @@ function index() {
       <Navbar />
       <Hero />
       <About />
-      <Vedio />
+      <InformationBar />
       <Shedule />
       <Awards />
       <DIS />

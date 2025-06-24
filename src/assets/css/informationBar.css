@@ -1,0 +1,110 @@
+.nt-informationBar-bg {
+  background: url(../img/informationbar/background-img.jpg) no-repeat;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: overlay;
+  background-size: cover;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nt-info-container {
+  margin: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 11rem;
+}
+
+.nt-info-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.nt-info-card {
+  min-width: 200px;
+  height: 270px;
+  padding: 1rem 1.5rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  box-shadow: 0 0px 24px #1e1e1e3c;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #fff;
+}
+
+#nt-info-card-1 {
+  background-image: 
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(46, 50, 146, 0.8) 100%
+    ),
+    url(../img/informationbar/shangrila-img.jpg);
+}
+
+#nt-info-card-2 {
+  background-image: 
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(46, 50, 146, 0.8) 100%
+    ),
+    url(../img/informationbar/meeting-date-img.jpg);
+}
+
+#nt-info-card-3 {
+  background-image: 
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(46, 50, 146, 0.8) 100%
+    ),
+    url(../img/informationbar/speker-img.webp);
+}
+
+#nt-info-card-4 {
+  background-image: 
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(46, 50, 146, 0.8) 100%
+    ),
+    url(../img/informationbar/seats-img.jpg);
+}
+
+.nt-info-card-main-content {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.nt-info-card-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .nt-info-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nt-info-container{
+    padding: 3rem;
+  }
+  .nt-info-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
