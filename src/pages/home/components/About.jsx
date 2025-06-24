@@ -1,114 +1,33 @@
-import img1 from "../../../assets/img/about/img1.jpg";
-import { CheckCircle } from "react-bootstrap-icons";
+import React from "react";
+import "../../../assets/css/about.css";
+import aboutData from "../../../data/components/about";
 
-function About() {
-  
+const About = () => {
   return (
-    <section
-      id="about"
-      className="section-padding"
-      style={{ marginBottom: "75px", marginTop: "50px" }}
-    >
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-6 col-md-12 col-xs-12">
-            <div className="img-thumb">
-              <img className="img-fluid" src={img1} alt="" />
-            </div>
-          </div>
-          <div className="col-lg-6 col-md-12 col-xs-12">
-            <div className="about-content">
-              <div>
-                <div className="about-text">
-                  <h2>About the Conference</h2>
-                  <p>
-                    <b>NITC 2025 Conference</b> will feature 6 tracks and will
-                    have 30+ local and foreign high-profile speakers and a
-                    series of prior events.
-                  </p>
-                </div>
-                <ul id="stylish-list" className="stylish-list mb-3">
-                  <li>
-                    <span
-                      style={{
-                        paddingRight: "8px",
-                        color: "blue",
-                        size: "25px",
-                      }}
-                    >
-                      <CheckCircle />
-                    </span>
-                    FinTech - Financial Technology
-                  </li>
-                  <li>
-                    <span
-                      style={{
-                        paddingRight: "8px",
-                        color: "blue",
-                        size: "25px",
-                      }}
-                    >
-                      <CheckCircle />
-                    </span>
-                    EduTech - Education Technology
-                  </li>
-
-                  <li>
-                    <span
-                      style={{
-                        paddingRight: "8px",
-                        color: "blue",
-                        size: "25px",
-                      }}
-                    >
-                      <CheckCircle />
-                    </span>
-                    TravelTech - Travel Technology
-                  </li>
-                  <li>
-                    <span
-                      style={{
-                        paddingRight: "8px",
-                        color: "blue",
-                        size: "25px",
-                      }}
-                    >
-                      <CheckCircle />
-                    </span>
-                    InfoSec & E-Governance - Information Security
-                  </li>
-                  <li>
-                    <span
-                      style={{
-                        paddingRight: "8px",
-                        color: "blue",
-                        size: "25px",
-                      }}
-                    >
-                      <CheckCircle />
-                    </span>
-                    AgriTech - Agricultural Technology
-                  </li>
-                  <li>
-                    <span
-                      style={{
-                        paddingRight: "8px",
-                        color: "blue",
-                        size: "25px",
-                      }}
-                    >
-                      <CheckCircle />
-                    </span>
-                    eHealth - Electronic Health care
-                  </li>
-                </ul>
-              </div>
-            </div>
+    <section className="nt-about-section">
+      <div className="nt-about-container">
+        <div className="nt-about-image-wrapper">
+          <img src={aboutData.mainImage} alt="About NITC Conference" className="nt-about-image" />
+          <img src={aboutData.logo} alt="CSSL Logo" className="nt-about-logo" />
+        </div>
+        <div className="nt-about-content-wrapper">
+          <div className="nt-about-content">
+            <h2 className="nt-about-title">{aboutData.title}</h2>
+            <p className="nt-about-description">
+              <b>{aboutData.description.split(' ')[0]}</b>{" "}
+              {aboutData.description.substring(aboutData.description.indexOf(' ') + 1)}
+            </p>
+            <ul className="nt-about-tracks">
+              {aboutData.tracks.map((track, idx) => (
+                <li key={idx}>{track}</li>
+              ))}
+            </ul>
+            <button className="nt-about-btn">{aboutData.button}</button>
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default About;

@@ -1,0 +1,138 @@
+.nt-about-section {
+  width: 100%;
+  background: #fff;
+  padding: 0;
+}
+
+.nt-about-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.nt-about-image-wrapper {
+  position: relative;
+  flex: 1 1 35%;
+  display: flex;
+  flex-direction: row;
+  min-width: 300px;
+}
+
+.nt-about-image-wrapper img:first-child {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.nt-about-logo {
+  position: absolute;
+  right: -45px;
+  top: 45%;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: rotate(-90deg);
+  width: 90px;
+  height: auto;
+}
+
+.nt-about-content-wrapper {
+  flex: 1 1 400px;
+}
+
+.nt-about-content {
+  padding: 25px 100px;
+}
+
+.nt-about-title {
+  color: #2e3292;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.nt-about-description {
+  color: #222;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.nt-about-tracks {
+  list-style: none;
+  padding: 0 0 15px 0;
+}
+
+.nt-about-tracks li {
+  font-size: 13px;
+  color: #333;
+  padding-left: 15px;
+  position: relative;
+}
+
+.nt-about-tracks li::before {
+  content: "\2022";
+  color: #2e3292;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.nt-about-btn {
+  background: transparent;
+  color: #2e3292;
+  border: 2px solid #2e3292;
+  border-radius: 25px;
+  padding: 10px 24px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  width: auto;
+}
+
+.nt-about-btn:hover {
+  background: #2e3292;
+  color: #fff;
+}
+
+@media (max-width: 1200px) {
+  .nt-about-container {
+    flex-direction: column;
+  }
+  .nt-about-image-wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .nt-about-logo {
+    position: relative;
+    transform: rotate(0deg);
+    top: -25px;
+    right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .nt-about-image-wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .nt-about-logo {
+    position: relative;
+    transform: rotate(0deg);
+    top: -25px;
+    right: 0;
+  }
+  .nt-about-content {
+    padding: 0 25px 25px 25px;
+  }
+  .nt-about-title {
+    font-size: 25px;
+  }
+  .nt-about-btn {
+    width: 100%;
+  }
+}

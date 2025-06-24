@@ -936,7 +936,7 @@ a.back-to-top:focus {
   color: #525252;
 }
 
-.about-content {
+/* .about-content {
   height: 100%;
   display: table;
 }
@@ -997,9 +997,9 @@ a.back-to-top:focus {
 
 .about-content .btn-about .btn {
   margin-right: 10px;
-}
+} */
 
-#event-up .event-item {
+/* #event-up .event-item {
   position: relative;
 }
 
@@ -1046,7 +1046,7 @@ a.back-to-top:focus {
 
 #event-up .event-item .overlay-text:hover {
   opacity: 1;
-}
+} */
 
 /* ==========================================================================
    Video Section Style
