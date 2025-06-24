@@ -23,8 +23,8 @@ function index() {
       <Hero />
       <About />
       <InformationBar />
-      <Shedule />
       <Awards />
+      <Shedule />
       <DIS />
       <Gallery />
       <Ticket_pricing />

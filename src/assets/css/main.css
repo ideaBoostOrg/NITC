@@ -329,11 +329,11 @@ ol li {
     text-align: center !important;
   }
 
-  #award .award_section_button {
+  /* #award .award_section_button {
     padding: 2rem;
     justify-content: center;
     flex-direction: column;
-  }
+  } */
 }
 
 button:focus {
@@ -3448,7 +3448,7 @@ footer {
   cursor: pointer;
 }
 
-#award .award_section_button {
+/* #award .award_section_button {
   display: flex;
   gap: 20px;
   justify-content: flex-start;
@@ -3460,14 +3460,14 @@ footer {
   color: var(--primary-blue);
   border: 1px solid var(--primary-blue);
   cursor: pointer;
-}
+} */
 
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   #cssl-awards .award_section_button {
     flex-direction: column;
   }
-}
+} */
 
 
 .form-footer {
