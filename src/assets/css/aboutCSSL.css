@@ -1,0 +1,56 @@
+.nt-aboutCSSL-section {
+  padding: 60px;
+}
+
+.nt-aboutCSSL-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.nt-aboutCSSL-image-wrapper {
+  flex: 1 1 65%;
+}
+
+.nt-aboutCSSL-logo {
+  width: 100%;
+  height: auto;
+}
+
+.nt-aboutCSSL-content-wrapper {
+  flex: 1 1 75%;
+}
+
+.nt-aboutCSSL-content {
+  text-align: left;
+}
+
+.nt-aboutCSSL-title {
+  color: #2e3292;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.nt-aboutCSSL-description {
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  .nt-aboutCSSL-section {
+    padding: 30px;
+  }
+
+  .nt-aboutCSSL-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nt-aboutCSSL-content-wrapper {
+    flex: 1 1 100%;
+  }
+
+}
