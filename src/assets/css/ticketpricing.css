@@ -1,0 +1,176 @@
+.nt-pricing-section {
+    padding: 50px 70px;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+    background-size: cover;
+}
+
+.nt-pricing-section {
+    text-align: center;
+}
+
+.nt-price-block-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  text-align: center;
+  border: 1px solid #2e3292;
+  border-radius: 15px;
+  background: #fff;
+  height: 400px;
+  background: url('../img/ticketpricing/background-img-content.jpg') center center / cover no-repeat;
+  margin-top: 40px;
+}
+
+.nt-price-card-content {
+    padding: 40px 20px;
+    height: 150px;   
+}
+
+.nt-pricing-title {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.nt-pricing-sub-title {
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.nt-price-card-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.nt-feature-list {
+  list-style: none;
+  padding: 25px;
+}
+
+.nt-feature-list li {
+  font-size: 13px;
+  color: #333;
+  padding-left: 15px;
+  position: relative;
+}
+
+.nt-feature-list li::before {
+  content: "\2022";
+  color: #2e3292;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.nt-price-card-footer {
+    background: linear-gradient(
+        180deg,
+        rgba(46, 50, 146, 1) 0%,
+        rgba(13, 17, 106, 0.1) 100%
+    );
+    background-color: #14153e;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 25px 20px;
+    color: white;
+    text-align: left;
+}
+
+.nt-prices-section {
+    margin-bottom: 15px;
+}
+
+.nt-local-price {
+    font-size: 18px;
+}
+
+.nt-usd-price {
+    font-size: 13px;
+}
+
+.nt-price-card-btn {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 25px;
+    font-size: 13px;
+    padding: 8px 15px;
+}
+
+.nt-price-card-btn:hover {
+    background-color: #fff;
+    color:#14153e;
+}
+
+.nt-full-pack-wrapper {
+    background: linear-gradient(
+        341deg,
+        rgba(13, 17, 106, 0.53) 0%,
+        rgba(47, 51, 146, 0.53) 100%
+    );
+    background-color: rgb(121, 119, 119);
+    border: 2px solid white;
+    overflow: hidden;
+    height: 475px;
+    margin-top: 0px;
+    color: white;
+    text-align: left;
+}
+
+.nt-full-pack-wrapper-content {
+    color: white;
+    text-align: left;
+}
+
+.nt-price-card-footer-full-package {
+    padding: 0px 20px 25px 20px;
+}
+
+.nt-feature-list-full-pack {
+    list-style: none;
+    padding: 25px 0px;
+}
+
+.nt-feature-list-full-pack li{
+    font-size: 13px;
+    color: #fff;
+    padding-left: 15px;
+    position: relative;
+}
+
+.nt-feature-list-full-pack li::before {
+  content: "\2022";
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.nt-full-pack-btn {
+    background-color: #fff;
+    color: #2e3292;
+    border: 2px solid #2e3292;
+}
+
+.nt-full-pack-btn:hover{
+    color: #fff;
+    background-color: #2e3292;
+}
+
+@media (max-width: 768px) {
+    .nt-pricing-section {
+        padding: 30px;
+        text-align: center;
+    }
+
+    .nt-price-block-wrapper{
+        margin-top: 20px;
+    }
+}
+

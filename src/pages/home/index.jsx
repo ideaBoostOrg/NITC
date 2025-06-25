@@ -7,7 +7,7 @@ import DIS from "./components/DIS";
 import Awards from "./components/Awards";
 import AboutCSSL from "./components/AboutCSSL";
 import Gallery from "./components/Gallery";
-import Ticket_pricing from "./components/Ticket_pricing";
+import TicketPricing from "./components/TicketPricing";
 import Sponsors from "./components/Sponsors";
 import National_partners from "./components/National_partners";
 import Partners from "./components/Partners";
@@ -26,9 +26,9 @@ function index() {
       <Awards />
       <AboutCSSL />
       <Gallery />
+      <TicketPricing />
       <Shedule />
       <DIS />
-      <Ticket_pricing />
       <National_partners />
       <Sponsors />
       <Partners />
