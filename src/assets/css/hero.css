@@ -27,6 +27,14 @@
   gap: 14px;
   justify-content: center;
   position: relative;
+  text-transform: uppercase;
+}
+
+.nt-hero-logo-mobile-only {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+  display: none;
 }
 
 .nt-hero-subtitle {
@@ -92,6 +100,10 @@
   .nt-hero-content {
     align-items: center;
     text-align: center;
+  }
+
+  .nt-hero-logo-mobile-only {
+    display: block;
   }
 
   .nt-hero-title {

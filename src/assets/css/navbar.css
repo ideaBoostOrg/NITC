@@ -6,21 +6,35 @@
   max-width: 1400px;
   margin: 30px auto;
   height: 70px;
-  padding: 0 80px;
+  padding: 0 70px;
   z-index: 100;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  gap: 70px;
+} 
+
+.nt-hero-logo {
+  width: 80px;
+  height: auto;
+  display: block;
+}
+
+.nt-navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .nt-nav-links {
   display: flex;
-  gap: 28px;
+  gap: 20px;
   align-items: center;
   flex: 1;
 }
 
 .nt-nav-link {
   color: var(--black);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -77,6 +91,7 @@
     flex-direction: column;
     height: auto;
     padding: 12px 8px;
+    gap: 16px;
   }
   .nt-nav-links {
     flex-wrap: wrap;
@@ -88,5 +103,8 @@
   }
   .nt-nav-actions {
     margin-top: 8px;
+  }
+  .nt-navbar-content {
+    flex-direction: column;
   }
 }
