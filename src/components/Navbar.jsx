@@ -1,7 +1,7 @@
 import React from "react";
 import { Link as SLink } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { faCaretDown, faBars } from "@fortawesome/free-solid-svg-icons";
 import NITCLogo from '../assets/img/NITC-Logo.png';
 import "../assets/css/Navbar.css";
 
@@ -19,33 +19,36 @@ const navLinks = [
 
 export const Navbar = () => {
   return (
-    <div className="nt-navbar fixed-top">
-      <img src={NITCLogo} alt="NITC Logo" className="nt-hero-logo" />
-      <div className="nt-navbar-content">
-      <div className="nt-nav-links">
-        {navLinks.map((link, idx) => (
-            <SLink
-              key={link.label}
-              className="nt-nav-link"
-              activeClass="nt-active"
-              to={link.to}
-              spy={true}
-              smooth={true}
-              offset={link.offset}
-              duration={300}
-            >
-              {link.label}
-              {link.icon && <FontAwesomeIcon className="nt-icon" icon={link.icon} />}
-            </SLink>
-          ))
-        }
+    <>
+      <FontAwesomeIcon icon={faBars} className="nt-nav-icon" />
+      <div className="nt-navbar fixed-top">
+        <img src={NITCLogo} alt="NITC Logo" className="nt-hero-logo" />
+        <div className="nt-navbar-content">
+        <div className="nt-nav-links">
+          {navLinks.map((link, idx) => (
+              <SLink
+                key={link.label}
+                className="nt-nav-link"
+                activeClass="nt-active"
+                to={link.to}
+                spy={true}
+                smooth={true}
+                offset={link.offset}
+                duration={300}
+              >
+                {link.label}
+                {link.icon && <FontAwesomeIcon className="nt-icon" icon={link.icon} />}
+              </SLink>
+            ))
+          }
+        </div>
+        <div className="nt-nav-actions">
+          <button className="nt-btn nt-btn-filled">Sign In</button>
+          <button className="nt-btn nt-btn-outlined">Sign Up</button>
+        </div>
+        </div>
       </div>
-      <div className="nt-nav-actions">
-        <button className="nt-btn nt-btn-filled">Sign In</button>
-        <button className="nt-btn nt-btn-outlined">Sign Up</button>
-      </div>
-      </div>
-    </div>
+    </>
   );
 };
 

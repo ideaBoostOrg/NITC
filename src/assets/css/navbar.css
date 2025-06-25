@@ -86,25 +86,22 @@
   border-color: var(--purple);
 }
 
+.nt-nav-icon {
+  display: none;
+  font-size: 24px;
+  color: var(--white);
+  cursor: pointer;
+  position: absolute;
+  z-index: 200;
+  margin: 20px;
+}
+
 @media (max-width: 900px) {
   .nt-navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 12px 8px;
-    gap: 16px;
+    display: none;
   }
-  .nt-nav-links {
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center;
-  }
-  .nt-logo {
-    margin-bottom: 8px;
-  }
-  .nt-nav-actions {
-    margin-top: 8px;
-  }
-  .nt-navbar-content {
-    flex-direction: column;
+
+  .nt-nav-icon {
+    display: block;
   }
 }
