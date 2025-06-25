@@ -91,7 +91,7 @@
   font-size: 24px;
   color: var(--white);
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   z-index: 200;
   margin: 20px;
 }
