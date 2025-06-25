@@ -2,7 +2,7 @@ import Navbar from "../../components/Navbar";
 import About from "./components/About";
 import Hero from "./components/Hero";
 import InformationBar from "./components/InformationBar";
-import Shedule from "./components/Shedule";
+import Schedule from "./components/Schedule";
 import DIS from "./components/DIS";
 import Awards from "./components/Awards";
 import AboutCSSL from "./components/AboutCSSL";
@@ -27,7 +27,7 @@ function index() {
       <AboutCSSL />
       <Gallery />
       <TicketPricing />
-      <Shedule />
+      <Schedule />
       <DIS />
       <National_partners />
       <Sponsors />

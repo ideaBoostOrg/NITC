@@ -1,0 +1,112 @@
+.nt-schedule-title-section-wrapper {
+    background-image: 
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.31) 0%,
+      rgba(46, 50, 146, 0.8) 100%
+    ),
+    url(../img/schedule/background-img.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 70px 50px;
+}
+
+.nt-main-title {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    line-height: 30px;
+}
+
+.nt-sub-title {
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.nt-schedule-section-btn {
+    background-color: transcparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px 20px;
+    font-size: 13px;
+    border-radius: 25px;
+}
+
+.nt-schedule-section-btn:hover{
+    color: #2e3292;
+    background-color: #fff;
+}
+
+.nt-schedule-content-wrapper {
+    background: url(../img/schedule/background-img.jpg) center center / cover no-repeat;
+    padding: 40px;
+}
+
+.nt-schedule-nav-tabs {
+  display: flex;
+  justify-content: left;
+  flex-wrap: nowrap;
+  border-bottom: none;
+  margin-top: 1.5rem;
+}
+
+.nt-schedule-nav-item {
+  border-radius: 15px;
+  padding: 0px 10px;
+}
+
+.nt-schedule-nav-item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.nt-schedule-nav-item-date {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.nt-schedule-nav-item-title {
+  font-size: 18px;
+  color: #2e3292;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.nt-schedule-nav-item-time {
+  font-size: 13px;
+}
+
+.nt-active-item {
+  border-bottom: 5px solid #2e3292;
+}
+
+@media (max-width: 600px) {
+  .nt-schedule-content-wrapper {
+    padding: 20px;
+  }
+
+  .nt-schedule-nav-item {
+    margin-right: 0px;
+    padding: 0px;
+    line-height: 15px;
+    border: 1px solid #2e3292;
+  }
+
+  .nt-active-item {
+    border-bottom: 5px solid #2e3292;
+  }
+
+  .nt-schedule-nav-item-date, .nt-schedule-nav-item-title, .nt-schedule-nav-item-time {
+    font-size: 10px;
+    text-align: left;
+  }
+}
