@@ -164,7 +164,7 @@
 }
 
 @media (max-width: 768px) {
-    .nt-pricing-section {
+    .nt-pricing-section-wrapper {
         padding: 30px;
         text-align: center;
     }
