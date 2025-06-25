@@ -38,7 +38,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  color: var(--dark-dark-blue);
+  color: var(--white);
 }
 
 #nt-info-card-1 {
