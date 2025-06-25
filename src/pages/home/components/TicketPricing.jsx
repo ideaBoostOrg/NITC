@@ -1,27 +1,25 @@
 import '../../../assets/css/ticketpricing.css';
-import pricingDetails from "../../../data/components/ticketpricing";
+import pricingData from "../../../data/components/ticketpricing";
 
 function TicketPricing() {
+  const { sectionTitle, sectionSubtitle, pricingDetails } = pricingData;
   return (
     <div className="nt-pricing-section">
         <div className="row">
             <div className="col-12">
                 <div className="nt-pricing-title-section">
                     <h2 className="nt-pricing-title wow fadeInUp" data-wow-delay="0.2s">
-                        Ticket Pricing
+                        {sectionTitle}
                     </h2>
                     <p className="nt-pricing-sub-title wow fadeInDown" data-wow-delay="0.2s">
-                        Experience the NITC IT Conference like never before with our
-                        affordable and flexible ticket pricing options, designed to
-                        <br />
-                        ensure accessibility for all technology enthusiasts.
+                        {sectionSubtitle}
                     </p>
                 </div>
             </div>
         </div>
         <div className="row">
             {pricingDetails.map((pricing, index) => (
-                <div className="col-lg-3 col-md-6 col-sm-12 mb-3 px-1">
+                <div className="col-lg-3 col-md-6 col-sm-12 mb-3 px-1" key={index}>
                     <div
                         className={`nt-price-block-wrapper ${index === 0 ? "nt-full-pack-wrapper" : ""}`}
                         data-wow-delay="0.3s"
@@ -42,7 +40,7 @@ function TicketPricing() {
                                 <p className="nt-usd-price">{pricing.priceUSD}</p>
                             </div>
                             <a href={pricing.link} className={`nt-price-card-btn ${index === 0 ? "nt-full-pack-btn" : ""}`}>
-                                Buy Ticket
+                                {pricing.buttonText}
                             </a>
                         </div>
                     </div>
