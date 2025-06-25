@@ -4,7 +4,7 @@ import aboutData from "../../../data/components/about";
 
 const About = () => {
   return (
-    <section className="nt-about-section">
+    <section className="nt-about-section-wrapper">
       <div className="nt-about-container">
         <div className="nt-about-image-wrapper">
           <img src={aboutData.mainImage} alt="About NITC Conference" className="nt-about-image" />
@@ -12,7 +12,7 @@ const About = () => {
         </div>
         <div className="nt-about-content-wrapper">
           <div className="nt-about-content">
-            <h2 className="nt-about-title">{aboutData.title}</h2>
+            <h2 className="nt-section-title">{aboutData.title}</h2>
             <p className="nt-about-description">
               <b>{aboutData.description.split(' ')[0]}</b>{" "}
               {aboutData.description.substring(aboutData.description.indexOf(' ') + 1)}

@@ -1,5 +1,5 @@
 .nt-navbar {
-  background-color: #fff;
+  background-color: var(--white);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,7 +19,7 @@
 }
 
 .nt-nav-link {
-  color: #0b143f;
+  color: var(--black);
   font-size: 13px;
   font-weight: 500;
   display: flex;
@@ -31,7 +31,7 @@
 }
 
 .nt-nav-link:hover, .nt-active {
-  color: #65558f !important;
+  color: var(--purple) !important;
   text-decoration: underline !important;
 }
 
@@ -44,32 +44,32 @@
   font-size: 13px;
   padding: 5px 22px;
   border-radius: 25px;
-  border: 2px solid #0b143f;
+  border: 2px solid var(--black);
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
 }
 
 .nt-btn-filled {
-  background: #0b143f;
-  color: #fff;
-  border: 2px solid #0b143f;
+  background: var(--black);
+  color: var(--white);
+  border: 2px solid var(--black);
 }
 
 .nt-btn-filled:hover {
-  background: #65558f;
-  border-color: #65558f;
+  background: var(--purple);
+  border-color: var(--purple);
 }
 
 .nt-btn-outlined {
-  background: #fff;
-  color: #0b143f;
-  border: 2px solid #0b143f;
+  background: var(--white);
+  color: var(--black);
+  border: 2px solid var(--black);
 }
 
 .nt-btn-outlined:hover {
   background: #f3f3f3;
-  color: #65558f;
-  border-color: #65558f;
+  color: var(--purple);
+  border-color: var(--purple);
 }
 
 @media (max-width: 900px) {

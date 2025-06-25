@@ -1,4 +1,4 @@
-.nt-aboutCSSL-section {
+.nt-aboutCSSL-section-wrapper {
   padding: 60px;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .nt-aboutCSSL-logo {
-  width: 80%;
+  width: 60%;
   height: auto;
 }
 
@@ -29,16 +29,9 @@
   text-align: left;
 }
 
-.nt-aboutCSSL-title {
-  color: #2e3292;
-  font-size: 30px;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
 .nt-aboutCSSL-description {
   font-size: 13px;
-  color: #333;
+  color: var(--light-gray);
   margin-bottom: 10px;
 }
 

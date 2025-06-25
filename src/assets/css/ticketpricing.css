@@ -1,4 +1,4 @@
-.nt-pricing-section {
+.nt-pricing-section-wrapper {
     padding: 50px 70px;
     background-color: rgba(0, 0, 0, 0.6);
     background-blend-mode: overlay;
@@ -15,9 +15,9 @@
   justify-content: space-between;
   align-items: space-between;
   text-align: center;
-  border: 1px solid #2e3292;
+  border: 1px solid var(--dark-blue);
   border-radius: 15px;
-  background: #fff;
+  background: var(--white);
   height: 400px;
   background: url('../img/ticketpricing/background-img.jpg') center center / cover no-repeat;
   margin-top: 40px;
@@ -29,14 +29,14 @@
 }
 
 .nt-pricing-title {
-    color: #fff;
+    color: var(--white);
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 20px;
 }
 
 .nt-pricing-sub-title {
-    color: #fff;
+    color: var(--white);
     font-size: 15px;
     margin-bottom: 30px;
     text-align: center;
@@ -55,14 +55,14 @@
 
 .nt-feature-list li {
   font-size: 13px;
-  color: #333;
+  color: var(--light-gray);
   padding-left: 15px;
   position: relative;
 }
 
 .nt-feature-list li::before {
   content: "\2022";
-  color: #2e3292;
+  color: var(--dark-blue);
   font-weight: bold;
   position: absolute;
   left: 0;
@@ -74,11 +74,11 @@
         rgba(46, 50, 146, 1) 0%,
         rgba(13, 17, 106, 0.1) 100%
     );
-    background-color: #14153e;
+    background-color: var(--dark-dark-blue);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     padding: 25px 20px;
-    color: white;
+    color: var(--white);
     text-align: left;
 }
 
@@ -96,16 +96,16 @@
 
 .nt-price-card-btn {
     background-color: transparent;
-    border: 1px solid white;
-    color: white;
+    border: 1px solid var(--white);
+    color: var(--white);
     border-radius: 25px;
     font-size: 13px;
     padding: 8px 15px;
 }
 
 .nt-price-card-btn:hover {
-    background-color: #fff;
-    color:#14153e;
+    background-color: var(--white);
+    color:var;
 }
 
 .nt-full-pack-wrapper {
@@ -115,16 +115,16 @@
         rgba(47, 51, 146, 0.53) 100%
     );
     background-color: rgb(121, 119, 119);
-    border: 2px solid white;
+    border: 2px solid var(--white);
     overflow: hidden;
     height: 475px;
     margin-top: 0px;
-    color: white;
+    color: var(--white);
     text-align: left;
 }
 
 .nt-full-pack-wrapper-content {
-    color: white;
+    color: var(--white);
     text-align: left;
 }
 
@@ -139,28 +139,28 @@
 
 .nt-feature-list-full-pack li{
     font-size: 13px;
-    color: #fff;
+    color: var(--white);
     padding-left: 15px;
     position: relative;
 }
 
 .nt-feature-list-full-pack li::before {
   content: "\2022";
-  color: #fff;
+  color: var(--white);
   font-weight: bold;
   position: absolute;
   left: 0;
 }
 
 .nt-full-pack-btn {
-    background-color: #fff;
-    color: #2e3292;
-    border: 2px solid #2e3292;
+    background-color: var(--white);
+    color: var(--dark-blue);
+    border: 2px solid var(--dark-blue);
 }
 
 .nt-full-pack-btn:hover{
-    color: #fff;
-    background-color: #2e3292;
+    color: var(--white);
+    background-color: var(--dark-blue);
 }
 
 @media (max-width: 768px) {

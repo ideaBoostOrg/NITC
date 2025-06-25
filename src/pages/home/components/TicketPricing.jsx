@@ -4,7 +4,7 @@ import pricingData from "../../../data/components/ticketpricing";
 function TicketPricing() {
   const { sectionTitle, sectionSubtitle, pricingDetails } = pricingData;
   return (
-    <div className="nt-pricing-section">
+    <div className="nt-pricing-section-wrapper">
         <div className="row">
             <div className="col-12">
                 <div className="nt-pricing-title-section">

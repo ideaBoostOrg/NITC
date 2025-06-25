@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
-:root {
+/* :root {
   --pressed-blue: #003bb3;
   --royal-blue: #004ce6;
   --primary-blue: #0055ff;
@@ -16,7 +16,7 @@
   --orange: #ff5100;
   --yellow-star: #ffd400;
   --school-green: #24be30;
-}
+} */
 
 
 html {
@@ -662,7 +662,7 @@ a.back-to-top:focus {
   background: #fff;
 }
 
-/* .navbar {
+.navbar {
   min-height: 60px;
   overflow: hidden;
 }
@@ -864,7 +864,7 @@ a.back-to-top:focus {
 .fadeInUpMenu {
   -webkit-animation-name: fadeInUpMenu;
   animation-name: fadeInUpMenu;
-} */
+}
 
 /* only small tablets */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -3935,4 +3935,24 @@ p {
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
+}
+
+
+
+/* nt common styles - 2025 */
+:root {
+  --dark-dark-blue: #14153e;
+  --dark-blue: #2e3292;
+  --white: #fff;
+  --gray: #222;
+  --light-gray: #333;
+  --black: #0b143f;
+  --purple: #65558f;
+}
+
+.nt-section-title {
+  color: var(--dark-blue);
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 15px;
 }

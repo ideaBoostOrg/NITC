@@ -1,6 +1,6 @@
-.nt-awards-section {
+.nt-awards-section-wrapper {
   width: 100%;
-  background: #fff;
+  background: var(--white);
   padding: 0;
 }
 
@@ -45,15 +45,8 @@
   text-align: left;
 }
 
-.nt-awards-title {
-  color: #2e3292;
-  font-size: 30px;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
 .nt-awards-subtitle {
-  color: #222;
+  color: var(--gray);
   font-size: 15px;
   font-weight: 500;
   margin-bottom: 10px;
@@ -61,14 +54,14 @@
 
 .nt-awards-description {
   font-size: 13px;
-  color: #333;
+  color: var(--light-gray);
   margin-bottom: 15px;
 }
 
 .nt-awards-btn {
   background: transparent;
-  color: #2e3292;
-  border: 2px solid #2e3292;
+  color: var(--dark-blue);
+  border: 2px solid var(--dark-blue);
   border-radius: 25px;
   padding: 10px 24px;
   font-size: 13px;
@@ -79,8 +72,8 @@
 }
 
 .nt-awards-btn:hover {
-  background: #2e3292;
-  color: #fff;
+  background: var(--dark-blue);
+  color: var(--white);
 }
 
 @media (max-width: 1200px) {

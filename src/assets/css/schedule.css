@@ -16,7 +16,7 @@
 }
 
 .nt-main-title {
-    color: #fff;
+    color: var(--white);
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 20px;
@@ -25,7 +25,7 @@
 }
 
 .nt-sub-title {
-    color: #fff;
+    color: var(--white);
     font-size: 15px;
     margin-bottom: 30px;
     text-align: left;
@@ -33,16 +33,16 @@
 
 .nt-schedule-section-btn {
     background-color: transcparent;
-    color: #ffffff;
-    border: 2px solid #ffffff;
+    color: var(--white);
+    border: 2px solid var(--white);
     padding: 10px 20px;
     font-size: 13px;
     border-radius: 25px;
 }
 
 .nt-schedule-section-btn:hover{
-    color: #2e3292;
-    background-color: #fff;
+    color: var(--dark-blue);
+    background-color: var(--white);
 }
 
 .nt-schedule-content-wrapper {
@@ -76,7 +76,7 @@
 
 .nt-schedule-nav-item-title {
   font-size: 18px;
-  color: #2e3292;
+  color: var(--dark-blue);
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -86,7 +86,7 @@
 }
 
 .nt-active-item {
-  border-bottom: 5px solid #2e3292;
+  border-bottom: 5px solid var(--dark-blue);
 }
 
 @media (max-width: 600px) {
@@ -98,11 +98,11 @@
     margin-right: 0px;
     padding: 0px;
     line-height: 15px;
-    border: 1px solid #2e3292;
+    border: 1px solid var(--dark-blue);
   }
 
   .nt-active-item {
-    border-bottom: 5px solid #2e3292;
+    border-bottom: 5px solid var(--dark-blue);
   }
 
   .nt-schedule-nav-item-date, .nt-schedule-nav-item-title, .nt-schedule-nav-item-time {

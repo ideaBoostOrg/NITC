@@ -1,6 +1,6 @@
-.nt-about-section {
+.nt-about-section-wrapper {
   width: 100%;
-  background: #fff;
+  background: var(--white);
   padding: 0;
 }
 
@@ -41,18 +41,11 @@
 }
 
 .nt-about-content {
-  padding: 25px 100px;
-}
-
-.nt-about-title {
-  color: #2e3292;
-  font-size: 30px;
-  font-weight: 600;
-  margin-bottom: 15px;
+  padding: 50px 100px;
 }
 
 .nt-about-description {
-  color: #222;
+  color: var(--gray);
   font-size: 15px;
   font-weight: 500;
   margin-bottom: 15px;
@@ -65,14 +58,14 @@
 
 .nt-about-tracks li {
   font-size: 13px;
-  color: #333;
+  color: var(--light-gray);
   padding-left: 15px;
   position: relative;
 }
 
 .nt-about-tracks li::before {
   content: "\2022";
-  color: #2e3292;
+  color: var(--dark-blue);
   font-weight: bold;
   position: absolute;
   left: 0;
@@ -80,8 +73,8 @@
 
 .nt-about-btn {
   background: transparent;
-  color: #2e3292;
-  border: 2px solid #2e3292;
+  color: var(--dark-blue);
+  border: 2px solid var(--dark-blue);
   border-radius: 25px;
   padding: 10px 24px;
   font-size: 13px;
@@ -92,8 +85,8 @@
 }
 
 .nt-about-btn:hover {
-  background: #2e3292;
-  color: #fff;
+  background: var(--dark-blue);
+  color: var(--white);
 }
 
 @media (max-width: 1200px) {
