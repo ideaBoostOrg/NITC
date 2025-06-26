@@ -12,10 +12,11 @@
 .nt-info-container {
   margin: auto;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 3rem 11rem;
+}
+
+.nt-informationBar-titlesection-wrapper {
+  display: none;
 }
 
 .nt-info-wrapper {
@@ -27,7 +28,7 @@
 }
 
 .nt-info-card {
-  min-width: 200px;
+  min-width: 150px;
   height: 270px;
   padding: 1rem 1.5rem;
   background-size: cover;
@@ -84,7 +85,6 @@
 .nt-info-card-main-content {
   font-size: 1.2rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
   text-align: left;
 }
 
@@ -95,16 +95,35 @@
 }
 
 @media screen and (max-width: 767px) {
-  .nt-info-wrapper {
-    grid-template-columns: repeat(2, 1fr);
+  .nt-informationBar-titlesection-wrapper {
+    display: block;
+    text-align: left;
+    margin: 2rem 0;
   }
-}
-
-@media screen and (max-width: 600px) {
+  .nt-section-title {
+    text-transform: uppercase;
+    color: var(--white);
+  }
+  .nt-titlesection-description {
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 300;
+  }
   .nt-info-container{
     padding: 3rem;
   }
   .nt-info-wrapper {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 0.5fr);
+    gap: 0.5rem;
+  }
+  .nt-info-card {
+    height: 200px;
+    padding: 1rem;
+  }
+  .nt-info-card-main-content {
+    font-size: 1rem;
+  }
+  .nt-info-card-title{
+    margin-bottom: 0rem;
   }
 }

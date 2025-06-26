@@ -1,13 +1,25 @@
-import informationBarData from "../../../data/components/informationBarData";
+import informationBarDataContent from "../../../data/components/informationBarData";
 import "../../../assets/css/informationBar.css";
 
 function InformationBar() {
   return (
     <div className="nt-informationBar-bg">
       <div className="nt-info-container ">
+        <div className="nt-informationBar-titlesection-wrapper">
+          <h2 className="nt-section-title">
+            {informationBarDataContent.informationBarTitle}
+          </h2>
+          <p className="nt-titlesection-description">
+            {informationBarDataContent.informationBarDescription}
+          </p>
+        </div>
         <div className="nt-info-wrapper">
-          {informationBarData.map((item, idx) => (
-            <div className="nt-info-card" id={`nt-info-card-${idx + 1}`} key={idx}>
+          {informationBarDataContent.informationBarDetails.map((item, idx) => (
+            <div
+              className="nt-info-card"
+              id={`nt-info-card-${idx + 1}`}
+              key={idx}
+            >
               <div className="nt-info-card-content">
                 <p className="nt-info-card-title">{item.title}</p>
                 <p className="nt-info-card-main-content">
