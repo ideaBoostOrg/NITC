@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1400px;
+  max-width: 100%;
   margin: 30px auto;
   height: 70px;
   padding: 0 70px;
@@ -23,6 +23,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  margin-left: 50px;
 }
 
 .nt-nav-links {
