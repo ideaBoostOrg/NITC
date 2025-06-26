@@ -19,4 +19,12 @@
     .nt-schedule-day-wrapper {
         padding: 50px 20px;
     }
+
+    .nt-event-list {
+        line-height: 25px;
+    }
+
+    .nt-event-list-item {
+        margin-bottom: 15px;
+    }
 }

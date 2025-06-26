@@ -29,6 +29,7 @@ function Shedule() {
           </div>
         </div>
         <div className="col-lg-8 col-md-8 col-sm-12 nt-schedule-content-wrapper">
+          <h2 className="nt-section-title nt-title-light-bg schedule-section-title-mobile-view">{scheduleData.mainTitle}</h2>
           <ul className="nav nt-schedule-nav-tabs">
             {scheduleData.tabs.map(tab => (
               <li

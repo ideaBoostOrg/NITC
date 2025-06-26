@@ -46,6 +46,10 @@
     padding: 40px;
 }
 
+.schedule-section-title-mobile-view {
+  display: none;
+}
+
 .nt-schedule-nav-tabs {
   display: flex;
   justify-content: left;
@@ -86,8 +90,17 @@
 }
 
 @media (max-width: 600px) {
+  .nt-schedule-title-section-wrapper {
+    display: none;
+  }
+
   .nt-schedule-content-wrapper {
-    padding: 20px;
+    padding: 40px 20px 20px 20px;
+  }
+
+  .schedule-section-title-mobile-view {
+    display: block;
+    text-align: center;
   }
 
   .nt-schedule-nav-item {
