@@ -1,6 +1,6 @@
 .nt-pricing-section-wrapper {
     padding: 50px 70px;
-    background: url('../img/ticket-bg.png') center center / cover no-repeat;
+    background: url('../img/ticketpricing/ticket-pricing-bg.png') center center / cover no-repeat;
     background-blend-mode: overlay;
     background-size: cover;
 }
@@ -19,7 +19,7 @@
   border-radius: 15px;
   background: var(--white);
   height: 400px;
-  background: url('../img/ticketpricing/background-img.jpg') center center / cover no-repeat;
+  background: url('../img/ticketpricing/ticker-day-bg.png') center center / cover no-repeat;
   margin-top: 40px;
 }
 
@@ -70,7 +70,7 @@
 }
 
 .nt-price-card-footer {
-    background: url('../img/ticket-card-bg.png') center center / cover no-repeat;
+    background: url('../img/ticketpricing/ticket-card-bg.png') center center / cover no-repeat;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     padding: 25px 20px;
@@ -105,7 +105,7 @@
 }
 
 .nt-full-pack-wrapper {
-    background: url('../img/ticket-01.png') center center;
+    background: url('../img/ticketpricing/ticket-01-bg.png') center center;
     border: 2px solid var(--white);
     overflow: hidden;
     height: 475px;

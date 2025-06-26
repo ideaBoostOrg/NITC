@@ -1,4 +1,4 @@
-import cssllogo from "../../assets/img/aboutCSSL/CSSLLogo.jpg";
+import cssllogo from "../../assets/img/aboutCSSL/cssl-logo.jpg";
 
 const aboutCSSLData = {
   title: "About CSSL",
