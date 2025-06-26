@@ -3951,8 +3951,22 @@ p {
 }
 
 .nt-section-title {
-  color: var(--dark-blue);
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 15px;
+}
+
+.nt-title-light-bg {
+  color: var(--dark-blue);
+}
+
+.nt-title-dark-bg {
+  color: var(--white);
+}
+
+@media(max-width: 768px) {
+  .nt-section-title {
+    text-transform: uppercase;
+    font-size: 25px;
+  }
 }

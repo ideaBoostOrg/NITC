@@ -15,7 +15,7 @@ function Shedule() {
       <div className="row gap-lg-4 gap-sm-1">
         <div className="col-lg-4 col-md-4 col-sm-12 nt-schedule-title-section-wrapper">
           <div className="">
-            <div className="nt-main-title">
+            <div className="nt-section-title nt-title-dark-bg nt-schedule-section-title">
               {scheduleData.mainTitle.split(' ').map((word, i) =>
                 word === 'Schedules' ? <><br key={i}/>{word}</> : word + ' '
               )}

@@ -8,7 +8,7 @@ function TicketPricing() {
         <div className="row">
             <div className="col-12">
                 <div className="nt-pricing-title-section">
-                    <h2 className="nt-pricing-title wow fadeInUp" data-wow-delay="0.2s">
+                    <h2 className="nt-section-title nt-title-dark-bg nt-pricing-title wow fadeInUp" data-wow-delay="0.2s">
                         {sectionTitle}
                     </h2>
                     <p className="nt-pricing-sub-title wow fadeInDown" data-wow-delay="0.2s">

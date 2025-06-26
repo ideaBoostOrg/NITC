@@ -12,7 +12,7 @@ const About = () => {
         </div>
         <div className="nt-about-content-wrapper">
           <div className="nt-about-content">
-            <h2 className="nt-section-title">{aboutData.title}</h2>
+            <h2 className="nt-section-title nt-title-light-bg">{aboutData.title}</h2>
             <p className="nt-about-description">
               <b>{aboutData.description.split(' ')[0]}</b>{" "}
               {aboutData.description.substring(aboutData.description.indexOf(' ') + 1)}

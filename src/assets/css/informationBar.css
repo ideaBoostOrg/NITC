@@ -101,10 +101,7 @@
     text-align: left;
     margin: 2rem 0;
   }
-  .nt-section-title {
-    text-transform: uppercase;
-    color: var(--white);
-  }
+
   .nt-titlesection-description {
     color: var(--white);
     font-size: 15px;

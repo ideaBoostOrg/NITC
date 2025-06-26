@@ -8,7 +8,7 @@ const Awards = () => {
       <div className="nt-awards-container">
         <div className="nt-awards-content-wrapper">
           <div className="nt-awards-content">
-            <h2 className="nt-section-title">{awardsDetails.title}</h2>
+            <h2 className="nt-section-title nt-title-light-bg">{awardsDetails.title}</h2>
             <p className="nt-awards-subtitle">{awardsDetails.subtitle}</p>
             <p className="nt-awards-description">
               {awardsDetails.description}

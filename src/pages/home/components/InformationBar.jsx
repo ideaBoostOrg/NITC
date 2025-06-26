@@ -6,7 +6,7 @@ function InformationBar() {
     <div className="nt-informationBar-bg">
       <div className="nt-info-container ">
         <div className="nt-informationBar-titlesection-wrapper">
-          <h2 className="nt-section-title">
+          <h2 className="nt-section-title nt-title-dark-bg">
             {informationBarDataContent.informationBarTitle}
           </h2>
           <p className="nt-titlesection-description">
