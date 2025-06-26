@@ -9,9 +9,9 @@ function InformationBar() {
           <h2 className="nt-section-title nt-title-dark-bg">
             {informationBarDataContent.informationBarTitle}
           </h2>
-          <p className="nt-titlesection-description">
+          <span className="nt-titlesection-description">
             {informationBarDataContent.informationBarDescription}
-          </p>
+          </span>
         </div>
         <div className="nt-info-wrapper">
           {informationBarDataContent.informationBarDetails.map((item, idx) => (
