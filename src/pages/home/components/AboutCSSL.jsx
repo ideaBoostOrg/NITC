@@ -11,7 +11,7 @@ const AboutCSSL = () => {
         </div>
         <div className="nt-aboutCSSL-content-wrapper">
           <div className="nt-aboutCSSL-content">
-            <h2 className="nt-section-title nt-title-light-bg">{aboutCSSLData.title}</h2>
+            <h2 className="nt-section-title nt-title-light-bg nt-aboutcssl-title">{aboutCSSLData.title}</h2>
             <p className="nt-aboutCSSL-description">
               {aboutCSSLData.description1}
             </p>

@@ -4,8 +4,8 @@ function ScheduleDay({ eventlist }) {
     return (
         <div className="nt-schedule-day-wrapper">
             {eventlist.map((event, idx) => (
-                <div key={idx} className="row nt-event-list">
-                    <div className="nt-event-list-item">
+                <div key={idx} className="nt-event-list">
+                    <div className="row nt-event-list-item">
                         <div className="col-lg-3 col-md-12 col-sm-12 fw-bold">
                             <span className="nt-event-time">{event.time}</span>
                         </div>
