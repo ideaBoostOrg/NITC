@@ -14,7 +14,6 @@ const Awards = () => {
               {awardsDetails.description}
             </p>            
             <button className="nt-awards-btn">{awardsDetails.button}</button>
-            <img src={awardsDetails.logo} alt="CSSL Logo" className="nt-awards-logo-mobile" />
           </div>
         </div>
         <div className="nt-awards-image-wrapper">
