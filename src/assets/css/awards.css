@@ -76,42 +76,45 @@
   color: var(--white);
 }
 
+.nt-awards-logo-mobile {
+  display: none;
+}
+
 @media (max-width: 1200px) {
   .nt-awards-container {
     flex-direction: column;
+    background: url(../img/DIGI_ECON.jpg) center center / cover no-repeat;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+    background-size: cover;
   }
+
   .nt-awards-image-wrapper {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+     display: none;
   }
-  .nt-awards-logo {
+
+  .nt-mobile-view {
+    color: white;
+    text-align: left !important;
+  }
+
+  .nt-awards-content {
+    padding: 200px 30px 40px 20px;
+  }
+
+  .nt-awards-subtitle, .nt-awards-description {
+    margin-bottom: 20px;
+  }
+
+  .nt-awards-logo-mobile {
     position: relative;
-    transform: rotate(0deg);
-    top: -25px;
-    right: 0;
+    width: 100px;
+    border-radius: 15px;
+    display: block;
+  }
+
+  .nt-awards-btn {
+    display: none;
   }
 }
 
-@media (max-width: 600px) {
-  .nt-awards-image-wrapper {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .nt-awards-logo {
-    position: relative;
-    transform: rotate(0deg);
-    top: 25px;
-    left: 0;
-  }
-  .nt-awards-content {
-    padding: 25px;
-  }
-  .nt-awards-title {
-    font-size: 25px;
-  }
-  .nt-awards-btn {
-    width: 100%;
-  }
-}

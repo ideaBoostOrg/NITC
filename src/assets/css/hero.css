@@ -82,7 +82,10 @@
 
 @media (max-width: 768px) {
   .nt-hero {
-    background: url('../img/hero/hero-bg-mobile.jpg') center center / cover no-repeat;
+    background: url('../img/hero/hero-bg-mobile.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   
   .nt-hero-overlay {
