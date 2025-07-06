@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link as SLink } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faCaretDown, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import NITCLogo from '../assets/img/NITC-Logo.png';
 import "../assets/css/Navbar.css";
 
@@ -18,14 +18,25 @@ const navLinks = [
 ];
 
 export const Navbar = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const handleMenuToggle = () => setMobileMenuOpen((open) => !open);
+  const handleCloseMenu = () => setMobileMenuOpen(false);
+
   return (
     <>
-      <FontAwesomeIcon icon={faBars} className="nt-nav-icon" />
+      {!mobileMenuOpen && (
+        <FontAwesomeIcon
+          icon={faBars}
+          className="nt-nav-icon"
+          onClick={handleMenuToggle}
+        />
+      )}
       <div className="nt-navbar fixed-top">
         <img src={NITCLogo} alt="NITC Logo" className="nt-hero-logo" />
         <div className="nt-navbar-content">
-        <div className="nt-nav-links">
-          {navLinks.map((link, idx) => (
+          <div className="nt-nav-links">
+            {navLinks.map((link, idx) => (
               <SLink
                 key={link.label}
                 className="nt-nav-link"
@@ -35,21 +46,55 @@ export const Navbar = () => {
                 smooth={true}
                 offset={link.offset}
                 duration={300}
+                onClick={handleCloseMenu}
               >
                 {link.label}
                 {link.icon && <FontAwesomeIcon className="nt-icon" icon={link.icon} />}
               </SLink>
-            ))
-          }
-        </div>
-        <div className="nt-nav-actions">
-          <button className="nt-btn nt-btn-filled">Sign In</button>
-          <button className="nt-btn nt-btn-outlined">Sign Up</button>
-        </div>
+            ))}
+          </div>
+          <div className="nt-nav-actions">
+            <button className="nt-btn nt-btn-filled">Sign In</button>
+            <button className="nt-btn nt-btn-outlined">Sign Up</button>
+          </div>
         </div>
       </div>
+      {mobileMenuOpen && (
+        <div className="nt-mobile-menu-overlay" onClick={handleCloseMenu}>
+          <div className="nt-mobile-menu" onClick={e => e.stopPropagation()}>
+            <FontAwesomeIcon
+              icon={faTimes}
+              className="nt-nav-close-icon"
+              onClick={handleCloseMenu}
+            />
+            <div className="nt-mobile-nav-links">
+              {navLinks.map((link) => (
+                <SLink
+                  key={link.label}
+                  className="nt-nav-link"
+                  activeClass="nt-active"
+                  to={link.to}
+                  spy={true}
+                  smooth={true}
+                  offset={link.offset}
+                  duration={300}
+                  onClick={handleCloseMenu}
+                >
+                  {link.label}
+                  {link.icon && <FontAwesomeIcon className="nt-icon" icon={link.icon} />}
+                </SLink>
+              ))}
+            </div>
+            <div className="nt-mobile-nav-actions">
+              <button className="nt-btn nt-btn-filled">Sign In</button>
+              <button className="nt-btn nt-btn-outlined">Sign Up</button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };
 
 export default Navbar;
+
