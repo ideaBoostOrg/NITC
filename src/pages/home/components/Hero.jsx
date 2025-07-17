@@ -1,5 +1,4 @@
-import React from 'react';
-import '../../../assets/css/Hero.css';
+import '../../../assets/css/hero.css';
 import heroData from '../../../data/components/hero';
 
 const Hero = () => {
