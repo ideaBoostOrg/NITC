@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import cryptoRandomString from 'crypto-random-string';
 import { addDoc, arrayUnion, collection, doc, getDocs, query, updateDoc, where } from "firebase/firestore";
-import { useNavigate } from 'react-router-dom';
 import { firestore } from "../../../firebase";
 import { loadPaycorpPayment } from '../../../pay';
 import TermsModal from "./DisTermsModal";
@@ -25,44 +24,14 @@ const DisRegisterForm = ({ clientRef, setClientRef, comment, setComment, formDat
     DSI: false,
   }
 
-  const EVENT_LIST = [
-    { name: 'Full_package', isRegistered: false },
-    { name: 'Inauguration', isRegistered: false },
-    { name: 'Day_01', isRegistered: false },
-    { name: 'Day_02', isRegistered: false },
-    { name: 'DSI', isRegistered: false },
-  ]
-
-  const [selectedEvents, setSelectedEvents] = useState(EVENTS)
-
-  //----
   const [eventList, setEventList] = useState(EVENTS);
-
   const [termsModalOpen, setTermsModalOpen] = useState(false);
   const [acceptTerm, setAcceptTerm] = useState(false);
-  const [discount, setDiscount] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
   const [currency, setCurrency] = useState("LKR"); // Default currency
   const [amount, setAmount] = useState(packages[0].price); // Default to local price
   const [netTotal, setNetTotal] = useState(packages[0].price); // Default to local net total
-
-  const navigate = useNavigate();
-  const pack = packages[0];
-
-  // Handle currency change for local/foreign payments
-  // const handleCurrencyChange = (event) => {
-  //   const selectedCurrency = event.target.value;
-  //   if (selectedCurrency === "LKR") {
-  //     setCurrency(pack.currencyLKR);
-  //     setAmount(pack.priceLKR);
-  //     setNetTotal(pack.priceLKR - discount); // Apply any discounts to net total if applicable
-  //   } else if (selectedCurrency === "USD") {
-  //     setCurrency(pack.currencyUSD);
-  //     setAmount(pack.priceUSD);
-  //     setNetTotal(pack.priceUSD - discount);
-  //   }
-  // };
 
   const handleAcceptTerms = (e) => {
     const value = e.target.checked;
@@ -77,7 +46,6 @@ const DisRegisterForm = ({ clientRef, setClientRef, comment, setComment, formDat
         paymentAmount: netTotal.toFixed(2) * 100,
         currency: 'LKR',
         returnUrl: `https://${window.location.hostname}/payment-confirm`,
-        // returnUrl: `http://127.0.0.1:5173/payment-confirm`,
         clientRef: cRef,
         comment: comm,
       }
@@ -108,11 +76,8 @@ const DisRegisterForm = ({ clientRef, setClientRef, comment, setComment, formDat
           else return s
         })
       }
-
     } else {
-
       if (sessions.length > 0) fSessionData = sessions
-
       fSessionData = fSessionData.map(s => {
         if (eventList[s.name]) return { ...s, isRegistered: true }
         else return s
@@ -175,9 +140,7 @@ const DisRegisterForm = ({ clientRef, setClientRef, comment, setComment, formDat
               eventList: Object.keys(eventList).filter(k => eventList[k] === true)
             })
           })
-
           handlePaymentGateway(cRef, comm)
-
         } catch (error) {
           console.log(error)
           setIsError(true)
@@ -185,8 +148,6 @@ const DisRegisterForm = ({ clientRef, setClientRef, comment, setComment, formDat
 
       }
     }
-
-
     setIsLoading(false)
   }
 
@@ -225,33 +186,7 @@ const DisRegisterForm = ({ clientRef, setClientRef, comment, setComment, formDat
                 </div>
 
                 <div className="col-lg-5 col-md-12">
-                  <div className="content">
-                    {/* Currency Selection */}
-                    {/* <div className="form-check">
-                      <input
-                        className="form-check-input"
-                        type="radio"
-                        name="mode"
-                        value="LKR"
-                        id="lkr"
-                        checked={currency === "LKR"}
-                        onChange={handleCurrencyChange}
-                      />
-                      <label className="form-check-label" htmlFor="lkr">Local Registration</label>
-                    </div> */}
-                    {/* <div className="form-check">
-                      <input
-                        className="form-check-input"
-                        type="radio"
-                        name="mode"
-                        value="USD"
-                        id="usd"
-                        checked={currency === "USD"}
-                        onChange={handleCurrencyChange}
-                      />
-                      <label className="form-check-label" htmlFor="usd">Foreign Registration</label>
-                    </div> */}
-
+                  <div className="content">             
                     {/* Amount Display */}
                     <div className="content-row">
                       <span className="label">Amount</span>

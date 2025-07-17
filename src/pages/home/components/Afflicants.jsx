@@ -1,13 +1,7 @@
-// import logo_1 from "../../../assets/img/afflicants/logo-1.webp";
-// import logo_2 from "../../../assets/img/afflicants/logo-2.webp";
-import logo_3 from "../../../assets/img/afflicants/logo-4.webp";
-import logo_4 from "../../../assets/img/afflicants/logo-5.webp";
-import logo_5 from "../../../assets/img/afflicants/logo-3.webp";
-import logo_6 from "../../../assets/img/afflicants/logo-6.png"
-
-// import logo_1 from "../../../assets/img/partners/ACM.png";
-// import logo_3 from "../../../assets/img/partners/ACS.png";
-// import logo_4 from "../../../assets/img/partners/BCS.png";
+import logo_1 from "../../../assets/img/afflicants/logo-1.webp";
+import logo_2 from "../../../assets/img/afflicants/logo-2.webp";
+import logo_3 from "../../../assets/img/afflicants/logo-3.webp";
+import logo_4 from "../../../assets/img/afflicants/logo-4.png"
 
 function Afflicants() {
   return (
@@ -22,7 +16,6 @@ function Afflicants() {
           <div className="col-12">
             <div className="section-title-header text-center">
               <h2
-                // className="section-title wow fadeInUp"
                 style={{ color: "#212121" }}
                 data-wow-delay="0.2s"
               >
@@ -44,24 +37,17 @@ function Afflicants() {
             <div className="sponsors-logo">
               <div className="col-lg-12 col-md-12 col-sm-12 text-center">
               <span className="afflicants-logo1">
-                  <img src={logo_6} alt="" />
+                  <img src={logo_4} alt="" />
                 </span>
                 <span href="" className="afflicants-logo1">
-                  <img src={logo_3} alt="" />
+                  <img src={logo_1} alt="" />
                 </span>
                 <span href="" className="afflicants-logo2">
-                  <img src={logo_4} alt="" />
+                  <img src={logo_2} alt="" />
                 </span>
                 <span href="" className="afflicants-logo3">
-                  <img src={logo_5} alt="" />
-                </span>
-
-                {/* <span className="partner-logo">
-                  <img src={logo_4} alt="" />
-                </span>
-                <span className="partner-logo">
                   <img src={logo_3} alt="" />
-                </span> */}
+                </span>
               </div>
             </div>
           </div>

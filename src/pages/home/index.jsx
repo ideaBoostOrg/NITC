@@ -1,62 +1,41 @@
 import Navbar from "../../components/Navbar";
 import About from "./components/About";
-import Hero from "./components/Hero";
-// import Countbar from "./components/Countbar";
-import Vedio from "./components/Vedio";
-import Shedule from "./components/Shedule";
-import DIS from "./components/DIS";
-// import Vedio_section from "./components/Vedio_section";
-// import Introduction from "./components/Introduction";
-import Awards from "./components/Awards";
-import About_CSSL from "./components/About_CSSL";
-// import Digital_economy from "./components/Digital_Economy";
-// import Counter_area from "./components/Counter_area";
-// import Event_gallery from "./components/Event_gallery";
-// import CSSL_digital_investment_submit from "./components/CSSL_digital_investment_submit";
-// import CSSL_colloquium from "./components/CSSL_colloquium";
-// import CSSL_awards from "./components/CSSL_awards";
-import Gallery from "./components/Gallery";
-import Ticket_pricing from "./components/Ticket_pricing";
-import Sponsors from "./components/Sponsors";
-import National_partners from "./components/National_partners";
-import Partners from "./components/Partners";
+import AboutCSSL from "./components/AboutCSSL";
 import Afflicants from "./components/Afflicants";
-import Annual_partners from "./components/Annual_Partners";
-import Map from "./components/Map";
+import AnnualPartners from "./components/Annual_Partners";
+import Awards from "./components/Awards";
+import DIS from "./components/DIS";
 import Footer from "./components/Footer";
-// import Speakers from "./components/Speakers";
+import Gallery from "./components/Gallery";
+import Hero from "./components/Hero";
+import InformationBar from "./components/InformationBar";
+import Map from "./components/Map";
+import NationalPartners from "./components/National_partners";
+import Partners from "./components/Partners";
+import Schedule from "./components/Schedule";
+import Sponsors from "./components/Sponsors";
+import TicketPricing from "./components/TicketPricing";
 
 function index() {
   return (
     <>
       <Navbar />
       <Hero />
-      {/* <Countbar /> */}
       <About />
-      {/* <Vedio_section /> */}
-      <Vedio />
-      <Shedule />
+      <InformationBar />
+      <Schedule />
       <Awards />
-      {/* <Introduction /> */}
-      <DIS />
-      {/* <Digital_economy /> */}
-      {/* <Speakers/> */}
-      {/* <CSSL_digital_investment_submit /> */}
-      {/* <CSSL_awards />
-      <CSSL_colloquium /> */}
-
-      {/* <Counter_area />
-      <Event_gallery /> */}
       <Gallery />
-      <Ticket_pricing />
-      <About_CSSL />
-      <National_partners />
+      <TicketPricing />
+      <AboutCSSL />
+       <DIS />
+      <NationalPartners />
       <Sponsors />
       <Partners />
       <Afflicants />
-      <Annual_partners />
+      <AnnualPartners />
       <Map />
-      <Footer />
+      <Footer /> 
     </>
   );
 }

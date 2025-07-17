@@ -1,14 +1,11 @@
-// import { HourglassSplit } from "react-bootstrap-icons";
 import { CreditCard } from "react-bootstrap-icons";
 
-/* eslint-disable react/no-unescaped-entities */
 function PaymentProcessing() {
     return (
         <section id="" className="section-padding notificaiton-pages">
             <div className="confirm-container payment-processing">
                 <div className="payment-processing-spinner-container">
                     <div className="payment-processing-spinner"></div>
-                    {/* <HourglassSplit className="icon" /> */}
                     <CreditCard className="icon" />
                 </div>
                 <br></br>

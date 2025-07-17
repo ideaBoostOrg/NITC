@@ -1,33 +1,25 @@
-import logo from "../../assets/img/NITC-Logo.png";
 
-/* eslint-disable no-unused-vars */
 import { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 import { useSearchParams } from "react-router-dom";
-
 import PaymentConfirmed from "./components/PaymentConfirmed";
 import PaymentFailed from "./components/PaymentFailed";
-
 import { firestore } from "../../firebase";
 import { collection, doc, query, getDocs, where, updateDoc, arrayUnion } from "firebase/firestore";
 import PaymentProcessing from "./components/PaymentProcessing";
 import SomethingWentWrong from "../../components/SomethingWentWrong";
-
+import logo from "../../assets/img/NITC-Logo.png";
 
 function ConfirmPage() {
-
     const [searchParams] = useSearchParams()
     const clientRef = searchParams.get('clientRef')
     const reqid = searchParams.get('reqid')
-
     const [data, setData] = useState()
     const [isPaymentConfirmed, setIsPaymentConfirmed] = useState(false)
     const [isLoading, setIsLoading] = useState(true)
     const [isError, setIsError] = useState(false)
 
-
     useEffect(() => {
-
         const sendEmail = (data) => {
             axios.post('https://api.imanage.services/api/api/nitc', data)
                 .then(Response => {
@@ -51,7 +43,6 @@ function ConfirmPage() {
                 }
 
                 const memberDoc = doc(firestore, "members", memberQuerySnapshot.docs[0].id)
-
                 const ticketCount = userSessions.filter(session => session.isRegistered).length
 
                 await updateDoc(memberDoc, {
@@ -61,7 +52,6 @@ function ConfirmPage() {
                 console.log("Ticket Count Updated");
 
             } catch (err) {
-                // setIsError(true)
                 console.log(err)
             }
         }
@@ -140,7 +130,6 @@ function ConfirmPage() {
 
                     console.log(userSessions);
 
-
                     if (userSessions.length === 4 && userSessions[3]?.isRegistered) {
                         sendEmail({
                             firstName: userData?.firstName,
@@ -183,10 +172,7 @@ function ConfirmPage() {
 
         const confirmPg = async () => {
             setIsLoading(true)
-
             const url = 'https://e5ncju2y5f.execute-api.eu-west-2.amazonaws.com/prod/confirm'
-            // const url = 'https://7kw2pe2bd8.execute-api.us-east-1.amazonaws.com/dev/confirm' //bashi
-            // const url = 'http://localhost:3400/confirm'
             try {
                 const response = await axios.post(url, {
                     clientRef: clientRef,
@@ -211,7 +197,6 @@ function ConfirmPage() {
                             setIsPaymentConfirmed(true)
                         }
                         else {
-
                             //payment failed
                             updatePayment(clientRef, results?.comment, "Payment Failed", results)
                             setIsLoading(false)
@@ -239,10 +224,7 @@ function ConfirmPage() {
                 setIsError(true)
             }
         }
-
-
         confirmPg()
-
     }, [])
 
     return (

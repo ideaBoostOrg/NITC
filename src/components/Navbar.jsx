@@ -1,172 +1,100 @@
-import logo from "../assets/img/NITC-Logo.png";
+import React, { useState } from "react";
 import { Link as SLink } from "react-scroll";
-/*icon */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faCaretDown, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import NITCLogo from '../assets/img/NITC-Logo.png';
+import "../assets/css/Navbar.css";
 
-import { useState } from "react";
+const navLinks = [
+  { label: "Home", to: "hero-area", icon: null, offset: -50 },
+  { label: "About Us", to: "about", icon: faCaretDown, offset: -100 },
+  { label: "Accreditation", to: "schedules", icon: faCaretDown, offset: -80 },
+  { label: "Membership", to: "award", icon: faCaretDown, offset: -30 },
+  { label: "NITC", to: "digital-economy", icon: faCaretDown, offset: -80 },
+  { label: "Events", to: "gallery", icon: null, offset: -50 },
+  { label: "People", to: "pricing", icon: faCaretDown, offset: -30 },
+  { label: "Training Partners", to: "sponsors", icon: null, offset: -80 },
+  { label: "Contact Us", to: "dis", icon: null, offset: -30 },
+];
 
-function Navbar() {
+export const Navbar = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const [isOpen, setIsOpen] = useState(false);
-
+  const handleMenuToggle = () => setMobileMenuOpen((open) => !open);
+  const handleCloseMenu = () => setMobileMenuOpen(false);
 
   return (
-    <nav
-      className="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar top-nav-collapse"
-      style={{ height: isOpen ? "fit-content" : "60px" }}
-    >
-      <div className="container">
-        <a href="/" className="navbar-brand">
-          <img src={logo} style={{ height: "50px" }} alt="" />
-        </a>
-        <button
-          className="navbar-toggler border-0"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarCollapse"
-          aria-controls="navbarCollapse"
-          aria-expanded="true"
-          aria-label="Toggle navigation"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <FontAwesomeIcon icon={faBars} />
-        </button>
-        <div className="navbar-collapse collapse show" id="navbarCollapse">
-          <ul className="navbar-nav mr-auto w-100 justify-content-end">
-            <li className="nav-item">
+    <>
+      {!mobileMenuOpen && (
+        <FontAwesomeIcon
+          icon={faBars}
+          className="nt-nav-icon"
+          onClick={handleMenuToggle}
+        />
+      )}
+      <div className="nt-navbar fixed-top">
+        <img src={NITCLogo} alt="NITC Logo" className="nt-hero-logo" />
+        <div className="nt-navbar-content">
+          <div className="nt-nav-links">
+            {navLinks.map((link, idx) => (
               <SLink
-                className="nav-link"
-                activeClass="active-link"
+                key={link.label}
+                className="nt-nav-link"
+                activeClass="nt-active"
+                to={link.to}
                 spy={true}
-                offset={-50}
-                to="hero-area"
-                duration={300}
                 smooth={true}
-                onClick={() => setIsOpen(false)}
-              >
-                Home
-              </SLink>
-            </li>
-            <li className="nav-item">
-              <SLink
-                className="nav-link"
-                activeClass="active-link"
-                spy={true}
-                offset={-100}
-                to="about"
+                offset={link.offset}
                 duration={300}
-                smooth={true}
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={handleCloseMenu}
               >
-                About
+                {link.label}
+                {link.icon && <FontAwesomeIcon className="nt-icon" icon={link.icon} />}
               </SLink>
-            </li>
-            <li className="nav-item">
-              <SLink
-                className="nav-link"
-                activeClass="active-link"
-                spy={true}
-                offset={-80}
-                to="schedules"
-                duration={300}
-                smooth={true}
-                onClick={() => setIsOpen(false)}
-              >
-                Schedules
-              </SLink>
-            </li>
-
-            <li className="nav-item">
-              <SLink
-                className="nav-link"
-                activeClass="active-link"
-                spy={true}
-                offset={-30}
-                to="award"
-                duration={300}
-                smooth={true}
-                onClick={() => setIsOpen(false)}
-              >
-                Awards
-              </SLink>
-            </li>
-            <li className="nav-item">
-              <SLink
-                className="nav-link"
-                activeClass="active-link"
-                spy={true}
-                offset={-80}
-                to="digital-economy"
-                duration={300}
-                smooth={true}
-                onClick={() => setIsOpen(false)}
-              >
-                DIGIECON
-              </SLink>
-            </li>
-            <li className="nav-item">
-              <SLink
-                className="nav-link"
-                activeClass="active-link"
-                spy={true}
-                offset={-50}
-                to="gallery"
-                duration={300}
-                smooth={true}
-                onClick={() => setIsOpen(false)}
-              >
-                Gallery
-              </SLink>
-            </li>
-            <li className="nav-item">
-              <SLink
-                className="nav-link"
-                activeClass="active-link"
-                spy={true}
-                offset={-30}
-                to="pricing"
-                duration={300}
-                smooth={true}
-                onClick={() => setIsOpen(false)}
-              >
-                Pricing
-              </SLink>
-            </li>
-            <li className="nav-item">
-              <SLink
-                className="nav-link"
-                activeClass="active-link"
-                spy={true}
-                offset={-80}
-                to="sponsors"
-                duration={300}
-                smooth={true}
-                onClick={() => setIsOpen(false)}
-              >
-                Sponsors
-              </SLink>
-            </li>
-
-            <div className="dis-btn-container">
-              <SLink
-                spy={true}
-                offset={-30}
-                to="dis"
-                duration={300}
-                smooth={true}
-                onClick={() => setIsOpen(false)}
-              >
-                <p
-                  className="disBtn"
-                >Digital Investment Summit</p>
-              </SLink>
-            </div>
-          </ul>
+            ))}
+          </div>
+          <div className="nt-nav-actions">
+            <button className="nt-btn nt-btn-filled">Sign In</button>
+            <button className="nt-btn nt-btn-outlined">Sign Up</button>
+          </div>
         </div>
       </div>
-    </nav>
+      {mobileMenuOpen && (
+        <div className="nt-mobile-menu-overlay" onClick={handleCloseMenu}>
+          <div className="nt-mobile-menu" onClick={e => e.stopPropagation()}>
+            <FontAwesomeIcon
+              icon={faTimes}
+              className="nt-nav-close-icon"
+              onClick={handleCloseMenu}
+            />
+            <div className="nt-mobile-nav-links">
+              {navLinks.map((link) => (
+                <SLink
+                  key={link.label}
+                  className="nt-nav-link"
+                  activeClass="nt-active"
+                  to={link.to}
+                  spy={true}
+                  smooth={true}
+                  offset={link.offset}
+                  duration={300}
+                  onClick={handleCloseMenu}
+                >
+                  {link.label}
+                  {link.icon && <FontAwesomeIcon className="nt-icon" icon={link.icon} />}
+                </SLink>
+              ))}
+            </div>
+            <div className="nt-mobile-nav-actions">
+              <button className="nt-btn nt-btn-filled">Sign In</button>
+              <button className="nt-btn nt-btn-outlined">Sign Up</button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
-}
+};
 
 export default Navbar;
+

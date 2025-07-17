@@ -1,5 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-
 import Awards from "../../../assets/img/DIGI_ECON.jpg";
 
 function DIS() {
@@ -9,7 +7,6 @@ function DIS() {
       style={{
         paddingTop: "50px",
         paddingBottom: "50px",
-        // backgroundColor: " rgb(243, 244, 243)",
       }}
     >
       <div className="container">
@@ -49,12 +46,6 @@ function DIS() {
               resurgence while accelerating digital advancements for the
               country.
             </p>
-
-            {/* hide this for the time being */}
-            {/* <p
-              style={{ marginBottom: "16px", fontWeight: "bold" }}
-            >Ticket Price : $45.00 (LKR 15,300.00)</p> */}
-
             <div className="award_section_button">
               <a
                 href="/disregister?type=Dis"
@@ -63,13 +54,6 @@ function DIS() {
               >
                 Register now
               </a>
-              {/* 
-              <a
-                href="https://forms.gle/BpxqFa2TmknPo21PA"
-                className="btn btn-common"
-              >
-                Investor Registration
-              </a> */}
             </div>
           </div>
         </div>

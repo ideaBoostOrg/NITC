@@ -1,47 +1,37 @@
-/*icon */
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
+import "../../../assets/css/imageGallery.css";
+import { eventImages } from "../../../data/components/eventGallery";
 
-import { eventImages } from "../../../assets/img";
+const firstImageSet = eventImages.slice(0, 3).map((src, idx) => ({
+  src,
+  alt: `Event ${idx + 1}`,
+}));
 
-function Gallery() {
+const secondImageSet = eventImages.slice(3, 7).map((src, idx) => ({
+  src,
+  alt: `Event ${idx + 4}`,
+}));
+
+
+function ImageGallery() {
   return (
-    <section
-      id="gallery"
-      className="section-padding"
-      style={{ padding: "30px 0" }}
-    >
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-12">
-            <div className="section-title-header text-center">
-              <h2
-                className="section-title wow fadeInUp animated"
-                style={{
-                  visibility: "visible",
-                  WebkitAnimationDelay: "0.2s",
-                  MozAnimationDelay: "0.2s",
-                  animationDelay: "0.2s",
-                  paddingBottom: "30px",
-                }}
-              >
-                Event Gallery
-              </h2>
-            </div>
-          </div>
+    <>
+        <div className="nt-gallery-grid-1">
+            {firstImageSet.map((img, idx) => (
+                <div className={`nt-gallery-item nt-gallery-item-${idx + 1}`} key={idx}>
+                    <img src={img.src} alt={img.alt} />
+                </div>
+            ))}
         </div>
-
-        <div className="grid-of-5-cols">
-          {eventImages.map((image, index) => (
-            <div key={index} className="">
-              <img className="img-fluid" alt="" src={image} />
-            </div>
-          ))}
+        <div className="nt-gallery-grid-2">
+            {secondImageSet.map((img, idx) => (
+                <div className={`nt-gallery-item nt-gallery-item-${idx + 4}`} key={idx}>
+                    <img src={img.src} alt={img.alt} />
+                </div>
+            ))}
         </div>
-        <br></br>
-      </div>
-    </section>
+    </>
   );
 }
 
-export default Gallery;
+export default ImageGallery;

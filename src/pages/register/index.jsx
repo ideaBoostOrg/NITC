@@ -1,6 +1,5 @@
 import { useState } from "react";
 import logo from "../../assets/img/NITC-Logo.png";
-
 import BillingDetails from "./components/BillingDetails";
 import RegisterForm from "./components/RegisterForm";
 

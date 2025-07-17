@@ -1,0 +1,30 @@
+.nt-schedule-day-wrapper {
+    padding: 50px 0px 30px 0px;
+}
+
+.nt-event-list {
+    line-height: 35px;
+    font-size: 13px;
+}
+
+.nt-event-time {
+    font-weight: 700;
+}
+
+.nt-event-title {
+    color: #2e3292;
+}
+
+@media (max-width: 768px) {
+    .nt-schedule-day-wrapper {
+        padding: 50px 20px;
+    }
+
+    .nt-event-list {
+        line-height: 25px;
+    }
+
+    .nt-event-list-item {
+        margin-bottom: 15px;
+    }
+}
