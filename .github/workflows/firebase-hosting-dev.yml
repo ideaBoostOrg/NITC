@@ -10,6 +10,11 @@ on:
       - dev
       - main
 
+# Sets permissions required for the Firebase GitHub Action
+permissions:
+  checks: write
+  contents: read
+
 env:
   VITE_FIREBASE_API_KEY: ${{ vars.VITE_FIREBASE_API_KEY }}
   VITE_FIREBASE_AUTH_DOMAIN : ${{ vars.VITE_FIREBASE_AUTH_DOMAIN }}
