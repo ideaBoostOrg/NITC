@@ -1,23 +1,23 @@
-import "../../assets/css/aboutcssl.css";
 import aboutCSSLData from "../../data/components/aboutCSSL.data";
+import styles from "./AboutCSSL.module.css"; // CSS module for styles
 
 const AboutCSSL = () => {
   return (
-    <section className="nt-aboutCSSL-section-wrapper">
-      <div className="nt-aboutCSSL-container">
-        <div className="nt-aboutCSSL-image-wrapper">
-          <img src={aboutCSSLData.logo} alt="CSSL Logo" className="nt-aboutCSSL-logo" />
+    <section className={styles.ntAboutCSSLSectionWrapper}>
+      <div className={styles.ntAboutCSSLContainer}>
+        <div className={styles.ntAboutCSSLImageWrapper}>
+          <img src={aboutCSSLData.logo} alt="CSSL Logo" className={styles.ntAboutCSSLLogo} />
         </div>
-        <div className="nt-aboutCSSL-content-wrapper">
-          <div className="nt-aboutCSSL-content">
+        <div className={styles.ntAboutCSSLContentWrapper}>
+          <div className={styles.ntAboutCSSLContent}>
             <h2 className="nt-section-title nt-title-light-bg nt-aboutcssl-title">{aboutCSSLData.title}</h2>
-            <p className="nt-aboutCSSL-description">
+            <p className={styles.ntAboutCSSLDescription}>
               {aboutCSSLData.description1}
             </p>
-            <p className="nt-aboutCSSL-description">
+            <p className={styles.ntAboutCSSLDescription}>
               {aboutCSSLData.description2}
             </p>
-            <p className="nt-aboutCSSL-description">
+            <p className={styles.ntAboutCSSLDescription}>
               {aboutCSSLData.description3}
             </p>
           </div>
