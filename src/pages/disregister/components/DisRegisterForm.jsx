@@ -1,11 +1,11 @@
-import React, { useState } from "react";
 import cryptoRandomString from 'crypto-random-string';
 import { addDoc, arrayUnion, collection, doc, getDocs, query, updateDoc, where } from "firebase/firestore";
+import { useState } from "react";
+import Loading from "../../../components/Loading";
+import SomethingWentWrong from "../../../components/SomethingWentWrong";
 import { firestore } from "../../../firebase";
 import { loadPaycorpPayment } from '../../../paymentService';
 import TermsModal from "./DisTermsModal";
-import Loading from "../../../components/Loading";
-import SomethingWentWrong from "../../../components/SomethingWentWrong";
 
 const packages = [{
   key: "DIS",

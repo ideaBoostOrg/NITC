@@ -1,4 +1,3 @@
-import React from "react";
 import "../../../assets/css/awards.css";
 import awardsDetails from "../../../data/components/awards.data";
 

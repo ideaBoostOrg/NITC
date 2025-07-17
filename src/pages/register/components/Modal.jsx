@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { loadPaycorpPayment } from "../../../paymentService";
 import { XLg } from "react-bootstrap-icons";
+import { loadPaycorpPayment } from "../../../paymentService";
 
 const Modal = (props) => {
   useEffect(() => {

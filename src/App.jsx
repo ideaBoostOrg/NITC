@@ -1,14 +1,14 @@
-import './assets/css/bootstrap.min.css'
-import './assets/css/nivo-lightbox.css'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import './assets/css/animate.css'
+import './assets/css/bootstrap.min.css'
 import './assets/css/main.css'
+import './assets/css/nivo-lightbox.css'
 import './assets/css/responsive.css'
-import Home from './pages/home/HomePage'
-import Register from './pages/register/RegisterPage'
+import { DataProvider } from './context/DataContext'
 import PaymentConfirm from './pages/confirm/ConfirmPage'
 import DisRegister from './pages/disregister/DisregisterPage'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { DataProvider } from './context/DataContext'
+import Home from './pages/home/HomePage'
+import Register from './pages/register/RegisterPage'
 
 function App() {
 

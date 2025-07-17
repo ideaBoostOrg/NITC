@@ -1,22 +1,22 @@
-import { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
-import TermsModal from "./TermsModal";
-import { loadPaycorpPayment } from "../../../paymentService";
-import { packages } from "../packages";
-import { firestore } from "../../../firebase";
+import cryptoRandomString from "crypto-random-string";
 import {
-  collection,
-  getDocs,
-  query,
-  where,
-  addDoc,
-  doc,
-  updateDoc,
-  arrayUnion,
+    addDoc,
+    arrayUnion,
+    collection,
+    doc,
+    getDocs,
+    query,
+    updateDoc,
+    where,
 } from "firebase/firestore";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import Loading from "../../../components/Loading";
 import SomethingWentWrong from "../../../components/SomethingWentWrong";
-import cryptoRandomString from "crypto-random-string";
+import { firestore } from "../../../firebase";
+import { loadPaycorpPayment } from "../../../paymentService";
+import { packages } from "../packages";
+import TermsModal from "./TermsModal";
 
 const RegisterForm = ({
   isMember,

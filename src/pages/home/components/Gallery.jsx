@@ -1,4 +1,3 @@
-import React from "react";
 import "../../../assets/css/image_gallery.css";
 import { eventImages } from "../../../data/components/eventGallery.data";
 

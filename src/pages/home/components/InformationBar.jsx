@@ -1,5 +1,5 @@
-import informationBarDataContent from "../../../data/components/informationBar.data";
 import "../../../assets/css/information_bar.css";
+import informationBarDataContent from "../../../data/components/informationBar.data";
 
 function InformationBar() {
   return (
