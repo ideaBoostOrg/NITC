@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { Link as SLink } from "react-scroll";
+import { faBars, faCaretDown, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+import { Link as SLink } from "react-scroll";
+import "../assets/css/navbar.css";
 import NITCLogo from '../assets/img/NITC-Logo.png';
-import "../assets/css/Navbar.css";
 
 const navLinks = [
   { label: "Home", to: "hero-area", icon: null, offset: -50 },
