@@ -1,18 +1,18 @@
-import TBA from "../../../assets/img/TBA.png";
-import master from '../../../assets/img/sponsors/strategicPartner/master.png';
-import dell from '../../../assets/img/sponsors/goldSponsors/DELL.png';
-import fortinet from '../../../assets/img/sponsors/goldSponsors/Fortinet.png';
-import Asset6 from '../../../assets/img/sponsors/diamondSponsors/Asset6.png';
-import DMS from '../../../assets/img/sponsors/diamondSponsors/DMS.png';
-import SafeProject from '../../../assets/img/sponsors/diamondSponsors/SafeProject.png';
-import Sanfer from '../../../assets/img/sponsors/diamondSponsors/Sanfer.png';
-import Orin from '../../../assets/img/sponsors/diamondSponsors/Orin.png';
-import Oracle from '../../../assets/img/sponsors/diamondSponsors/Oracle.png';
-import Google from '../../../assets/img/sponsors/diamondSponsors/Google.png';
-import BlueChip from '../../../assets/img/sponsors/bluechip.png';
-import AIKEN from '../../../assets/img/sponsors/AIKEN.png';
-import informatics from '../../../assets/img/sponsors/Informatics.png';
-import SAT from '../../../assets/img/sponsors/SAT GROUP.png';
+import TBA from "../../assets/img/TBA.png";
+import AIKEN from '../../assets/img/sponsors/AIKEN.png';
+import informatics from '../../assets/img/sponsors/Informatics.png';
+import SAT from '../../assets/img/sponsors/SAT GROUP.png';
+import BlueChip from '../../assets/img/sponsors/bluechip.png';
+import Asset6 from '../../assets/img/sponsors/diamondSponsors/Asset6.png';
+import DMS from '../../assets/img/sponsors/diamondSponsors/DMS.png';
+import Google from '../../assets/img/sponsors/diamondSponsors/Google.png';
+import Oracle from '../../assets/img/sponsors/diamondSponsors/Oracle.png';
+import Orin from '../../assets/img/sponsors/diamondSponsors/Orin.png';
+import SafeProject from '../../assets/img/sponsors/diamondSponsors/SafeProject.png';
+import Sanfer from '../../assets/img/sponsors/diamondSponsors/Sanfer.png';
+import dell from '../../assets/img/sponsors/goldSponsors/DELL.png';
+import fortinet from '../../assets/img/sponsors/goldSponsors/Fortinet.png';
+import master from '../../assets/img/sponsors/strategicPartner/master.png';
 
 function Sponsors() {
   return (

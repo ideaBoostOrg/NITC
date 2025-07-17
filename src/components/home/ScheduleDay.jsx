@@ -1,4 +1,4 @@
-import '../../../assets/css/scheduleDay.css';
+import '../../assets/css/scheduleDay.css';
 
 function ScheduleDay({ eventlist }) {
     return (

@@ -1,4 +1,4 @@
-import logo_1 from "../../../assets/img/national_partners/MoT-Logo-V3.png";
+import logo_1 from "../../assets/img/national_partners/MoT-Logo-V3.png";
 
 function National_partners() {
   return (

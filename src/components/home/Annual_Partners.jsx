@@ -1,4 +1,4 @@
-import TBA from "../../../assets/img/TBA.png";
+import TBA from "../../assets/img/TBA.png";
 
 function Annual_partners() {
   return (

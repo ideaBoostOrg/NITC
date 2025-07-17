@@ -1,7 +1,7 @@
-import logo_2 from "../../../assets/img/partners/FITTIS.png";
-import logo_7 from "../../../assets/img/partners/ISACA.png";
-import logo_8 from "../../../assets/img/partners/SLASSCOMLogo.png";
-import logo_4 from "../../../assets/img/partners/BCSLogo.png";
+import logo_4 from "../../assets/img/partners/BCSLogo.png";
+import logo_2 from "../../assets/img/partners/FITTIS.png";
+import logo_7 from "../../assets/img/partners/ISACA.png";
+import logo_8 from "../../assets/img/partners/SLASSCOMLogo.png";
 
 function Partners() {
   return (

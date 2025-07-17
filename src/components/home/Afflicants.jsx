@@ -1,7 +1,7 @@
-import logo_1 from "../../../assets/img/afflicants/logo-1.webp";
-import logo_2 from "../../../assets/img/afflicants/logo-2.webp";
-import logo_3 from "../../../assets/img/afflicants/logo-3.webp";
-import logo_4 from "../../../assets/img/afflicants/logo-4.png"
+import logo_1 from "../../assets/img/afflicants/logo-1.webp";
+import logo_2 from "../../assets/img/afflicants/logo-2.webp";
+import logo_3 from "../../assets/img/afflicants/logo-3.webp";
+import logo_4 from "../../assets/img/afflicants/logo-4.png";
 
 function Afflicants() {
   return (

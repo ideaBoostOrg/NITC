@@ -2,6 +2,7 @@ import { faBars, faCaretDown, faTimes } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { Link as SLink } from "react-scroll";
+import "../../assets/css/navbar.css";
 import NITCLogo from '../../assets/img/NITC-Logo.png';
 
 const navLinks = [

@@ -1,4 +1,4 @@
-import Awards from "../../../assets/img/DIGI_ECON.jpg";
+import Awards from "../../assets/img/DIGI_ECON.jpg";
 
 function DIS() {
   return (
