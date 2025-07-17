@@ -1,10 +1,20 @@
 {
-  "hosting": {
-    "site": "nitc-demo",
-    "public": "dist",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-    "frameworksBackend": {
-      "region": "asia-east1"
+  "hosting": [
+    {
+      "target": "nitc-demo",
+      "public": "dist",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "frameworksBackend": {
+        "region": "asia-east1"
+      }
+    },
+    {
+      "target": "nitc-2025",
+      "public": "dist",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "frameworksBackend": {
+        "region": "asia-east1"
+      }
     }
-  }
+  ]
 }

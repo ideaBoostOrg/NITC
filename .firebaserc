@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "nitc-2025"
+  },
+  "targets": {
+    "nitc-2025": {
+      "hosting": {
+        "nitc-demo": [
+          "nitc-demo"
+        ],
+        "nitc-2025": [
+          "nitc-2025"
+        ]
+      }
+    }
   }
 }
