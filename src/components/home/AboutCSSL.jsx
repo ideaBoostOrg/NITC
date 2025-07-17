@@ -1,5 +1,5 @@
-import "../../../assets/css/aboutcssl.css";
-import aboutCSSLData from "../../../data/components/aboutCSSL.data";
+import "../../assets/css/aboutcssl.css";
+import aboutCSSLData from "../../data/components/aboutCSSL.data";
 
 const AboutCSSL = () => {
   return (

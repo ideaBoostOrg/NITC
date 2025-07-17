@@ -1,5 +1,5 @@
-import "../../../assets/css/awards.css";
-import awardsDetails from "../../../data/components/awards.data";
+import "../../assets/css/awards.css";
+import awardsDetails from "../../data/components/awards.data";
 
 const Awards = () => {
   return (

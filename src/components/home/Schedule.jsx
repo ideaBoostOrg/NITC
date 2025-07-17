@@ -1,5 +1,5 @@
-import '../../../assets/css/schedule.css';
-import { scheduleData } from '../../../data/components/schedule.data';
+import '../../assets/css/schedule.css';
+import { scheduleData } from '../../data/components/schedule.data';
 import ScheduleDay from './ScheduleDay';
 
 import { useState } from "react";

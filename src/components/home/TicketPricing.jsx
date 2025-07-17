@@ -1,5 +1,5 @@
-import '../../../assets/css/ticketpricing.css';
-import pricingData from "../../../data/components/ticketPricing.data";
+import '../../assets/css/ticketpricing.css';
+import pricingData from "../../data/components/ticketPricing.data";
 
 function TicketPricing() {
   const { sectionTitle, sectionSubtitle, pricingDetails } = pricingData;

@@ -1,5 +1,5 @@
-import "../../../assets/css/image_gallery.css";
-import { eventImages } from "../../../data/components/eventGallery.data";
+import "../../assets/css/image_gallery.css";
+import { eventImages } from "../../data/components/eventGallery.data";
 
 const firstImageSet = eventImages.slice(0, 3).map((src, idx) => ({
   src,
