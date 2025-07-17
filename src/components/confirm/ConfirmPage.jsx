@@ -1,14 +1,14 @@
 
-import { useCallback, useEffect, useState } from "react";
 import axios from "axios";
+import { arrayUnion, collection, doc, getDocs, query, updateDoc, where } from "firebase/firestore";
+import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import logo from "../../assets/img/NITC-Logo.png";
+import SomethingWentWrong from "../../components/SomethingWentWrong";
+import { firestore } from "../../firebase";
 import PaymentConfirmed from "./components/PaymentConfirmed";
 import PaymentFailed from "./components/PaymentFailed";
-import { firestore } from "../../firebase";
-import { collection, doc, query, getDocs, where, updateDoc, arrayUnion } from "firebase/firestore";
 import PaymentProcessing from "./components/PaymentProcessing";
-import SomethingWentWrong from "../../components/SomethingWentWrong";
-import logo from "../../assets/img/NITC-Logo.png";
 
 function ConfirmPage() {
     const [searchParams] = useSearchParams()
