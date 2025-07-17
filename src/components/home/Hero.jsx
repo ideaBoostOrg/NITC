@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="nt-hero">
       <div className="nt-hero-overlay">
         <div className="nt-hero-content">
-          <img src={heroData.logo} alt="NITC Logo" className="nt-hero-logo nt-hero-logo-mobile-only" />
+          <img src={heroData.logo} alt="NITC Logo" className="nt-hero-logo-mobile-only" />
           <h2 className="nt-hero-subtitle">{heroData.subtitle}</h2>
           <h1 className="nt-hero-title">
             {heroData.title}
