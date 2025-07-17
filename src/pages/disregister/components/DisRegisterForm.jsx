@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import cryptoRandomString from 'crypto-random-string';
 import { addDoc, arrayUnion, collection, doc, getDocs, query, updateDoc, where } from "firebase/firestore";
 import { firestore } from "../../../firebase";
-import { loadPaycorpPayment } from '../../../pay';
+import { loadPaycorpPayment } from '../../../paymentService';
 import TermsModal from "./DisTermsModal";
 import Loading from "../../../components/Loading";
 import SomethingWentWrong from "../../../components/SomethingWentWrong";

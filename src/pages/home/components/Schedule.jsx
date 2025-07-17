@@ -1,6 +1,6 @@
 import '../../../assets/css/schedule.css';
 import ScheduleDay from './ScheduleDay';
-import { scheduleData } from '../../../data/components/schedule';
+import { scheduleData } from '../../../data/components/schedule.data';
 
 import { useState } from "react";
 

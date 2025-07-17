@@ -1,6 +1,6 @@
 import React from "react";
 import "../../../assets/css/aboutcssl.css";
-import aboutCSSLData from "../../../data/components/aboutCSSL";
+import aboutCSSLData from "../../../data/components/aboutCSSL.data";
 
 const AboutCSSL = () => {
   return (

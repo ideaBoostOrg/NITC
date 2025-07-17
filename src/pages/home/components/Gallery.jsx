@@ -1,6 +1,6 @@
 import React from "react";
 import "../../../assets/css/image_gallery.css";
-import { eventImages } from "../../../data/components/eventGallery";
+import { eventImages } from "../../../data/components/eventGallery.data";
 
 const firstImageSet = eventImages.slice(0, 3).map((src, idx) => ({
   src,

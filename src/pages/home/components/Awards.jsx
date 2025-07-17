@@ -1,6 +1,6 @@
 import React from "react";
 import "../../../assets/css/awards.css";
-import awardsDetails from "../../../data/components/awards.js";
+import awardsDetails from "../../../data/components/awards.data";
 
 const Awards = () => {
   return (

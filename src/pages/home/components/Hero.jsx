@@ -1,5 +1,5 @@
 import '../../../assets/css/hero.css';
-import heroData from '../../../data/components/hero';
+import heroData from '../../../data/components/hero.data';
 
 const Hero = () => {
   return (

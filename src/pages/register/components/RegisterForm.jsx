@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import TermsModal from "./TermsModal";
-import { loadPaycorpPayment } from "../../../pay";
+import { loadPaycorpPayment } from "../../../paymentService";
 import { packages } from "../packages";
 import { firestore } from "../../../firebase";
 import {

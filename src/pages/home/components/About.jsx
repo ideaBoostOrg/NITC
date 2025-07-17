@@ -1,6 +1,6 @@
 import React from "react";
 import "../../../assets/css/about.css";
-import aboutData from "../../../data/components/about";
+import aboutData from "../../../data/components/about.data";
 
 const About = () => {
   return (
