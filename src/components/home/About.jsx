@@ -1,4 +1,4 @@
-import aboutData from "../../../data/components/about.data";
+import aboutData from "../../data/components/about.data";
 import styles from "./About.module.css";
 
 const About = () => {
