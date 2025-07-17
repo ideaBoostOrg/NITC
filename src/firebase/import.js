@@ -1,6 +1,6 @@
 // /* eslint-disable no-unused-vars */
 // import { firestore } from './index.js'
-// import { members } from '../data/members.js'
+// import { members } from '../data/members.data.js'
 // import { collection, getDocs, addDoc } from 'firebase/firestore'
 
 // const userCollectionRef = collection(firestore, 'members')

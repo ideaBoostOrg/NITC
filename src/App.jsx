@@ -1,14 +1,14 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
-import './assets/css/animate.css'
-import './assets/css/bootstrap.min.css'
-import './assets/css/main.css'
-import './assets/css/nivo-lightbox.css'
-import './assets/css/responsive.css'
 import { DataProvider } from './context/DataContext'
 import PaymentConfirm from './pages/confirm/ConfirmPage'
 import DisRegister from './pages/disregister/DisregisterPage'
 import Home from './pages/home/HomePage'
 import Register from './pages/register/RegisterPage'
+import './styles/global/animate.css'
+import './styles/global/bootstrap.min.css'
+import './styles/global/main.css'
+import './styles/global/nivo-lightbox.css'
+import './styles/global/responsive.css'
 
 function App() {
 

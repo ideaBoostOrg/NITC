@@ -1,0 +1,73 @@
+.nt-aboutCSSL-section-wrapper {
+  padding: 60px;
+  background: url('../img/aboutCSSL/cssl-bg.png') center center / cover no-repeat;
+}
+
+.nt-aboutCSSL-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.nt-aboutCSSL-image-wrapper {
+  flex: 1 1 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nt-aboutCSSL-logo {
+  width: 60%;
+  height: auto;
+}
+
+.nt-aboutCSSL-content-wrapper {
+  flex: 1 1 75%;
+}
+
+.nt-aboutCSSL-content {
+  text-align: left;
+}
+
+.nt-aboutCSSL-description {
+  font-size: 13px;
+  color: var(--light-gray);
+  margin-bottom: 10px;
+  text-align: left !important;
+}
+
+@media (max-width: 900px) {
+  .nt-aboutCSSL-section-wrapper {
+    padding: 40px 30px 0px 30px;
+    background: url('../img/aboutCSSL/cssl-bg-mobile.png') center center / cover no-repeat;
+  }
+
+  .nt-aboutCSSL-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nt-aboutCSSL-content-wrapper {
+    flex: 1 1 100%;
+    padding-top: 30px;
+  }
+
+  .nt-aboutCSSL-logo {
+    width: 60%;
+    height: auto;
+  }
+
+  .nt-aboutcssl-title {
+    display: none;
+  }
+
+  .nt-aboutCSSL-description {
+    text-align: center !important;
+  }
+
+  .nt-aboutCSSL-description {
+    margin-bottom: 30px;
+  }
+
+}
