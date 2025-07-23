@@ -1,15 +1,14 @@
 .nt-navbar {
-  background-color: var(--white);
+  background-color: rgba(3, 6, 74, 0.53);
   display: flex;
   align-items: center;
-  justify-content: space-between;
   max-width: 100%;
   margin: 30px auto;
   height: 70px;
-  padding: 0 70px;
+  padding: 0 150px;
   z-index: 100;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  gap: 70px;
+  gap: 150px;
 } 
 
 .nt-hero-logo {
@@ -23,6 +22,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  color: var(--white)
   /* margin-left: 50px; */
 }
 
@@ -30,7 +30,6 @@
   display: flex;
   gap: 20px;
   align-items: center;
-  flex: 1;
 }
 
 .nt-nav-link {
@@ -46,8 +45,9 @@
 }
 
 .nt-nav-link:hover, .nt-active {
-  color: var(--purple) !important;
+  color: var(--dark-dark-blue) !important;
   text-decoration: underline !important;
+  font-weight: 700 !important;
 }
 
 .nt-nav-actions {
@@ -56,12 +56,13 @@
 }
 
 .nt-btn {
-  font-size: 13px;
+  font-size: 10px;
   padding: 5px 22px;
   border-radius: 25px;
   border: 2px solid var(--black);
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
+  font-weight: 500;
 }
 
 .nt-btn-filled {
@@ -89,6 +90,13 @@
 
 .nt-nav-icon {
   display: none;
+}
+
+@media (max-width: 1200px) {
+  .nt-navbar {
+    gap: 20px;
+    padding: 0 100px;
+  }
 }
 
 @media (max-width: 900px) {
