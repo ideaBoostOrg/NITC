@@ -1,4 +1,5 @@
 import logo_NITC from "../../../assets/img/NITC-Logo.png";
+import '../../../assets/css/footer.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
@@ -10,12 +11,11 @@ function Footer() {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-8 col-md-12 col-xs-12">
-            <div className="NITC-logo" style={{ padding: "20px 0 0 0" }}>
-              <img src={logo_NITC} alt="" style={{ width: 150, height: 100 }} />
+            <div className="nt-logo-container">
+              <img src={logo_NITC} alt="" className="nt-NITC-logo" />
             </div>
             <div
               className="social-icons-footer"
-              style={{ padding: "20px 0 0 0" }}
             >
               <ul>
                 <li className="facebook">
@@ -44,9 +44,9 @@ function Footer() {
               </ul>
             </div>
             <div className="site-info">
-              <p style={{ textAlign: "center" }}>
+              <p className="nt-footer-text">
                 2025 ©️ Powered by{" "}
-                <a href="http://ideaboost.tech" rel="nofollow">
+                <a href="https://ideaboosts.vercel.app/" rel="nofollow">
                   ideaBoost.
                 </a>
               </p>
