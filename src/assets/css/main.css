@@ -3941,6 +3941,7 @@ p {
 
 /* nt common styles - 2025 */
 :root {
+  --primary-blue: #19205F;
   --dark-dark-blue: #14153e;
   --dark-blue: #2e3292;
   --white: #fff;

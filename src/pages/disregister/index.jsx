@@ -2,6 +2,7 @@ import { useState } from "react";
 import logo from "../../assets/img/NITC-Logo.png";
 import DisBillingDetails from "./components/DisBillingDetails";
 import DisRegisterForm from "./components/DisRegisterForm";
+import "../../assets/css/navbar.css";
 
 function DisRegister() {
   const [isMember, setisMember] = useState(false);
@@ -19,8 +20,8 @@ function DisRegister() {
       <section>
         <nav className="navbar navbar-expand-lg bg-inverse scrolling-navbar top-nav-collapse">
           <div className="container">
-            <a href="/" className="navbar-brand">
-              <img src={logo} alt="" />
+            <a href="/">
+              <img src={logo} alt="" className="nt-hero-logo" />
             </a>
           </div>
         </nav>
