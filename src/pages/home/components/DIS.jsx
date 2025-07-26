@@ -19,7 +19,6 @@ const DIS = () => {
             <p className="nt-dis-text-content">
                 {DISData.content}
             </p>
-            <br />
             <button className="nt-dis-btn">{DISData.button}</button>
           </div>
         </div>
