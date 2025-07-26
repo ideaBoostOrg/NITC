@@ -27,8 +27,8 @@ function index() {
       <Awards />
       <Gallery />
       <TicketPricing />
+      <DIS />
       <AboutCSSL />
-       <DIS />
       <NationalPartners />
       <Sponsors />
       <Partners />
