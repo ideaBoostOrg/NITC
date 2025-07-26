@@ -3,7 +3,7 @@ import heroData from '../../../data/components/hero';
 
 const Hero = () => {
   return (
-    <section className="nt-hero">
+    <section className="nt-hero" id="hero-area">
       <div className="nt-hero-overlay">
         <div className="nt-hero-content">
           <img src={heroData.logo} alt="NITC Logo" className="nt-hero-logo nt-hero-logo-mobile-only" />

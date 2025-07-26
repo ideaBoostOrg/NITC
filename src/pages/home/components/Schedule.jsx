@@ -11,7 +11,7 @@ function Shedule() {
   };
 
   return (
-    <>
+    <section id="schedule">
       <div className="row gap-lg-4 gap-sm-1">
         <div className="col-lg-4 col-md-4 col-sm-12 nt-schedule-title-section-wrapper">
           <div className="">
@@ -59,7 +59,7 @@ function Shedule() {
           {toggleState === 3 && <ScheduleDay eventlist={scheduleData.tabs[2].eventlist} />}
         </div>
       </div>
-    </>
+    </section>
   );
 }
 

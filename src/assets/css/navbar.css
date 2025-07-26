@@ -45,7 +45,7 @@
 }
 
 .nt-nav-link:hover, .nt-active {
-  color: var(--dark-dark-blue) !important;
+  color: var(--light-light-gray) !important;
   text-decoration: underline !important;
   font-weight: 700 !important;
 }

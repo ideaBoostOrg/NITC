@@ -8,7 +8,7 @@ import NITCLogo from '../assets/img/NITC-Logo.png';
 const navLinks = [
   { label: "Home", to: "hero-area", icon: null, offset: -50 },
   { label: "About", to: "about", icon: null, offset: -100 },
-  { label: "Schedule", to: "schedules", icon: null, offset: -80 },
+  { label: "Schedule", to: "schedule", icon: null, offset: -80 },
   { label: "Awards", to: "award", icon: null, offset: -30 },
   { label: "Gallery", to: "gallery", icon: null, offset: -50 },
   { label: "Pricing", to: "pricing", icon: null, offset: -30 },

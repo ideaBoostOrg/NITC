@@ -4,7 +4,7 @@ import awardsDetails from "../../../data/components/awards.js";
 
 const Awards = () => {
   return (
-    <section className="nt-awards-section-wrapper">
+    <section id="award" className="nt-awards-section-wrapper">
       <div className="nt-awards-container">
         <div className="nt-awards-content-wrapper">
           <div className="nt-awards-content">

@@ -4,7 +4,7 @@ import aboutData from "../../../data/components/about";
 
 const About = () => {
   return (
-    <section className="nt-about-section-wrapper">
+    <section className="nt-about-section-wrapper" id="about">
       <div className="nt-about-container">
         <div className="nt-about-image-wrapper">
           <img src={aboutData.mainImage} alt="About NITC Conference" className="nt-about-image" />
