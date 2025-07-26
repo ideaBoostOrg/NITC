@@ -1,10 +1,11 @@
 import React from "react";
+import { Link as SLink } from "react-scroll";
 import "../../../assets/css/DIS.css";
 import DISData from "../../../data/components/DIS";
 
 const DIS = () => {
   return (
-    <section className="nt-dis-section-wrapper">
+    <section className="nt-dis-section-wrapper" id="digital-investment-summit">
       <div className="nt-dis-container">
         <div className="nt-dis-image-wrapper">
           <img src={DISData.mainImage} alt="About NITC Conference" className="nt-dis-image" />
@@ -19,7 +20,16 @@ const DIS = () => {
             <p className="nt-dis-text-content">
                 {DISData.content}
             </p>
-            <button className="nt-dis-btn">{DISData.button}</button>
+            <SLink 
+              className="nt-dis-btn" 
+              to="pricing"
+              spy={true} 
+              smooth={true} 
+              offset={-50} 
+              duration={300}
+            >
+              {DISData.button}
+            </SLink>
           </div>
         </div>
       </div>

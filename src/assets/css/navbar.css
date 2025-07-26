@@ -78,14 +78,9 @@
 
 .nt-btn-outlined {
   background: var(--white);
-  color: var(--black);
+  color: var(--black) !important;
   border: 2px solid var(--black);
-}
-
-.nt-btn-outlined:hover {
-  background: #f3f3f3;
-  color: var(--purple);
-  border-color: var(--purple);
+  text-align: center;
 }
 
 .nt-nav-icon {

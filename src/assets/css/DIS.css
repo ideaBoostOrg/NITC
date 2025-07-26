@@ -60,7 +60,7 @@
 
 .nt-dis-btn {
   background: transparent;
-  color: var(--dark-blue);
+  color: var(--dark-blue) !important;
   border: 2px solid var(--dark-blue);
   border-radius: 25px;
   padding: 10px 24px;
@@ -73,7 +73,7 @@
 
 .nt-dis-btn:hover {
   background: var(--dark-blue);
-  color: var(--white);
+  color: var(--white) !important;
 }
 
 @media (max-width: 1200px) {

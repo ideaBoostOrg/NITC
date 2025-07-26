@@ -4,7 +4,7 @@ import aboutCSSLData from "../../../data/components/aboutCSSL";
 
 const AboutCSSL = () => {
   return (
-    <section className="nt-aboutCSSL-section-wrapper">
+    <section className="nt-aboutCSSL-section-wrapper" id="about-cssl">
       <div className="nt-aboutCSSL-container">
         <div className="nt-aboutCSSL-image-wrapper">
           <img src={aboutCSSLData.logo} alt="CSSL Logo" className="nt-aboutCSSL-logo" />

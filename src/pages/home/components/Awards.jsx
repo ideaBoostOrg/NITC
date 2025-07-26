@@ -1,4 +1,5 @@
 import React from "react";
+import { Link as SLink } from "react-scroll";
 import "../../../assets/css/awards.css";
 import awardsDetails from "../../../data/components/awards.js";
 
@@ -13,7 +14,16 @@ const Awards = () => {
             <p className="nt-awards-description nt-mobile-view">
               {awardsDetails.description}
             </p>            
-            <button className="nt-awards-btn">{awardsDetails.button}</button>
+            <SLink 
+              className="nt-awards-btn"
+              to="pricing"
+              spy={true}
+              smooth={true}
+              offset={-50}
+              duration={300}
+            >
+              {awardsDetails.button}
+            </SLink>
           </div>
         </div>
         <div className="nt-awards-image-wrapper">

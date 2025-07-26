@@ -1,4 +1,5 @@
 import React from "react";
+import { Link as SLink } from "react-scroll";
 import "../../../assets/css/about.css";
 import aboutData from "../../../data/components/about";
 
@@ -22,7 +23,16 @@ const About = () => {
                 <li key={idx}>{track}</li>
               ))}
             </ul>
-            <button className="nt-about-btn">{aboutData.button}</button>
+            <SLink 
+              className="nt-about-btn"
+              to="about-cssl"
+              spy={true}
+              smooth={true}
+              offset={-50}
+              duration={300}
+            >
+              {aboutData.button}
+            </SLink>
           </div>
         </div>
       </div>

@@ -65,7 +65,7 @@
 
 .nt-hero-button {
   background-color: transparent;
-  color: var(--white);
+  color: var(--white) !important;
   border: 1.5px solid var(--white);
   padding: 12px 24px;
   font-size: 16px;
@@ -77,7 +77,7 @@
 
 .nt-hero-button:hover {
   background-color: var(--white);
-  color: var(--dark-dark-blue);
+  color: var(--dark-dark-blue) !important;
 }
 
 @media (max-width: 768px) {

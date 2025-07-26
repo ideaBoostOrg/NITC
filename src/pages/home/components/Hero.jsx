@@ -1,3 +1,4 @@
+import { Link as SLink } from "react-scroll";
 import '../../../assets/css/hero.css';
 import heroData from '../../../data/components/hero';
 
@@ -12,7 +13,16 @@ const Hero = () => {
             {heroData.title}
           </h1>
           <p className="nt-hero-tagline">{heroData.tagline}</p>
-          <button className="nt-hero-button">{heroData.buttonText}</button>
+            <SLink 
+              className="nt-hero-button"
+              to="pricing"
+              spy={true}
+              smooth={true}
+              offset={-50}
+              duration={300}
+            >
+              {heroData.buttonText}
+            </SLink>
         </div>
       </div>
     </section>

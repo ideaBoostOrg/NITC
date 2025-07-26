@@ -52,7 +52,16 @@ export const Navbar = () => {
             ))}
           </div>
           <div className="nt-nav-actions">
-            <button className="nt-btn nt-btn-outlined">Digital Investment Summit</button>
+            <SLink 
+              className="nt-btn nt-btn-outlined"
+              to="digital-investment-summit"
+              spy={true}
+              smooth={true}
+              offset={-50}
+              duration={300}
+            >
+              Digital Investment Summit
+            </SLink>
           </div>
         </div>
       </div>
@@ -83,7 +92,16 @@ export const Navbar = () => {
               ))}
             </div>
             <div className="nt-mobile-nav-actions">
-              <button className="nt-btn nt-btn-outlined">Digital Investment Summit</button>
+              <SLink 
+                className="nt-btn nt-btn-outlined"
+                to="digital-investment-summit"
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={300}
+              >
+                Digital Investment Summit
+              </SLink>
             </div>
           </div>
         </div>
