@@ -1,5 +1,5 @@
 .nt-informationBar-bg {
-  background: url(../img/informationbar/background-img.jpg) no-repeat;
+  background: url(../img/informationbar/information-bar-bg.png) no-repeat;
   background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: overlay;
   background-size: cover;
@@ -10,10 +10,7 @@
 }
 
 .nt-info-container {
-  margin: auto;
-  height: 100%;
   padding: 3rem 11rem;
-  background-image: url('../img/informationbar/information-bar-bg.png');
 }
 
 .nt-informationBar-titlesection-wrapper {

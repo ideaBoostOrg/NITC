@@ -1,9 +1,3 @@
-.nt-dis-section-wrapper {
-  width: 100%;
-  background: var(--white);
-  padding: 0;
-}
-
 .nt-dis-container {
   display: flex;
   flex-direction: row;
@@ -47,7 +41,8 @@
 .nt-dis-text-content {
     font-size: 13px;
     text-align: left;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
+    color: var(--light-gray);
 }
 
 .nt-dis-description {
@@ -118,6 +113,10 @@
   .nt-dis-description {
     text-align: center;
     margin-bottom: 25px;
+  }
+
+  .nt-dis-text-content {
+    text-align: center;
   }
 
 }

@@ -5,12 +5,13 @@ import aboutCSSLData from "../../../data/components/aboutCSSL";
 const AboutCSSL = () => {
   return (
     <section className="nt-aboutCSSL-section-wrapper" id="about-cssl">
-      <div className="nt-aboutCSSL-container">
-        <div className="nt-aboutCSSL-image-wrapper">
-          <img src={aboutCSSLData.logo} alt="CSSL Logo" className="nt-aboutCSSL-logo" />
-        </div>
-        <div className="nt-aboutCSSL-content-wrapper">
-          <div className="nt-aboutCSSL-content">
+      <div className="container">
+        <div className="nt-aboutCSSL-container">
+          <div className="nt-aboutCSSL-image-wrapper">
+            <img src={aboutCSSLData.logo} alt="CSSL Logo" className="nt-aboutCSSL-logo" />
+          </div>
+          <div className="nt-aboutCSSL-content-wrapper">
+            <div className="nt-aboutCSSL-content">
             <h2 className="nt-section-title nt-title-light-bg nt-aboutcssl-title">{aboutCSSLData.title}</h2>
             <p className="nt-aboutCSSL-description">
               {aboutCSSLData.description1}
@@ -21,6 +22,7 @@ const AboutCSSL = () => {
             <p className="nt-aboutCSSL-description">
               {aboutCSSLData.description3}
             </p>
+            </div>
           </div>
         </div>
       </div>

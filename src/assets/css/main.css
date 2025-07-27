@@ -3966,9 +3966,29 @@ p {
   color: var(--white);
 }
 
+.container {
+  max-width: 100%;
+  margin:  auto;
+  padding: 0px;
+  width: 100%;
+}
+
+.container-without-margin {
+  max-width: 100%;
+  margin:  0px;
+  padding: 0px;
+  width: 100%;
+}
+
 @media(max-width: 768px) {
   .nt-section-title {
     text-transform: uppercase;
     font-size: 25px;
+  }
+}
+
+@media(min-width: 1300px) {
+  .container, .container-without-margin {
+    max-width: 1300px !important;
   }
 }

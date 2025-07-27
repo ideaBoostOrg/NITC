@@ -3,6 +3,10 @@
     background: url('../img/pricing-schedule-bg.png') center center / cover no-repeat;
     background-blend-mode: overlay;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
 }
 
 .nt-pricing-section {

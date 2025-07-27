@@ -1,9 +1,3 @@
-.nt-about-section-wrapper {
-  width: 100%;
-  background: var(--white);
-  padding: 0;
-}
-
 .nt-about-container {
   display: flex;
   flex-direction: row;
@@ -12,7 +6,7 @@
 
 .nt-about-image-wrapper {
   position: relative;
-  flex: 1 1 25%;
+  flex: 1 1 35%;
   display: flex;
   flex-direction: row;
   min-width: 300px;
