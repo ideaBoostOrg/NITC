@@ -3988,7 +3988,7 @@ p {
 }
 
 @media(min-width: 1300px) {
-  .container, .nt-container-without-margin {
+  .nt-container, .nt-container-without-margin {
     max-width: 1300px !important;
   }
 }
