@@ -9,6 +9,7 @@ import { collection, doc, query, getDocs, where, updateDoc, arrayUnion } from "f
 import PaymentProcessing from "./components/PaymentProcessing";
 import SomethingWentWrong from "../../components/SomethingWentWrong";
 import logo from "../../assets/img/NITC-Logo.png";
+import "../../assets/css/navbar.css";
 
 function ConfirmPage() {
     const [searchParams] = useSearchParams()
@@ -232,8 +233,8 @@ function ConfirmPage() {
             <section>
                 <nav className="navbar navbar-expand-lg bg-inverse scrolling-navbar top-nav-collapse">
                     <div className="container">
-                        <div className="navbar-brand">
-                            <img src={logo} alt="" />
+                        <div>
+                            <img src={logo} alt="" className="nt-hero-logo"/>
                         </div>
                     </div>
                 </nav>

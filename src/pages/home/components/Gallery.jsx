@@ -15,7 +15,7 @@ const secondImageSet = eventImages.slice(3, 7).map((src, idx) => ({
 
 function ImageGallery() {
   return (
-    <>
+    <section id="gallery">
         <div className="nt-gallery-grid-1">
             {firstImageSet.map((img, idx) => (
                 <div className={`nt-gallery-item nt-gallery-item-${idx + 1}`} key={idx}>
@@ -30,7 +30,7 @@ function ImageGallery() {
                 </div>
             ))}
         </div>
-    </>
+    </section>
   );
 }
 

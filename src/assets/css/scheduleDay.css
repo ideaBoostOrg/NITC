@@ -7,12 +7,19 @@
     font-size: 13px;
 }
 
+.nt-event-list-item {
+    display: flex;
+    flex-direction: row;
+}
+
 .nt-event-time {
     font-weight: 700;
+    flex: 0 0 20%;
 }
 
 .nt-event-title {
     color: #2e3292;
+    flex: 1;
 }
 
 @media (max-width: 768px) {
@@ -22,6 +29,10 @@
 
     .nt-event-list {
         line-height: 25px;
+    }
+
+    .nt-event-list-item {
+        flex-direction: column;
     }
 
     .nt-event-list-item {

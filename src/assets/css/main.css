@@ -3941,11 +3941,13 @@ p {
 
 /* nt common styles - 2025 */
 :root {
+  --primary-blue: #19205F;
   --dark-dark-blue: #14153e;
   --dark-blue: #2e3292;
   --white: #fff;
   --gray: #222;
   --light-gray: #333;
+  --light-light-gray: #e1ddff;
   --black: #0b143f;
   --purple: #65558f;
 }
@@ -3964,9 +3966,29 @@ p {
   color: var(--white);
 }
 
+.nt-container {
+  max-width: 100%;
+  margin:  auto;
+  padding: 0px;
+  width: 100%;
+}
+
+.nt-container-without-margin {
+  max-width: 100%;
+  margin:  0px;
+  padding: 0px;
+  width: 100%;
+}
+
 @media(max-width: 768px) {
   .nt-section-title {
     text-transform: uppercase;
     font-size: 25px;
+  }
+}
+
+@media(min-width: 1300px) {
+  .nt-container, .nt-container-without-margin {
+    max-width: 1300px !important;
   }
 }

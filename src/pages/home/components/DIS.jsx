@@ -1,65 +1,42 @@
-import Awards from "../../../assets/img/DIGI_ECON.jpg";
+import React from "react";
+import { Link as SLink } from "react-scroll";
+import "../../../assets/css/DIS.css";
+import DISData from "../../../data/components/DIS";
 
-function DIS() {
+const DIS = () => {
   return (
-    <section
-      id="dis"
-      style={{
-        paddingTop: "50px",
-        paddingBottom: "50px",
-      }}
-    >
-      <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <div className="section-title-header text-center">
-              <h2 className="section-title wow fadeInUp" data-wow-delay="0.2s">
-                Digital Investment Summit
-              </h2>
-              <p className="wow fadeInDown">
-                Unleash the power of digital innovations and seize growth
-                opportunities at the Sri Lanka Digital
-                <br /> Investment Summit.
+    <section id="digital-investment-summit">
+      <div className="nt-container-without-margin">
+        <div className="nt-dis-container">
+          <div className="nt-dis-image-wrapper">
+            <img src={DISData.mainImage} alt="About NITC Conference" className="nt-dis-image" />
+            <img src={DISData.logo} alt="CSSL Logo" className="nt-dis-logo" />
+          </div>
+          <div className="nt-dis-content-wrapper">
+            <div className="nt-dis-content">
+              <h2 className="nt-section-title nt-title-light-bg">{DISData.title}</h2>
+              <p className="nt-dis-description">
+                {DISData.description}
               </p>
-            </div>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-lg-6 col-md-12 col-xs-12">
-            <div className="img-thumb">
-              <img className="img-fluid" src={Awards} alt="" />
-            </div>
-          </div>
-
-          <div className="col-lg-6 col-md-12 col-xs-12">
-            <p style={{ marginBottom: "2rem" }}>
-              <b>Sri Lanka Digital Investment Summit</b> is a joint industry
-              initiative to connect Sri Lankan Startups and mature companies
-              with local and foreign investors to support their next growth
-              phase and global expansions and serves as a gateway to delve into
-              Sri Lanka's dynamic digital investment ecosystem. This summit
-              rallies all industries and sectors nationwide, fostering
-              partnerships with government officials, venture capitalists,
-              investor groups, multinational corporates, entrepreneurs and
-              thought leaders in the global stage. It also engages bilateral and
-              multilateral associations and acts as a catalyst for economic
-              resurgence while accelerating digital advancements for the
-              country.
-            </p>
-            <div className="award_section_button">
-              <a
-                href="/disregister?type=Dis"
-                className="btn btn-common"
-                id="view_more_btn"
+              <p className="nt-dis-text-content">
+                  {DISData.content}
+              </p>
+              <SLink 
+                className="nt-dis-btn" 
+                to="pricing"
+                spy={true} 
+                smooth={true} 
+                offset={-50} 
+                duration={300}
               >
-                Register now
-              </a>
+                {DISData.button}
+              </SLink>
             </div>
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default DIS;

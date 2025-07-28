@@ -1,20 +1,18 @@
-import React, { useState } from "react";
-import { Link as SLink } from "react-scroll";
+import { faBars, faCaretDown, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+import { Link as SLink } from "react-scroll";
+import "../assets/css/navbar.css";
 import NITCLogo from '../assets/img/NITC-Logo.png';
-import "../assets/css/Navbar.css";
 
 const navLinks = [
   { label: "Home", to: "hero-area", icon: null, offset: -50 },
-  { label: "About Us", to: "about", icon: faCaretDown, offset: -100 },
-  { label: "Accreditation", to: "schedules", icon: faCaretDown, offset: -80 },
-  { label: "Membership", to: "award", icon: faCaretDown, offset: -30 },
-  { label: "NITC", to: "digital-economy", icon: faCaretDown, offset: -80 },
-  { label: "Events", to: "gallery", icon: null, offset: -50 },
-  { label: "People", to: "pricing", icon: faCaretDown, offset: -30 },
-  { label: "Training Partners", to: "sponsors", icon: null, offset: -80 },
-  { label: "Contact Us", to: "dis", icon: null, offset: -30 },
+  { label: "About", to: "about", icon: null, offset: -100 },
+  { label: "Schedule", to: "schedule", icon: null, offset: -80 },
+  { label: "Awards", to: "award", icon: null, offset: -30 },
+  { label: "Gallery", to: "gallery", icon: null, offset: -50 },
+  { label: "Pricing", to: "pricing", icon: null, offset: -30 },
+  { label: "Sponsors", to: "sponsors", icon: null, offset: -80 },
 ];
 
 export const Navbar = () => {
@@ -54,8 +52,16 @@ export const Navbar = () => {
             ))}
           </div>
           <div className="nt-nav-actions">
-            <button className="nt-btn nt-btn-filled">Sign In</button>
-            <button className="nt-btn nt-btn-outlined">Sign Up</button>
+            <SLink 
+              className="nt-btn nt-btn-outlined"
+              to="digital-investment-summit"
+              spy={true}
+              smooth={true}
+              offset={-50}
+              duration={300}
+            >
+              Digital Investment Summit
+            </SLink>
           </div>
         </div>
       </div>
@@ -86,8 +92,16 @@ export const Navbar = () => {
               ))}
             </div>
             <div className="nt-mobile-nav-actions">
-              <button className="nt-btn nt-btn-filled">Sign In</button>
-              <button className="nt-btn nt-btn-outlined">Sign Up</button>
+              <SLink 
+                className="nt-btn nt-btn-outlined"
+                to="digital-investment-summit"
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={300}
+              >
+                Digital Investment Summit
+              </SLink>
             </div>
           </div>
         </div>
