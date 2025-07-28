@@ -6,7 +6,7 @@ function TicketPricing() {
   return (
     <section id="pricing">
         <div className="nt-pricing-section-wrapper">
-            <div className="container">
+            <div className="nt-container">
                 <div className="row">
                     <div className="col-12">
                         <div className="nt-pricing-title-section">

@@ -12,7 +12,7 @@ function Shedule() {
 
   return (
     <section id="schedule">
-      <div className="container-without-margin">
+      <div className="nt-container-without-margin">
         <div className="row gap-lg-4 gap-sm-1">
           <div className="col-lg-4 col-md-4 col-sm-12 nt-schedule-title-section-wrapper">
             <div className="">

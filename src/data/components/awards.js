@@ -1,13 +1,50 @@
-import mainImage from "../../assets/img/about/main-img.jpg";
-import cssllogo from "../../assets/img/about/cssl-logo.jpg";
-
 const aboutData = {
-  title: "NITC Awards 2023",
-  subtitle: "Unleash the power of digital innovations and seize growth opportunities at the Sri Lanka Digital Investment Summit.",
-  description: "Sri Lanka Digital Investment Summit is a joint industry initiative to connect Sri Lankan Startups and mature companies with local and foreign investors to support their next growth phase and global expansions and serves as a gateway to delve into Sri Lanka's dynamic digital investment ecosystem. This summit rallies all industries and sectors nationwide, fostering partnerships with government officials, venture capitalists, investor groups, multinational corporates, entrepreneurs and thought leaders in the global stage. It also engages bilateral and multilateral associations and acts as a catalyst for economic resurgence while accelerating digital advancements for the country.",
-  button: "Register Now",
-  mainImage: mainImage,
-  logo: cssllogo,
+  title: "NITC Awards 2024",
+  subtitle: `At the NITC awards 2025, Come Celebrate the outstanding achievements of the <br />industries shining stars`,
+  description: `CSSL Awards recognises significant national contributions by ICT Professionals and CSSL Elite awards <br /> will be held at the inauguration ceremony of the NITC Conference.`,
+  apply_now_button: "Apply Now",
+  view_more_button: "View More",
+  awards: [
+    {
+      title: "CSSL Elite Awards",
+      types: [
+        "CSSL ICT Leader of the Year – Male Category",
+        "CSSL ICT Leader of the Year – Female Category",
+        "CSSL ICT Researcher of the Year",
+        "CSSL ICT Educator of the Year"
+      ]
+    },
+    {
+      title: "Professional Awards",
+      types: [
+        "CSSL Chief Information Security Officer of the Year",
+        "CSSL Leader in ICT Project Manager of the Year (PMP)",
+        "CSSL Leader in Business Analysis of the Year",
+        "CSSL Leader in Software Quality Assurance of the Year",
+        "CSSL Leader in Software Engineering of the Year",
+        "CSSL ICT Innovator of the Year"
+      ]
+    },
+    {
+      title: "ICT Student Awards",
+      types: [
+        "School Category (Public)",
+        "School Category (International)",
+        "Undergraduate Category",
+        "Postgraduate Category"
+      ]
+    },
+    {
+      title: "ICT Startup Eco System Awards",
+      types: [
+        "CSSL Best Founder Award",
+        "CSSL Digital Investor Award",
+        "CSSL Digital Social Innovator Award",
+        "CSSL Emerging ICT Leader of the Year Award"
+      ]
+    }
+  ]
 };
 
 export default aboutData;
+

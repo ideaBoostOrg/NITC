@@ -6,7 +6,7 @@ import DISData from "../../../data/components/DIS";
 const DIS = () => {
   return (
     <section id="digital-investment-summit">
-      <div className="container-without-margin">
+      <div className="nt-container-without-margin">
         <div className="nt-dis-container">
           <div className="nt-dis-image-wrapper">
             <img src={DISData.mainImage} alt="About NITC Conference" className="nt-dis-image" />

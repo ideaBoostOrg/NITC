@@ -3966,14 +3966,14 @@ p {
   color: var(--white);
 }
 
-.container {
+.nt-container {
   max-width: 100%;
   margin:  auto;
   padding: 0px;
   width: 100%;
 }
 
-.container-without-margin {
+.nt-container-without-margin {
   max-width: 100%;
   margin:  0px;
   padding: 0px;
@@ -3988,7 +3988,7 @@ p {
 }
 
 @media(min-width: 1300px) {
-  .container, .container-without-margin {
+  .container, .nt-container-without-margin {
     max-width: 1300px !important;
   }
 }

@@ -1,38 +1,44 @@
-import React from "react";
-import { Link as SLink } from "react-scroll";
 import "../../../assets/css/awards.css";
 import awardsDetails from "../../../data/components/awards.js";
 
 const Awards = () => {
-  return (
-    <section id="award" className="nt-awards-section-wrapper">
-      <div className="nt-awards-container">
-        <div className="nt-awards-content-wrapper">
-          <div className="nt-awards-content">
-            <h2 className="nt-section-title nt-title-light-bg nt-mobile-view">{awardsDetails.title}</h2>
-            <p className="nt-awards-subtitle nt-mobile-view">{awardsDetails.subtitle}</p>
-            <p className="nt-awards-description nt-mobile-view">
-              {awardsDetails.description}
-            </p>            
-            <SLink 
-              className="nt-awards-btn"
-              to="pricing"
-              spy={true}
-              smooth={true}
-              offset={-50}
-              duration={300}
-            >
-              {awardsDetails.button}
-            </SLink>
-          </div>
-        </div>
-        <div className="nt-awards-image-wrapper">
-          <img src={awardsDetails.logo} alt="CSSL Logo" className="nt-awards-logo" />
-          <img src={awardsDetails.mainImage} alt="awards NITC Conference" className="nt-awards-image" />
-        </div>
-      </div>
-    </section>
-  );
-};
+    return (
+        <section className="nt-awards-section-wrapper" id="awards">
+            <div className="nt-container">
+                <div className="nt-awards-content">
+                    <div className="nt-awards-header-content">
+                        <h2 className="nt-section-title nt-title-light-bg">
+                            {awardsDetails.title}
+                        </h2>
+                        <p className="nt-awards-subtitle" dangerouslySetInnerHTML={{ __html: awardsDetails.subtitle }} />
+                        <p className="nt-awards-description" dangerouslySetInnerHTML={{ __html: awardsDetails.description }} />
+                        <div className="nt-awards-buttons-container">
+                            <button className="nt-apply-now-btn">{awardsDetails.apply_now_button}</button>
+                            <button className="nt-view-more-btn">{awardsDetails.view_more_button}</button>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-lg-9 col-md-12 col-sm-12">
+                            <div className="row">
+                                {awardsDetails.awards.map((award, idx) => (
+                                    <div className="col-lg-6 col-md-6 col-sm-12 mb-3" key={idx}>
+                                        <div className="nt-award-item">
+                                            <p className="nt-award-title">{award.title}</p>
+                                            <ul className="nt-award-types-list">
+                                                {award.types.map((type, index) => (
+                                                    <li key={index}>{type}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}
 
 export default Awards;

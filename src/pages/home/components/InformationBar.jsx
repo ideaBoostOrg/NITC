@@ -4,7 +4,7 @@ import "../../../assets/css/informationBar.css";
 function InformationBar() {
   return (
     <div className="nt-informationBar-bg">
-      <div className="container">
+      <div className="nt-container">
         <div className="nt-info-container">
           <div className="nt-informationBar-titlesection-wrapper">
             <h2 className="nt-section-title nt-title-dark-bg">
