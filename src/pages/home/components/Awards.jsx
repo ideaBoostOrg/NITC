@@ -23,7 +23,7 @@ const Awards = () => {
                                 {awardsDetails.awards.map((award, idx) => (
                                     <div className="col-lg-6 col-md-6 col-sm-12 mb-3" key={idx}>
                                         <div className="nt-award-item">
-                                            <p className="nt-award-title">{award.title}</p>
+                                            <span className="nt-award-title">{award.title}</span>
                                             <ul className="nt-award-types-list">
                                                 {award.types.map((type, index) => (
                                                     <li key={index}>{type}</li>
