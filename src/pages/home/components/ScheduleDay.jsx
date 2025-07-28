@@ -5,13 +5,9 @@ function ScheduleDay({ eventlist }) {
         <div className="nt-schedule-day-wrapper">
             {eventlist.map((event, idx) => (
                 <div key={idx} className="nt-event-list">
-                    <div className="row nt-event-list-item">
-                        <div className="col-lg-3 col-md-12 col-sm-12 fw-bold">
-                            <span className="nt-event-time">{event.time}</span>
-                        </div>
-                        <div className="col-lg-9 col-md-12 col-sm-12 ">
-                            <span className="nt-event-title">{event.title}</span>
-                        </div>
+                    <div className="nt-event-list-item">
+                        <span className="nt-event-time">{event.time}</span>
+                        <span className="nt-event-title">{event.title}</span>
                     </div>
                 </div>
             ))}
